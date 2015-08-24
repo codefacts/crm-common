@@ -109,9 +109,9 @@ public class Util {
         System.out.println(new JsonObject().getValue("kkk"));
     }
 
-    public static JsonObject updateObject(JsonObject area) {
-        area.remove(QC.id);
-        return new JsonObject().put(QC.$set, area);
+    public static JsonObject updateObject(JsonObject jsonObject) {
+        jsonObject.remove(QC.id);
+        return new JsonObject().put(QC.$set, jsonObject);
     }
 
     public static String trim(String string) {
