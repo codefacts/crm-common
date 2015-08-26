@@ -34,7 +34,7 @@ public class ExceptionUtil {
         try {
             runnable.run();
         } catch (Exception e) {
-            e.printStackTrace();
+            logException(e);
         }
     }
 
@@ -42,7 +42,7 @@ public class ExceptionUtil {
         try {
             return runnable.call();
         } catch (Exception e) {
-            e.printStackTrace();
+            logException(e);
         }
         return null;
     }
@@ -87,5 +87,9 @@ public class ExceptionUtil {
     public static void fail(Message message, Throwable throwable) {
         message.fail(FailureCode.InternalServerError.code, throwable.getMessage());
         System.out.println("FAILING MESSAGE: " + message + " <<>> CAUSE: " + throwable.getMessage());
+    }
+
+    public static void logException(Throwable e) {
+        System.err.println("Error: " + e.getClass() + " : " + e.getMessage());
     }
 }

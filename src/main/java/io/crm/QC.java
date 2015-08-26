@@ -10,5 +10,6 @@ public class QC {
     public static final String userType = "userType";
     public static final String message = "message";
     public static final String id = "_id";
-    public static String $set = "$set";
+    public static final String $set = "$set";
+    public static final String prefix = "prefix";
 }

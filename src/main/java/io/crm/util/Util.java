@@ -15,7 +15,7 @@ import java.util.*;
  * Created by sohan on 8/1/2015.
  */
 public class Util {
-    public static final String mongoDateFormatString = "yyyy-MM-dd'T'HH:mm:ss.SSS";
+    public static final String mongoDateFormatString = "yyyy-MM-dd'T'HH:mm:ss'Z'";
     public static final ThreadLocal<DateFormat> DATE_FORMAT_THREAD_LOCAL = new ThreadLocal<DateFormat>() {
         @Override
         protected DateFormat initialValue() {
@@ -63,7 +63,7 @@ public class Util {
         return list;
     }
 
-    public static Date toDate(final String isoString) throws ParseException {
+    public static Date parseMongoDate(String isoString) throws ParseException {
         return mongoDateFormat().parse(isoString);
     }
 
@@ -89,7 +89,7 @@ public class Util {
     }
 
     public static Date parseMongoDate(JsonObject jsonObject) throws ParseException {
-        return toDate(jsonObject.getString("$date"));
+        return parseMongoDate(jsonObject.getString("$date"));
     }
 
     public static DateFormat mongoDateFormat() {
@@ -105,8 +105,8 @@ public class Util {
         return area.getLong(field);
     }
 
-    public static void main(String... args) {
-        System.out.println(new JsonObject().getValue("kkk"));
+    public static void main(String... args) throws ParseException {
+        System.out.println(parseMongoDate(new JsonObject().put("$date", "2015-05-17T00:00:00Z")));
     }
 
     public static JsonObject updateObject(JsonObject jsonObject) {
@@ -118,8 +118,7 @@ public class Util {
         return string == null ? "" : string.trim();
     }
 
-    public static boolean emptyOrNull(String value) {
+    public static boolean isEmptyOrNull(String value) {
         return value == null || value.trim().isEmpty();
     }
-
 }

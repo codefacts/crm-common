@@ -11,6 +11,7 @@ public enum Indexes {
     location_name(mc.locations, new IndexTouple[]{new IndexTouple(QC.name, 1)}, true),
     user_id(mc.user_indexes, new IndexTouple[]{new IndexTouple(QC.userId, 1)}, true),
     user_type(mc.user_types, new IndexTouple[]{new IndexTouple(QC.name, 1)}, true),
+    user_id_prefix(mc.user_types, new IndexTouple[]{new IndexTouple(QC.prefix, 1)}, true),
     username(mc.user_indexes, new IndexTouple[]{new IndexTouple(QC.username, 1)}, true);
 
     public final String collection;
