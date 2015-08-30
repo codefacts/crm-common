@@ -4,6 +4,7 @@ package io.crm;
  * Created by someone on 18/08/2015.
  */
 public enum Indexes {
+    campaign_name(mc.campaigns, new IndexTouple[]{new IndexTouple(QC.name, 1)}, true),
     region_name(mc.regions, new IndexTouple[]{new IndexTouple(QC.name, 1)}, true),
     area_name(mc.areas, new IndexTouple[]{new IndexTouple(QC.name, 1)}, true),
     house_name(mc.distribution_houses, new IndexTouple[]{new IndexTouple(QC.name, 1)}, true),
