@@ -13,7 +13,7 @@ public enum mc {
     employees("employee", "Employee"),
     regions("region", "Region"),
     locations("location", "Location"),
-    campaigns("campaigns", "Campaign"),
+    campaigns("campaign", "Campaign"),
     user_types("userType", "User Type"),
     user_indexes("user_index", "User Index", -1, true);
 
