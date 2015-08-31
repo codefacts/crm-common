@@ -119,13 +119,12 @@ public class Util {
         return DATE_FORMAT_THREAD_LOCAL.get();
     }
 
-    public static Long id(JsonObject area, String field) {
-        final Object value = area.getValue(field);
+    public static Long id(Object value) {
         if (value instanceof JsonObject) {
             JsonObject json = (JsonObject) value;
             return json.getLong(QC.id);
         }
-        return area.getLong(field);
+        return ((Number) value).longValue();
     }
 
     public static void main(String... args) throws ParseException {
