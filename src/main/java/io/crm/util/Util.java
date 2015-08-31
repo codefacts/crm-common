@@ -67,10 +67,6 @@ public class Util {
         return mongoDateFormat().parse(isoString);
     }
 
-    public static String toIsoString(final Date date) {
-        return mongoDateFormat().format(date) + "Z";
-    }
-
     public static void validateMongoDate(String iso_date) {
         try {
             mongoDateFormat().parse(iso_date);
@@ -81,15 +77,42 @@ public class Util {
 
     public static JsonObject toMongoDate(String iso_string) {
         validateMongoDate(iso_string);
-        return new JsonObject().put("$date", iso_string);
+        return new JsonObject().put(QC.$date, iso_string);
     }
 
     public static JsonObject toMongoDate(Date date) {
-        return new JsonObject().put("$date", toIsoString(date));
+        return new JsonObject().put(QC.$date, toIsoString(date));
+    }
+
+    public static JsonObject toMongoDate(Date date, Date defaultValue) {
+        return new JsonObject().put(QC.$date, toIsoString(date, defaultValue));
+    }
+
+    public static String toIsoString(final Date date) {
+        return mongoDateFormat().format(date) + "Z";
+    }
+
+    private static String toIsoString(Date date, Date defaultValue) {
+        try {
+            return mongoDateFormat().format(date);
+        } catch (Exception ex) {
+            if (defaultValue != null) {
+                return mongoDateFormat().format(date);
+            }
+            return "";
+        }
+    }
+
+    public static Date parseMongoDate(JsonObject jsonObject, Date defaultValue) {
+        try {
+            return parseMongoDate(jsonObject.getString(QC.$date));
+        } catch (Exception ex) {
+            return defaultValue;
+        }
     }
 
     public static Date parseMongoDate(JsonObject jsonObject) throws ParseException {
-        return parseMongoDate(jsonObject.getString("$date"));
+        return parseMongoDate(jsonObject.getString(QC.$date));
     }
 
     public static DateFormat mongoDateFormat() {
@@ -106,7 +129,7 @@ public class Util {
     }
 
     public static void main(String... args) throws ParseException {
-        System.out.println(parseMongoDate(new JsonObject().put("$date", "2015-05-17T00:00:00Z")));
+        System.out.println(parseMongoDate(new JsonObject().put(QC.$date, "2015-05-17T00:00:00Z")));
     }
 
     public static JsonObject updateObject(JsonObject jsonObject) {

@@ -12,4 +12,5 @@ public class QC {
     public static final String id = "_id";
     public static final String $set = "$set";
     public static final String prefix = "prefix";
+    public static String $date = "$date";
 }
