@@ -48,7 +48,6 @@ public class TaskCoordinatorBuilder {
     }
 
     public TaskCoordinator get() {
-        if (count <= 0) throw new IllegalArgumentException("count can't be 0. count = " + count);
         return new TaskCoordinator(count, message, onSuccess, onError, onComplete);
     }
 

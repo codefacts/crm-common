@@ -28,6 +28,8 @@ final public class TaskCoordinator {
         this.onSuccess = onSuccess;
         this.onError = onError;
         this.onComplete = onComplete;
+
+        onFinish(new ArrayList<>());
     }
 
     public <T> Handler<AsyncResult<T>> add(ConsumerInterface<T> consumer) {
