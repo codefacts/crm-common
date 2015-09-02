@@ -26,7 +26,6 @@ final public class Events {
     public static final String FIND_ALL_CLIENTS = "FIND_ALL_CLIENTS";
     public static final String FIND_ALL_CONTACTS = "FIND_ALL_CONTACTS";
 
-    public static final String GET_DB_TREE = "GET_DB_TREE";
     public static final String GET_COLLECTION_COUNT = "GET_COLLECTION_COUNT";
 
     public static final String UPDATE_EMPLOYEE = "UPDATE_EMPLOYEE";
