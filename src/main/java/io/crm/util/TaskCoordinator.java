@@ -52,6 +52,26 @@ final public class TaskCoordinator {
         };
     }
 
+    public <T> Handler<AsyncResult<T>> catchOnException(ConsumerInterface<T> consumer) {
+        return r -> {
+            final ArrayList<Exception> exceptions = new ArrayList<>();
+            if (r.failed()) {
+                count--;
+                error = r.cause();
+                if (message != null) fail(message, r.cause());
+            } else {
+                if (consumer != null) try {
+                    consumer.accept(r.result());
+                } catch (Exception ex) {
+                    fail(message, ex);
+                    exceptions.add(ex);
+                }
+            }
+
+            onFinish(exceptions);
+        };
+    }
+
     private final void onFinish(ArrayList<Exception> exceptions) {
         if (count <= 0) {
             if (error == null) {
