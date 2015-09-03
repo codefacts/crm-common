@@ -7,7 +7,7 @@ import io.vertx.core.eventbus.Message;
 /**
  * Created by someone on 12-Aug-2015.
  */
-public class TaskCoordinatorBuilder {
+final public class TaskCoordinatorBuilder {
     private Message message;
     private io.crm.intfs.Runnable onSuccess;
     private ConsumerInterface<Throwable> onError;
@@ -22,27 +22,27 @@ public class TaskCoordinatorBuilder {
         return message;
     }
 
-    public TaskCoordinatorBuilder count(int count) {
+    public TaskCoordinatorBuilder count(final int count) {
         this.count = count;
         return this;
     }
 
-    public TaskCoordinatorBuilder message(Message message) {
+    public TaskCoordinatorBuilder message(final Message message) {
         this.message = message;
         return this;
     }
 
-    public TaskCoordinatorBuilder onSuccess(Runnable onSuccess) {
+    public TaskCoordinatorBuilder onSuccess(final Runnable onSuccess) {
         this.onSuccess = onSuccess;
         return this;
     }
 
-    public TaskCoordinatorBuilder onError(ConsumerInterface<Throwable> onError) {
+    public TaskCoordinatorBuilder onError(final ConsumerInterface<Throwable> onError) {
         this.onError = onError;
         return this;
     }
 
-    public TaskCoordinatorBuilder onComplete(ConsumerInterface<TaskCoordinator> onComplete) {
+    public TaskCoordinatorBuilder onComplete(final ConsumerInterface<TaskCoordinator> onComplete) {
         this.onComplete = onComplete;
         return this;
     }

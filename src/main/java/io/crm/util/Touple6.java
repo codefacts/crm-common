@@ -11,7 +11,7 @@ final public class Touple6<T1, T2, T3, T4, T5, T6> {
     private T5 t5;
     private T6 t6;
 
-    public Touple6(T1 t1, T2 t2, T3 t3, T4 t4, T5 t5, T6 t6) {
+    public Touple6(final T1 t1, final T2 t2, final T3 t3, final T4 t4, final T5 t5, final T6 t6) {
         this.t1 = t1;
         this.t2 = t2;
         this.t3 = t3;
@@ -28,7 +28,7 @@ final public class Touple6<T1, T2, T3, T4, T5, T6> {
         return t1;
     }
 
-    public void setT1(T1 t1) {
+    public void setT1(final T1 t1) {
         this.t1 = t1;
     }
 
@@ -36,7 +36,7 @@ final public class Touple6<T1, T2, T3, T4, T5, T6> {
         return t2;
     }
 
-    public void setT2(T2 t2) {
+    public void setT2(final T2 t2) {
         this.t2 = t2;
     }
 
@@ -44,7 +44,7 @@ final public class Touple6<T1, T2, T3, T4, T5, T6> {
         return t3;
     }
 
-    public void setT3(T3 t3) {
+    public void setT3(final T3 t3) {
         this.t3 = t3;
     }
 
@@ -52,7 +52,7 @@ final public class Touple6<T1, T2, T3, T4, T5, T6> {
         return t4;
     }
 
-    public void setT4(T4 t4) {
+    public void setT4(final T4 t4) {
         this.t4 = t4;
     }
 
@@ -60,7 +60,7 @@ final public class Touple6<T1, T2, T3, T4, T5, T6> {
         return t5;
     }
 
-    public void setT5(T5 t5) {
+    public void setT5(final T5 t5) {
         this.t5 = t5;
     }
 
@@ -68,7 +68,7 @@ final public class Touple6<T1, T2, T3, T4, T5, T6> {
         return t6;
     }
 
-    public void setT6(T6 t6) {
+    public void setT6(final T6 t6) {
         this.t6 = t6;
     }
 

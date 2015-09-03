@@ -5,7 +5,7 @@ import io.vertx.core.AsyncResult;
 /**
  * Created by someone on 30-Jul-2015.
  */
-public class AsyncUtil {
+final public class AsyncUtil {
 
     public static <T> AsyncResult<T> success() {
         return new AsyncResult<T>() {

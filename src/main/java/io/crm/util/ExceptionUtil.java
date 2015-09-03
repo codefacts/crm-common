@@ -12,51 +12,51 @@ import io.vertx.core.eventbus.Message;
 /**
  * Created by someone on 26-Jul-2015.
  */
-public class ExceptionUtil {
+final public class ExceptionUtil {
 
-    public static void toRuntime(Runnable runnable) {
+    public static void toRuntime(final Runnable runnable) {
         try {
             runnable.run();
-        } catch (Exception e) {
+        } catch (final Exception e) {
             throw new RuntimeException(e);
         }
     }
 
-    public static <T> T toRuntimeCall(Callable<T> runnable) {
+    public static <T> T toRuntimeCall(final Callable<T> runnable) {
         try {
             return runnable.call();
-        } catch (Exception e) {
+        } catch (final Exception e) {
             throw new RuntimeException(e);
         }
     }
 
-    public static void sallowRun(Runnable runnable) {
+    public static void sallowRun(final Runnable runnable) {
         try {
             runnable.run();
-        } catch (Exception e) {
+        } catch (final Exception e) {
             logException(e);
         }
     }
 
-    public static <T> T sallowCall(Callable<T> runnable) {
+    public static <T> T sallowCall(final Callable<T> runnable) {
         try {
             return runnable.call();
-        } catch (Exception e) {
+        } catch (final Exception e) {
             logException(e);
         }
         return null;
     }
 
-    public static <T> void then(Callable<T> callable, AsyncResultHandler<T> asyncResultHandler) {
+    public static <T> void then(final Callable<T> callable, final AsyncResultHandler<T> asyncResultHandler) {
         try {
-            T t = callable.call();
+            final T t = callable.call();
             asyncResultHandler.handle(AsyncUtil.success(t));
-        } catch (Exception ex) {
+        } catch (final Exception ex) {
             asyncResultHandler.handle(AsyncUtil.fail(ex));
         }
     }
 
-    public static <T> Handler<AsyncResult<T>> withReply(ConsumerInterface<T> consumerInterface, Message message) {
+    public static <T> Handler<AsyncResult<T>> withReply(final ConsumerInterface<T> consumerInterface, final Message message) {
         return r -> {
             if (r.failed()) {
                 ExceptionUtil.fail(message, r.cause());
@@ -66,30 +66,30 @@ public class ExceptionUtil {
         };
     }
 
-    public static void withReplyRun(Runnable runnable, Message message) {
+    public static void withReplyRun(final Runnable runnable, final Message message) {
         try {
             runnable.run();
-        } catch (Exception e) {
+        } catch (final Exception e) {
             ExceptionUtil.fail(message, e);
             throw new RuntimeException(e);
         }
     }
 
-    public static <T> T withReplyCall(Callable<T> runnable, Message message) {
+    public static <T> T withReplyCall(final Callable<T> runnable, final Message message) {
         try {
             return runnable.call();
-        } catch (Exception e) {
+        } catch (final Exception e) {
             ExceptionUtil.fail(message, e);
             throw new RuntimeException(e);
         }
     }
 
-    public static void fail(Message message, Throwable throwable) {
+    public static void fail(final Message message, final Throwable throwable) {
         message.fail(FailureCode.InternalServerError.code, throwable.getMessage());
         System.out.println("FAILING MESSAGE: " + message + " <<>> CAUSE: " + throwable.getMessage());
     }
 
-    public static void logException(Throwable e) {
+    public static void logException(final Throwable e) {
         System.err.println("Error: " + e.getClass() + " : " + e.getMessage());
     }
 }

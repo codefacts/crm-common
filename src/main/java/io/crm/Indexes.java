@@ -19,7 +19,7 @@ public enum Indexes {
     public final IndexTouple[] kyes;
     public final boolean unique;
 
-    Indexes(mc collection, IndexTouple[] kyes, boolean unique) {
+    Indexes(final mc collection, final IndexTouple[] kyes, final boolean unique) {
         this.collection = collection + "";
         this.kyes = kyes;
         this.unique = unique;

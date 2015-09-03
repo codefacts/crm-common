@@ -14,7 +14,7 @@ import java.util.*;
 /**
  * Created by sohan on 8/1/2015.
  */
-public class Util {
+final public class Util {
     public static final String mongoDateFormatString = "yyyy-MM-dd'T'HH:mm:ss'Z'";
     public static final ThreadLocal<DateFormat> DATE_FORMAT_THREAD_LOCAL = new ThreadLocal<DateFormat>() {
         @Override
@@ -23,16 +23,16 @@ public class Util {
         }
     };
 
-    public static Document toDocument(JsonObject jsonObject) {
+    public static Document toDocument(final JsonObject jsonObject) {
         return toDocument(new Document(), jsonObject);
     }
 
-    public static List toDocumentArray(JsonArray jsonObject) {
+    public static List toDocumentArray(final JsonArray jsonObject) {
         return toDocumentArray(new ArrayList<>(), jsonObject);
     }
 
     public static List<Document> toDocumentList(final Collection<JsonObject> jsonObjects) {
-        ArrayList<Document> documentList = new ArrayList<>();
+        final ArrayList<Document> documentList = new ArrayList<>();
         jsonObjects.forEach(obj -> documentList.add(toDocument(obj)));
         return documentList;
     }
@@ -63,11 +63,11 @@ public class Util {
         return list;
     }
 
-    public static Date parseMongoDate(String isoString) throws ParseException {
+    public static Date parseMongoDate(final String isoString) throws ParseException {
         return mongoDateFormat().parse(isoString);
     }
 
-    public static void validateMongoDate(String iso_date) {
+    public static void validateMongoDate(final String iso_date) {
         try {
             mongoDateFormat().parse(iso_date);
         } catch (ParseException e) {
@@ -75,16 +75,16 @@ public class Util {
         }
     }
 
-    public static JsonObject toMongoDate(String iso_string) {
+    public static JsonObject toMongoDate(final String iso_string) {
         validateMongoDate(iso_string);
         return new JsonObject().put(QC.$date, iso_string);
     }
 
-    public static JsonObject toMongoDate(Date date) {
+    public static JsonObject toMongoDate(final Date date) {
         return new JsonObject().put(QC.$date, toIsoString(date));
     }
 
-    public static JsonObject toMongoDate(Date date, Date defaultValue) {
+    public static JsonObject toMongoDate(final Date date, final Date defaultValue) {
         return new JsonObject().put(QC.$date, toIsoString(date, defaultValue));
     }
 
@@ -92,7 +92,7 @@ public class Util {
         return mongoDateFormat().format(date) + "Z";
     }
 
-    private static String toIsoString(Date date, Date defaultValue) {
+    private static String toIsoString(final Date date, final Date defaultValue) {
         try {
             return mongoDateFormat().format(date);
         } catch (Exception ex) {
@@ -103,7 +103,7 @@ public class Util {
         }
     }
 
-    public static Date parseMongoDate(JsonObject jsonObject, Date defaultValue) {
+    public static Date parseMongoDate(final JsonObject jsonObject, final Date defaultValue) {
         try {
             return parseMongoDate(jsonObject.getString(QC.$date));
         } catch (Exception ex) {
@@ -111,7 +111,7 @@ public class Util {
         }
     }
 
-    public static Date parseMongoDate(JsonObject jsonObject) throws ParseException {
+    public static Date parseMongoDate(final JsonObject jsonObject) throws ParseException {
         return parseMongoDate(jsonObject.getString(QC.$date));
     }
 
@@ -119,12 +119,17 @@ public class Util {
         return DATE_FORMAT_THREAD_LOCAL.get();
     }
 
-    public static Long id(Object value) {
+    public static Long id(final Object value) {
         if (value instanceof JsonObject) {
-            JsonObject json = (JsonObject) value;
+            final JsonObject json = (JsonObject) value;
             return json.getLong(QC.id);
         }
         return ((Number) value).longValue();
+    }
+
+
+    public static final <T> T getOrDefault(final T src, final T defaultValue) {
+        return src == null ? defaultValue : src;
     }
 
     public static void main(String... args) throws ParseException {

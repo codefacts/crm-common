@@ -24,7 +24,7 @@ public enum mc {
     private final boolean internal;
     private AtomicLong nextId = new AtomicLong(0);
 
-    mc(String fieldName, String label, long nextId, boolean internal) {
+    mc(final String fieldName, final String label, final long nextId, final boolean internal) {
         this.fieldName = fieldName;
         this.label = label;
         this.nextId.set(nextId);

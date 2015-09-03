@@ -22,7 +22,8 @@ final public class TaskCoordinator {
     private int count;
     private Throwable error;
 
-    TaskCoordinator(int count, Message message, Runnable onSuccess, ConsumerInterface<Throwable> onError, ConsumerInterface<TaskCoordinator> onComplete) {
+    TaskCoordinator(final int count, final Message message, final Runnable onSuccess, final ConsumerInterface<Throwable> onError,
+                    final ConsumerInterface<TaskCoordinator> onComplete) {
         this.count = count;
         this.message = message;
         this.onSuccess = onSuccess;
@@ -42,7 +43,7 @@ final public class TaskCoordinator {
             } else {
                 if (consumer != null) try {
                     consumer.accept(r.result());
-                } catch (Exception ex) {
+                } catch (final Exception ex) {
                     fail(message, ex);
                     exceptions.add(ex);
                 }
@@ -52,7 +53,7 @@ final public class TaskCoordinator {
         };
     }
 
-    public <T> Handler<AsyncResult<T>> catchOnException(ConsumerInterface<T> consumer) {
+    public <T> Handler<AsyncResult<T>> catchOnException(final ConsumerInterface<T> consumer) {
         return r -> {
             final ArrayList<Exception> exceptions = new ArrayList<>();
             if (r.failed()) {
@@ -62,7 +63,7 @@ final public class TaskCoordinator {
             } else {
                 if (consumer != null) try {
                     consumer.accept(r.result());
-                } catch (Exception ex) {
+                } catch (final Exception ex) {
                     fail(message, ex);
                     exceptions.add(ex);
                 }
@@ -72,25 +73,25 @@ final public class TaskCoordinator {
         };
     }
 
-    private final void onFinish(ArrayList<Exception> exceptions) {
+    private final void onFinish(final ArrayList<Exception> exceptions) {
         if (count <= 0) {
             if (error == null) {
                 if (onSuccess != null) try {
                     onSuccess.run();
-                } catch (Exception ex) {
+                } catch (final Exception ex) {
                     fail(message, ex);
                     exceptions.add(ex);
                 }
             } else {
                 if (onError != null) try {
                     onError.accept(error);
-                } catch (Exception ex) {
+                } catch (final Exception ex) {
                     exceptions.add(ex);
                 }
             }
             if (onComplete != null) try {
                 onComplete.accept(this);
-            } catch (Exception ex) {
+            } catch (final Exception ex) {
                 ExceptionUtil.fail(message, ex);
                 exceptions.add(ex);
             }
@@ -100,7 +101,7 @@ final public class TaskCoordinator {
         }
     }
 
-    public void countdown(int step) {
+    public void countdown(final int step) {
         count -= step;
         onFinish(new ArrayList<>());
     }
@@ -126,17 +127,17 @@ final public class TaskCoordinator {
         return String.format("[%s complete: %s error: %s]", this.getClass().getSimpleName(), isComplete(), error);
     }
 
-    public TaskCoordinator onSuccess(Runnable onSuccess) {
+    public TaskCoordinator onSuccess(final Runnable onSuccess) {
         this.onSuccess = onSuccess;
         return this;
     }
 
-    public TaskCoordinator onError(ConsumerInterface<Throwable> onError) {
+    public TaskCoordinator onError(final ConsumerInterface<Throwable> onError) {
         this.onError = onError;
         return this;
     }
 
-    public TaskCoordinator onComplete(ConsumerInterface<TaskCoordinator> onComplete) {
+    public TaskCoordinator onComplete(final ConsumerInterface<TaskCoordinator> onComplete) {
         this.onComplete = onComplete;
         return this;
     }
@@ -149,7 +150,7 @@ final public class TaskCoordinator {
         countdown(count);
     }
 
-    public void signalError(Throwable throwable) {
+    public void signalError(final Throwable throwable) {
         error = throwable;
         if (message != null) fail(message, error);
         countdown();

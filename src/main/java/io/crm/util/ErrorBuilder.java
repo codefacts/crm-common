@@ -13,7 +13,7 @@ import java.util.Map;
 final public class ErrorBuilder {
     private final Map<String, JsonArray> errorMap = new LinkedHashMap<>();
 
-    public ErrorBuilder put(String field, JsonObject error) {
+    public ErrorBuilder put(final String field, final JsonObject error) {
         JsonArray list = errorMap.get(field);
         if (list == null) {
             list = new JsonArray();
@@ -23,7 +23,7 @@ final public class ErrorBuilder {
         return this;
     }
 
-    public ErrorBuilder put(String field, String message) {
+    public ErrorBuilder put(final String field, final String message) {
         return put(field, new JsonObject().put(QC.message, message));
     }
 
@@ -31,7 +31,7 @@ final public class ErrorBuilder {
         return new JsonObject(map(errorMap));
     }
 
-    private Map<String, Object> map(Map map) {
+    private Map<String, Object> map(final Map map) {
         return map;
     }
 
