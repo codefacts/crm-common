@@ -5,4 +5,11 @@ package io.crm.util;
  */
 public class Touple1<T1> {
     public T1 t1;
+
+    public Touple1() {
+    }
+
+    public Touple1(T1 t1) {
+        this.t1 = t1;
+    }
 }
