@@ -4,6 +4,8 @@ package io.crm;
  * Created by someone on 01/09/2015.
  */
 final public class Events {
+    public static final String JSON_VALIDATOR = "campudus.jsonvalidator";
+
     public static final String CREATE_NEW_ADMIN = "create-new-admin";
     public static final String CREATE_NEW_HEAD_OFFICE = "create-new-head-office";
 

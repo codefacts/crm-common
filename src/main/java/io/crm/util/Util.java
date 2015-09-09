@@ -1,15 +1,20 @@
 package io.crm.util;
 
+import com.google.common.collect.ImmutableList;
+import io.crm.Events;
 import io.crm.QC;
 import io.crm.util.exceptions.InvalidArgumentException;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import org.bson.Document;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Created by sohan on 8/1/2015.
@@ -63,6 +68,14 @@ final public class Util {
         return list;
     }
 
+    public static Date parseMongoDate(final String isoString, final Date defaultValue) {
+        try {
+            return mongoDateFormat().parse(isoString);
+        } catch (final ParseException ex) {
+            return defaultValue;
+        }
+    }
+
     public static Date parseMongoDate(final String isoString) throws ParseException {
         return mongoDateFormat().parse(isoString);
     }
@@ -106,7 +119,7 @@ final public class Util {
     public static Date parseMongoDate(final JsonObject jsonObject, final Date defaultValue) {
         try {
             return parseMongoDate(jsonObject.getString(QC.$date));
-        } catch (Exception ex) {
+        } catch (ParseException | NullPointerException ex) {
             return defaultValue;
         }
     }
@@ -145,7 +158,57 @@ final public class Util {
         return string == null ? "" : string.trim();
     }
 
-    public static boolean isEmptyOrNull(String value) {
+    public static boolean isEmptyOrNullOrSpaces(String value) {
         return value == null || value.trim().isEmpty();
+    }
+
+    public static List<String> listEvents() {
+        final ImmutableList.Builder<String> builder = ImmutableList.builder();
+        for (Field f : Events.class.getDeclaredFields()) {
+            if (Modifier.isStatic(f.getModifiers())) {
+                try {
+                    builder.add(f.get("").toString());
+                } catch (IllegalAccessException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }
+        return builder.build();
+    }
+
+    public static <T> T as(Object obj, Class<T> tClass) {
+        return tClass.cast(obj);
+    }
+
+    public static JsonObject toJsonObject(final Object obj) {
+        return toJsonObject(obj, null);
+    }
+
+    public static JsonObject toJsonObject(final Object obj, final JsonObject jsonObject) {
+        return obj instanceof JsonObject ? (JsonObject) obj : obj instanceof Map ? new JsonObject((Map<String, Object>) obj) : jsonObject;
+    }
+
+    public static JsonArray toJsonArray(final Object obj) {
+        return toJsonArray(obj, null);
+    }
+
+    public static JsonArray toJsonArray(final Object obj, final JsonArray jsonArray) {
+        return obj instanceof JsonArray ? (JsonArray) obj : obj instanceof List ? new JsonArray((List) obj) : jsonArray;
+    }
+
+    public static List<Long> listIds(List<JsonObject> list) {
+        return list.stream().map(v -> v.getLong(QC.id)).collect(Collectors.toList());
+    }
+
+    public static List<Long> listIds(JsonArray array) {
+        return array.stream().map(v -> toJsonObject(v).getLong(QC.id)).collect(Collectors.toList());
+    }
+
+    public static List<String> listIdValuePairs(List<JsonObject> list) {
+        return list.stream().map(v -> String.format("[ID: %d, Name: %s]", v.getLong(QC.id), v.getString(QC.name))).collect(Collectors.toList());
+    }
+
+    public static List<String> listIdValuePairs(JsonArray array) {
+        return array.stream().map(v -> String.format("[ID: %d, Name: %s]", toJsonObject(v).getLong(QC.id), toJsonObject(v).getString(QC.name))).collect(Collectors.toList());
     }
 }
