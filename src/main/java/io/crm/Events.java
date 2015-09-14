@@ -68,4 +68,6 @@ final public class Events {
     public static final String CAMPAIGN_UPDATED = "CAMPAIGN_UPDATED";
     public static final String CREATE_CAMPAIGN = "CREATE_CAMPAIGN";
     public static final String UPDATE_CAMPAIGN = "UPDATE_CAMPAIGN";
+    public static final String VALIDATE_AREA = "VALIDATE_AREA";
+    public static final String VALIDATE_CAMPAIGN = "VALIDATE_CAMPAIGN";
 }
