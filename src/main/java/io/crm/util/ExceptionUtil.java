@@ -85,7 +85,7 @@ final public class ExceptionUtil {
     }
 
     public static void fail(final Message message, final Throwable throwable) {
-        message.fail(FailureCode.InternalServerError.code, throwable.getMessage());
+        if (message != null) message.fail(FailureCode.InternalServerError.code, throwable.getMessage());
         System.out.println("FAILING MESSAGE: " + message + " <<>> CAUSE: " + throwable.getMessage());
     }
 

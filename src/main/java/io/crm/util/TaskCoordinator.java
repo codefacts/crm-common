@@ -39,7 +39,7 @@ final public class TaskCoordinator {
             count--;
             if (r.failed()) {
                 error = r.cause();
-                if (message != null) fail(message, r.cause());
+                fail(message, r.cause());
             } else {
                 if (consumer != null) try {
                     consumer.accept(r.result());
@@ -59,7 +59,7 @@ final public class TaskCoordinator {
             if (r.failed()) {
                 count--;
                 error = r.cause();
-                if (message != null) fail(message, r.cause());
+                fail(message, r.cause());
             } else {
                 if (consumer != null) try {
                     consumer.accept(r.result());
@@ -152,7 +152,7 @@ final public class TaskCoordinator {
 
     public void signalError(final Throwable throwable) {
         error = throwable;
-        if (message != null) fail(message, error);
+        fail(message, error);
         countdown();
     }
 }

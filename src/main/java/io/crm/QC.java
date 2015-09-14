@@ -56,26 +56,11 @@ final public class QC {
     public static final String br = "br";
     public static final String brand = "brand";
     public static final String prefix = "prefix";
-    public static final String brandId = concat(brand, id);
     public static final String required = "required";
     public static final String $date = "$date";
     public static final String $in = "$in";
     public static final String areaCoordinator = "areaCoordinator";
-    public static final String areaCoordinatorId = concat(areaCoordinator, id);
-    public static final String locationId = concat(location, id);
     public static final String brSupervisor = "brSupervisor";
-    public static final String brSupervisorId = concat(brSupervisor, id);
-    public static final String areaRegionId = concat(area, region, id);
-    public static final String distributionHouseAreaId = concat(distributionHouse, area, id);
-    public static final String locationDistributionHouseId = concat(location, distributionHouse, id);
-    public static final String brDistributionHouseId = concat(br, distributionHouse, id);
-    public static final String brSupervisorDistributionHouseId = concat(brSupervisor, distributionHouse, id);
-    public static final String areaCoordinatorAreaId = concat(areaCoordinator, area, id);
-    public static final String regionId = region + "." + id;
-    public static final String areaId = area + "." + id;
-    public static final String houseId = concat(distributionHouse, id);
-    public static final String brId = concat(br, id);
-    public static final String userTypeId = concat(userType, id);
 
     public static final String contactCount = "contactCount";
     public static final String ptrCount = "ptrCount";
@@ -91,6 +76,34 @@ final public class QC {
     public static final String _all_area_house_id = "_all_area_house_id";
     public static final String _all_area_ac_id = "_all_area_ac_id";
     public static final String tree = "tree";
+    public static final String parent = "parent";
+    public static final String closeDate = "closeDate";
+    public static final String launchDate = "launchDate";
+    public static final String salaryStartDate = "salaryStartDate";
+    public static final String salaryEndDate = "salaryEndDate";
+    public static final String invalidValue = "invalidValue";
+    public static final String constraintDescriptor = "constraintDescriptor";
+    public static final String messageTemplate = "messageTemplate";
+    public static final String propertyPath = "propertyPath";
+    public static final String rootBean = "rootBean";
+    public static final String rootBeanClass = "rootBeanClass";
+    public static final String leafBean = "leafBean";
+
+    public static final String brandId = concat(brand, id);
+    public static final String areaCoordinatorId = concat(areaCoordinator, id);
+    public static final String locationId = concat(location, id);
+    public static final String brSupervisorId = concat(brSupervisor, id);
+    public static final String areaRegionId = concat(area, region, id);
+    public static final String distributionHouseAreaId = concat(distributionHouse, area, id);
+    public static final String locationDistributionHouseId = concat(location, distributionHouse, id);
+    public static final String brDistributionHouseId = concat(br, distributionHouse, id);
+    public static final String brSupervisorDistributionHouseId = concat(brSupervisor, distributionHouse, id);
+    public static final String areaCoordinatorAreaId = concat(areaCoordinator, area, id);
+    public static final String regionId = concat(region, id);
+    public static final String areaId = concat(area, id);
+    public static final String houseId = concat(distributionHouse, id);
+    public static final String brId = concat(br, id);
+    public static final String userTypeId = concat(userType, id);
 
     public static final String concat(String... strings) {
         return String.join(".", strings);
