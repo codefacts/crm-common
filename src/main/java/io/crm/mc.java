@@ -9,15 +9,15 @@ public enum mc {
     areas("area", "Area"),
     brands("brand", "Region"),
     clients("client", "Client"),
-    consumer_contacts("consumer_contact", "Consumer Contact"),
+    consumerContacts("consumer_contact", "Consumer Contact"),
     consumers("consumer", "Consumer"),
-    distribution_houses("distributionHouse", "Distribution House"),
+    distributionHouses("distributionHouse", "Distribution House"),
     employees("employee", "Employee"),
     regions("region", "Region"),
     locations("location", "Location"),
     campaigns("campaign", "Campaign"),
-    user_types("userType", "User Type"),
-    user_indexes("user_index", "User Index", -1, true);
+    userTypes("userType", "User Type"),
+    userIndexes("user_index", "User Index", -1, true);
 
     public final String label;
     public final String fieldName;
