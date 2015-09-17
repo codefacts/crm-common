@@ -5,11 +5,11 @@ package io.crm.model;
  */
 public enum EmployeeType {
     admin(1, "ad", "Admin"),
-    head_office(2, "ho", "Head Office User"),
-    area_coordinator(3, "ac", "Area Coordinator"),
-    br_supervisor(4, "sp", "Br Supervisor"),
-    call_operator(5, "co", "Call Operator"),
-    call_center_supervisor(6, "cs", "Call Center Supervisor"),
+    headOffice(2, "ho", "Head Office User"),
+    areaCoordinator(3, "ac", "Area Coordinator"),
+    brSupervisor(4, "sp", "Br Supervisor"),
+    callOperator(5, "co", "Call Operator"),
+    callCenterSupervisor(6, "cs", "Call Center Supervisor"),
     br(7, "br", "BR");
 
     public final Long id;
