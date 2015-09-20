@@ -1,11 +1,14 @@
 package io.crm.util;
 
+import com.google.common.collect.Multimap;
 import io.crm.QC;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 
+import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by someone on 18/08/2015.
@@ -27,11 +30,16 @@ final public class ErrorBuilder {
         return put(field, new JsonObject().put(QC.message, message));
     }
 
-    public JsonObject get() {
-        return new JsonObject(map(errorMap));
+    public ErrorBuilder putAll(final Collection<JsonObject> violations) {
+
+        return this;
     }
 
-    private Map<String, Object> map(final Map map) {
+    public JsonObject build() {
+        return new JsonObject(cast(errorMap));
+    }
+
+    private Map<String, Object> cast(final Map map) {
         return map;
     }
 
