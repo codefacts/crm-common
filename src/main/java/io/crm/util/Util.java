@@ -20,6 +20,8 @@ import java.util.stream.Collectors;
  * Created by sohan on 8/1/2015.
  */
 final public class Util {
+    public static final JsonArray EMPTY_JSON_ARRAY = new JsonArray(Collections.EMPTY_LIST);
+    public static final JsonObject EMPTY_JSON_OBJECT = new JsonObject(Collections.EMPTY_MAP);
     public static final String mongoDateFormatString = "yyyy-MM-dd'T'HH:mm:ss'Z'";
     public static final ThreadLocal<DateFormat> DATE_FORMAT_THREAD_LOCAL = new ThreadLocal<DateFormat>() {
         @Override
