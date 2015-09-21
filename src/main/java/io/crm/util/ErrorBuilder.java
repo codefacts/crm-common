@@ -5,21 +5,18 @@ import io.crm.QC;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 
-import java.util.Collection;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by someone on 18/08/2015.
  */
 final public class ErrorBuilder {
-    private final Map<String, JsonArray> errorMap = new LinkedHashMap<>();
+    private final Map<String, List<JsonObject>> errorMap = new LinkedHashMap<>();
 
     public ErrorBuilder put(final String field, final JsonObject error) {
-        JsonArray list = errorMap.get(field);
+        List<JsonObject> list = errorMap.get(field);
         if (list == null) {
-            list = new JsonArray();
+            list = new ArrayList<>();
             errorMap.put(field, list);
         }
         list.add(error);
@@ -31,7 +28,8 @@ final public class ErrorBuilder {
     }
 
     public ErrorBuilder putAll(final Collection<JsonObject> violations) {
-
+        violations.forEach(v -> put(
+                v.getString(QC.field), v));
         return this;
     }
 

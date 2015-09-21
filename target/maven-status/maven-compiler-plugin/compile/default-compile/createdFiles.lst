@@ -10,4 +10,6 @@ io\crm\util\Touple9.class
 io\crm\util\Touple10.class
 io\crm\util\Touple6.class
 io\crm\util\Touple3.class
+io\crm\intfs\BiConsumerUnchecked.class
+io\crm\Operation.class
 io\crm\util\Touple12.class

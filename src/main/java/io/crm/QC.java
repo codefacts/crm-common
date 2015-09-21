@@ -105,6 +105,9 @@ final public class QC {
     public static final String brId = concat(br, id);
     public static final String userTypeId = concat(userType, id);
     public static final String db_name = "db_name";
+    public static final String violations = "violations";
+    public static final String data = "data";
+    public static final String operation = "operation";
 
     public static final String concat(String... strings) {
         return String.join(".", strings);
