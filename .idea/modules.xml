@@ -3,6 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/common-crm.iml" filepath="$PROJECT_DIR$/common-crm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../crm-core/core.iml" filepath="$PROJECT_DIR$/../crm-core/core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../crm-query/query.iml" filepath="$PROJECT_DIR$/../crm-query/query.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../schema-validation/schema-validation.iml" filepath="$PROJECT_DIR$/../schema-validation/schema-validation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../crm-web/web.iml" filepath="$PROJECT_DIR$/../crm-web/web.iml" />
     </modules>
   </component>
 </project>
