@@ -1,38 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d163bfc-fd49-42ac-89b1-b7377f1bdc19" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/ApiEvents.java" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\MainVerticle.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\service\ApiService.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/AllModuleStarterVerticle.class" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/AllModuleStarterVerticle.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-core/target/classes/io/crm/core/codec/ArrayListToJsonArrayCodec.class" afterPath="$PROJECT_DIR$/../crm-core/target/classes/io/crm/core/codec/ArrayListToJsonArrayCodec.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-query/target/classes/io/crm/query/codec/ArrayListToJsonArrayCodec.class" afterPath="$PROJECT_DIR$/../crm-query/target/classes/io/crm/query/codec/ArrayListToJsonArrayCodec.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-core/target/classes/io/crm/core/service/BrandService.class" afterPath="$PROJECT_DIR$/../crm-core/target/classes/io/crm/core/service/BrandService.class" />
+    <list default="true" id="3d163bfc-fd49-42ac-89b1-b7377f1bdc19" name="Default" comment="Web">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/ApiEvents.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/service/callreview/ApiService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/images/Thumbs.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/images/Thumbs.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/fonts/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.ar.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.az.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.bg.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.bs.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.ca.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.cs.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/css/bootstrap-datepicker.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.cy.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.da.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.de.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.el.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.en-GB.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.es.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.et.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.eu.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.fa.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.fi.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.fo.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.fr-CH.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.fr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.gl.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.he.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.hr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.hu.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.hy.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.id.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.is.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.it-CH.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.it.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.ja.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/js/bootstrap-datepicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.ka.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.kh.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.kk.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.kr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.lt.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.lv.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.me.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/css/bootstrap-datepicker.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/js/bootstrap-datepicker.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.mk.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.ms.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.nb.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.nl-BE.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.nl.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.no.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.pl.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.pt-BR.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.pt.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.ro.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.rs-latin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.rs.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.ru.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.sk.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.sl.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.sq.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.sr-latin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.sr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/css/bootstrap-datepicker.standalone.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/css/bootstrap-datepicker.standalone.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.sv.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.sw.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.th.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.tr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.uk.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.vi.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.zh-CN.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.zh-TW.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/css/bootstrap-datepicker3.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/css/bootstrap-datepicker3.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/css/bootstrap-datepicker3.standalone.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/components/bootstrap-datepicker-1.4.1/css/bootstrap-datepicker3.standalone.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/static/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/controller/CallController.class" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/controller/CallController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-core/target/classes/io/crm/core/service/DistributionHouseService.class" afterPath="$PROJECT_DIR$/../crm-core/target/classes/io/crm/core/service/DistributionHouseService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/io/crm/util/ErrorBuilder.class" afterPath="$PROJECT_DIR$/target/classes/io/crm/util/ErrorBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/controller/EventPublisherController.class" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/controller/EventPublisherController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/EventPublisherForm.class" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/EventPublisherForm.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/view/EventPublisherForm.class" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/view/EventPublisherForm.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/controller/HomeController.class" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/controller/HomeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-core/target/classes/io/crm/core/service/ImportService.class" afterPath="$PROJECT_DIR$/../crm-core/target/classes/io/crm/core/service/ImportService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/controller/LoginController.class" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/controller/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-core/target/classes/io/crm/core/MainVerticle.class" afterPath="$PROJECT_DIR$/../crm-core/target/classes/io/crm/core/MainVerticle.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../schema-validation/target/classes/io/crm/schema/validation/MainVerticle.class" afterPath="$PROJECT_DIR$/../schema-validation/target/classes/io/crm/schema/validation/MainVerticle.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-core/target/classes/io/crm/core/service/RegionService.class" afterPath="$PROJECT_DIR$/../crm-core/target/classes/io/crm/core/service/RegionService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/SidebarTemplate.class" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/SidebarTemplate.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-core/target/classes/io/crm/core/service/TownService.class" afterPath="$PROJECT_DIR$/../crm-core/target/classes/io/crm/core/service/TownService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-core/target/classes/io/crm/core/service/UserService$1.class" afterPath="$PROJECT_DIR$/../crm-core/target/classes/io/crm/core/service/UserService$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-core/target/classes/io/crm/core/service/UserService.class" afterPath="$PROJECT_DIR$/../crm-core/target/classes/io/crm/core/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-core/target/classes/io/crm/core/service/UserTypeService.class" afterPath="$PROJECT_DIR$/../crm-core/target/classes/io/crm/core/service/UserTypeService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/io/crm/util/Util.class" afterPath="$PROJECT_DIR$/target/classes/io/crm/util/Util.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../schema-validation/target/classes/io/crm/schema/validation/service/ValidatorService.class" afterPath="$PROJECT_DIR$/../schema-validation/target/classes/io/crm/schema/validation/service/ValidatorService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/MainVerticle.class" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/MainVerticle.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/controller/CallController.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/controller/CallController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/controller/LoginController.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/controller/LoginController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/MainVerticle.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/MainVerticle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/resources/templates/en_US/filters-panel.html" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/templates/en_US/filters-panel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/target/classes/templates/en_US/filters-panel.html" afterPath="$PROJECT_DIR$/../crm-web/target/classes/templates/en_US/filters-panel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/resources/templates/en_US/page.html" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/templates/en_US/page.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\IdeaProjects\crm-web\src\main\java\io\crm\web\service\ApiService.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/service/callreview/ApiService.java" />
     </list>
     <ignored path="common-crm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,8 +128,8 @@
       <file leaf-file-name="MainVerticle.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/MainVerticle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.9655173">
-              <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="210" column="5" selection-start-line="210" selection-start-column="5" selection-end-line="210" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,78 +137,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/controller/HomeController.java">
+      <file leaf-file-name="CallController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/controller/CallController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <caret line="32" column="89" selection-start-line="32" selection-start-column="89" selection-end-line="32" selection-end-column="89" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExceptionUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/util/ExceptionUtil.java">
+      <file leaf-file-name="FiltersPanelTemplateBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/template/FiltersPanelTemplateBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
-              <folding />
+              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+              <folding>
+                <element signature="e#159#160#0" expanded="true" />
+                <element signature="e#193#194#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DashboardTemplate.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/template/DashboardTemplate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/controller/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6953405">
-              <caret line="50" column="15" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApiService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/service/callreview/ApiService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="58" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApiEvents.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/ApiEvents.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Uris.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/Uris.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/App.java">
+      <file leaf-file-name="FiltersPanelTemplate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/template/FiltersPanelTemplate.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
@@ -152,11 +170,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AllModuleStarterVerticle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/AllModuleStarterVerticle.java">
+      <file leaf-file-name="filters-panel.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/resources/templates/en_US/filters-panel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.31954888">
+              <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/resources/templates/en_US/page.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.269231">
+              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -199,8 +227,11 @@
         <option value="$PROJECT_DIR$/../crm-web/pom.xml" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/ApiEvents.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/service/callreview/ApiService.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/MainVerticle.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/controller/CallController.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/MainVerticle.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/resources/templates/en_US/page.html" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/resources/templates/en_US/filters-panel.html" />
       </list>
     </option>
   </component>
@@ -433,6 +464,160 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="en_US" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common-crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crm-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common-crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crm-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap-datepicker-1.4.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common-crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crm-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap-datepicker-1.4.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common-crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crm-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap-datepicker-1.4.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common-crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crm-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -865,7 +1050,13 @@
       <option name="project" value="LOCAL" />
       <updated>1443548685182</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Web">
+      <created>1443580723643</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1443580723643</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1147,34 +1338,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/controller/CallController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/AllModuleStarterVerticle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/Uris.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -1211,16 +1378,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/MainVerticle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9655173">
-          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/controller/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1231,8 +1388,77 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6953405">
+        <state vertical-scroll-proportion="0.0">
           <caret line="50" column="15" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21326165">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/Uris.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15232974">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/controller/CallController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="89" selection-start-line="32" selection-start-column="89" selection-end-line="32" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/template/FiltersPanelTemplateBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding>
+            <element signature="e#159#160#0" expanded="true" />
+            <element signature="e#193#194#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/template/FiltersPanelTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/MainVerticle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="210" column="5" selection-start-line="210" selection-start-column="5" selection-end-line="210" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/resources/templates/en_US/page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.269231">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/resources/templates/en_US/filters-panel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31954888">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
           <folding />
         </state>
       </provider>
