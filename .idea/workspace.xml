@@ -2,23 +2,166 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d163bfc-fd49-42ac-89b1-b7377f1bdc19" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/css/bootstrap/BootstrapCss.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/css/bootstrap/ButtonClasses.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/input/ButtonTemplate.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/input/ButtonTemplateBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/ColumnTemplate.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/ColumnTemplateBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/css/CssClass.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/input/DateInputTemplate.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/input/DateInputTemplateBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/input/DateRangeTemplate.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/input/DateRangeTemplateBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/form/DefaultFooterBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/controller/FileUploadController$StatusCode.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/controller/FileUploadController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/service/callreview/FileUploadService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/FileUploadTemplate.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/model/Footer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/form/FormRowBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/FormTemplate.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/FormTemplateBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/model/Header.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/form/InputBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/JavascriptRedirect.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/css/MyButtonClasses.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/input/NumberTemplate.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/input/NumberTemplateBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/util/Pagination.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/pagination/PaginationFirstLastButtonTemplate.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/pagination/PaginationFirstLastButtonTemplateBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/pagination/PaginationItemTemplate.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/pagination/PaginationItemTemplateBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/pagination/PaginationTemplate.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/pagination/PaginationTemplateBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/form/RangeInputBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/input/RangeTemplate.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/input/RangeTemplateBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/RowTemplate.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/RowTemplateBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/input/SelectTemplate.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/input/SelectTemplateBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/table/TableBody.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/table/TableBodyBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/table/TableCell.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/table/TableCellBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/css/bootstrap/TableClasses.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/table/TableFooter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/table/TableFooterBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/table/TableHeader.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/table/TableHeaderBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/table/TableRow.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/table/TableRowBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/table/TableTemplate.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/table/TableTemplateBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/input/TextInputTemplate.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/input/TextInputTemplateBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/table/Th.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/template/table/ThBuilder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/util/WebUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/fonts/glyphicons-halflings-regular.woff" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/template/JavascriptRedirect.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vaadincrm/.idea/libraries/Maven__io_crm_common_1_0_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vaadincrm/.idea/libraries/Maven__io_crm_core_1_0_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vaadincrm/.idea/libraries/Maven__io_crm_query_1_0_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vaadincrm/.idea/libraries/Maven__io_crm_schema_validation_1_0_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vaadincrm/.idea/libraries/Maven__io_crm_web_1_0_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vaadincrm/.idea/libraries/Maven__io_vertx_vertx_auth_common_3_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vaadincrm/.idea/libraries/Maven__io_vertx_vertx_lang_js_3_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vaadincrm/.idea/libraries/Maven__io_vertx_vertx_mongo_client_3_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vaadincrm/.idea/libraries/Maven__io_vertx_vertx_web_3_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vaadincrm/.idea/libraries/Maven__javax_el_javax_el_api_2_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vaadincrm/.idea/libraries/Maven__org_glassfish_web_javax_el_2_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vaadincrm/.idea/libraries/Maven__org_mongodb_bson_3_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vaadincrm/.idea/libraries/Maven__org_mongodb_mongodb_driver_async_3_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vaadincrm/.idea/libraries/Maven__org_mongodb_mongodb_driver_core_3_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../vaadincrm/.idea/libraries/Maven__org_watertemplate_watertemplate_engine_custom_1_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/public/css/app.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.ar.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.az.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.bg.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.bs.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.ca.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.cs.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/css/bootstrap-datepicker.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.cy.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.da.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.de.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.el.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.en-GB.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.es.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.et.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.eu.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.fa.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.fi.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.fo.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.fr-CH.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.fr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.gl.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.he.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.hr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.hu.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.hy.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.id.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.is.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.it-CH.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.it.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.ja.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/js/bootstrap-datepicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.ka.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.kh.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.kk.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.kr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.lt.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.lv.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.me.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/css/bootstrap-datepicker.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/js/bootstrap-datepicker.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.mk.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.ms.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.nb.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.nl-BE.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.nl.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.no.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.pl.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.pt-BR.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.pt.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.ro.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.rs-latin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.rs.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.ru.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.sk.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.sl.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.sq.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.sr-latin.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.sr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/css/bootstrap-datepicker.standalone.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/css/bootstrap-datepicker.standalone.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.sv.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.sw.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.th.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.tr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.uk.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.vi.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.zh-CN.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/locales/bootstrap-datepicker.zh-TW.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/css/bootstrap-datepicker3.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/css/bootstrap-datepicker3.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/css/bootstrap-datepicker3.standalone.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/components/bootstrap-datepicker-1.4.1/css/bootstrap-datepicker3.standalone.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/templates/en_US/button.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/templates/en_US/column.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/templates/en_US/date-range.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/templates/en_US/date.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/templates/en_US/file-upload.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/templates/en_US/form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/static/fonts/glyphicons-halflings-regular.svg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/templates/en_US/javascript-redirect.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/templates/en_US/javascript-redirect.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/templates/en_US/number.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/templates/en_US/pagination-first-last-button.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/templates/en_US/pagination-item.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/templates/en_US/pagination.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/templates/en_US/range.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/templates/en_US/row.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/templates/en_US/select.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/templates/en_US/table-body.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/templates/en_US/table-cell.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/templates/en_US/table-footer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/templates/en_US/table-header.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/templates/en_US/table-row.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/templates/en_US/table.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/templates/en_US/text-input.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/target/classes/templates/en_US/th.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/AllModuleStarterVerticle.class" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/AllModuleStarterVerticle.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/ApiEvents.class" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/ApiEvents.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/service/callreview/ApiService.class" afterPath="$PROJECT_DIR$/../crm-web/target/classes/io/crm/web/service/callreview/ApiService.class" />
@@ -44,9 +187,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/template/Page.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/template/Page.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/ST.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/ST.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/resources/templates/en_US/file-upload.html" afterPath="$PROJECT_DIR$/../crm-web/src/main/resources/templates/en_US/file-upload.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../vaadincrm/vaadincrm.iml" afterPath="$PROJECT_DIR$/../vaadincrm/vaadincrm.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../vaadincrm/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../vaadincrm/.idea/workspace.xml" />
     </list>
     <ignored path="common-crm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,8 +218,8 @@
       <file leaf-file-name="FileUploadController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/controller/FileUploadController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6072607">
-              <caret line="181" column="0" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.49850747">
+              <caret line="169" column="18" selection-start-line="169" selection-start-column="18" selection-end-line="169" selection-end-column="18" />
               <folding>
                 <element signature="e#7958#7959#0" expanded="true" />
                 <element signature="e#7997#7998#0" expanded="true" />
@@ -913,7 +1054,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38054606" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38054606" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -928,7 +1069,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43515357" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43515357" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -978,7 +1119,8 @@
     <MESSAGE value="Module Fix" />
     <MESSAGE value="Web" />
     <MESSAGE value="Remove dependency of io.crm.qury and core" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove dependency of io.crm.qury and core" />
+    <MESSAGE value="File Uploader Page Done" />
+    <option name="LAST_COMMIT_MESSAGE" value="File Uploader Page Done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1393,8 +1535,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/controller/FileUploadController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6072607">
-          <caret line="181" column="0" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.49850747">
+          <caret line="169" column="18" selection-start-line="169" selection-start-column="18" selection-end-line="169" selection-end-column="18" />
           <folding>
             <element signature="e#7958#7959#0" expanded="true" />
             <element signature="e#7997#7998#0" expanded="true" />
