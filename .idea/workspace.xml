@@ -2,210 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d163bfc-fd49-42ac-89b1-b7377f1bdc19" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\AllModuleStarterVerticle.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\ApiEvents.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\App.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\MainVerticle.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\ST.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\Uris.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\controller\CallController.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\controller\EventPublisherController.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\controller\FileUploadController$StatusCode.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\controller\FileUploadController.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\controller\HomeController.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\controller\LoginController.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\css\CssClass.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\css\MyButtonClasses.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\css\bootstrap\BootstrapCss.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\css\bootstrap\ButtonClasses.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\css\bootstrap\TableClasses.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\excpt\ApiServiceException.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\service\callreview\ApiService.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\service\callreview\FileUploadService.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\CallDetailsTemplate.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\CallDetailsTemplateBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\ColumnTemplate.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\ColumnTemplateBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\DashboardTemplate.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\DashboardTemplateBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\DataPanelTemplate.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\DataPanelTemplateBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\EmptyTemplate.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\EventPublisherForm.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\FileUploadTemplate.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\FiltersPanelTemplate.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\FiltersPanelTemplateBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\FormTemplate.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\FormTemplateBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\JavascriptRedirect.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\LoginTemplate.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\Page.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\PageBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\RowTemplate.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\RowTemplateBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\SidebarTemplate.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\TemplateUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\form\DefaultFooterBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\form\FormRowBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\form\InputBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\form\RangeInputBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\input\ButtonTemplate.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\input\ButtonTemplateBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\input\DateInputTemplate.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\input\DateInputTemplateBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\input\DateRangeTemplate.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\input\DateRangeTemplateBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\input\NumberTemplate.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\input\NumberTemplateBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\input\RangeTemplate.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\input\RangeTemplateBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\input\SelectTemplate.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\input\SelectTemplateBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\input\TextInputTemplate.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\input\TextInputTemplateBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\model\Footer.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\model\Header.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\pagination\PaginationFirstLastButtonTemplate.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\pagination\PaginationFirstLastButtonTemplateBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\pagination\PaginationItemTemplate.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\pagination\PaginationItemTemplateBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\pagination\PaginationTemplate.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\pagination\PaginationTemplateBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\table\TableBody.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\table\TableBodyBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\table\TableCell.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\table\TableCellBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\table\TableFooter.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\table\TableFooterBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\table\TableHeader.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\table\TableHeaderBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\table\TableRow.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\table\TableRowBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\table\TableTemplate.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\table\TableTemplateBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\table\Th.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\template\table\ThBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\util\Pagination.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\io\crm\web\util\WebUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\public\css\app.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\public\js\dashboard.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\css\bootstrap-datepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\css\bootstrap-datepicker.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\css\bootstrap-datepicker.standalone.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\css\bootstrap-datepicker.standalone.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\css\bootstrap-datepicker3.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\css\bootstrap-datepicker3.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\css\bootstrap-datepicker3.standalone.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\css\bootstrap-datepicker3.standalone.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\js\bootstrap-datepicker.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\js\bootstrap-datepicker.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.ar.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.az.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.bg.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.bs.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.ca.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.cs.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.cy.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.da.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.de.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.el.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.en-GB.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.es.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.et.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.eu.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.fa.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.fi.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.fo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.fr-CH.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.fr.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.gl.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.he.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.hr.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.hu.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.hy.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.id.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.is.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.it-CH.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.it.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.ja.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.ka.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.kh.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.kk.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.kr.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.lt.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.lv.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.me.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.mk.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.ms.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.nb.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.nl-BE.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.nl.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.no.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.pl.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.pt-BR.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.pt.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.ro.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.rs-latin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.rs.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.ru.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.sk.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.sl.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.sq.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.sr-latin.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.sr.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.sv.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.sw.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.th.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.tr.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.uk.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.vi.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.zh-CN.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\components\bootstrap-datepicker-1.4.1\locales\bootstrap-datepicker.zh-TW.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\css\bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\css\bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\fonts\glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\fonts\glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\fonts\glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\fonts\glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\fonts\glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\images\Thumbs.db" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\images\collapse.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\js\bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\static\js\jquery-2.1.4.min.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\button.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\call-details.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\column.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\dashboard.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\data-panel.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\date-range.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\date.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\empty.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\event-publish-form.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\file-upload.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\filters-panel.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\form.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\javascript-redirect.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\login-form.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\number.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\page.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\pagination-first-last-button.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\pagination-item.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\pagination.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\range.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\row.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\select.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\sidebar.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\table-body.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\table-cell.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\table-footer.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\table-header.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\table-row.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\table.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\text-input.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\classes\templates\en_US\th.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\maven-archiver\pom.properties" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\test-classes\TestWater.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\IdeaProjects\crm-web\target\web-1.0-SNAPSHOT.jar" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="common-crm.iws" />
@@ -460,6 +256,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -857,8 +655,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1163,7 +959,13 @@
       <option name="project" value="LOCAL" />
       <updated>1443836042048</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="br_checker_app jar file creating with maven-assembly-plugin">
+      <created>1443840471860</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1443840471860</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1171,32 +973,32 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38054606" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34039333" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28668943" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2526475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25189108" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5631399" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38054606" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28668943" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5631399" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1234,7 +1036,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="85" column="20" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1276,8 +1077,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="57" column="54" selection-start-line="57" selection-start-column="54" selection-end-line="57" selection-end-column="54" />
           <folding>
-            <element signature="e#3028#3029#0" expanded="true" />
-            <element signature="e#3096#3097#0" expanded="true" />
+            <element signature="e#3028#3029#0" expanded="false" />
+            <element signature="e#3096#3097#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1287,7 +1088,7 @@
         <state vertical-scroll-proportion="0.38345864">
           <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
           <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1296,9 +1097,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36021507">
           <caret line="40" column="14" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1306,9 +1104,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4516129">
           <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1316,7 +1111,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1340,7 +1134,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25612053">
           <caret line="45" column="55" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1348,7 +1141,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.5555553">
           <caret line="76" column="49" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1356,7 +1148,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1364,9 +1155,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1374,7 +1162,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1382,7 +1169,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1390,7 +1176,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1398,10 +1183,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
-          <folding>
-            <element signature="e#529#530#0" expanded="true" />
-            <element signature="e#584#585#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1409,7 +1190,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1417,7 +1197,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1425,7 +1204,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1433,7 +1211,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="59" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1441,10 +1218,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
-          <folding>
-            <element signature="e#220#221#0" expanded="true" />
-            <element signature="e#271#272#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1452,7 +1225,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1460,7 +1232,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1468,7 +1239,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1476,7 +1246,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1484,10 +1253,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="59" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
-          <folding>
-            <element signature="e#308#309#0" expanded="true" />
-            <element signature="e#376#377#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1495,7 +1260,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1503,7 +1267,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1511,7 +1274,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1519,7 +1281,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.03046595">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1527,7 +1288,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1535,10 +1295,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
-          <folding>
-            <element signature="e#869#870#0" expanded="true" />
-            <element signature="e#922#923#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1546,7 +1302,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1554,7 +1309,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1562,10 +1316,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-          <folding>
-            <element signature="e#643#644#0" expanded="true" />
-            <element signature="e#698#699#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1573,10 +1323,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
-          <folding>
-            <element signature="e#914#915#0" expanded="true" />
-            <element signature="e#968#969#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1584,10 +1330,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
-          <folding>
-            <element signature="e#920#921#0" expanded="true" />
-            <element signature="e#975#976#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1595,7 +1337,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1603,10 +1344,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
-          <folding>
-            <element signature="e#649#650#0" expanded="true" />
-            <element signature="e#708#709#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1614,7 +1351,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="68" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1622,7 +1358,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1630,7 +1365,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1638,7 +1372,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1663,8 +1396,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
           <folding>
-            <element signature="e#954#955#0" expanded="true" />
-            <element signature="e#1015#1016#0" expanded="true" />
+            <element signature="e#954#955#0" expanded="false" />
+            <element signature="e#1015#1016#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1674,8 +1407,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="49" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
           <folding>
-            <element signature="e#883#884#0" expanded="true" />
-            <element signature="e#941#942#0" expanded="true" />
+            <element signature="e#883#884#0" expanded="false" />
+            <element signature="e#941#942#0" expanded="false" />
           </folding>
         </state>
       </provider>
