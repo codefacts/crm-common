@@ -18,6 +18,9 @@ final public class ExceptionUtil {
         try {
             runnable.run();
         } catch (final Exception e) {
+            if (e instanceof RuntimeException) {
+                throw (RuntimeException) e;
+            }
             throw new RuntimeException(e);
         }
     }
@@ -26,6 +29,9 @@ final public class ExceptionUtil {
         try {
             return runnable.call();
         } catch (final Exception e) {
+            if (e instanceof RuntimeException) {
+                throw (RuntimeException) e;
+            }
             throw new RuntimeException(e);
         }
     }
@@ -56,6 +62,55 @@ final public class ExceptionUtil {
         }
     }
 
+    public static <T> Handler<T> withCatch(final ConsumerInterface<T> consumerInterface, final ConsumerInterface<Throwable> runnable) {
+        return val -> {
+            try {
+                consumerInterface.accept(val);
+            } catch (final Exception e) {
+                try {
+                    runnable.accept(e);
+                } catch (Exception e1) {
+                    if (e instanceof RuntimeException) {
+                        throw (RuntimeException) e;
+                    }
+                    throw new RuntimeException(e);
+                }
+                if (e instanceof RuntimeException) {
+                    throw (RuntimeException) e;
+                }
+                throw new RuntimeException(e);
+            }
+        };
+    }
+
+    public static <T> Handler<T> withWebHandler(final ConsumerInterface<T> consumerInterface, final Message message) {
+        return val -> {
+            try {
+                consumerInterface.accept(val);
+            } catch (final Exception e) {
+                ExceptionUtil.fail(message, e);
+                if (e instanceof RuntimeException) {
+                    throw (RuntimeException) e;
+                }
+                throw new RuntimeException(e);
+            }
+        };
+    }
+
+    public static <T> Handler<T> withHandler(final ConsumerInterface<T> consumerInterface, final Message message) {
+        return val -> {
+            try {
+                consumerInterface.accept(val);
+            } catch (final Exception e) {
+                ExceptionUtil.fail(message, e);
+                if (e instanceof RuntimeException) {
+                    throw (RuntimeException) e;
+                }
+                throw new RuntimeException(e);
+            }
+        };
+    }
+
     public static <T> Handler<AsyncResult<T>> withReply(final ConsumerInterface<T> consumerInterface, final Message message) {
         return r -> {
             if (r.failed()) {
@@ -71,6 +126,9 @@ final public class ExceptionUtil {
             runnable.run();
         } catch (final Exception e) {
             ExceptionUtil.fail(message, e);
+            if (e instanceof RuntimeException) {
+                throw (RuntimeException) e;
+            }
             throw new RuntimeException(e);
         }
     }
@@ -80,6 +138,9 @@ final public class ExceptionUtil {
             return runnable.call();
         } catch (final Exception e) {
             ExceptionUtil.fail(message, e);
+            if (e instanceof RuntimeException) {
+                throw (RuntimeException) e;
+            }
             throw new RuntimeException(e);
         }
     }

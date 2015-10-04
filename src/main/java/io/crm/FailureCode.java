@@ -6,7 +6,8 @@ package io.crm;
 public enum FailureCode {
     validationError(1, "Validation Error"),
     BadRequest(2, "Bad Request"),
-    InternalServerError(3, "Internal Server Error");
+    InternalServerError(3, "Internal Server Error"),
+    UnknownError(4, "Unknown response from service");
 
     public final int code;
     public final String message;
