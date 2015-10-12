@@ -213,4 +213,39 @@ final public class Util {
     public static List<String> listIdValuePairs(JsonArray array) {
         return array.stream().map(v -> String.format("[ID: %d, Name: %s]", toJsonObject(v).getLong(QC.id), toJsonObject(v).getString(QC.name))).collect(Collectors.toList());
     }
+
+    public static JsonObject toJsonRecursive(final Throwable ex) {
+        if (ex == null) return null;
+        JsonObject jsonObject = exceptionToJson(ex);
+        Throwable e = ex.getCause();
+        for (; ; ) {
+            if (e == null) break;
+            final JsonObject js = exceptionToJson(e);
+            jsonObject
+                    .put(QC.cause, js);
+            jsonObject = js;
+            e = e.getCause();
+        }
+        return jsonObject;
+    }
+
+    private static JsonObject exceptionToJson(Throwable ex) {
+        final ImmutableList.Builder<JsonObject> builder = ImmutableList.builder();
+        for (StackTraceElement e : ex.getStackTrace()) {
+            builder.add(
+                    new JsonObject()
+                            .put(QC.className, e.getClassName())
+                            .put(QC.fieldName, e.getFileName())
+                            .put(QC.methodName, e.getMethodName())
+                            .put(QC.lineNumber, e.getLineNumber())
+            );
+        }
+        return
+                new JsonObject()
+                        .put(QC.fullName, ex.getClass().getName())
+                        .put(QC.simpleName, ex.getClass().getSimpleName())
+                        .put(QC.message, ex.getMessage())
+                        .put(QC.stackTrace, builder.build())
+                ;
+    }
 }

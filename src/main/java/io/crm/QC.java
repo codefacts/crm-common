@@ -108,6 +108,14 @@ final public class QC {
     public static final String violations = "violations";
     public static final String data = "data";
     public static final String operation = "operation";
+    public static final String cause = "cause";
+    public static final String fullName = "fullName";
+    public static final String simpleName = "simpleName";
+    public static final String stackTrace = "stackTrace";
+    public static final String className = "className";
+    public static final String fieldName = "fieldName";
+    public static final String methodName = "methodName";
+    public static final String lineNumber = "lineNumber";
 
     public static final String concat(String... strings) {
         return String.join(".", strings);
