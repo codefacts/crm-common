@@ -1,6 +1,6 @@
 package io.crm.util;
 
-import io.crm.util.intfs.Context;
+import io.crm.intfs.Context;
 
 import java.util.Collection;
 import java.util.HashMap;

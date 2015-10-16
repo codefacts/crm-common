@@ -1,4 +1,4 @@
-package io.crm.util.intfs;
+package io.crm.intfs;
 
 import java.io.Serializable;
 import java.util.Map;
