@@ -1,7 +1,9 @@
 package io.crm.promise.intfs;
 
+import io.crm.intfs.ConsumerInterface;
+
 /**
  * Created by someone on 16/10/2015.
  */
-public interface ThenHandler<T> {
+public interface ThenHandler<T> extends ConsumerInterface<T>, Invokable {
 }

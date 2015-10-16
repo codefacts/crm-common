@@ -10,4 +10,6 @@ public interface Defer<T> {
     public void complete();
 
     public void complete(T value);
+
+    public Promise<T> promise();
 }

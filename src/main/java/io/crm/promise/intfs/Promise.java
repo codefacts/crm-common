@@ -1,7 +1,5 @@
 package io.crm.promise.intfs;
 
-import io.crm.intfs.ConsumerInterface;
-import io.crm.intfs.FunctionAsync;
 import io.crm.intfs.FunctionUnchecked;
 
 /**
@@ -9,17 +7,17 @@ import io.crm.intfs.FunctionUnchecked;
  */
 public interface Promise<T> {
 
-    public <R> Promise<R> map(FunctionUnchecked<T, R> functionUnchecked);
+    public <R> Promise<R> map(MapHandler<T, R> functionUnchecked);
 
-    public <R> Promise<R> mapPromise(FunctionAsync<T, R> function);
+    public <R> Promise<R> mapPromise(MapPromiseHandler<T, R> function);
 
-    public Promise<Void> then(ConsumerInterface<T> valueConsumer);
+    public Promise<Void> then(ThenHandler<T> valueConsumer);
 
-    public Promise<T> success(ConsumerInterface<T> successHandler);
+    public Promise<T> success(SuccessHandler<T> successHandler);
 
-    public Promise<T> error(ConsumerInterface<Throwable> errorHandler);
+    public Promise<T> error(ErrorHandler errorHandler);
 
-    public Promise<T> complete(ConsumerInterface<Promise<T>> completeHandler);
+    public Promise<T> complete(CompleteHandler<T> completeHandler);
 
     public boolean isComplete();
 

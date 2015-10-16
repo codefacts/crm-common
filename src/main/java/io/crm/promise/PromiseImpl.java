@@ -1,90 +1,237 @@
 package io.crm.promise;
 
-import io.crm.intfs.ConsumerInterface;
-import io.crm.intfs.FunctionAsync;
-import io.crm.intfs.FunctionUnchecked;
 import io.crm.promise.intfs.*;
 
 /**
  * Created by someone on 15/10/2015.
  */
 final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
+    private static final MapHandler emptyMapHandler = s -> s;
+    private static final MapPromiseHandler emptyMapPromiseHandler = s -> Promises.success(s);
+    private static final ThenHandler emptyThenHandler = s -> {
+    };
+
+    PromiseImpl() {
+    }
+
     private T value;
     private Throwable error;
     private State state;
 
-    private Object invokeNext;
+    private Invokable invokeNext;
     private Defer deferNext;
 
     @Override
     public void fail(Throwable throwable) {
+        if (isComplete()) {
+            throw new PromiseAlreadyComplete("Promise already complete. " + toString());
+        }
         error = throwable;
         state = State.error;
-        invokeErrorNext();
-    }
-
-    private void invokeErrorNext() {
-
-        if (invokeNext instanceof SuccessHandler) {
-
-        } else if (invokeNext instanceof ErrorHandler) {
-
-        } else if (invokeNext instanceof CompleteHandler) {
-
-        } else if (invokeNext instanceof MapHandler) {
-
-        } else if (invokeNext instanceof MapPromiseHandler) {
-
-        } else {
-
-        }
+        invokeErrorCallback();
     }
 
     @Override
     public void complete() {
+        if (isComplete()) {
+            throw new PromiseAlreadyComplete("Promise already complete. " + toString());
+        }
         state = State.success;
-        invokeSuccessNext();
-    }
-
-    private void invokeSuccessNext() {
-
+        invokeSuccessCallback();
     }
 
     @Override
     public void complete(T value) {
+        if (isComplete()) {
+            throw new PromiseAlreadyComplete("Promise already complete. " + toString());
+        }
         this.value = value;
         state = State.success;
-        invokeSuccessNext();
+        invokeSuccessCallback();
     }
 
     @Override
-    public <R> Promise<R> map(FunctionUnchecked<T, R> functionInt) {
-        return null;
+    public Promise<T> promise() {
+        return this;
+    }
+
+    private void invokeErrorCallback() {
+        if (deferNext == null) return;
+        try {
+            if (invokeNext instanceof ErrorHandler) {
+                ((ErrorHandler) invokeNext).accept(error);
+            } else if (invokeNext instanceof CompleteHandler) {
+                ((CompleteHandler) invokeNext).accept(this);
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            error.addSuppressed(ex);
+        }
+        deferNext.fail(error);
+    }
+
+    private void invokeSuccessCallback() {
+        if (deferNext == null) return;
+        try {
+            if (invokeNext instanceof MapHandler) {
+                final Object retValue = ((MapHandler) invokeNext).apply(value);
+                deferNext.complete(retValue);
+            } else if (invokeNext instanceof MapPromiseHandler) {
+                final Promise promise = ((MapPromiseHandler) invokeNext).apply(value);
+                promise.error(e -> deferNext.fail(e));
+                promise.success(s -> deferNext.complete(s));
+            } else if (invokeNext instanceof ThenHandler) {
+                ((ThenHandler) invokeNext).accept(value);
+                deferNext.complete();
+            } else if (invokeNext instanceof SuccessHandler) {
+                ((SuccessHandler) invokeNext).accept(value);
+                deferNext.complete(value);
+            } else if (invokeNext instanceof CompleteHandler) {
+                ((CompleteHandler) invokeNext).accept(this);
+                deferNext.complete(value);
+            } else {
+                deferNext.complete(value);
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            deferNext.fail(ex);
+        }
     }
 
     @Override
-    public <R> Promise<R> mapPromise(FunctionAsync<T, R> function) {
-        return null;
+    public <R> Promise<R> map(MapHandler<T, R> mapHandler) {
+        final MapHandler<T, R> _mapHandler = mapHandler == null ? emptyMapHandler : mapHandler;
+        final PromiseImpl<R> promise = new PromiseImpl<>();
+        deferNext = promise;
+        if (isSuccess()) {
+            try {
+                final R retVal = _mapHandler.apply(value);
+                deferNext.complete(retVal);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                deferNext.fail(ex);
+            }
+            return promise;
+        } else if (isError()) {
+            deferNext.fail(error);
+            return promise;
+        }
+        invokeNext = _mapHandler;
+        return promise;
     }
 
     @Override
-    public Promise<Void> then(ConsumerInterface<T> valueConsumer) {
-        return null;
+    public <R> Promise<R> mapPromise(MapPromiseHandler<T, R> promiseHandler) {
+        final MapPromiseHandler<T, R> _promiseHandler = promiseHandler == null ? emptyMapPromiseHandler : promiseHandler;
+        final PromiseImpl<R> promise = new PromiseImpl<>();
+        deferNext = promise;
+        if (isSuccess()) {
+            try {
+                final Promise<R> rPromise = _promiseHandler.apply(value);
+                rPromise.success(s -> deferNext.complete(s)).error(e -> deferNext.fail(e));
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                deferNext.fail(ex);
+            }
+            return promise;
+        } else if (isError()) {
+            deferNext.fail(error);
+            return promise;
+        }
+        invokeNext = _promiseHandler;
+        return promise;
     }
 
     @Override
-    public Promise<T> success(ConsumerInterface<T> successHandler) {
-        return null;
+    public Promise<Void> then(ThenHandler<T> thenHandler) {
+        final ThenHandler<T> _thenHandler = thenHandler == null ? emptyThenHandler : thenHandler;
+        final PromiseImpl<Void> promise = new PromiseImpl<>();
+        deferNext = promise;
+        if (isSuccess()) {
+            try {
+                _thenHandler.accept(value);
+                deferNext.complete();
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                deferNext.fail(ex);
+            }
+            return promise;
+        } else if (isError()) {
+            deferNext.fail(error);
+            return promise;
+        }
+        invokeNext = _thenHandler;
+        return promise;
     }
 
     @Override
-    public Promise<T> error(ConsumerInterface<Throwable> errorHandler) {
-        return null;
+    public Promise<T> success(SuccessHandler<T> successHandler) {
+        final PromiseImpl<T> promise = new PromiseImpl<>();
+        deferNext = promise;
+        if (isSuccess()) {
+            try {
+                successHandler.accept(value);
+                deferNext.complete(value);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                deferNext.fail(ex);
+            }
+            return promise;
+        } else if (isError()) {
+            deferNext.fail(error);
+            return promise;
+        }
+        invokeNext = successHandler;
+        return promise;
     }
 
     @Override
-    public Promise<T> complete(ConsumerInterface<Promise<T>> completeHandler) {
-        return null;
+    public Promise<T> error(ErrorHandler errorHandler) {
+        final PromiseImpl<T> promise = new PromiseImpl<>();
+        deferNext = promise;
+        if (isError()) {
+            try {
+                errorHandler.accept(error);
+                deferNext.fail(error);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                error.addSuppressed(ex);
+                deferNext.fail(error);
+            }
+            return promise;
+        } else if (isSuccess()) {
+            deferNext.complete(value);
+            return promise;
+        }
+        invokeNext = errorHandler;
+        return promise;
+    }
+
+    @Override
+    public Promise<T> complete(CompleteHandler<T> completeHandler) {
+        final PromiseImpl<T> promise = new PromiseImpl<>();
+        deferNext = promise;
+        if (isSuccess()) {
+            try {
+                completeHandler.accept(this);
+                deferNext.complete(value);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                deferNext.fail(ex);
+            }
+            return promise;
+        } else if (isError()) {
+            try {
+                completeHandler.accept(this);
+                deferNext.fail(error);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                deferNext.fail(ex);
+            }
+            return promise;
+        }
+        invokeNext = completeHandler;
+        return promise;
     }
 
     @Override
@@ -118,4 +265,14 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
     }
 
     public enum State {success, error}
+
+    @Override
+    public String toString() {
+        return String.format("Promise[value: %s | error: %s | success: %s | error: %s | complete: %s]",
+                value, error, isSuccess(), isError(), isComplete());
+    }
+
+    public static void main(String... args) throws Exception {
+
+    }
 }
