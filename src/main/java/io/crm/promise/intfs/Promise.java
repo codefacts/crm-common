@@ -7,11 +7,11 @@ import io.crm.intfs.FunctionUnchecked;
  */
 public interface Promise<T> {
 
-    public <R> Promise<R> map(MapHandler<T, R> functionUnchecked);
+    public <R> Promise<R> mapTo(MapHandler<T, R> functionUnchecked);
 
-    public <R> Promise<R> mapPromise(MapPromiseHandler<T, R> function);
+    public <R> Promise<R> mapToPromise(MapPromiseHandler<T, R> function);
 
-    public Promise<Void> then(ThenHandler<T> valueConsumer);
+    public Promise<Void> mapToVoid(ThenHandler<T> valueConsumer);
 
     public Promise<T> success(SuccessHandler<T> successHandler);
 

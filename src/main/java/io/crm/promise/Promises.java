@@ -1,5 +1,6 @@
 package io.crm.promise;
 
+import diag.Watch;
 import io.crm.promise.intfs.Defer;
 import io.crm.promise.intfs.Promise;
 import io.vertx.core.Vertx;
@@ -44,47 +45,107 @@ final public class Promises {
     }
 
     public static void main(String... args) {
-        final Defer<Object> defer = defer(Vertx.vertx());
-        defer.promise()
-                .success(s -> System.out.println("1 : " + s))
-                .error(System.out::println)
-                .map(s -> s.toString())
-                .map(s -> s.split("-"))
-                .success(s -> System.out.println("2 : " + s))
-                .map(s -> String.join("-", s))
-                .complete(System.out::println)
-                .error(System.out::println)
-                .mapPromise(m -> Promises.success(m.split("5")))
-                .complete(System.out::println)
-                .map(s -> s.length)
-                .success(s -> System.out.println("3 : " + s))
-                .error(System.out::println)
-                .map(null)
-                .mapPromise(null)
-                .complete(null)
-                .then(null)
-                .success(null)
-                .error(null)
-                .map(v -> {
-                    return "[void]";
-                })
-                .success(s -> System.out.println("4 : " + s))
-                .error(System.out::println)
-        ;
-//        defer.complete(new Exception("NO NO"));
+        final Vertx vertx = Vertx.vertx();
+        Watch watch = new Watch().start();
+        for (int i = 0; i < 10_000_000; i++) {
+            final Defer<Object> defer = defer(vertx);
+            Promises.success("356")
+                    .success(null)
+                    .error(null)
+                    .mapTo(s -> s.toString())
+                    .mapTo(s -> s.split("-"))
+                    .success(null)
+                    .mapTo(s -> String.join("-", s))
+                    .complete(null)
+                    .error(null)
+                    .mapToPromise(m -> Promises.success(m.split("5")))
+                    .complete(null)
+                    .mapTo(s -> String.join("-", s))
+                    .complete(null)
+                    .error(null)
+                    .mapToPromise(m -> Promises.success(m.split("5")))
+                    .complete(null)
+                    .mapTo(s -> s.length)
+                    .success(null)
+                    .error(null)
+                    .mapTo(null)
+                    .mapToPromise(null)
+                    .complete(null)
+                    .mapToVoid(null)
+                    .error(null)
+                    .mapTo(null)
+                    .mapToPromise(null)
+                    .complete(null)
+                    .mapToVoid(null)
+                    .success(null)
+                    .error(null)
+                    .mapTo(v -> {
+                        return "[void]";
+                    })
+                    .success(null)
+                    .error(null)
+            ;
+            defer.complete(123);
+        }
+        System.out.println(watch.end().elapsed() + " total: " + PromiseImpl.total);
+    }
+
+    public static void test7() {
+        Watch watch = new Watch().start();
+        for (int i = 0; i < 10_000_000; i++) {
+            final Defer<Object> defer = defer(Vertx.vertx());
+            defer.promise()
+                    .success(null)
+                    .error(null)
+                    .mapTo(s -> s.toString())
+                    .mapTo(s -> s.split("-"))
+                    .success(null)
+                    .mapTo(s -> String.join("-", s))
+                    .complete(null)
+                    .error(null)
+                    .mapToPromise(m -> Promises.success(m.split("5")))
+                    .complete(null)
+                    .mapTo(s -> String.join("-", s))
+                    .complete(null)
+                    .error(null)
+                    .mapToPromise(m -> Promises.success(m.split("5")))
+                    .complete(null)
+                    .mapTo(s -> s.length)
+                    .success(null)
+                    .error(null)
+                    .mapTo(null)
+                    .mapToPromise(null)
+                    .complete(null)
+                    .mapToVoid(null)
+                    .error(null)
+                    .mapTo(null)
+                    .mapToPromise(null)
+                    .complete(null)
+                    .mapToVoid(null)
+                    .success(null)
+                    .error(null)
+                    .mapTo(v -> {
+                        return "[void]";
+                    })
+                    .success(null)
+                    .error(null)
+            ;
+            defer.complete(123);
+        }
+        System.out.println(watch.end().elapsed() + " total: " + PromiseImpl.total);
     }
 
     public static void test6() {
         final Defer<Object> defer = defer(Vertx.vertx());
         defer.promise()
-                .success(System.out::println)
-                .error(System.out::println)
-                .success(System.out::println)
-                .complete(System.out::println)
-                .error(System.out::println)
-                .complete(System.out::println)
-                .success(System.out::println)
-                .error(System.out::println)
+                .success(null)
+                .error(null)
+                .success(null)
+                .complete(null)
+                .error(null)
+                .complete(null)
+                .success(null)
+                .error(null)
         ;
         defer.fail(new Exception("NO NO"));
     }
@@ -92,14 +153,14 @@ final public class Promises {
     public static void test5() {
         final Defer<Object> defer = defer(Vertx.vertx());
         defer.promise()
-                .success(System.out::println)
-                .error(System.out::println)
-                .success(System.out::println)
-                .complete(System.out::println)
-                .error(System.out::println)
-                .complete(System.out::println)
-                .success(System.out::println)
-                .error(System.out::println)
+                .success(null)
+                .error(null)
+                .success(null)
+                .complete(null)
+                .error(null)
+                .complete(null)
+                .success(null)
+                .error(null)
         ;
         defer.complete();
     }
@@ -107,14 +168,14 @@ final public class Promises {
     public static void test4() {
         final Defer<Object> defer = defer(Vertx.vertx());
         defer.promise()
-                .success(System.out::println)
-                .error(System.out::println)
-                .success(System.out::println)
-                .complete(System.out::println)
-                .error(System.out::println)
-                .complete(System.out::println)
-                .success(System.out::println)
-                .error(System.out::println)
+                .success(null)
+                .error(null)
+                .success(null)
+                .complete(null)
+                .error(null)
+                .complete(null)
+                .success(null)
+                .error(null)
         ;
         defer.complete("8888888888888888888");
     }
@@ -122,41 +183,41 @@ final public class Promises {
     public static void test3() {
         final Defer<Object> defer = defer(Vertx.vertx());
         defer.promise()
-                .success(System.out::println)
-                .error(System.out::println)
-                .success(System.out::println)
-                .complete(System.out::println)
-                .error(System.out::println)
-                .complete(System.out::println)
-                .success(System.out::println)
-                .error(System.out::println)
+                .success(null)
+                .error(null)
+                .success(null)
+                .complete(null)
+                .error(null)
+                .complete(null)
+                .success(null)
+                .error(null)
         ;
         defer.fail(new TimeoutException("Delay: 55"));
     }
 
     private static void test2() {
         error(new TimeoutException("Timed out: 55"))
-                .success(System.out::println)
-                .error(System.out::println)
-                .success(System.out::println)
-                .complete(System.out::println)
-                .error(System.out::println)
-                .complete(System.out::println)
-                .success(System.out::println)
-                .error(System.out::println)
+                .success(null)
+                .error(null)
+                .success(null)
+                .complete(null)
+                .error(null)
+                .complete(null)
+                .success(null)
+                .error(null)
         ;
     }
 
     private static void test1() {
         success("Sona")
-                .success(System.out::println)
-                .error(System.out::println)
-                .success(System.out::println)
-                .complete(System.out::println)
-                .error(System.out::println)
-                .complete(System.out::println)
-                .success(System.out::println)
-                .error(System.out::println)
+                .success(null)
+                .error(null)
+                .success(null)
+                .complete(null)
+                .error(null)
+                .complete(null)
+                .success(null)
+                .error(null)
         ;
     }
 }
