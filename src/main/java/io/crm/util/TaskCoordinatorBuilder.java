@@ -1,7 +1,7 @@
 package io.crm.util;
 
-import io.crm.intfs.ConsumerInterface;
-import io.crm.intfs.Runnable;
+import io.crm.intfs.ConsumerUnchecked;
+import io.crm.intfs.RunnableUnchecked;
 import io.vertx.core.eventbus.Message;
 
 /**
@@ -9,9 +9,9 @@ import io.vertx.core.eventbus.Message;
  */
 final public class TaskCoordinatorBuilder {
     private Message message;
-    private io.crm.intfs.Runnable onSuccess;
-    private ConsumerInterface<Throwable> onError;
-    private ConsumerInterface<TaskCoordinator> onComplete;
+    private RunnableUnchecked onSuccess;
+    private ConsumerUnchecked<Throwable> onError;
+    private ConsumerUnchecked<TaskCoordinator> onComplete;
     private int count;
 
     public int count() {
@@ -32,17 +32,17 @@ final public class TaskCoordinatorBuilder {
         return this;
     }
 
-    public TaskCoordinatorBuilder onSuccess(final Runnable onSuccess) {
+    public TaskCoordinatorBuilder onSuccess(final RunnableUnchecked onSuccess) {
         this.onSuccess = onSuccess;
         return this;
     }
 
-    public TaskCoordinatorBuilder onError(final ConsumerInterface<Throwable> onError) {
+    public TaskCoordinatorBuilder onError(final ConsumerUnchecked<Throwable> onError) {
         this.onError = onError;
         return this;
     }
 
-    public TaskCoordinatorBuilder onComplete(final ConsumerInterface<TaskCoordinator> onComplete) {
+    public TaskCoordinatorBuilder onComplete(final ConsumerUnchecked<TaskCoordinator> onComplete) {
         this.onComplete = onComplete;
         return this;
     }

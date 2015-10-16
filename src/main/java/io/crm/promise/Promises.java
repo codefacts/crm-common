@@ -39,6 +39,24 @@ final public class Promises {
             final Defer<Object> defer = defer();
             defer.promise()
 //            Promises.success(55)
+                    .mapTo(null)
+                    .mapToPromise(null)
+                    .mapToVoid(null)
+                    .success(null)
+                    .complete(null)
+                    .error(null)
+            ;
+            defer.complete(31);
+        }
+        System.out.println(watch.end().elapsed() + " total: " + PromiseImpl.total);
+    }
+
+    public static void test8() {
+        Watch watch = new Watch().start();
+        for (int i = 0; i < 50_000_000; i++) {
+            final Defer<Object> defer = defer();
+            defer.promise()
+//            Promises.success(55)
                     .success(null)
                     .error(null)
                     .mapTo(null)

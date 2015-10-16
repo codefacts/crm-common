@@ -1,9 +1,9 @@
 package io.crm.util;
 
 import io.crm.FailureCode;
-import io.crm.intfs.Callable;
-import io.crm.intfs.ConsumerInterface;
-import io.crm.intfs.Runnable;
+import io.crm.intfs.CallableUnchecked;
+import io.crm.intfs.ConsumerUnchecked;
+import io.crm.intfs.RunnableUnchecked;
 import io.vertx.core.AsyncResult;
 import io.vertx.core.AsyncResultHandler;
 import io.vertx.core.Handler;
@@ -14,9 +14,9 @@ import io.vertx.core.eventbus.Message;
  */
 final public class ExceptionUtil {
 
-    public static void toRuntime(final Runnable runnable) {
+    public static void toRuntime(final RunnableUnchecked runnableUnchecked) {
         try {
-            runnable.run();
+            runnableUnchecked.run();
         } catch (final Exception e) {
             if (e instanceof RuntimeException) {
                 throw (RuntimeException) e;
@@ -25,7 +25,7 @@ final public class ExceptionUtil {
         }
     }
 
-    public static <T> T toRuntimeCall(final Callable<T> runnable) {
+    public static <T> T toRuntimeCall(final CallableUnchecked<T> runnable) {
         try {
             return runnable.call();
         } catch (final Exception e) {
@@ -36,15 +36,15 @@ final public class ExceptionUtil {
         }
     }
 
-    public static void sallowRun(final Runnable runnable) {
+    public static void sallowRun(final RunnableUnchecked runnableUnchecked) {
         try {
-            runnable.run();
+            runnableUnchecked.run();
         } catch (final Exception e) {
             logException(e);
         }
     }
 
-    public static <T> T sallowCall(final Callable<T> runnable) {
+    public static <T> T sallowCall(final CallableUnchecked<T> runnable) {
         try {
             return runnable.call();
         } catch (final Exception e) {
@@ -53,19 +53,19 @@ final public class ExceptionUtil {
         return null;
     }
 
-    public static <T> void then(final Callable<T> callable, final AsyncResultHandler<T> asyncResultHandler) {
+    public static <T> void then(final CallableUnchecked<T> callableUnchecked, final AsyncResultHandler<T> asyncResultHandler) {
         try {
-            final T t = callable.call();
+            final T t = callableUnchecked.call();
             asyncResultHandler.handle(AsyncUtil.success(t));
         } catch (final Exception ex) {
             asyncResultHandler.handle(AsyncUtil.fail(ex));
         }
     }
 
-    public static <T> Handler<T> withCatch(final ConsumerInterface<T> consumerInterface, final ConsumerInterface<Throwable> runnable) {
+    public static <T> Handler<T> withCatch(final ConsumerUnchecked<T> consumerUnchecked, final ConsumerUnchecked<Throwable> runnable) {
         return val -> {
             try {
-                consumerInterface.accept(val);
+                consumerUnchecked.accept(val);
             } catch (final Exception e) {
                 try {
                     runnable.accept(e);
@@ -83,10 +83,10 @@ final public class ExceptionUtil {
         };
     }
 
-    public static <T> Handler<T> withWebHandler(final ConsumerInterface<T> consumerInterface, final Message message) {
+    public static <T> Handler<T> withWebHandler(final ConsumerUnchecked<T> consumerUnchecked, final Message message) {
         return val -> {
             try {
-                consumerInterface.accept(val);
+                consumerUnchecked.accept(val);
             } catch (final Exception e) {
                 ExceptionUtil.fail(message, e);
                 if (e instanceof RuntimeException) {
@@ -97,10 +97,10 @@ final public class ExceptionUtil {
         };
     }
 
-    public static <T> Handler<T> withHandler(final ConsumerInterface<T> consumerInterface, final Message message) {
+    public static <T> Handler<T> withHandler(final ConsumerUnchecked<T> consumerUnchecked, final Message message) {
         return val -> {
             try {
-                consumerInterface.accept(val);
+                consumerUnchecked.accept(val);
             } catch (final Exception e) {
                 ExceptionUtil.fail(message, e);
                 if (e instanceof RuntimeException) {
@@ -111,19 +111,19 @@ final public class ExceptionUtil {
         };
     }
 
-    public static <T> Handler<AsyncResult<T>> withReply(final ConsumerInterface<T> consumerInterface, final Message message) {
+    public static <T> Handler<AsyncResult<T>> withReply(final ConsumerUnchecked<T> consumerUnchecked, final Message message) {
         return r -> {
             if (r.failed()) {
                 ExceptionUtil.fail(message, r.cause());
                 return;
             }
-            withReplyRun(() -> consumerInterface.accept(r.result()), message);
+            withReplyRun(() -> consumerUnchecked.accept(r.result()), message);
         };
     }
 
-    public static void withReplyRun(final Runnable runnable, final Message message) {
+    public static void withReplyRun(final RunnableUnchecked runnableUnchecked, final Message message) {
         try {
-            runnable.run();
+            runnableUnchecked.run();
         } catch (final Exception e) {
             ExceptionUtil.fail(message, e);
             if (e instanceof RuntimeException) {
@@ -133,7 +133,7 @@ final public class ExceptionUtil {
         }
     }
 
-    public static <T> T withReplyCall(final Callable<T> runnable, final Message message) {
+    public static <T> T withReplyCall(final CallableUnchecked<T> runnable, final Message message) {
         try {
             return runnable.call();
         } catch (final Exception e) {

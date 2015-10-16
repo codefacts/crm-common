@@ -1,7 +1,7 @@
 package io.crm.util;
 
-import io.crm.intfs.ConsumerInterface;
-import io.crm.intfs.Runnable;
+import io.crm.intfs.ConsumerUnchecked;
+import io.crm.intfs.RunnableUnchecked;
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Handler;
 import io.vertx.core.eventbus.Message;
@@ -16,14 +16,14 @@ import static io.crm.util.ExceptionUtil.fail;
  */
 final public class TaskCoordinator {
     private final Message message;
-    private io.crm.intfs.Runnable onSuccess;
-    private ConsumerInterface<Throwable> onError;
-    private ConsumerInterface<TaskCoordinator> onComplete;
+    private RunnableUnchecked onSuccess;
+    private ConsumerUnchecked<Throwable> onError;
+    private ConsumerUnchecked<TaskCoordinator> onComplete;
     private int count;
     private Throwable error;
 
-    TaskCoordinator(final int count, final Message message, final Runnable onSuccess, final ConsumerInterface<Throwable> onError,
-                    final ConsumerInterface<TaskCoordinator> onComplete) {
+    TaskCoordinator(final int count, final Message message, final RunnableUnchecked onSuccess, final ConsumerUnchecked<Throwable> onError,
+                    final ConsumerUnchecked<TaskCoordinator> onComplete) {
         this.count = count;
         this.message = message;
         this.onSuccess = onSuccess;
@@ -33,7 +33,7 @@ final public class TaskCoordinator {
         onFinish(new ArrayList<>());
     }
 
-    public <T> Handler<AsyncResult<T>> add(ConsumerInterface<T> consumer) {
+    public <T> Handler<AsyncResult<T>> add(ConsumerUnchecked<T> consumer) {
         return r -> {
             final ArrayList<Exception> exceptions = new ArrayList<>();
             count--;
@@ -53,7 +53,7 @@ final public class TaskCoordinator {
         };
     }
 
-    public <T> Handler<AsyncResult<T>> catchOnException(final ConsumerInterface<T> consumer) {
+    public <T> Handler<AsyncResult<T>> catchOnException(final ConsumerUnchecked<T> consumer) {
         return r -> {
             final ArrayList<Exception> exceptions = new ArrayList<>();
             if (r.failed()) {
@@ -127,17 +127,17 @@ final public class TaskCoordinator {
         return String.format("[%s complete: %s error: %s]", this.getClass().getSimpleName(), isComplete(), error);
     }
 
-    public TaskCoordinator onSuccess(final Runnable onSuccess) {
+    public TaskCoordinator onSuccess(final RunnableUnchecked onSuccess) {
         this.onSuccess = onSuccess;
         return this;
     }
 
-    public TaskCoordinator onError(final ConsumerInterface<Throwable> onError) {
+    public TaskCoordinator onError(final ConsumerUnchecked<Throwable> onError) {
         this.onError = onError;
         return this;
     }
 
-    public TaskCoordinator onComplete(final ConsumerInterface<TaskCoordinator> onComplete) {
+    public TaskCoordinator onComplete(final ConsumerUnchecked<TaskCoordinator> onComplete) {
         this.onComplete = onComplete;
         return this;
     }
