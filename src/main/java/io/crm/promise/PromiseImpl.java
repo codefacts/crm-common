@@ -1,5 +1,8 @@
 package io.crm.promise;
 
+import io.crm.intfs.ConsumerInterface;
+import io.crm.intfs.FunctionAsync;
+import io.crm.intfs.FunctionUnchecked;
 import io.crm.promise.intfs.*;
 
 /**
@@ -55,32 +58,32 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
     }
 
     @Override
-    public <R> Promise<R> map(MapHandler<T, R> functionInt) {
+    public <R> Promise<R> map(FunctionUnchecked<T, R> functionInt) {
         return null;
     }
 
     @Override
-    public <R> Promise<R> mapPromise(MapPromiseHandler<T, R> function) {
+    public <R> Promise<R> mapPromise(FunctionAsync<T, R> function) {
         return null;
     }
 
     @Override
-    public Promise<Void> then(ThenHandler<T> valueConsumer) {
+    public Promise<Void> then(ConsumerInterface<T> valueConsumer) {
         return null;
     }
 
     @Override
-    public Promise<T> success(SuccessHandler<T> successHandler) {
+    public Promise<T> success(ConsumerInterface<T> successHandler) {
         return null;
     }
 
     @Override
-    public Promise<T> error(ErrorHandler<Throwable> errorHandler) {
+    public Promise<T> error(ConsumerInterface<Throwable> errorHandler) {
         return null;
     }
 
     @Override
-    public Promise<T> complete(CompleteHandler<Promise<T>> completeHandler) {
+    public Promise<T> complete(ConsumerInterface<Promise<T>> completeHandler) {
         return null;
     }
 
