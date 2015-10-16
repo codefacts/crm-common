@@ -12,8 +12,6 @@ import java.util.concurrent.TimeoutException;
  */
 final public class Promises {
 
-    private static final long DEFAULT_TIMEOUT = 3 * 10 * 1000;
-
     public static Promise<Void> success() {
         return success(null);
     }
@@ -30,42 +28,38 @@ final public class Promises {
         return promise;
     }
 
-    public static <T> Defer<T> defer(Vertx vertx) {
-        return defer(vertx, -1);
-    }
-
-    public static <T> Defer<T> defer(Vertx vertx, final long timeoutMilis) {
-        final long _timeoutMilis = timeoutMilis <= 0 ? DEFAULT_TIMEOUT : timeoutMilis;
+    public static <T> Defer<T> defer() {
         final PromiseImpl<T> promise = new PromiseImpl<>();
-        vertx.setTimer(_timeoutMilis, l -> {
-            if (!promise.isComplete())
-                promise.fail(new TimeoutException("Promise timed out. Timeout: " + _timeoutMilis + " Delay: " + l));
-        });
         return promise;
     }
 
     public static void main(String... args) {
-        final Vertx vertx = Vertx.vertx();
         Watch watch = new Watch().start();
-        for (int i = 0; i < 10_000_000; i++) {
-            final Defer<Object> defer = defer(vertx);
-            Promises.success("356")
+        for (int i = 0; i < 50_000_000; i++) {
+            final Defer<Object> defer = defer();
+            defer.promise()
+//            Promises.success(55)
                     .success(null)
                     .error(null)
-                    .mapTo(s -> s.toString())
-                    .mapTo(s -> s.split("-"))
+                    .mapTo(null)
+                    .mapTo(null)
                     .success(null)
-                    .mapTo(s -> String.join("-", s))
+                    .mapTo(null)
                     .complete(null)
                     .error(null)
-                    .mapToPromise(m -> Promises.success(m.split("5")))
+                    .mapToPromise(null)
                     .complete(null)
-                    .mapTo(s -> String.join("-", s))
+                    .mapTo(null)
                     .complete(null)
                     .error(null)
-                    .mapToPromise(m -> Promises.success(m.split("5")))
+                    .mapToPromise(null)
                     .complete(null)
-                    .mapTo(s -> s.length)
+                    .mapTo(null)
+                    .success(null)
+                    .error(null)
+                    .mapTo(null)
+                    .mapToPromise(null)
+                    .complete(null)
                     .success(null)
                     .error(null)
                     .mapTo(null)
@@ -79,13 +73,38 @@ final public class Promises {
                     .mapToVoid(null)
                     .success(null)
                     .error(null)
-                    .mapTo(v -> {
-                        return "[void]";
-                    })
+                    .mapTo(null)
+                    .success(null)
+                    .error(null)
+                    .success(null)
+                    .error(null)
+                    .mapTo(null)
+                    .mapToPromise(null)
+                    .complete(null)
+                    .mapToVoid(null)
+                    .error(null)
+                    .mapTo(null)
+                    .mapToPromise(null)
+                    .complete(null)
+                    .mapToVoid(null)
+                    .success(null)
+                    .error(null)
+                    .mapTo(null)
+                    .success(null)
+                    .error(null)
+                    .mapToVoid(null)
+                    .error(null)
+                    .mapTo(null)
+                    .mapToPromise(null)
+                    .complete(null)
+                    .mapToVoid(null)
+                    .success(null)
+                    .error(null)
+                    .mapTo(null)
                     .success(null)
                     .error(null)
             ;
-            defer.complete(123);
+            defer.complete(31);
         }
         System.out.println(watch.end().elapsed() + " total: " + PromiseImpl.total);
     }
@@ -93,7 +112,7 @@ final public class Promises {
     public static void test7() {
         Watch watch = new Watch().start();
         for (int i = 0; i < 10_000_000; i++) {
-            final Defer<Object> defer = defer(Vertx.vertx());
+            final Defer<Object> defer = defer();
             defer.promise()
                     .success(null)
                     .error(null)
@@ -136,7 +155,7 @@ final public class Promises {
     }
 
     public static void test6() {
-        final Defer<Object> defer = defer(Vertx.vertx());
+        final Defer<Object> defer = defer();
         defer.promise()
                 .success(null)
                 .error(null)
@@ -151,7 +170,7 @@ final public class Promises {
     }
 
     public static void test5() {
-        final Defer<Object> defer = defer(Vertx.vertx());
+        final Defer<Object> defer = defer();
         defer.promise()
                 .success(null)
                 .error(null)
@@ -166,7 +185,7 @@ final public class Promises {
     }
 
     public static void test4() {
-        final Defer<Object> defer = defer(Vertx.vertx());
+        final Defer<Object> defer = defer();
         defer.promise()
                 .success(null)
                 .error(null)
@@ -181,7 +200,7 @@ final public class Promises {
     }
 
     public static void test3() {
-        final Defer<Object> defer = defer(Vertx.vertx());
+        final Defer<Object> defer = defer();
         defer.promise()
                 .success(null)
                 .error(null)
