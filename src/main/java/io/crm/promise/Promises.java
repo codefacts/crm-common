@@ -1,20 +1,15 @@
 package io.crm.promise;
 
 import com.google.common.collect.ImmutableList;
-import diag.Watch;
-import io.crm.promise.intfs.CompleteHandler;
 import io.crm.promise.intfs.Defer;
 import io.crm.promise.intfs.Promise;
 import io.crm.util.SimpleCounter;
 import io.crm.util.Touple2;
 import io.crm.util.Touple3;
 import io.crm.util.Touple4;
-import io.vertx.core.Vertx;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.concurrent.TimeoutException;
 
 /**
  * Created by someone on 16/10/2015.
@@ -26,19 +21,19 @@ final public class Promises {
     }
 
     public static <T> Promise<T> success(final T val) {
-        final PromiseImpl<T> promise = new PromiseImpl<>();
+        final PromiseImpl<T> promise = new PromiseImpl<>(null, null);
         promise.complete(val);
         return promise;
     }
 
     public static Promise<Void> error(Throwable error) {
-        final PromiseImpl<Void> promise = new PromiseImpl<>();
+        final PromiseImpl<Void> promise = new PromiseImpl<>(null, null);
         promise.fail(error);
         return promise;
     }
 
     public static <T> Defer<T> defer() {
-        final PromiseImpl<T> promise = new PromiseImpl<>();
+        final PromiseImpl<T> promise = new PromiseImpl<>(null, null);
         return promise;
     }
 

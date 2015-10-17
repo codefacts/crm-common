@@ -18,25 +18,28 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
     private static final CompleteHandler emptyCompleteHandler = s -> {
     };
 
-    PromiseImpl() {
-        total++;
-    }
-
     private T value;
     private Throwable error;
     private State state;
 
-    private Invokable invokeNext;
-    private Defer deferNext;
+    private final Invokable callback;
+    private final Type type;
+    private PromiseImpl deferNext;
+
+    PromiseImpl(final Invokable callback, final Type type) {
+        this.callback = callback;
+        this.type = type;
+        total++;
+    }
 
     @Override
-    public void fail(Throwable throwable) {
+    public void fail(final Throwable throwable) {
         if (isComplete()) {
             throw new PromiseAlreadyComplete("Promise already complete. " + toString());
         }
         error = throwable;
         state = State.error;
-        invokeErrorCallback();
+        invokeErrorCallback(deferNext);
     }
 
     @Override
@@ -45,17 +48,17 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
             throw new PromiseAlreadyComplete("Promise already complete. " + toString());
         }
         state = State.success;
-        invokeSuccessCallback();
+        invokeSuccessCallback(deferNext);
     }
 
     @Override
-    public void complete(T value) {
+    public void complete(final T value) {
         if (isComplete()) {
             throw new PromiseAlreadyComplete("Promise already complete. " + toString());
         }
         this.value = value;
         state = State.success;
-        invokeSuccessCallback();
+        invokeSuccessCallback(deferNext);
     }
 
     @Override
@@ -63,185 +66,181 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
         return this;
     }
 
-    private void invokeErrorCallback() {
-        if (deferNext == null) return;
+    private void invokeErrorCallback(final PromiseImpl<T> _deferNext) {
+        if (_deferNext == null) return;
         try {
-            if (invokeNext instanceof ErrorHandler) {
-                ((ErrorHandler) invokeNext).accept(error);
-            } else if (invokeNext instanceof CompleteHandler) {
-                ((CompleteHandler) invokeNext).accept(this);
+            final Invokable _invokeNext = _deferNext.callback;
+            if (_invokeNext instanceof ErrorHandler) {
+                ((ErrorHandler) _invokeNext).accept(error);
+            } else if (_invokeNext instanceof CompleteHandler) {
+                ((CompleteHandler) _invokeNext).accept(this);
             }
-        } catch (Exception ex) {
+        } catch (final Exception ex) {
             ex.printStackTrace();
             error.addSuppressed(ex);
         }
-        deferNext.fail(error);
+        _deferNext.fail(error);
     }
 
-    private void invokeSuccessCallback() {
-        if (deferNext == null) return;
+    private void invokeSuccessCallback(final PromiseImpl _deferNext) {
+        if (_deferNext == null) return;
         try {
-            if (invokeNext instanceof MapHandler) {
-                final Object retValue = ((MapHandler) invokeNext).apply(value);
-                deferNext.complete(retValue);
-            } else if (invokeNext instanceof MapPromiseHandler) {
-                final Promise promise = ((MapPromiseHandler) invokeNext).apply(value);
-                promise.error(e -> deferNext.fail(e));
-                promise.success(s -> deferNext.complete(s));
-            } else if (invokeNext instanceof ThenHandler) {
-                ((ThenHandler) invokeNext).accept(value);
-                deferNext.complete();
-            } else if (invokeNext instanceof SuccessHandler) {
-                ((SuccessHandler) invokeNext).accept(value);
-                deferNext.complete(value);
-            } else if (invokeNext instanceof CompleteHandler) {
-                ((CompleteHandler) invokeNext).accept(this);
-                deferNext.complete(value);
+            final Invokable _invokeNext = _deferNext.callback;
+            if (_deferNext.type == Type.MapTo) {
+                final Object retValue = ((MapHandler) _invokeNext).apply(value);
+                _deferNext.complete(retValue);
+            } else if (_invokeNext instanceof MapPromiseHandler) {
+                final Promise promise = ((MapPromiseHandler) _invokeNext).apply(value);
+                promise.error(e -> _deferNext.fail(e));
+                promise.success(s -> _deferNext.complete(s));
+            } else if (_invokeNext instanceof ThenHandler) {
+                ((ThenHandler) _invokeNext).accept(value);
+                _deferNext.complete();
+            } else if (_invokeNext instanceof SuccessHandler) {
+                ((SuccessHandler) _invokeNext).accept(value);
+                _deferNext.complete(value);
+            } else if (_invokeNext instanceof CompleteHandler) {
+                ((CompleteHandler) _invokeNext).accept(this);
+                _deferNext.complete(value);
             } else {
-                deferNext.complete(value);
+                _deferNext.complete(value);
             }
-        } catch (Exception ex) {
+        } catch (final Exception ex) {
             ex.printStackTrace();
-            deferNext.fail(ex);
+            _deferNext.fail(ex);
         }
     }
 
     @Override
-    public <R> Promise<R> mapTo(MapHandler<T, R> mapHandler) {
+    public <R> Promise<R> mapTo(final MapHandler<T, R> mapHandler) {
         final MapHandler<T, R> _mapHandler = mapHandler == null ? emptyMapHandler : mapHandler;
-        final PromiseImpl<R> promise = new PromiseImpl<>();
-        deferNext = promise;
+        final PromiseImpl<R> promise = new PromiseImpl<>(_mapHandler, Type.MapTo);
+        final Defer _deferNext = deferNext = promise;
         if (isSuccess()) {
             try {
                 final R retVal = _mapHandler.apply(value);
-                deferNext.complete(retVal);
-            } catch (Exception ex) {
+                _deferNext.complete(retVal);
+            } catch (final Exception ex) {
                 ex.printStackTrace();
-                deferNext.fail(ex);
+                _deferNext.fail(ex);
             }
             return promise;
         } else if (isError()) {
-            deferNext.fail(error);
+            _deferNext.fail(error);
             return promise;
         }
-        invokeNext = _mapHandler;
         return promise;
     }
 
     @Override
-    public <R> Promise<R> mapToPromise(MapPromiseHandler<T, R> promiseHandler) {
+    public <R> Promise<R> mapToPromise(final MapPromiseHandler<T, R> promiseHandler) {
         final MapPromiseHandler<T, R> _promiseHandler = promiseHandler == null ? emptyMapPromiseHandler : promiseHandler;
-        final PromiseImpl<R> promise = new PromiseImpl<>();
-        deferNext = promise;
+        final PromiseImpl<R> promise = new PromiseImpl<>(_promiseHandler, Type.MapToPromise);
+        final Defer _deferNext = deferNext = promise;
         if (isSuccess()) {
             try {
                 final Promise<R> rPromise = _promiseHandler.apply(value);
-                rPromise.success(s -> deferNext.complete(s)).error(e -> deferNext.fail(e));
-            } catch (Exception ex) {
+                rPromise.success(s -> _deferNext.complete(s)).error(e -> _deferNext.fail(e));
+            } catch (final Exception ex) {
                 ex.printStackTrace();
-                deferNext.fail(ex);
+                _deferNext.fail(ex);
             }
             return promise;
         } else if (isError()) {
-            deferNext.fail(error);
+            _deferNext.fail(error);
             return promise;
         }
-        invokeNext = _promiseHandler;
         return promise;
     }
 
     @Override
-    public Promise<Void> mapToVoid(ThenHandler<T> thenHandler) {
+    public Promise<Void> mapToVoid(final ThenHandler<T> thenHandler) {
         final ThenHandler<T> _thenHandler = thenHandler == null ? emptyThenHandler : thenHandler;
-        final PromiseImpl<Void> promise = new PromiseImpl<>();
-        deferNext = promise;
+        final PromiseImpl<Void> promise = new PromiseImpl<>(_thenHandler, Type.MapToVoid);
+        final Defer _deferNext = deferNext = promise;
         if (isSuccess()) {
             try {
                 _thenHandler.accept(value);
-                deferNext.complete();
-            } catch (Exception ex) {
+                _deferNext.complete();
+            } catch (final Exception ex) {
                 ex.printStackTrace();
-                deferNext.fail(ex);
+                _deferNext.fail(ex);
             }
             return promise;
         } else if (isError()) {
-            deferNext.fail(error);
+            _deferNext.fail(error);
             return promise;
         }
-        invokeNext = _thenHandler;
         return promise;
     }
 
     @Override
-    public Promise<T> success(SuccessHandler<T> successHandler) {
+    public Promise<T> success(final SuccessHandler<T> successHandler) {
         final SuccessHandler<T> _successHandler = successHandler == null ? emptySuccessHandler : successHandler;
-        final PromiseImpl<T> promise = new PromiseImpl<>();
-        deferNext = promise;
+        final PromiseImpl<T> promise = new PromiseImpl<>(_successHandler, Type.SuccessHandler);
+        final Defer _deferNext = deferNext = promise;
         if (isSuccess()) {
             try {
                 _successHandler.accept(value);
-                deferNext.complete(value);
-            } catch (Exception ex) {
+                _deferNext.complete(value);
+            } catch (final Exception ex) {
                 ex.printStackTrace();
-                deferNext.fail(ex);
+                _deferNext.fail(ex);
             }
             return promise;
         } else if (isError()) {
-            deferNext.fail(error);
+            _deferNext.fail(error);
             return promise;
         }
-        invokeNext = _successHandler;
         return promise;
     }
 
     @Override
-    public Promise<T> error(ErrorHandler errorHandler) {
+    public Promise<T> error(final ErrorHandler errorHandler) {
         final ErrorHandler _errorHandler = errorHandler == null ? emptyErrorHandler : errorHandler;
-        final PromiseImpl<T> promise = new PromiseImpl<>();
-        deferNext = promise;
+        final PromiseImpl<T> promise = new PromiseImpl<>(_errorHandler, Type.ErrorHandler);
+        final Defer _deferNext = deferNext = promise;
         if (isError()) {
             try {
                 _errorHandler.accept(error);
-                deferNext.fail(error);
-            } catch (Exception ex) {
+                _deferNext.fail(error);
+            } catch (final Exception ex) {
                 ex.printStackTrace();
                 error.addSuppressed(ex);
-                deferNext.fail(error);
+                _deferNext.fail(error);
             }
             return promise;
         } else if (isSuccess()) {
-            deferNext.complete(value);
+            _deferNext.complete(value);
             return promise;
         }
-        invokeNext = _errorHandler;
         return promise;
     }
 
     @Override
-    public Promise<T> complete(CompleteHandler<T> completeHandler) {
+    public Promise<T> complete(final CompleteHandler<T> completeHandler) {
         final CompleteHandler<T> _completeHandler = completeHandler == null ? emptyCompleteHandler : completeHandler;
-        final PromiseImpl<T> promise = new PromiseImpl<>();
-        deferNext = promise;
+        final PromiseImpl<T> promise = new PromiseImpl<>(_completeHandler, Type.CompleteHandler);
+        final Defer _deferNext = deferNext = promise;
         if (isSuccess()) {
             try {
                 _completeHandler.accept(this);
-                deferNext.complete(value);
-            } catch (Exception ex) {
+                _deferNext.complete(value);
+            } catch (final Exception ex) {
                 ex.printStackTrace();
-                deferNext.fail(ex);
+                _deferNext.fail(ex);
             }
             return promise;
         } else if (isError()) {
             try {
                 _completeHandler.accept(this);
-                deferNext.fail(error);
-            } catch (Exception ex) {
+                _deferNext.fail(error);
+            } catch (final Exception ex) {
                 ex.printStackTrace();
-                deferNext.fail(ex);
+                _deferNext.fail(ex);
             }
             return promise;
         }
-        invokeNext = _completeHandler;
         return promise;
     }
 
@@ -275,7 +274,16 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
         return error;
     }
 
-    public enum State {success, error}
+    private enum State {success, error}
+
+    private enum Type {
+        MapTo,
+        MapToPromise,
+        MapToVoid,
+        SuccessHandler,
+        ErrorHandler,
+        CompleteHandler
+    }
 
     @Override
     public String toString() {
