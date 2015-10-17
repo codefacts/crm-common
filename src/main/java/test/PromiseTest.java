@@ -35,9 +35,9 @@ public class PromiseTest {
     public static void test8() {
         Watch watch = new Watch().start();
         for (int i = 0; i < 10_000_000; i++) {
-//            final Defer<Object> defer = defer();
-//            defer.promise()
-            Promises.success(55)
+            final Defer<Object> defer = defer();
+            defer.promise()
+//            Promises.success(55)
                     .success(null)
                     .error(null)
                     .mapTo(null)
@@ -103,7 +103,7 @@ public class PromiseTest {
                     .success(null)
                     .error(null)
             ;
-//            defer.complete(31);
+            defer.complete(31);
         }
         System.out.println(watch.end().elapsed() + " total: " + PromiseImpl.total);
     }
