@@ -31,90 +31,31 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
 
     @Override
     public void fail(Throwable throwable) {
-        if (((state == State.error) | (state == State.success))) {
+        if (isComplete()) {
             throw new PromiseAlreadyComplete("Promise already complete. " + toString());
         }
         error = throwable;
         state = State.error;
-        if (deferNext == null) return;
-        try {
-            if (invokeNext instanceof ErrorHandler) {
-                ((ErrorHandler) invokeNext).accept(error);
-            } else if (invokeNext instanceof CompleteHandler) {
-                ((CompleteHandler) invokeNext).accept(this);
-            }
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            error.addSuppressed(ex);
-        }
-        deferNext.fail(error);
+        invokeErrorCallback();
     }
 
     @Override
     public void complete() {
-        if (((state == State.error) | (state == State.success))) {
+        if (isComplete()) {
             throw new PromiseAlreadyComplete("Promise already complete. " + toString());
         }
         state = State.success;
-        if (deferNext == null) return;
-        try {
-            if (invokeNext instanceof MapHandler) {
-                final Object retValue = ((MapHandler) invokeNext).apply(value);
-                deferNext.complete(retValue);
-            } else if (invokeNext instanceof MapPromiseHandler) {
-                final Promise promise = ((MapPromiseHandler) invokeNext).apply(value);
-                promise.error(e -> deferNext.fail(e));
-                promise.success(s -> deferNext.complete(s));
-            } else if (invokeNext instanceof ThenHandler) {
-                ((ThenHandler) invokeNext).accept(value);
-                deferNext.complete();
-            } else if (invokeNext instanceof SuccessHandler) {
-                ((SuccessHandler) invokeNext).accept(value);
-                deferNext.complete(value);
-            } else if (invokeNext instanceof CompleteHandler) {
-                ((CompleteHandler) invokeNext).accept(this);
-                deferNext.complete(value);
-            } else {
-                deferNext.complete(value);
-            }
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            deferNext.fail(ex);
-        }
+        invokeSuccessCallback();
     }
 
     @Override
     public void complete(T value) {
-        if (((state == State.error) | (state == State.success))) {
+        if (isComplete()) {
             throw new PromiseAlreadyComplete("Promise already complete. " + toString());
         }
         this.value = value;
         state = State.success;
-        if (deferNext == null) return;
-        try {
-            if (invokeNext instanceof MapHandler) {
-                final Object retValue = ((MapHandler) invokeNext).apply(value);
-                deferNext.complete(retValue);
-            } else if (invokeNext instanceof MapPromiseHandler) {
-                final Promise promise = ((MapPromiseHandler) invokeNext).apply(value);
-                promise.error(e -> deferNext.fail(e));
-                promise.success(s -> deferNext.complete(s));
-            } else if (invokeNext instanceof ThenHandler) {
-                ((ThenHandler) invokeNext).accept(value);
-                deferNext.complete();
-            } else if (invokeNext instanceof SuccessHandler) {
-                ((SuccessHandler) invokeNext).accept(value);
-                deferNext.complete(value);
-            } else if (invokeNext instanceof CompleteHandler) {
-                ((CompleteHandler) invokeNext).accept(this);
-                deferNext.complete(value);
-            } else {
-                deferNext.complete(value);
-            }
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            deferNext.fail(ex);
-        }
+        invokeSuccessCallback();
     }
 
     @Override
@@ -170,7 +111,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
         final MapHandler<T, R> _mapHandler = mapHandler == null ? emptyMapHandler : mapHandler;
         final PromiseImpl<R> promise = new PromiseImpl<>();
         deferNext = promise;
-        if ((state == State.success)) {
+        if (isSuccess()) {
             try {
                 final R retVal = _mapHandler.apply(value);
                 deferNext.complete(retVal);
@@ -179,7 +120,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
                 deferNext.fail(ex);
             }
             return promise;
-        } else if ((state == State.error)) {
+        } else if (isError()) {
             deferNext.fail(error);
             return promise;
         }
@@ -192,7 +133,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
         final MapPromiseHandler<T, R> _promiseHandler = promiseHandler == null ? emptyMapPromiseHandler : promiseHandler;
         final PromiseImpl<R> promise = new PromiseImpl<>();
         deferNext = promise;
-        if ((state == State.success)) {
+        if (isSuccess()) {
             try {
                 final Promise<R> rPromise = _promiseHandler.apply(value);
                 rPromise.success(s -> deferNext.complete(s)).error(e -> deferNext.fail(e));
@@ -201,7 +142,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
                 deferNext.fail(ex);
             }
             return promise;
-        } else if ((state == State.error)) {
+        } else if (isError()) {
             deferNext.fail(error);
             return promise;
         }
@@ -214,7 +155,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
         final ThenHandler<T> _thenHandler = thenHandler == null ? emptyThenHandler : thenHandler;
         final PromiseImpl<Void> promise = new PromiseImpl<>();
         deferNext = promise;
-        if ((state == State.success)) {
+        if (isSuccess()) {
             try {
                 _thenHandler.accept(value);
                 deferNext.complete();
@@ -223,7 +164,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
                 deferNext.fail(ex);
             }
             return promise;
-        } else if ((state == State.error)) {
+        } else if (isError()) {
             deferNext.fail(error);
             return promise;
         }
@@ -236,7 +177,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
         final SuccessHandler<T> _successHandler = successHandler == null ? emptySuccessHandler : successHandler;
         final PromiseImpl<T> promise = new PromiseImpl<>();
         deferNext = promise;
-        if ((state == State.success)) {
+        if (isSuccess()) {
             try {
                 _successHandler.accept(value);
                 deferNext.complete(value);
@@ -245,7 +186,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
                 deferNext.fail(ex);
             }
             return promise;
-        } else if ((state == State.error)) {
+        } else if (isError()) {
             deferNext.fail(error);
             return promise;
         }
@@ -258,7 +199,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
         final ErrorHandler _errorHandler = errorHandler == null ? emptyErrorHandler : errorHandler;
         final PromiseImpl<T> promise = new PromiseImpl<>();
         deferNext = promise;
-        if ((state == State.error)) {
+        if (isError()) {
             try {
                 _errorHandler.accept(error);
                 deferNext.fail(error);
@@ -268,7 +209,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
                 deferNext.fail(error);
             }
             return promise;
-        } else if ((state == State.success)) {
+        } else if (isSuccess()) {
             deferNext.complete(value);
             return promise;
         }
@@ -281,7 +222,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
         final CompleteHandler<T> _completeHandler = completeHandler == null ? emptyCompleteHandler : completeHandler;
         final PromiseImpl<T> promise = new PromiseImpl<>();
         deferNext = promise;
-        if ((state == State.success)) {
+        if (isSuccess()) {
             try {
                 _completeHandler.accept(this);
                 deferNext.complete(value);
@@ -290,7 +231,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
                 deferNext.fail(ex);
             }
             return promise;
-        } else if ((state == State.error)) {
+        } else if (isError()) {
             try {
                 _completeHandler.accept(this);
                 deferNext.fail(error);
@@ -306,17 +247,17 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
 
     @Override
     public boolean isComplete() {
-        return ((state == State.error) | (state == State.success));
+        return (state == State.error) | (state == State.success);
     }
 
     @Override
     public boolean isSuccess() {
-        return (state == State.success);
+        return state == State.success;
     }
 
     @Override
     public boolean isError() {
-        return (state == State.error);
+        return state == State.error;
     }
 
     @Override
@@ -339,7 +280,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
     @Override
     public String toString() {
         return String.format("Promise[value: %s | error: %s | success: %s | error: %s | complete: %s]",
-                value, error, (state == State.success), (state == State.error), ((state == State.error) | (state == State.success)));
+                value, error, isSuccess(), isError(), isComplete());
     }
 
     public static void main(String... args) throws Exception {
