@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d163bfc-fd49-42ac-89b1-b7377f1bdc19" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/io/crm/promise/PromiseImpl2.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/crm/promise/PromiseImpl.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/promise/PromiseImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/test/PromiseTest.java" afterPath="$PROJECT_DIR$/src/main/java/test/PromiseTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/crm/promise/Promises.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/promise/Promises.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="common-crm.iws" />
@@ -36,9 +36,12 @@
       <file leaf-file-name="PromiseTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/test/PromiseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.392562">
-              <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
-              <folding />
+            <state vertical-scroll-proportion="0.5082645">
+              <caret line="107" column="29" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="29" />
+              <folding>
+                <element signature="e#380#381#0" expanded="true" />
+                <element signature="e#403#404#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -47,22 +50,47 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/promise/PromiseImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="223" column="32" selection-start-line="223" selection-start-column="32" selection-end-line="223" selection-end-column="32" />
+              <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
               <folding>
-                <element signature="e#1862#1863#0" expanded="true" />
-                <element signature="e#1889#1890#0" expanded="true" />
-                <element signature="e#8851#8852#0" expanded="true" />
-                <element signature="e#8923#8924#0" expanded="true" />
-                <element signature="e#8971#8972#0" expanded="true" />
-                <element signature="e#9016#9017#0" expanded="true" />
-                <element signature="e#9062#9063#0" expanded="true" />
-                <element signature="e#9105#9106#0" expanded="true" />
-                <element signature="e#9141#9142#0" expanded="true" />
-                <element signature="e#9169#9170#0" expanded="true" />
-                <element signature="e#9214#9215#0" expanded="true" />
-                <element signature="e#9262#9263#0" expanded="true" />
-                <element signature="e#9308#9309#0" expanded="true" />
-                <element signature="e#9336#9337#0" expanded="true" />
+                <element signature="e#1901#1902#0" expanded="true" />
+                <element signature="e#1928#1929#0" expanded="true" />
+                <element signature="e#11607#11608#0" expanded="true" />
+                <element signature="e#11679#11680#0" expanded="true" />
+                <element signature="e#11727#11728#0" expanded="true" />
+                <element signature="e#11772#11773#0" expanded="true" />
+                <element signature="e#11818#11819#0" expanded="true" />
+                <element signature="e#11861#11862#0" expanded="true" />
+                <element signature="e#11897#11898#0" expanded="true" />
+                <element signature="e#11925#11926#0" expanded="true" />
+                <element signature="e#11970#11971#0" expanded="true" />
+                <element signature="e#12018#12019#0" expanded="true" />
+                <element signature="e#12064#12065#0" expanded="true" />
+                <element signature="e#12092#12093#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PromiseImpl2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/promise/PromiseImpl2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="139" selection-end-column="5" />
+              <folding>
+                <element signature="e#1904#1905#0" expanded="true" />
+                <element signature="e#1931#1932#0" expanded="true" />
+                <element signature="e#9595#9596#0" expanded="true" />
+                <element signature="e#9667#9668#0" expanded="true" />
+                <element signature="e#9715#9716#0" expanded="true" />
+                <element signature="e#9760#9761#0" expanded="true" />
+                <element signature="e#9806#9807#0" expanded="true" />
+                <element signature="e#9849#9850#0" expanded="true" />
+                <element signature="e#9885#9886#0" expanded="true" />
+                <element signature="e#9913#9914#0" expanded="true" />
+                <element signature="e#9958#9959#0" expanded="true" />
+                <element signature="e#10006#10007#0" expanded="true" />
+                <element signature="e#10052#10053#0" expanded="true" />
+                <element signature="e#10080#10081#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -115,7 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../crm-web/src/main/resources/templates/en_US/br-checker-details.html" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/template/DataPanelTemplateBuilder.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/template/SidebarTemplate.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/resources/templates/en_US/alert.html" />
@@ -164,6 +191,7 @@
         <option value="$PROJECT_DIR$/src/main/java/test/PromiseAllTest.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/service/callreview/BrCheckerDetailsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/promise/Promises.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/crm/promise/PromiseImpl2.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/promise/PromiseImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/test/PromiseTest.java" />
       </list>
@@ -1162,7 +1190,13 @@
       <option name="project" value="LOCAL" />
       <updated>1445101532711</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Finally Promise optimized">
+      <created>1445107445504</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1445107445504</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1170,7 +1204,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1219,14 +1253,15 @@
     <MESSAGE value="Promise Optimization" />
     <MESSAGE value="Promise Optimization did not work" />
     <MESSAGE value="Promise Optimization did not work. Undoing all changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Promise Optimization did not work. Undoing all changes" />
+    <MESSAGE value="Finally Promise optimized" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finally Promise optimized" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/io/crm/promise/PromiseImpl.java</url>
-          <line>90</line>
+          <line>163</line>
           <properties />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
@@ -1240,13 +1275,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/template/input/SelectTemplateBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/template/input/TextInputTemplate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1490,7 +1518,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="58" column="43" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1556,8 +1584,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#679#680#0" expanded="true" />
-            <element signature="e#723#724#0" expanded="true" />
+            <element signature="e#679#680#0" expanded="false" />
+            <element signature="e#723#724#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1567,7 +1595,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="308" column="12" selection-start-line="308" selection-start-column="12" selection-end-line="308" selection-end-column="12" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1585,7 +1613,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1594,14 +1622,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/promise/intfs/Defer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -1616,34 +1636,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/promise/intfs/Defer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/promise/PromiseImpl2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="139" selection-end-column="5" />
+          <folding>
+            <element signature="e#1904#1905#0" expanded="true" />
+            <element signature="e#1931#1932#0" expanded="true" />
+            <element signature="e#9595#9596#0" expanded="true" />
+            <element signature="e#9667#9668#0" expanded="true" />
+            <element signature="e#9715#9716#0" expanded="true" />
+            <element signature="e#9760#9761#0" expanded="true" />
+            <element signature="e#9806#9807#0" expanded="true" />
+            <element signature="e#9849#9850#0" expanded="true" />
+            <element signature="e#9885#9886#0" expanded="true" />
+            <element signature="e#9913#9914#0" expanded="true" />
+            <element signature="e#9958#9959#0" expanded="true" />
+            <element signature="e#10006#10007#0" expanded="true" />
+            <element signature="e#10052#10053#0" expanded="true" />
+            <element signature="e#10080#10081#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/promise/PromiseImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="223" column="32" selection-start-line="223" selection-start-column="32" selection-end-line="223" selection-end-column="32" />
+          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
           <folding>
-            <element signature="e#1862#1863#0" expanded="true" />
-            <element signature="e#1889#1890#0" expanded="true" />
-            <element signature="e#8851#8852#0" expanded="true" />
-            <element signature="e#8923#8924#0" expanded="true" />
-            <element signature="e#8971#8972#0" expanded="true" />
-            <element signature="e#9016#9017#0" expanded="true" />
-            <element signature="e#9062#9063#0" expanded="true" />
-            <element signature="e#9105#9106#0" expanded="true" />
-            <element signature="e#9141#9142#0" expanded="true" />
-            <element signature="e#9169#9170#0" expanded="true" />
-            <element signature="e#9214#9215#0" expanded="true" />
-            <element signature="e#9262#9263#0" expanded="true" />
-            <element signature="e#9308#9309#0" expanded="true" />
-            <element signature="e#9336#9337#0" expanded="true" />
+            <element signature="e#1901#1902#0" expanded="true" />
+            <element signature="e#1928#1929#0" expanded="true" />
+            <element signature="e#11607#11608#0" expanded="true" />
+            <element signature="e#11679#11680#0" expanded="true" />
+            <element signature="e#11727#11728#0" expanded="true" />
+            <element signature="e#11772#11773#0" expanded="true" />
+            <element signature="e#11818#11819#0" expanded="true" />
+            <element signature="e#11861#11862#0" expanded="true" />
+            <element signature="e#11897#11898#0" expanded="true" />
+            <element signature="e#11925#11926#0" expanded="true" />
+            <element signature="e#11970#11971#0" expanded="true" />
+            <element signature="e#12018#12019#0" expanded="true" />
+            <element signature="e#12064#12065#0" expanded="true" />
+            <element signature="e#12092#12093#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/test/PromiseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.392562">
-          <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
-          <folding />
+        <state vertical-scroll-proportion="0.5082645">
+          <caret line="107" column="29" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="29" />
+          <folding>
+            <element signature="e#380#381#0" expanded="true" />
+            <element signature="e#403#404#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

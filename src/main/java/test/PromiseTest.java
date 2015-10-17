@@ -4,6 +4,7 @@ import diag.Watch;
 import io.crm.promise.PromiseImpl;
 import io.crm.promise.Promises;
 import io.crm.promise.intfs.Defer;
+import io.crm.promise.intfs.Promise;
 
 import static io.crm.promise.Promises.*;
 
@@ -16,6 +17,19 @@ public class PromiseTest {
 
     public static void main(String... args) {
         test8();
+    }
+
+    public static void test9() {
+        Defer<Integer> first = Promises.defer();
+        Promise<Integer> last = first.promise();
+        for (int i = 0; i < 100000; i++) {
+            last = last.mapTo(v -> v + 1);
+        }
+        Watch watch = new Watch().start();
+        first.complete(0);
+        last.success(v -> {
+            System.out.println(v + " " + watch.end().elapsed());
+        });
     }
 
     public static void test8() {
