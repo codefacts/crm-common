@@ -1,11 +1,19 @@
 package io.crm.promise;
 
+import com.google.common.collect.ImmutableList;
 import diag.Watch;
+import io.crm.promise.intfs.CompleteHandler;
 import io.crm.promise.intfs.Defer;
 import io.crm.promise.intfs.Promise;
+import io.crm.util.SimpleCounter;
 import io.crm.util.Touple2;
+import io.crm.util.Touple3;
+import io.crm.util.Touple4;
 import io.vertx.core.Vertx;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 import java.util.concurrent.TimeoutException;
 
 /**
@@ -34,24 +42,181 @@ final public class Promises {
         return promise;
     }
 
+    public static <T> Promise<List<T>> all(final Collection<Promise<T>> ts) {
+        if (ts.size() == 0) {
+            return Promises.success(ImmutableList.of());
+        }
+        Defer<List<T>> defer = defer();
+        final SimpleCounter counter = new SimpleCounter(0);
+        ts.forEach(tl -> {
+            tl.complete(t -> {
+                if (!defer.promise().isComplete()) {
+                    if (t.isSuccess()) {
+                        counter.counter++;
+                        if (counter.counter == ts.size()) {
+                            ImmutableList.Builder<T> builder = ImmutableList.builder();
+                            ts.forEach(tt -> builder.add(tt.get()));
+                            defer.complete(builder.build());
+                        }
+                    } else {
+                        defer.fail(t.error());
+                    }
+                }
+            });
+        });
+        return defer.promise();
+    }
+
     public static <T1, T2> Promise<Touple2<T1, T2>> all(final Promise<T1> t1Promise, final Promise<T2> t2Promise) {
         final Defer<Touple2<T1, T2>> defer = defer();
-        t1Promise
-                .complete(t1p -> {
-                    if (t1p.isSuccess()) {
-                        t2Promise
-                                .complete(t2p -> {
-                                    if (t2p.isSuccess()) {
-                                        defer.complete(new Touple2<T1, T2>(t1p.get(), t2p.get()));
-                                    } else {
-                                        defer.fail(t2p.error());
-                                    }
-                                });
-                    } else {
-                        defer.fail(t1p.error());
+        SimpleCounter counter = new SimpleCounter();
+        Touple2<T1, T2> touple2 = new Touple2<>();
+        final int len = 2;
+        t1Promise.complete(t -> {
+            if (!defer.promise().isComplete()) {
+                if (t.isSuccess()) {
+                    touple2.t1 = t.get();
+                    counter.counter++;
+                    if (counter.counter == len) {
+                        defer.complete(touple2);
                     }
-                })
-        ;
+                } else {
+                    defer.fail(t.error());
+                }
+            }
+        });
+
+        t2Promise.complete(t -> {
+            if (!defer.promise().isComplete()) {
+                if (t.isSuccess()) {
+                    touple2.t2 = t.get();
+                    counter.counter++;
+                    if (counter.counter == len) {
+                        defer.complete(touple2);
+                    }
+                } else {
+                    defer.fail(t.error());
+                }
+            }
+        });
+        return defer.promise();
+    }
+
+    public static <T1, T2, T3> Promise<Touple3<T1, T2, T3>> all(final Promise<T1> t1Promise,
+                                                                final Promise<T2> t2Promise,
+                                                                final Promise<T3> t3Promise) {
+        final Defer<Touple3<T1, T2, T3>> defer = defer();
+        SimpleCounter counter = new SimpleCounter();
+        Touple3<T1, T2, T3> touple3 = new Touple3<>();
+        final int len = 3;
+        t1Promise.complete(t -> {
+            if (!defer.promise().isComplete()) {
+                if (t.isSuccess()) {
+                    touple3.setT1(t.get());
+                    counter.counter++;
+                    if (counter.counter == len) {
+                        defer.complete(touple3);
+                    }
+                } else {
+                    defer.fail(t.error());
+                }
+            }
+        });
+
+        t2Promise.complete(t -> {
+            if (!defer.promise().isComplete()) {
+                if (t.isSuccess()) {
+                    touple3.setT2(t.get());
+                    counter.counter++;
+                    if (counter.counter == len) {
+                        defer.complete(touple3);
+                    }
+                } else {
+                    defer.fail(t.error());
+                }
+            }
+        });
+
+        t3Promise.complete(t -> {
+            if (!defer.promise().isComplete()) {
+                if (t.isSuccess()) {
+                    touple3.setT3(t.get());
+                    counter.counter++;
+                    if (counter.counter == len) {
+                        defer.complete(touple3);
+                    }
+                } else {
+                    defer.fail(t.error());
+                }
+            }
+        });
+        return defer.promise();
+    }
+
+
+    public static <T1, T2, T3, T4> Promise<Touple4<T1, T2, T3, T4>> all(final Promise<T1> t1Promise,
+                                                                        final Promise<T2> t2Promise,
+                                                                        final Promise<T3> t3Promise,
+                                                                        final Promise<T4> t4Promise) {
+        final Defer<Touple4<T1, T2, T3, T4>> defer = defer();
+        SimpleCounter counter = new SimpleCounter();
+        Touple4<T1, T2, T3, T4> touple4 = new Touple4<>();
+        final int len = 4;
+        t1Promise.complete(t -> {
+            if (!defer.promise().isComplete()) {
+                if (t.isSuccess()) {
+                    touple4.setT1(t.get());
+                    counter.counter++;
+                    if (counter.counter == len) {
+                        defer.complete(touple4);
+                    }
+                } else {
+                    defer.fail(t.error());
+                }
+            }
+        });
+
+        t2Promise.complete(t -> {
+            if (!defer.promise().isComplete()) {
+                if (t.isSuccess()) {
+                    touple4.setT2(t.get());
+                    counter.counter++;
+                    if (counter.counter == len) {
+                        defer.complete(touple4);
+                    }
+                } else {
+                    defer.fail(t.error());
+                }
+            }
+        });
+
+        t3Promise.complete(t -> {
+            if (!defer.promise().isComplete()) {
+                if (t.isSuccess()) {
+                    touple4.setT3(t.get());
+                    counter.counter++;
+                    if (counter.counter == len) {
+                        defer.complete(touple4);
+                    }
+                } else {
+                    defer.fail(t.error());
+                }
+            }
+        });
+
+        t4Promise.complete(t -> {
+            if (!defer.promise().isComplete()) {
+                if (t.isSuccess()) {
+                    touple4.setT4(t.get());
+                    counter.counter++;
+                    if (counter.counter == len) {
+                        defer.complete(touple4);
+                    }
+                } else {
+                    defer.fail(t.error());
+                }
+            }
+        });
         return defer.promise();
     }
 }
