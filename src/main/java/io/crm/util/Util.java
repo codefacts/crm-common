@@ -3,7 +3,14 @@ package io.crm.util;
 import com.google.common.collect.ImmutableList;
 import io.crm.Events;
 import io.crm.QC;
+import io.crm.promise.Promises;
+import io.crm.promise.intfs.Defer;
+import io.crm.promise.intfs.Promise;
 import io.crm.util.exceptions.InvalidArgumentException;
+import io.vertx.core.AsyncResult;
+import io.vertx.core.Vertx;
+import io.vertx.core.eventbus.EventBus;
+import io.vertx.core.eventbus.Message;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import org.bson.Document;
@@ -247,5 +254,17 @@ final public class Util {
                         .put(QC.message, ex.getMessage())
                         .put(QC.stackTrace, builder.build())
                 ;
+    }
+
+    public static <T> Promise<Message<T>> send(final EventBus eventBus, final String dest, Object message) {
+        final Defer<Message<T>> defer = Promises.defer();
+        eventBus.send(dest, message, (AsyncResult<Message<T>> r) -> {
+            if (r.failed()) {
+                defer.fail(r.cause());
+            } else {
+                defer.complete(r.result());
+            }
+        });
+        return defer.promise();
     }
 }
