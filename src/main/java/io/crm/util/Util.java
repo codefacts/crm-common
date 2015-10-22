@@ -8,6 +8,7 @@ import io.crm.promise.intfs.Defer;
 import io.crm.promise.intfs.Promise;
 import io.crm.util.exceptions.InvalidArgumentException;
 import io.vertx.core.AsyncResult;
+import io.vertx.core.Handler;
 import io.vertx.core.Vertx;
 import io.vertx.core.eventbus.EventBus;
 import io.vertx.core.eventbus.Message;
@@ -266,5 +267,12 @@ final public class Util {
             }
         });
         return defer.promise();
+    }
+
+    public static <T> Handler<AsyncResult<T>> makeDeferred(Defer<T> defer) {
+        return r -> {
+            if (r.failed()) defer.fail(r.cause());
+            else defer.complete(r.result());
+        };
     }
 }
