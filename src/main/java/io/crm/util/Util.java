@@ -275,4 +275,14 @@ final public class Util {
             else defer.complete(r.result());
         };
     }
+
+    public static JsonObject pagination(final int page, final int size, final long total, final int length) {
+        return
+                new JsonObject()
+                        .put(QC.page, page)
+                        .put(QC.size, size)
+                        .put(QC.total, total)
+                        .put(QC.length, length)
+                ;
+    }
 }
