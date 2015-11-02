@@ -34,24 +34,25 @@ final public class Promises {
         return promise;
     }
 
-    public static <T> Promise<List<T>> all(final Collection<Promise<T>> ts) {
-        if (ts.size() == 0) {
+    public static <T> Promise<List<T>> all(final Collection<Promise<T>> promises) {
+        if (promises.size() == 0) {
             return Promises.success(ImmutableList.of());
         }
         Defer<List<T>> defer = defer();
         final SimpleCounter counter = new SimpleCounter(0);
-        ts.forEach(tl -> {
-            tl.complete(t -> {
-                if (!defer.promise().isComplete()) {
-                    if (t.isSuccess()) {
-                        counter.counter++;
-                        if (counter.counter == ts.size()) {
-                            ImmutableList.Builder<T> builder = ImmutableList.builder();
-                            ts.forEach(tt -> builder.add(tt.get()));
-                            defer.complete(builder.build());
-                        }
+        Touple2<Boolean, Throwable> pStatus = new Touple2<>();
+        promises.forEach(pm -> {
+            pm.complete(pms -> {
+                pStatus.t1 &= pms.isSuccess();
+                pStatus.t2 = pStatus.t2 == null ? pms.error() : pStatus.t2;
+                counter.counter++;
+                if (counter.counter == promises.size()) {
+                    if (pStatus.t1) {
+                        ImmutableList.Builder<T> builder = ImmutableList.builder();
+                        promises.forEach(promise -> builder.add(promise.get()));
+                        defer.complete(builder.build());
                     } else {
-                        defer.fail(t.error());
+                        defer.fail(pStatus.t2);
                     }
                 }
             });
