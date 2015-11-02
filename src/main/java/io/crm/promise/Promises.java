@@ -34,7 +34,7 @@ final public class Promises {
         return promise;
     }
 
-    public static <T> Promise<List<T>> all(final Collection<Promise<T>> promises) {
+    public static <T> Promise<List<T>> when(final Collection<Promise<T>> promises) {
         if (promises.size() == 0) {
             return Promises.success(ImmutableList.of());
         }
@@ -60,17 +60,19 @@ final public class Promises {
         return defer.promise();
     }
 
-    public static <C extends Collection<Promise<T>>, T> Promise<C> allDone(final C promises) {
-        final Defer<C> defer = Promises.defer();
+    public static <T> Promise<List<Promise<T>>> allComplete(final Collection<Promise<T>> promises) {
+        final Defer<List<Promise<T>>> defer = Promises.defer();
         try {
+            final ImmutableList.Builder<Promise<T>> builder = ImmutableList.builder();
             final SimpleCounter counter = new SimpleCounter(0);
             promises.forEach(promise -> {
-                promise.complete(p -> {
+                final Promise<T> complete = promise.complete(p -> {
                     counter.counter++;
                     if (counter.counter == promises.size()) {
-                        defer.complete(promises);
+                        defer.complete(builder.build());
                     }
                 });
+                builder.add(complete);
             });
         } catch (Exception ex) {
             defer.fail(ex);
@@ -78,7 +80,7 @@ final public class Promises {
         return defer.promise();
     }
 
-    public static <T1, T2> Promise<Touple2<T1, T2>> all(final Promise<T1> t1Promise, final Promise<T2> t2Promise) {
+    public static <T1, T2> Promise<Touple2<T1, T2>> when(final Promise<T1> t1Promise, final Promise<T2> t2Promise) {
         final Defer<Touple2<T1, T2>> defer = defer();
         SimpleCounter counter = new SimpleCounter();
         Touple2<T1, T2> touple2 = new Touple2<>();
@@ -113,9 +115,9 @@ final public class Promises {
         return defer.promise();
     }
 
-    public static <T1, T2, T3> Promise<Touple3<T1, T2, T3>> all(final Promise<T1> t1Promise,
-                                                                final Promise<T2> t2Promise,
-                                                                final Promise<T3> t3Promise) {
+    public static <T1, T2, T3> Promise<Touple3<T1, T2, T3>> when(final Promise<T1> t1Promise,
+                                                                 final Promise<T2> t2Promise,
+                                                                 final Promise<T3> t3Promise) {
         final Defer<Touple3<T1, T2, T3>> defer = defer();
         SimpleCounter counter = new SimpleCounter();
         Touple3<T1, T2, T3> touple3 = new Touple3<>();
@@ -165,10 +167,10 @@ final public class Promises {
     }
 
 
-    public static <T1, T2, T3, T4> Promise<Touple4<T1, T2, T3, T4>> all(final Promise<T1> t1Promise,
-                                                                        final Promise<T2> t2Promise,
-                                                                        final Promise<T3> t3Promise,
-                                                                        final Promise<T4> t4Promise) {
+    public static <T1, T2, T3, T4> Promise<Touple4<T1, T2, T3, T4>> when(final Promise<T1> t1Promise,
+                                                                         final Promise<T2> t2Promise,
+                                                                         final Promise<T3> t3Promise,
+                                                                         final Promise<T4> t4Promise) {
         final Defer<Touple4<T1, T2, T3, T4>> defer = defer();
         SimpleCounter counter = new SimpleCounter();
         Touple4<T1, T2, T3, T4> touple4 = new Touple4<>();
