@@ -60,6 +60,24 @@ final public class Promises {
         return defer.promise();
     }
 
+    public static <C extends Collection<Promise<T>>, T> Promise<C> allDone(final C promises) {
+        final Defer<C> defer = Promises.defer();
+        try {
+            final SimpleCounter counter = new SimpleCounter(0);
+            promises.forEach(promise -> {
+                promise.complete(p -> {
+                    counter.counter++;
+                    if (counter.counter == promises.size()) {
+                        defer.complete(promises);
+                    }
+                });
+            });
+        } catch (Exception ex) {
+            defer.fail(ex);
+        }
+        return defer.promise();
+    }
+
     public static <T1, T2> Promise<Touple2<T1, T2>> all(final Promise<T1> t1Promise, final Promise<T2> t2Promise) {
         final Defer<Touple2<T1, T2>> defer = defer();
         SimpleCounter counter = new SimpleCounter();
