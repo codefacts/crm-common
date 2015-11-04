@@ -8,7 +8,7 @@ import io.crm.promise.intfs.*;
 final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
     public static long total = 0;
     private static final MapHandler emptyMapHandler = s -> s;
-    private static final MapPromiseHandler emptyMapPromiseHandler = s -> Promises.success(s);
+    private static final MapPromiseHandler emptyMapPromiseHandler = s -> Promises.from(s);
     private static final ThenHandler emptyThenHandler = s -> {
     };
     private static final SuccessHandler emptySuccessHandler = s -> {
@@ -110,7 +110,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
                     promise
                             .error(e ->
                                     pp.fail(e))
-                            .success(s ->
+                            .then(s ->
                                     pp.complete(s));
 
                     return;
@@ -176,7 +176,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
         if (isSuccess()) {
             try {
                 final Promise<R> rPromise = _promiseHandler.apply(value);
-                rPromise.success(s -> _deferNext.complete(s)).error(e -> _deferNext.fail(e));
+                rPromise.then(s -> _deferNext.complete(s)).error(e -> _deferNext.fail(e));
             } catch (final Exception ex) {
                 ex.printStackTrace();
                 _deferNext.fail(ex);
@@ -211,7 +211,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
     }
 
     @Override
-    public Promise<T> success(final SuccessHandler<T> successHandler) {
+    public Promise<T> then(final SuccessHandler<T> successHandler) {
         final SuccessHandler<T> _successHandler = successHandler == null ? emptySuccessHandler : successHandler;
         final PromiseImpl<T> promise = new PromiseImpl<>(_successHandler, Type.SuccessHandler);
         final Defer _deferNext = nextPromise = promise;

@@ -1,5 +1,8 @@
 package io.crm.util;
 
+import java.util.function.BiConsumer;
+import java.util.function.BiFunction;
+
 /**
  * Created by someone on 20/08/2015.
  */
@@ -31,5 +34,9 @@ final public class Touple2<T1, T2> {
     public Touple2<T1, T2> t2(final T2 t2) {
         this.t2 = t2;
         return this;
+    }
+
+    public <R> R apply(final BiFunction<T1, T2, R> biFunction) {
+        return biFunction.apply(t1, t2);
     }
 }

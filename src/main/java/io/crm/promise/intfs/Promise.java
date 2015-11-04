@@ -13,7 +13,7 @@ public interface Promise<T> {
 
     public Promise<Void> mapToVoid(ThenHandler<T> valueConsumer);
 
-    public Promise<T> success(SuccessHandler<T> successHandler);
+    public Promise<T> then(SuccessHandler<T> successHandler);
 
     public Promise<T> error(ErrorHandler errorHandler);
 

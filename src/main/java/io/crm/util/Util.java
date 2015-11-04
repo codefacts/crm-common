@@ -22,6 +22,8 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
@@ -284,5 +286,46 @@ final public class Util {
                         .put(QC.total, total)
                         .put(QC.length, length)
                 ;
+    }
+
+    public static <T> boolean eq(final T t1, final T t2) {
+        return t1.equals(t2);
+    }
+
+    public static <T, R> R apply(final T t, final Function<T, R> function) {
+        return function.apply(t);
+    }
+
+    public static <T> T accept(final T t, final Consumer<T> consumer) {
+        consumer.accept(t);
+        return t;
+    }
+
+    public static String toString(char i) {
+        return i + "";
+    }
+
+    public static String toString(byte i) {
+        return i + "";
+    }
+
+    public static String toString(short i) {
+        return i + "";
+    }
+
+    public static String toString(int i) {
+        return i + "";
+    }
+
+    public static String toString(long i) {
+        return i + "";
+    }
+
+    public static String toString(float i) {
+        return i + "";
+    }
+
+    public static String toString(double i) {
+        return i + "";
     }
 }

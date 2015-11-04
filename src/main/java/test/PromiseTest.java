@@ -27,7 +27,7 @@ public class PromiseTest {
         }
         Watch watch = new Watch().start();
         first.complete(0);
-        last.success(v -> {
+        last.then(v -> {
             System.out.println(v + " " + watch.end().elapsed());
         });
     }
@@ -38,11 +38,11 @@ public class PromiseTest {
             final Defer<Object> defer = defer();
             defer.promise()
 //            Promises.success(55)
-                    .success(null)
+                    .then(null)
                     .error(null)
                     .mapTo(null)
                     .mapTo(null)
-                    .success(null)
+                    .then(null)
                     .mapTo(null)
                     .complete(null)
                     .error(null)
@@ -54,28 +54,12 @@ public class PromiseTest {
                     .mapToPromise(null)
                     .complete(null)
                     .mapTo(null)
-                    .success(null)
+                    .then(null)
                     .error(null)
                     .mapTo(null)
                     .mapToPromise(null)
                     .complete(null)
-                    .success(null)
-                    .error(null)
-                    .mapTo(null)
-                    .mapToPromise(null)
-                    .complete(null)
-                    .mapToVoid(null)
-                    .error(null)
-                    .mapTo(null)
-                    .mapToPromise(null)
-                    .complete(null)
-                    .mapToVoid(null)
-                    .success(null)
-                    .error(null)
-                    .mapTo(null)
-                    .success(null)
-                    .error(null)
-                    .success(null)
+                    .then(null)
                     .error(null)
                     .mapTo(null)
                     .mapToPromise(null)
@@ -86,10 +70,26 @@ public class PromiseTest {
                     .mapToPromise(null)
                     .complete(null)
                     .mapToVoid(null)
-                    .success(null)
+                    .then(null)
                     .error(null)
                     .mapTo(null)
-                    .success(null)
+                    .then(null)
+                    .error(null)
+                    .then(null)
+                    .error(null)
+                    .mapTo(null)
+                    .mapToPromise(null)
+                    .complete(null)
+                    .mapToVoid(null)
+                    .error(null)
+                    .mapTo(null)
+                    .mapToPromise(null)
+                    .complete(null)
+                    .mapToVoid(null)
+                    .then(null)
+                    .error(null)
+                    .mapTo(null)
+                    .then(null)
                     .error(null)
                     .mapToVoid(null)
                     .error(null)
@@ -97,10 +97,10 @@ public class PromiseTest {
                     .mapToPromise(null)
                     .complete(null)
                     .mapToVoid(null)
-                    .success(null)
+                    .then(null)
                     .error(null)
                     .mapTo(null)
-                    .success(null)
+                    .then(null)
                     .error(null)
             ;
             defer.complete(31);
@@ -113,23 +113,23 @@ public class PromiseTest {
         for (int i = 0; i < 10_000_000; i++) {
             final Defer<Object> defer = defer();
             defer.promise()
-                    .success(null)
+                    .then(null)
                     .error(null)
                     .mapTo(s -> s.toString())
                     .mapTo(s -> s.split("-"))
-                    .success(null)
+                    .then(null)
                     .mapTo(s -> String.join("-", s))
                     .complete(null)
                     .error(null)
-                    .mapToPromise(m -> Promises.success(m.split("5")))
+                    .mapToPromise(m -> Promises.from(m.split("5")))
                     .complete(null)
                     .mapTo(s -> String.join("-", s))
                     .complete(null)
                     .error(null)
-                    .mapToPromise(m -> Promises.success(m.split("5")))
+                    .mapToPromise(m -> Promises.from(m.split("5")))
                     .complete(null)
                     .mapTo(s -> s.length)
-                    .success(null)
+                    .then(null)
                     .error(null)
                     .mapTo(null)
                     .mapToPromise(null)
@@ -140,12 +140,12 @@ public class PromiseTest {
                     .mapToPromise(null)
                     .complete(null)
                     .mapToVoid(null)
-                    .success(null)
+                    .then(null)
                     .error(null)
                     .mapTo(v -> {
                         return "[void]";
                     })
-                    .success(null)
+                    .then(null)
                     .error(null)
             ;
             defer.complete(123);
@@ -156,13 +156,13 @@ public class PromiseTest {
     public static void test6() {
         final Defer<Object> defer = defer();
         defer.promise()
-                .success(null)
+                .then(null)
                 .error(null)
-                .success(null)
+                .then(null)
                 .complete(null)
                 .error(null)
                 .complete(null)
-                .success(null)
+                .then(null)
                 .error(null)
         ;
         defer.fail(new Exception("NO NO"));
@@ -171,13 +171,13 @@ public class PromiseTest {
     public static void test5() {
         final Defer<Object> defer = defer();
         defer.promise()
-                .success(null)
+                .then(null)
                 .error(null)
-                .success(null)
+                .then(null)
                 .complete(null)
                 .error(null)
                 .complete(null)
-                .success(null)
+                .then(null)
                 .error(null)
         ;
         defer.complete();
@@ -186,13 +186,13 @@ public class PromiseTest {
     public static void test4() {
         final Defer<Object> defer = defer();
         defer.promise()
-                .success(null)
+                .then(null)
                 .error(null)
-                .success(null)
+                .then(null)
                 .complete(null)
                 .error(null)
                 .complete(null)
-                .success(null)
+                .then(null)
                 .error(null)
         ;
         defer.complete("8888888888888888888");
@@ -201,40 +201,40 @@ public class PromiseTest {
     public static void test3() {
         final Defer<Object> defer = defer();
         defer.promise()
-                .success(null)
+                .then(null)
                 .error(null)
-                .success(null)
+                .then(null)
                 .complete(null)
                 .error(null)
                 .complete(null)
-                .success(null)
+                .then(null)
                 .error(null)
         ;
         defer.fail(new TimeoutException("Delay: 55"));
     }
 
     private static void test2() {
-        error(new TimeoutException("Timed out: 55"))
-                .success(null)
+        fromError(new TimeoutException("Timed out: 55"))
+                .then(null)
                 .error(null)
-                .success(null)
+                .then(null)
                 .complete(null)
                 .error(null)
                 .complete(null)
-                .success(null)
+                .then(null)
                 .error(null)
         ;
     }
 
     private static void test1() {
-        success("Sona")
-                .success(null)
+        from("Sona")
+                .then(null)
                 .error(null)
-                .success(null)
+                .then(null)
                 .complete(null)
                 .error(null)
                 .complete(null)
-                .success(null)
+                .then(null)
                 .error(null)
         ;
     }

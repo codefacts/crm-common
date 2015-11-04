@@ -6,6 +6,7 @@ import io.crm.promise.intfs.Promise;
 import io.crm.util.*;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -13,17 +14,17 @@ import java.util.List;
  */
 final public class Promises {
 
-    public static Promise<Void> success() {
-        return success(null);
+    public static Promise<Void> from() {
+        return from(null);
     }
 
-    public static <T> Promise<T> success(final T val) {
+    public static <T> Promise<T> from(final T val) {
         final PromiseImpl<T> promise = new PromiseImpl<>(null, null);
         promise.complete(val);
         return promise;
     }
 
-    public static Promise<Void> error(Throwable error) {
+    public static Promise<Void> fromError(Throwable error) {
         final PromiseImpl<Void> promise = new PromiseImpl<>(null, null);
         promise.fail(error);
         return promise;
@@ -36,7 +37,7 @@ final public class Promises {
 
     public static <T> Promise<List<T>> when(final Collection<Promise<T>> promises) {
         if (promises.size() == 0) {
-            return Promises.success(ImmutableList.of());
+            return Promises.from(ImmutableList.of());
         }
         Defer<List<T>> defer = defer();
         final SimpleCounter counter = new SimpleCounter(0);
@@ -62,6 +63,7 @@ final public class Promises {
 
     public static <T> Promise<List<Promise<T>>> allComplete(final Collection<Promise<T>> promises) {
         final Defer<List<Promise<T>>> defer = Promises.defer();
+        if (promises.size() <= 0) defer.complete(Collections.emptyList());
         try {
             final ImmutableList.Builder<Promise<T>> builder = ImmutableList.builder();
             final SimpleCounter counter = new SimpleCounter(0);
