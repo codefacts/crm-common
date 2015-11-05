@@ -22,6 +22,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.concurrent.Callable;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -152,6 +153,9 @@ final public class Util {
         return ((Number) value).longValue();
     }
 
+    public static final String getOrDefault(final Enum src, final String defaultValue) {
+        return src == null ? defaultValue : src.name();
+    }
 
     public static final <T> T getOrDefault(final T src, final T defaultValue) {
         return src == null ? defaultValue : src;
@@ -299,6 +303,22 @@ final public class Util {
     public static <T> T accept(final T t, final Consumer<T> consumer) {
         consumer.accept(t);
         return t;
+    }
+
+    public static <R> R call(final Callable<R> rCallable) {
+        try {
+            return rCallable.call();
+        } catch (Exception e) {
+            if (e instanceof RuntimeException) {
+                throw ((RuntimeException) e);
+            } else {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
+    public static void run(final Runnable runnable) {
+        runnable.run();
     }
 
     public static String toString(char i) {
