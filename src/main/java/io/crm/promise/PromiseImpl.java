@@ -38,11 +38,10 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
         if (isComplete()) {
             throw new PromiseAlreadyComplete("Promise already complete. " + toString());
         }
-        fail(throwable, null);
+        _fail(throwable);
     }
 
-    private void fail(Throwable ex, T val) {
-        value = val;
+    private void _fail(final Throwable ex) {
         error = ex;
         state = State.error;
         invokeErrorCallback(nextPromise, error, this);
@@ -214,11 +213,11 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
                 _deferNext.complete(value);
             } catch (final Exception ex) {
                 ex.printStackTrace();
-                _deferNext.fail(ex, value);
+                _deferNext._fail(ex);
             }
             return promise;
         } else if (isError()) {
-            _deferNext.fail(error, value);
+            _deferNext._fail(error);
             return promise;
         }
         return promise;
@@ -233,11 +232,11 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
         if (isError()) {
             try {
                 _errorHandler.accept(error);
-                promise.fail(error, value);
+                promise._fail(error);
             } catch (final Exception ex) {
                 ex.printStackTrace();
                 error.addSuppressed(ex);
-                promise.fail(error, value);
+                promise._fail(error);
             }
             return promise;
         } else if (isSuccess()) {
@@ -258,16 +257,16 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
                 _deferNext.complete(value);
             } catch (final Exception ex) {
                 ex.printStackTrace();
-                _deferNext.fail(ex, value);
+                _deferNext._fail(ex);
             }
             return promise;
         } else if (isError()) {
             try {
                 _completeHandler.accept(this);
-                _deferNext.fail(error, value);
+                _deferNext._fail(error);
             } catch (final Exception ex) {
                 ex.printStackTrace();
-                _deferNext.fail(ex, value);
+                _deferNext._fail(ex);
             }
             return promise;
         }
