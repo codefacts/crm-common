@@ -4,6 +4,9 @@ import com.google.common.collect.ImmutableList;
 import io.crm.promise.intfs.Defer;
 import io.crm.promise.intfs.Promise;
 import io.crm.util.*;
+import io.crm.util.touple.MutableTpl2;
+import io.crm.util.touple.MutableTpl3;
+import io.crm.util.touple.MutableTpl4;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -41,7 +44,7 @@ final public class Promises {
         }
         Defer<List<T>> defer = defer();
         final SimpleCounter counter = new SimpleCounter(0);
-        Touple2<Boolean, Throwable> pStatus = new Touple2<>();
+        MutableTpl2<Boolean, Throwable> pStatus = new MutableTpl2<>();
         promises.forEach(pm -> {
             pm.complete(pms -> {
                 pStatus.t1 &= pms.isSuccess();
@@ -82,18 +85,18 @@ final public class Promises {
         return defer.promise();
     }
 
-    public static <T1, T2> Promise<Touple2<T1, T2>> when(final Promise<T1> t1Promise, final Promise<T2> t2Promise) {
-        final Defer<Touple2<T1, T2>> defer = defer();
+    public static <T1, T2> Promise<MutableTpl2<T1, T2>> when(final Promise<T1> t1Promise, final Promise<T2> t2Promise) {
+        final Defer<MutableTpl2<T1, T2>> defer = defer();
         SimpleCounter counter = new SimpleCounter();
-        Touple2<T1, T2> touple2 = new Touple2<>();
+        MutableTpl2<T1, T2> mutableTpl2 = new MutableTpl2<>();
         final int len = 2;
         t1Promise.complete(t -> {
             if (!defer.promise().isComplete()) {
                 if (t.isSuccess()) {
-                    touple2.t1 = t.get();
+                    mutableTpl2.t1 = t.get();
                     counter.counter++;
                     if (counter.counter == len) {
-                        defer.complete(touple2);
+                        defer.complete(mutableTpl2);
                     }
                 } else {
                     defer.fail(t.error());
@@ -104,10 +107,10 @@ final public class Promises {
         t2Promise.complete(t -> {
             if (!defer.promise().isComplete()) {
                 if (t.isSuccess()) {
-                    touple2.t2 = t.get();
+                    mutableTpl2.t2 = t.get();
                     counter.counter++;
                     if (counter.counter == len) {
-                        defer.complete(touple2);
+                        defer.complete(mutableTpl2);
                     }
                 } else {
                     defer.fail(t.error());
@@ -117,20 +120,20 @@ final public class Promises {
         return defer.promise();
     }
 
-    public static <T1, T2, T3> Promise<Touple3<T1, T2, T3>> when(final Promise<T1> t1Promise,
-                                                                 final Promise<T2> t2Promise,
-                                                                 final Promise<T3> t3Promise) {
-        final Defer<Touple3<T1, T2, T3>> defer = defer();
+    public static <T1, T2, T3> Promise<MutableTpl3<T1, T2, T3>> when(final Promise<T1> t1Promise,
+                                                                     final Promise<T2> t2Promise,
+                                                                     final Promise<T3> t3Promise) {
+        final Defer<MutableTpl3<T1, T2, T3>> defer = defer();
         SimpleCounter counter = new SimpleCounter();
-        Touple3<T1, T2, T3> touple3 = new Touple3<>();
+        MutableTpl3<T1, T2, T3> mutableTpl3 = new MutableTpl3<>();
         final int len = 3;
         t1Promise.complete(t -> {
             if (!defer.promise().isComplete()) {
                 if (t.isSuccess()) {
-                    touple3.setT1(t.get());
+                    mutableTpl3.setT1(t.get());
                     counter.counter++;
                     if (counter.counter == len) {
-                        defer.complete(touple3);
+                        defer.complete(mutableTpl3);
                     }
                 } else {
                     defer.fail(t.error());
@@ -141,10 +144,10 @@ final public class Promises {
         t2Promise.complete(t -> {
             if (!defer.promise().isComplete()) {
                 if (t.isSuccess()) {
-                    touple3.setT2(t.get());
+                    mutableTpl3.setT2(t.get());
                     counter.counter++;
                     if (counter.counter == len) {
-                        defer.complete(touple3);
+                        defer.complete(mutableTpl3);
                     }
                 } else {
                     defer.fail(t.error());
@@ -155,10 +158,10 @@ final public class Promises {
         t3Promise.complete(t -> {
             if (!defer.promise().isComplete()) {
                 if (t.isSuccess()) {
-                    touple3.setT3(t.get());
+                    mutableTpl3.setT3(t.get());
                     counter.counter++;
                     if (counter.counter == len) {
-                        defer.complete(touple3);
+                        defer.complete(mutableTpl3);
                     }
                 } else {
                     defer.fail(t.error());
@@ -169,21 +172,21 @@ final public class Promises {
     }
 
 
-    public static <T1, T2, T3, T4> Promise<Touple4<T1, T2, T3, T4>> when(final Promise<T1> t1Promise,
-                                                                         final Promise<T2> t2Promise,
-                                                                         final Promise<T3> t3Promise,
-                                                                         final Promise<T4> t4Promise) {
-        final Defer<Touple4<T1, T2, T3, T4>> defer = defer();
+    public static <T1, T2, T3, T4> Promise<MutableTpl4<T1, T2, T3, T4>> when(final Promise<T1> t1Promise,
+                                                                             final Promise<T2> t2Promise,
+                                                                             final Promise<T3> t3Promise,
+                                                                             final Promise<T4> t4Promise) {
+        final Defer<MutableTpl4<T1, T2, T3, T4>> defer = defer();
         SimpleCounter counter = new SimpleCounter();
-        Touple4<T1, T2, T3, T4> touple4 = new Touple4<>();
+        MutableTpl4<T1, T2, T3, T4> mutableTpl4 = new MutableTpl4<>();
         final int len = 4;
         t1Promise.complete(t -> {
             if (!defer.promise().isComplete()) {
                 if (t.isSuccess()) {
-                    touple4.setT1(t.get());
+                    mutableTpl4.setT1(t.get());
                     counter.counter++;
                     if (counter.counter == len) {
-                        defer.complete(touple4);
+                        defer.complete(mutableTpl4);
                     }
                 } else {
                     defer.fail(t.error());
@@ -194,10 +197,10 @@ final public class Promises {
         t2Promise.complete(t -> {
             if (!defer.promise().isComplete()) {
                 if (t.isSuccess()) {
-                    touple4.setT2(t.get());
+                    mutableTpl4.setT2(t.get());
                     counter.counter++;
                     if (counter.counter == len) {
-                        defer.complete(touple4);
+                        defer.complete(mutableTpl4);
                     }
                 } else {
                     defer.fail(t.error());
@@ -208,10 +211,10 @@ final public class Promises {
         t3Promise.complete(t -> {
             if (!defer.promise().isComplete()) {
                 if (t.isSuccess()) {
-                    touple4.setT3(t.get());
+                    mutableTpl4.setT3(t.get());
                     counter.counter++;
                     if (counter.counter == len) {
-                        defer.complete(touple4);
+                        defer.complete(mutableTpl4);
                     }
                 } else {
                     defer.fail(t.error());
@@ -222,10 +225,10 @@ final public class Promises {
         t4Promise.complete(t -> {
             if (!defer.promise().isComplete()) {
                 if (t.isSuccess()) {
-                    touple4.setT4(t.get());
+                    mutableTpl4.setT4(t.get());
                     counter.counter++;
                     if (counter.counter == len) {
-                        defer.complete(touple4);
+                        defer.complete(mutableTpl4);
                     }
                 } else {
                     defer.fail(t.error());

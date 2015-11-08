@@ -1,19 +1,18 @@
-package io.crm.util;
+package io.crm.util.touple;
 
-import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 
 /**
  * Created by someone on 20/08/2015.
  */
-final public class Touple2<T1, T2> {
+final public class MutableTpl2<T1, T2> {
     public T1 t1;
     public T2 t2;
 
-    public Touple2() {
+    public MutableTpl2() {
     }
 
-    public Touple2(final T1 t1, final T2 t2) {
+    public MutableTpl2(final T1 t1, final T2 t2) {
         this.t1 = t1;
         this.t2 = t2;
     }
@@ -22,7 +21,7 @@ final public class Touple2<T1, T2> {
         return t1;
     }
 
-    public Touple2<T1, T2> t1(final T1 t1) {
+    public MutableTpl2<T1, T2> t1(final T1 t1) {
         this.t1 = t1;
         return this;
     }
@@ -31,7 +30,7 @@ final public class Touple2<T1, T2> {
         return t2;
     }
 
-    public Touple2<T1, T2> t2(final T2 t2) {
+    public MutableTpl2<T1, T2> t2(final T2 t2) {
         this.t2 = t2;
         return this;
     }

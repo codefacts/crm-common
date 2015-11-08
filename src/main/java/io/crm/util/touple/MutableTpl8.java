@@ -1,9 +1,9 @@
-package io.crm.util;
+package io.crm.util.touple;
 
 /**
  * Created by someone on 23-Jun-2015.
  */
-final public class Touple11<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> {
+final public class MutableTpl8<T1, T2, T3, T4, T5, T6, T7, T8> {
     private T1 t1;
     private T2 t2;
     private T3 t3;
@@ -12,11 +12,8 @@ final public class Touple11<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> {
     private T6 t6;
     private T7 t7;
     private T8 t8;
-    private T9 t9;
-    private T10 t10;
-    private T11 t11;
 
-    public Touple11(final T1 t1, final T2 t2, final T3 t3, final T4 t4, final T5 t5, final T6 t6, final T7 t7, final T8 t8, final T9 t9, final T10 t10, final T11 t11) {
+    public MutableTpl8(final T1 t1, final T2 t2, final T3 t3, final T4 t4, final T5 t5, final T6 t6, final T7 t7, final T8 t8) {
         this.t1 = t1;
         this.t2 = t2;
         this.t3 = t3;
@@ -25,28 +22,17 @@ final public class Touple11<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> {
         this.t6 = t6;
         this.t7 = t7;
         this.t8 = t8;
-        this.t9 = t9;
-        this.t10 = t10;
-        this.t11 = t11;
     }
 
-    public Touple11() {
+    public MutableTpl8() {
 
-    }
-
-    public T9 getT9() {
-        return t9;
-    }
-
-    public void setT9(T9 t9) {
-        this.t9 = t9;
     }
 
     public T1 getT1() {
         return t1;
     }
 
-    public void setT1(T1 t1) {
+    public void setT1(final T1 t1) {
         this.t1 = t1;
     }
 
@@ -54,7 +40,7 @@ final public class Touple11<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> {
         return t2;
     }
 
-    public void setT2(T2 t2) {
+    public void setT2(final T2 t2) {
         this.t2 = t2;
     }
 
@@ -62,7 +48,7 @@ final public class Touple11<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> {
         return t3;
     }
 
-    public void setT3(T3 t3) {
+    public void setT3(final T3 t3) {
         this.t3 = t3;
     }
 
@@ -70,7 +56,7 @@ final public class Touple11<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> {
         return t4;
     }
 
-    public void setT4(T4 t4) {
+    public void setT4(final T4 t4) {
         this.t4 = t4;
     }
 
@@ -78,7 +64,7 @@ final public class Touple11<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> {
         return t5;
     }
 
-    public void setT5(T5 t5) {
+    public void setT5(final T5 t5) {
         this.t5 = t5;
     }
 
@@ -86,7 +72,7 @@ final public class Touple11<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> {
         return t6;
     }
 
-    public void setT6(T6 t6) {
+    public void setT6(final T6 t6) {
         this.t6 = t6;
     }
 
@@ -94,7 +80,7 @@ final public class Touple11<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> {
         return t7;
     }
 
-    public void setT7(T7 t7) {
+    public void setT7(final T7 t7) {
         this.t7 = t7;
     }
 
@@ -102,29 +88,13 @@ final public class Touple11<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> {
         return t8;
     }
 
-    public void setT8(T8 t8) {
+    public void setT8(final T8 t8) {
         this.t8 = t8;
-    }
-
-    public T10 getT10() {
-        return t10;
-    }
-
-    public void setT10(T10 t10) {
-        this.t10 = t10;
-    }
-
-    public T11 getT11() {
-        return t11;
-    }
-
-    public void setT11(T11 t11) {
-        this.t11 = t11;
     }
 
     @Override
     public String toString() {
-        return "Touple11{" +
+        return "Touple8{" +
                 "t1=" + t1 +
                 ", t2=" + t2 +
                 ", t3=" + t3 +
@@ -133,9 +103,6 @@ final public class Touple11<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11> {
                 ", t6=" + t6 +
                 ", t7=" + t7 +
                 ", t8=" + t8 +
-                ", t9=" + t9 +
-                ", t10=" + t10 +
-                ", t11=" + t11 +
                 '}';
     }
 }

@@ -1,30 +1,24 @@
-package io.crm.util;
+package io.crm.util.touple;
 
 /**
  * Created by someone on 23-Jun-2015.
  */
-final public class Touple8<T1, T2, T3, T4, T5, T6, T7, T8> {
+final public class MutableTpl5<T1, T2, T3, T4, T5> {
     private T1 t1;
     private T2 t2;
     private T3 t3;
     private T4 t4;
     private T5 t5;
-    private T6 t6;
-    private T7 t7;
-    private T8 t8;
 
-    public Touple8(final T1 t1, final T2 t2, final T3 t3, final T4 t4, final T5 t5, final T6 t6, final T7 t7, final T8 t8) {
+    public MutableTpl5(final T1 t1, final T2 t2, final T3 t3, final T4 t4, final T5 t5) {
         this.t1 = t1;
         this.t2 = t2;
         this.t3 = t3;
         this.t4 = t4;
         this.t5 = t5;
-        this.t6 = t6;
-        this.t7 = t7;
-        this.t8 = t8;
     }
 
-    public Touple8() {
+    public MutableTpl5() {
 
     }
 
@@ -68,41 +62,14 @@ final public class Touple8<T1, T2, T3, T4, T5, T6, T7, T8> {
         this.t5 = t5;
     }
 
-    public T6 getT6() {
-        return t6;
-    }
-
-    public void setT6(final T6 t6) {
-        this.t6 = t6;
-    }
-
-    public T7 getT7() {
-        return t7;
-    }
-
-    public void setT7(final T7 t7) {
-        this.t7 = t7;
-    }
-
-    public T8 getT8() {
-        return t8;
-    }
-
-    public void setT8(final T8 t8) {
-        this.t8 = t8;
-    }
-
     @Override
     public String toString() {
-        return "Touple8{" +
+        return "Touple5{" +
                 "t1=" + t1 +
                 ", t2=" + t2 +
                 ", t3=" + t3 +
                 ", t4=" + t4 +
                 ", t5=" + t5 +
-                ", t6=" + t6 +
-                ", t7=" + t7 +
-                ", t8=" + t8 +
                 '}';
     }
 }

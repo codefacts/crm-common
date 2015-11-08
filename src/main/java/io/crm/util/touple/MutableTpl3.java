@@ -1,17 +1,17 @@
-package io.crm.util;
+package io.crm.util.touple;
 
-final public class Touple3<T1, T2, T3> {
+final public class MutableTpl3<T1, T2, T3> {
     private T1 t1;
     private T2 t2;
     private T3 t3;
 
-    public Touple3(final T1 t1, final T2 t2, final T3 t3) {
+    public MutableTpl3(final T1 t1, final T2 t2, final T3 t3) {
         this.t1 = t1;
         this.t2 = t2;
         this.t3 = t3;
     }
 
-    public Touple3() {
+    public MutableTpl3() {
 
     }
 

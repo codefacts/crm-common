@@ -1,26 +1,22 @@
-package io.crm.util;
+package io.crm.util.touple;
 
 /**
  * Created by someone on 23-Jun-2015.
  */
-final public class Touple6<T1, T2, T3, T4, T5, T6> {
+final public class MutableTpl4<T1, T2, T3, T4> {
     private T1 t1;
     private T2 t2;
     private T3 t3;
     private T4 t4;
-    private T5 t5;
-    private T6 t6;
 
-    public Touple6(final T1 t1, final T2 t2, final T3 t3, final T4 t4, final T5 t5, final T6 t6) {
+    public MutableTpl4(final T1 t1, final T2 t2, final T3 t3, final T4 t4) {
         this.t1 = t1;
         this.t2 = t2;
         this.t3 = t3;
         this.t4 = t4;
-        this.t5 = t5;
-        this.t6 = t6;
     }
 
-    public Touple6() {
+    public MutableTpl4() {
 
     }
 
@@ -56,31 +52,13 @@ final public class Touple6<T1, T2, T3, T4, T5, T6> {
         this.t4 = t4;
     }
 
-    public T5 getT5() {
-        return t5;
-    }
-
-    public void setT5(final T5 t5) {
-        this.t5 = t5;
-    }
-
-    public T6 getT6() {
-        return t6;
-    }
-
-    public void setT6(final T6 t6) {
-        this.t6 = t6;
-    }
-
     @Override
     public String toString() {
-        return "Touple6{" +
+        return "Touple4{" +
                 "t1=" + t1 +
                 ", t2=" + t2 +
                 ", t3=" + t3 +
                 ", t4=" + t4 +
-                ", t5=" + t5 +
-                ", t6=" + t6 +
                 '}';
     }
 }

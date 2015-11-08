@@ -1,17 +1,19 @@
 package io.crm.promise.intfs;
 
-import io.crm.intfs.FunctionUnchecked;
-
 /**
  * Created by someone on 15/10/2015.
  */
 public interface Promise<T> {
 
-    public <R> Promise<R> mapTo(MapHandler<T, R> functionUnchecked);
+    public <R> Promise<R> mapTo(MapToHandler<T, R> functionUnchecked);
 
-    public <R> Promise<R> mapToPromise(MapPromiseHandler<T, R> function);
+    public <R> Promise<R> mapToPromise(MapToPromiseHandler<T, R> function);
 
-    public Promise<Void> mapToVoid(ThenHandler<T> valueConsumer);
+//    public <R> Promise<R> mapToAndDecide(MapAndDecideHandler<T, R> functionUnchecked);
+//
+//    public <R> Promise<R> mapToPromiseAndDecide(MapToPromiseAndDecideHandler<T, R> function);
+//
+//    public Promise<Void> thenDecide(ThenDecideHandler<T> valueConsumer);
 
     public Promise<T> then(SuccessHandler<T> successHandler);
 

@@ -7,8 +7,8 @@ import io.crm.promise.intfs.*;
  */
 final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
     public static long total = 0;
-    private static final MapHandler emptyMapHandler = s -> s;
-    private static final MapPromiseHandler emptyMapPromiseHandler = s -> Promises.from(s);
+    private static final MapToHandler EMPTY_MAP_TO_HANDLER = s -> s;
+    private static final MapToPromiseHandler EMPTY_MAP_TO_PROMISE_HANDLER = s -> Promises.from(s);
     private static final ThenHandler emptyThenHandler = s -> {
     };
     private static final SuccessHandler emptySuccessHandler = s -> {
@@ -17,6 +17,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
     };
     private static final CompleteHandler emptyCompleteHandler = s -> {
     };
+    private FilterHandler emptyFilterHandler = s -> true;
 
     private T value;
     private Throwable error;
@@ -37,9 +38,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
         if (isComplete()) {
             throw new PromiseAlreadyComplete("Promise already complete. " + toString());
         }
-        error = throwable;
-        state = State.error;
-        invokeErrorCallback(nextPromise, error, this);
+        fail(throwable, null);
     }
 
     private void fail(Throwable ex, T val) {
@@ -107,12 +106,17 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
 
                 if (nextPromise.type == Type.MapTo) {
 
-                    final Object retValue = ((MapHandler) _invokeNext).apply(value);
+                    final Object retValue = ((MapToHandler) _invokeNext).apply(value);
                     value = nextPromise.value = retValue;
 
-                } else if (_invokeNext instanceof MapPromiseHandler) {
+                } else if (_invokeNext instanceof MapToPromiseHandler) {
 
-                    final Promise promise = ((MapPromiseHandler) _invokeNext).apply(value);
+                    final Promise promise = ((MapToPromiseHandler) _invokeNext).apply(value);
+
+                    if (promise == null) {
+                        throw new NullPointerException("No Promise was returned from the mapToPromise Handler for value: " + value);
+                    }
+
                     final PromiseImpl pp = nextPromise;
                     promise
                             .error(e ->
@@ -155,13 +159,13 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
     }
 
     @Override
-    public <R> Promise<R> mapTo(final MapHandler<T, R> mapHandler) {
-        final MapHandler<T, R> _mapHandler = mapHandler == null ? emptyMapHandler : mapHandler;
-        final PromiseImpl<R> promise = new PromiseImpl<>(_mapHandler, Type.MapTo);
+    public <R> Promise<R> mapTo(final MapToHandler<T, R> mapToHandler) {
+        final MapToHandler<T, R> _mapToHandler = mapToHandler == null ? EMPTY_MAP_TO_HANDLER : mapToHandler;
+        final PromiseImpl<R> promise = new PromiseImpl<>(_mapToHandler, Type.MapTo);
         final Defer _deferNext = nextPromise = promise;
         if (isSuccess()) {
             try {
-                final R retVal = _mapHandler.apply(value);
+                final R retVal = _mapToHandler.apply(value);
                 _deferNext.complete(retVal);
             } catch (final Exception ex) {
                 ex.printStackTrace();
@@ -176,35 +180,17 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
     }
 
     @Override
-    public <R> Promise<R> mapToPromise(final MapPromiseHandler<T, R> promiseHandler) {
-        final MapPromiseHandler<T, R> _promiseHandler = promiseHandler == null ? emptyMapPromiseHandler : promiseHandler;
+    public <R> Promise<R> mapToPromise(final MapToPromiseHandler<T, R> promiseHandler) {
+        final MapToPromiseHandler<T, R> _promiseHandler = promiseHandler == null ? EMPTY_MAP_TO_PROMISE_HANDLER : promiseHandler;
         final PromiseImpl<R> promise = new PromiseImpl<>(_promiseHandler, Type.MapToPromise);
         final Defer _deferNext = nextPromise = promise;
         if (isSuccess()) {
             try {
                 final Promise<R> rPromise = _promiseHandler.apply(value);
+                if (rPromise == null) {
+                    throw new NullPointerException("No Promise was returned from the mapToPromise Handler for value: " + value);
+                }
                 rPromise.then(s -> _deferNext.complete(s)).error(e -> _deferNext.fail(e));
-            } catch (final Exception ex) {
-                ex.printStackTrace();
-                _deferNext.fail(ex);
-            }
-            return promise;
-        } else if (isError()) {
-            _deferNext.fail(error);
-            return promise;
-        }
-        return promise;
-    }
-
-    @Override
-    public Promise<Void> mapToVoid(final ThenHandler<T> thenHandler) {
-        final ThenHandler<T> _thenHandler = thenHandler == null ? emptyThenHandler : thenHandler;
-        final PromiseImpl<Void> promise = new PromiseImpl<>(_thenHandler, Type.MapToVoid);
-        final Defer _deferNext = nextPromise = promise;
-        if (isSuccess()) {
-            try {
-                _thenHandler.accept(value);
-                _deferNext.complete();
             } catch (final Exception ex) {
                 ex.printStackTrace();
                 _deferNext.fail(ex);
@@ -336,6 +322,29 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
     }
 
     public static void main(String... args) throws Exception {
+        final Defer<Object> defer = Promises.defer();
+        defer.promise()
+//        Promises.from("sona")
+                .then(s -> {
+                    System.out.println();
+//                    throw new RuntimeException();
+                })
+                .complete(p -> {
+                    System.out.println();
+                })
+                .mapTo(s -> Boolean.TRUE)
+                .then(s -> {
+                    System.out.println(s);
+                    throw new RuntimeException();
+                })
+                .complete(p -> {
+                    System.out.println(p);
+                })
+                .complete(p -> {
+                    System.out.println(p);
+                })
+        ;
 
+        defer.complete("sona");
     }
 }
