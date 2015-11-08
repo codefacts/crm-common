@@ -15,7 +15,7 @@ import java.util.Arrays;
 public class CreateFunctions {
     public static void main(String... args) {
         String dir = "D:\\IdeaProjects\\crm-common\\src\\main\\java\\io\\crm\\intfs";
-        String[] strings = {"Tri", "Quad", "Peta", "hexa", "Seven", "Octa"};
+        String[] strings = {"Tri", "Quad", "Peta", "Hexa", "Seven", "Octa"};
 
         final SimpleCounter cc = new SimpleCounter(3);
         Arrays.asList(strings).forEach(nm -> {

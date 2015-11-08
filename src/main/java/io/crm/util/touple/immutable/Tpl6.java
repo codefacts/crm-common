@@ -1,7 +1,7 @@
 package io.crm.util.touple.immutable;
 
-import io.crm.intfs.hexaConsumerUnchecked;
-import io.crm.intfs.hexaFunctionUnchecked;
+import io.crm.intfs.HexaConsumerUnchecked;
+import io.crm.intfs.HexaFunctionUnchecked;
 
 /**
  * Created by someone on 08/11/2015.
@@ -48,7 +48,7 @@ final public class Tpl6<T1, T2, T3, T4, T5, T6> {
         return t6;
     }
 
-    public <R> R apply(final hexaFunctionUnchecked<T1, T2, T3, T4, T5, T6, R> functionUnchecked) {
+    public <R> R apply(final HexaFunctionUnchecked<T1, T2, T3, T4, T5, T6, R> functionUnchecked) {
         try {
             return functionUnchecked.apply(t1, t2, t3, t4, t5, t6);
         } catch (Exception e) {
@@ -60,7 +60,7 @@ final public class Tpl6<T1, T2, T3, T4, T5, T6> {
         }
     }
 
-    public void accept(final hexaConsumerUnchecked<T1, T2, T3, T4, T5, T6> consumerUnchecked) {
+    public void accept(final HexaConsumerUnchecked<T1, T2, T3, T4, T5, T6> consumerUnchecked) {
         try {
             consumerUnchecked.accept(t1, t2, t3, t4, t5, t6);
         } catch (Exception e) {

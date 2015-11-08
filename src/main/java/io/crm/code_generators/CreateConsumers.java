@@ -17,7 +17,7 @@ public class CreateConsumers {
 
     public static void main(String... args) {
         String dir = "D:\\IdeaProjects\\crm-common\\src\\main\\java\\io\\crm\\intfs";
-        String[] strings = {"Peta", "hexa", "Seven", "Octa"};
+        String[] strings = {"Peta", "Hexa", "Seven", "Octa"};
 
         final SimpleCounter cc = new SimpleCounter(5);
         Arrays.asList(strings).forEach(nm -> {
