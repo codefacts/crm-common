@@ -9,11 +9,11 @@ public interface Promise<T> {
 
     public <R> Promise<R> mapToPromise(MapToPromiseHandler<T, R> function);
 
-//    public <R> Promise<R> mapToAndDecide(MapAndDecideHandler<T, R> functionUnchecked);
+//    public <R> Router<R> mapToAndDecide(MapAndDecideHandler<T, R> functionUnchecked);
 //
-//    public <R> Promise<R> mapToPromiseAndDecide(MapToPromiseAndDecideHandler<T, R> function);
+//    public <R> Router<R> mapToPromiseAndDecide(MapToPromiseAndDecideHandler<T, R> function);
 //
-//    public Promise<Void> thenDecide(ThenDecideHandler<T> valueConsumer);
+//    public Router<Void> thenDecide(ThenDecideHandler<T> valueConsumer);
 
     public Promise<T> then(SuccessHandler<T> successHandler);
 
