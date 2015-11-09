@@ -158,7 +158,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
     }
 
     @Override
-    public <R> Promise<R> mapTo(final MapToHandler<T, R> mapToHandler) {
+    public <R> Promise<R> map(final MapToHandler<T, R> mapToHandler) {
         final MapToHandler<T, R> _mapToHandler = mapToHandler == null ? EMPTY_MAP_TO_HANDLER : mapToHandler;
         final PromiseImpl<R> promise = new PromiseImpl<>(_mapToHandler, Type.MapTo);
         final Defer _deferNext = nextPromise = promise;
@@ -200,6 +200,45 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
             return promise;
         }
         return promise;
+    }
+
+    @Override
+    public <R> ConditionalPromise<R> mapAndDecide(MapAndDecideHandler<T, R> functionUnchecked) {
+        final Defer<Decision<R>> decisionDefer = Promises.<Decision<R>>defer();
+        final ConditionalPromiseImpl<R> router = new ConditionalPromiseImpl<>(decisionDefer.promise());
+        this.map(functionUnchecked::apply)
+                .then(decision -> {
+                    decisionDefer.complete(decision);
+                })
+                .error(decisionDefer::fail)
+        ;
+        return router;
+    }
+
+    @Override
+    public <R> ConditionalPromise<R> mapToPromiseAndDecide(MapToPromiseAndDecideHandler<T, R> function) {
+        final Defer<Decision<R>> decisionDefer = Promises.<Decision<R>>defer();
+        final ConditionalPromiseImpl<R> router = new ConditionalPromiseImpl<>(decisionDefer.promise());
+        this.map(function::apply)
+                .mapToPromise(decision -> decision.retVal.then(val -> {
+                    decisionDefer.complete(Decision.dec(decision.decision, val));
+                }))
+                .error(decisionDefer::fail)
+        ;
+        return router;
+    }
+
+    @Override
+    public ConditionalPromise<Void> thenDecide(ThenDecideHandler<T> valueConsumer) {
+        final Defer<Decision<Void>> decisionDefer = Promises.<Decision<Void>>defer();
+        final ConditionalPromiseImpl<Void> router = new ConditionalPromiseImpl<>(decisionDefer.promise());
+        this.map(valueConsumer::apply)
+                .then(decision -> {
+                    decisionDefer.complete(Decision.dec(decision, null));
+                })
+                .error(decisionDefer::fail)
+        ;
+        return router;
     }
 
     @Override
@@ -331,7 +370,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
                 .complete(p -> {
                     System.out.println();
                 })
-                .mapTo(s -> Boolean.TRUE)
+                .map(s -> Boolean.TRUE)
                 .then(s -> {
                     System.out.println(s);
                     throw new RuntimeException();

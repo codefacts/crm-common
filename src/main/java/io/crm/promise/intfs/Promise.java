@@ -5,15 +5,15 @@ package io.crm.promise.intfs;
  */
 public interface Promise<T> {
 
-    public <R> Promise<R> mapTo(MapToHandler<T, R> functionUnchecked);
+    public <R> Promise<R> map(MapToHandler<T, R> functionUnchecked);
 
     public <R> Promise<R> mapToPromise(MapToPromiseHandler<T, R> function);
 
-//    public <R> Router<R> mapToAndDecide(MapAndDecideHandler<T, R> functionUnchecked);
-//
-//    public <R> Router<R> mapToPromiseAndDecide(MapToPromiseAndDecideHandler<T, R> function);
-//
-//    public Router<Void> thenDecide(ThenDecideHandler<T> valueConsumer);
+    public <R> ConditionalPromise<R> mapAndDecide(MapAndDecideHandler<T, R> functionUnchecked);
+
+    public <R> ConditionalPromise<R> mapToPromiseAndDecide(MapToPromiseAndDecideHandler<T, R> function);
+
+    public ConditionalPromise<Void> thenDecide(ThenDecideHandler<T> valueConsumer);
 
     public Promise<T> then(SuccessHandler<T> successHandler);
 

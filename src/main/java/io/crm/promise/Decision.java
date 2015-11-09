@@ -7,12 +7,20 @@ public class Decision<T> {
     public final String decision;
     public final T retVal;
 
-    public Decision(String decision, T retVal) {
+    Decision(String decision, T retVal) {
         this.decision = decision;
         this.retVal = retVal;
     }
 
-    public <V> Decision dec() {
-        return null;
+    public static <V> Decision dec(final String decision, final V retVal) {
+        return new Decision(decision, retVal);
+    }
+
+    @Override
+    public String toString() {
+        return "Decision{" +
+                "decision='" + decision + '\'' +
+                ", retVal=" + retVal +
+                '}';
     }
 }
