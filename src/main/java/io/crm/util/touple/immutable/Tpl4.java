@@ -19,6 +19,13 @@ final public class Tpl4<T1, T2, T3, T4> {
         this.t4 = t4;
     }
 
+    public <T5> Tpl5<T1, T2, T3, T4, T5> ps(final T5 val) {
+        return new Tpl5<>(t1, t2, t3, t4, val);
+    }
+
+    public Tpl3<T1, T2, T3> pp() {
+        return new Tpl3<>(t1, t2, t3);
+    }
 
     public <T5> Tpl5<T1, T2, T3, T4, T5> al(final T5 val) {
         return new Tpl5<>(t1, t2, t3, t4, val);

@@ -15,6 +15,13 @@ final public class Tpl2<T1, T2> {
         this.t2 = t2;
     }
 
+    public <T3> Tpl3<T1, T2, T3> ps(final T3 val) {
+        return new Tpl3<>(t1, t2, val);
+    }
+
+    public T1 pp() {
+        return t1;
+    }
 
     public <T3> Tpl3<T1, T2, T3> al(final T3 val) {
         return new Tpl3<>(t1, t2, val);
@@ -22,6 +29,14 @@ final public class Tpl2<T1, T2> {
 
     public <T3> Tpl3<T3, T1, T2> af(final T3 val) {
         return new Tpl3<>(val, t1, t2);
+    }
+
+    public T2 df() {
+        return t2;
+    }
+
+    public T1 dl() {
+        return t1;
     }
 
     public T1 ft() {

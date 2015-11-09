@@ -17,6 +17,13 @@ final public class Tpl3<T1, T2, T3> {
         this.t3 = t3;
     }
 
+    public <T4> Tpl4<T1, T2, T3, T4> ps(final T4 val) {
+        return new Tpl4<>(t1, t2, t3, val);
+    }
+
+    public Tpl2<T1, T2> pp() {
+        return new Tpl2<>(t1, t2);
+    }
 
     public <T4> Tpl4<T1, T2, T3, T4> al(final T4 val) {
         return new Tpl4<>(t1, t2, t3, val);

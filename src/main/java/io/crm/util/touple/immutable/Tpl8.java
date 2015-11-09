@@ -27,6 +27,10 @@ final public class Tpl8<T1, T2, T3, T4, T5, T6, T7, T8> {
         this.t8 = t8;
     }
 
+    public Tpl7<T1, T2, T3, T4, T5, T6, T7> pp() {
+        return new Tpl7<>(t1, t2, t3, t4, t5, t6, t7);
+    }
+
 
     public Tpl7<T2, T3, T4, T5, T6, T7, T8> df() {
         return new Tpl7<>(t2, t3, t4, t5, t6, t7, t8);
