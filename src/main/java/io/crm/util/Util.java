@@ -1,5 +1,6 @@
 package io.crm.util;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableList;
 import io.crm.Events;
 import io.crm.QC;
@@ -31,6 +32,7 @@ import java.util.stream.Collectors;
  * Created by sohan on 8/1/2015.
  */
 final public class Util {
+    public static final ObjectMapper mapper = new ObjectMapper();
     public static final JsonArray EMPTY_JSON_ARRAY = new JsonArray(Collections.EMPTY_LIST);
     public static final JsonObject EMPTY_JSON_OBJECT = new JsonObject(Collections.EMPTY_MAP);
     public static final String mongoDateFormatString = "yyyy-MM-dd'T'HH:mm:ss'Z'";
@@ -317,35 +319,45 @@ final public class Util {
         }
     }
 
+    public static <T> T copy(T model, Class<T> tClass) throws Exception {
+        final byte[] bytes = mapper.writeValueAsBytes(model);
+        final T copy = mapper.readValue(bytes, tClass);
+        return copy;
+    }
+
     public static void run(final Runnable runnable) {
         runnable.run();
     }
 
-    public static String toString(char i) {
-        return i + "";
+    public static String toString(Enum i) {
+        return i == null ? "" : i + "";
     }
 
-    public static String toString(byte i) {
-        return i + "";
+    public static String toString(Character i) {
+        return i == null ? "" : i + "";
     }
 
-    public static String toString(short i) {
-        return i + "";
+    public static String toString(Byte i) {
+        return i == null ? "" : i + "";
     }
 
-    public static String toString(int i) {
-        return i + "";
+    public static String toString(Short i) {
+        return i == null ? "" : i + "";
     }
 
-    public static String toString(long i) {
-        return i + "";
+    public static String toString(Integer i) {
+        return i == null ? "" : i + "";
     }
 
-    public static String toString(float i) {
-        return i + "";
+    public static String toString(Long i) {
+        return i == null ? "" : i + "";
     }
 
-    public static String toString(double i) {
-        return i + "";
+    public static String toString(Float i) {
+        return i == null ? "" : i + "";
+    }
+
+    public static String toString(Double i) {
+        return i == null ? "" : i + "";
     }
 }
