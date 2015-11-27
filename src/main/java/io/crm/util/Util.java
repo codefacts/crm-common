@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableList;
 import io.crm.Events;
 import io.crm.QC;
+import io.crm.intfs.CallableUnchecked;
 import io.crm.promise.Promises;
 import io.crm.promise.intfs.Defer;
 import io.crm.promise.intfs.Promise;
@@ -282,6 +283,19 @@ final public class Util {
             if (r.failed()) defer.fail(r.cause());
             else defer.complete(r.result());
         };
+    }
+
+    public static <T> Promise<T> executeBlocking(Vertx vertx, CallableUnchecked<T> callableUnchecked) {
+        final Defer<T> defer = Promises.defer();
+        vertx.executeBlocking(f -> {
+            try {
+                defer.complete(callableUnchecked.call());
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                f.fail(ex);
+            }
+        }, Util.makeDeferred(defer));
+        return defer.promise();
     }
 
     public static JsonObject pagination(final int page, final int size, final long total, final int length) {
