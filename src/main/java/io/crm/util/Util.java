@@ -374,4 +374,16 @@ final public class Util {
     public static String toString(Double i) {
         return i == null ? "" : i + "";
     }
+
+    public static void putln(Object s) {
+        System.out.println(s);
+    }
+
+    public static void puts(String s) {
+        System.out.print(s);
+    }
+
+    public static int offset(int page, int size) {
+        return (page - 1) * size;
+    }
 }
