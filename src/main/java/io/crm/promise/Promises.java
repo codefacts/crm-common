@@ -7,6 +7,7 @@ import io.crm.util.*;
 import io.crm.util.touple.MutableTpl2;
 import io.crm.util.touple.MutableTpl3;
 import io.crm.util.touple.MutableTpl4;
+import io.crm.util.touple.MutableTpls;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -44,23 +45,21 @@ final public class Promises {
         }
         Defer<List<T>> defer = defer();
         final SimpleCounter counter = new SimpleCounter(0);
-        MutableTpl2<Boolean, Throwable> pStatus = new MutableTpl2<>();
-        promises.forEach(pm -> {
-            pm.complete(pms -> {
-                pStatus.t1 &= pms.isSuccess();
-                pStatus.t2 = pStatus.t2 == null ? pms.error() : pStatus.t2;
-                counter.counter++;
-                if (counter.counter == promises.size()) {
-                    if (pStatus.t1) {
-                        ImmutableList.Builder<T> builder = ImmutableList.builder();
-                        promises.forEach(promise -> builder.add(promise.get()));
-                        defer.complete(builder.build());
-                    } else {
-                        defer.fail(pStatus.t2);
-                    }
+        MutableTpl2<Boolean, Throwable> pStatus = MutableTpls.of(true, null);
+        promises.forEach(pm -> pm.complete(pms -> {
+            pStatus.t1 &= pms.isSuccess();
+            pStatus.t2 = pStatus.t2 == null ? pms.error() : pStatus.t2;
+            counter.counter++;
+            if (counter.counter == promises.size()) {
+                if (pStatus.t1) {
+                    ImmutableList.Builder<T> builder = ImmutableList.builder();
+                    promises.forEach(promise -> builder.add(promise.get()));
+                    defer.complete(builder.build());
+                } else {
+                    defer.fail(pStatus.t2);
                 }
-            });
-        });
+            }
+        }));
         return defer.promise();
     }
 

@@ -12,12 +12,18 @@ import io.crm.util.exceptions.InvalidArgumentException;
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Handler;
 import io.vertx.core.Vertx;
+import io.vertx.core.eventbus.DeliveryOptions;
 import io.vertx.core.eventbus.EventBus;
 import io.vertx.core.eventbus.Message;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
 import org.bson.Document;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.text.DateFormat;
@@ -33,14 +39,36 @@ import java.util.stream.Collectors;
  * Created by sohan on 8/1/2015.
  */
 final public class Util {
+    private static final String CONFIG_FILE_NAME = "config.json";
+    private static final String CURRENT_PROFILE = "CURRENT_PROFILE";
+    private static final String PROFILES = "PROFILES";
     public static final ObjectMapper mapper = new ObjectMapper();
     public static final JsonArray EMPTY_JSON_ARRAY = new JsonArray(Collections.EMPTY_LIST);
     public static final JsonObject EMPTY_JSON_OBJECT = new JsonObject(Collections.EMPTY_MAP);
     public static final String mongoDateFormatString = "yyyy-MM-dd'T'HH:mm:ss'Z'";
-    public static final ThreadLocal<DateFormat> DATE_FORMAT_THREAD_LOCAL = new ThreadLocal<DateFormat>() {
+    public static final ThreadLocal<DateFormat> MONGO_DATE_FORMAT_THREAD_LOCAL = new ThreadLocal<DateFormat>() {
         @Override
         protected DateFormat initialValue() {
             return new SimpleDateFormat(mongoDateFormatString);
+        }
+    };
+
+    public static final String GLOBAL_DATE_FORMAT_PATTERN = "\\d{1,2}-[a-zA-Z]{1,3}-\\d{4} \\d{1,2}:\\d{1,2}:\\d{1,2} [AP]M";
+    public static final String EXCEL_DATE_FORMAT_PATTERN = "\\d{1,2}/\\d{1,2}/\\d{4} \\d{1,2}:\\d{1,2}";
+
+    public static final String GLOBAL_DATE_FORMAT = "dd-MMM-yyyy hh:mm:ss a";
+    public static final ThreadLocal<DateFormat> DATE_FORMAT_THREAD_LOCAL = new ThreadLocal<DateFormat>() {
+        @Override
+        protected DateFormat initialValue() {
+            return new SimpleDateFormat(GLOBAL_DATE_FORMAT);
+        }
+    };
+
+    public static final String EXCEL_DATE_FORMAT = "dd/MM/yyyy kk:mm";
+    public static final ThreadLocal<DateFormat> EXCEL_DATE_FORMAT_THREAD_LOCAL = new ThreadLocal<DateFormat>() {
+        @Override
+        protected DateFormat initialValue() {
+            return new SimpleDateFormat(EXCEL_DATE_FORMAT);
         }
     };
 
@@ -145,7 +173,7 @@ final public class Util {
     }
 
     public static DateFormat mongoDateFormat() {
-        return DATE_FORMAT_THREAD_LOCAL.get();
+        return MONGO_DATE_FORMAT_THREAD_LOCAL.get();
     }
 
     public static Long id(final Object value) {
@@ -278,6 +306,18 @@ final public class Util {
         return defer.promise();
     }
 
+    public static <T> Promise<Message<T>> send(final EventBus eventBus, final String dest, Object message, DeliveryOptions options) {
+        final Defer<Message<T>> defer = Promises.defer();
+        eventBus.send(dest, message, options, (AsyncResult<Message<T>> r) -> {
+            if (r.failed()) {
+                defer.fail(r.cause());
+            } else {
+                defer.complete(r.result());
+            }
+        });
+        return defer.promise();
+    }
+
     public static <T> Handler<AsyncResult<T>> makeDeferred(Defer<T> defer) {
         return r -> {
             if (r.failed()) defer.fail(r.cause());
@@ -385,5 +425,40 @@ final public class Util {
 
     public static int offset(int page, int size) {
         return (page - 1) * size;
+    }
+
+    public static JsonObject loadConfig(Class<?> aClass) {
+        try {
+            JsonObject jConfig;
+            final File file = new File(CONFIG_FILE_NAME);
+            if (file.exists()) {
+                jConfig = new JsonObject(FileUtils.readFileToString(file));
+            } else {
+                final InputStream inputStream = aClass.getClassLoader().getResourceAsStream(CONFIG_FILE_NAME);
+                jConfig = new JsonObject(IOUtils.toString(inputStream));
+            }
+            return jConfig
+                    .getJsonObject(PROFILES, new JsonObject())
+                    .getJsonObject(jConfig.getString(CURRENT_PROFILE), new JsonObject());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static final Date parseDate(String val) {
+        final String string = getOrDefault(val, "").trim();
+        if (string.matches(GLOBAL_DATE_FORMAT_PATTERN)) {
+            return ExceptionUtil.toRuntimeCall(() -> DATE_FORMAT_THREAD_LOCAL.get().parse(string));
+        } else {
+            return ExceptionUtil.toRuntimeCall(() -> EXCEL_DATE_FORMAT_THREAD_LOCAL.get().parse(string));
+        }
+    }
+
+    public static String formatDate(final Date date, final String defaultValue) {
+        try {
+            return DATE_FORMAT_THREAD_LOCAL.get().format(date);
+        } catch (Exception ex) {
+            return defaultValue;
+        }
     }
 }
