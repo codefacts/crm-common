@@ -28,8 +28,8 @@ final public class Promises {
         return promise;
     }
 
-    public static Promise<Void> fromError(Throwable error) {
-        final PromiseImpl<Void> promise = new PromiseImpl<>(null, null);
+    public static <T> Promise<T> fromError(Throwable error) {
+        final PromiseImpl<T> promise = new PromiseImpl<>(null, null);
         promise.fail(error);
         return promise;
     }

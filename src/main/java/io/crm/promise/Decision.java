@@ -8,20 +8,20 @@ public class Decision<T> {
     public final String decision;
     public final T retVal;
 
-    Decision(String decision, T retVal) {
+    private Decision(String decision, T retVal) {
         this.decision = decision;
         this.retVal = retVal;
     }
 
-    public static <V> Decision of(final String decision, final V retVal) {
+    public static <V> Decision<V> of(final String decision, final V retVal) {
         return new Decision(decision, retVal);
     }
 
     @Override
     public String toString() {
         return "Decision{" +
-                "decision='" + decision + '\'' +
-                ", retVal=" + retVal +
-                '}';
+            "decision='" + decision + '\'' +
+            ", retVal=" + retVal +
+            '}';
     }
 }
