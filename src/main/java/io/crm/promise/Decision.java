@@ -4,6 +4,7 @@ package io.crm.promise;
  * Created by someone on 09/11/2015.
  */
 public class Decision<T> {
+    public static final String OTHERWISE = "OTHERWISE";
     public final String decision;
     public final T retVal;
 
@@ -12,7 +13,7 @@ public class Decision<T> {
         this.retVal = retVal;
     }
 
-    public static <V> Decision dec(final String decision, final V retVal) {
+    public static <V> Decision of(final String decision, final V retVal) {
         return new Decision(decision, retVal);
     }
 

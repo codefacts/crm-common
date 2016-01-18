@@ -203,7 +203,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
     }
 
     @Override
-    public <R> ConditionalPromise<R> mapAndDecide(MapAndDecideHandler<T, R> functionUnchecked) {
+    public <R> ConditionalPromise<R> decideAndMap(MapAndDecideHandler<T, R> functionUnchecked) {
         final Defer<Decision<R>> decisionDefer = Promises.<Decision<R>>defer();
         final ConditionalPromiseImpl<R> router = new ConditionalPromiseImpl<>(decisionDefer.promise());
         this.map(functionUnchecked::apply)
@@ -216,12 +216,12 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
     }
 
     @Override
-    public <R> ConditionalPromise<R> mapToPromiseAndDecide(MapToPromiseAndDecideHandler<T, R> function) {
+    public <R> ConditionalPromise<R> decideAndMapToPromise(MapToPromiseAndDecideHandler<T, R> function) {
         final Defer<Decision<R>> decisionDefer = Promises.<Decision<R>>defer();
         final ConditionalPromiseImpl<R> router = new ConditionalPromiseImpl<>(decisionDefer.promise());
         this.map(function::apply)
                 .mapToPromise(decision -> decision.retVal.then(val -> {
-                    decisionDefer.complete(Decision.dec(decision.decision, val));
+                    decisionDefer.complete(Decision.of(decision.decision, val));
                 }))
                 .error(decisionDefer::fail)
         ;
@@ -229,12 +229,12 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
     }
 
     @Override
-    public ConditionalPromise<Void> thenDecide(ThenDecideHandler<T> valueConsumer) {
+    public ConditionalPromise<Void> decide(ThenDecideHandler<T> valueConsumer) {
         final Defer<Decision<Void>> decisionDefer = Promises.<Decision<Void>>defer();
         final ConditionalPromiseImpl<Void> router = new ConditionalPromiseImpl<>(decisionDefer.promise());
         this.map(valueConsumer::apply)
                 .then(decision -> {
-                    decisionDefer.complete(Decision.dec(decision, null));
+                    decisionDefer.complete(Decision.of(decision, null));
                 })
                 .error(decisionDefer::fail)
         ;

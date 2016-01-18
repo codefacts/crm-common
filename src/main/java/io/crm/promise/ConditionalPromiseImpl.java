@@ -2,7 +2,6 @@ package io.crm.promise;
 
 import io.crm.intfs.ConsumerUnchecked;
 import io.crm.promise.intfs.*;
-import io.crm.util.Util;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,9 +12,8 @@ import static io.crm.util.Util.apply;
  * Created by someone on 09/11/2015.
  */
 final public class ConditionalPromiseImpl<T> implements ConditionalPromise<T> {
-    private static final String OTHERWISE = "OTHERWISE";
     private Promise<Decision<T>> promise;
-    private final Map<String, ConsumerUnchecked<Promise<T>>> map = new HashMap<>();
+    private final Map<String, ConsumerUnchecked<T>> map = new HashMap<>();
     private boolean done = false;
 
     ConditionalPromiseImpl(Promise<Decision<T>> promise) {
@@ -23,15 +21,15 @@ final public class ConditionalPromiseImpl<T> implements ConditionalPromise<T> {
     }
 
     @Override
-    public ConditionalPromise<T> on(final String condition, final ConsumerUnchecked<Promise<T>> promiseConsumer) {
+    public ConditionalPromise<T> on(final String condition, final ConsumerUnchecked<T> promiseConsumer) {
         map.put(condition, promiseConsumer);
         doStuff();
         return this;
     }
 
     @Override
-    public ConditionalPromise<T> otherwise(final ConsumerUnchecked<Promise<T>> promiseConsumer) {
-        map.put(OTHERWISE, promiseConsumer);
+    public ConditionalPromise<T> otherwise(final ConsumerUnchecked<T> promiseConsumer) {
+        map.put(Decision.OTHERWISE, promiseConsumer);
         doStuff();
         return this;
     }
@@ -39,11 +37,11 @@ final public class ConditionalPromiseImpl<T> implements ConditionalPromise<T> {
     private void doStuff() {
         promise = promise.then(decision -> {
             if (!done) {
-                final ConsumerUnchecked<Promise<T>> decisionHandler = apply(map.get(decision.decision),
-                        pcu -> pcu == null ? map.get(OTHERWISE) : pcu);
+                final ConsumerUnchecked<T> decisionHandler = apply(map.get(decision.decision),
+                        pcu -> pcu == null ? map.get(Decision.OTHERWISE) : pcu);
                 if (decisionHandler != null) {
                     done = true;
-                    decisionHandler.accept(Promises.from(decision.retVal));
+                    decisionHandler.accept(decision.retVal);
                 }
             }
         });
@@ -65,20 +63,9 @@ final public class ConditionalPromiseImpl<T> implements ConditionalPromise<T> {
 
     public static void main(String... args) {
         final Defer<Object> defer = Promises.defer();
-        defer.promise()
-//        Promises.from()
-                .mapAndDecide(aVoid -> Decision.dec("no", "sona"))
-                .on("no", p -> {
-                    System.out.println("P >>> " + p + " >>> no");
-                })
-                .on("go", p -> {
-                    System.out.println("P >>> " + p + " >>> go");
-                })
-                .otherwise(p -> {
-                    System.out.println("otherwise");
-                })
-                .error(Throwable::printStackTrace)
-                .complete(System.out::println)
+
+        Promises.from().decideAndMap(v -> Decision.of("ok", "JJ"))
+        .on("ok", val -> val.notify());
         ;
         defer.complete("kkkk");
     }

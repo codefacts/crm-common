@@ -53,14 +53,24 @@ final public class Util {
         }
     };
 
-    public static final String GLOBAL_DATE_FORMAT_PATTERN = "\\d{1,2}-[a-zA-Z]{1,3}-\\d{4} \\d{1,2}:\\d{1,2}:\\d{1,2} [AP]M";
+    public static final String GLOBAL_DATE_FORMAT_PATTERN = "^\\d{1,2}-[a-zA-Z]{1,3}-\\d{4}$";
+    public static final String GLOBAL_DATETIME_FORMAT_PATTERN = "^\\d{1,2}-[a-zA-Z]{1,3}-\\d{4} \\d{1,2}:\\d{1,2}:\\d{1,2} [AP]M$";
     public static final String EXCEL_DATE_FORMAT_PATTERN = "\\d{1,2}/\\d{1,2}/\\d{4} \\d{1,2}:\\d{1,2}";
 
-    public static final String GLOBAL_DATE_FORMAT = "dd-MMM-yyyy hh:mm:ss a";
+    public static final String GLOBAL_DATE_FORMAT = "dd-MMM-yyyy";
+    public static final String GLOBAL_DATETIME_FORMAT = "dd-MMM-yyyy hh:mm:ss a";
+
     public static final ThreadLocal<DateFormat> DATE_FORMAT_THREAD_LOCAL = new ThreadLocal<DateFormat>() {
         @Override
         protected DateFormat initialValue() {
             return new SimpleDateFormat(GLOBAL_DATE_FORMAT);
+        }
+    };
+
+    public static final ThreadLocal<DateFormat> DATETIME_FORMAT_THREAD_LOCAL = new ThreadLocal<DateFormat>() {
+        @Override
+        protected DateFormat initialValue() {
+            return new SimpleDateFormat(GLOBAL_DATETIME_FORMAT);
         }
     };
 
@@ -149,7 +159,7 @@ final public class Util {
         return mongoDateFormat().format(date) + "Z";
     }
 
-    private static String toIsoString(final Date date, final Date defaultValue) {
+    public static String toIsoString(final Date date, final Date defaultValue) {
         try {
             return mongoDateFormat().format(date);
         } catch (Exception ex) {
@@ -267,7 +277,7 @@ final public class Util {
             if (e == null) break;
             final JsonObject js = exceptionToJson(e);
             jsonObject
-                    .put(QC.cause, js);
+                .put(QC.cause, js);
             jsonObject = js;
             e = e.getCause();
         }
@@ -278,20 +288,20 @@ final public class Util {
         final ImmutableList.Builder<JsonObject> builder = ImmutableList.builder();
         for (StackTraceElement e : ex.getStackTrace()) {
             builder.add(
-                    new JsonObject()
-                            .put(QC.className, e.getClassName())
-                            .put(QC.fieldName, e.getFileName())
-                            .put(QC.methodName, e.getMethodName())
-                            .put(QC.lineNumber, e.getLineNumber())
+                new JsonObject()
+                    .put(QC.className, e.getClassName())
+                    .put(QC.fieldName, e.getFileName())
+                    .put(QC.methodName, e.getMethodName())
+                    .put(QC.lineNumber, e.getLineNumber())
             );
         }
         return
-                new JsonObject()
-                        .put(QC.fullName, ex.getClass().getName())
-                        .put(QC.simpleName, ex.getClass().getSimpleName())
-                        .put(QC.message, ex.getMessage())
-                        .put(QC.stackTrace, builder.build())
-                ;
+            new JsonObject()
+                .put(QC.fullName, ex.getClass().getName())
+                .put(QC.simpleName, ex.getClass().getSimpleName())
+                .put(QC.message, ex.getMessage())
+                .put(QC.stackTrace, builder.build())
+            ;
     }
 
     public static <T> Promise<Message<T>> send(final EventBus eventBus, final String dest, Object message) {
@@ -340,12 +350,12 @@ final public class Util {
 
     public static JsonObject pagination(final int page, final int size, final long total, final int length) {
         return
-                new JsonObject()
-                        .put(QC.page, page)
-                        .put(QC.size, size)
-                        .put(QC.total, total)
-                        .put(QC.length, length)
-                ;
+            new JsonObject()
+                .put(QC.page, page)
+                .put(QC.size, size)
+                .put(QC.total, total)
+                .put(QC.length, length)
+            ;
     }
 
     public static <T> boolean eq(final T t1, final T t2) {
@@ -438,8 +448,8 @@ final public class Util {
                 jConfig = new JsonObject(IOUtils.toString(inputStream));
             }
             return jConfig
-                    .getJsonObject(PROFILES, new JsonObject())
-                    .getJsonObject(jConfig.getString(CURRENT_PROFILE), new JsonObject());
+                .getJsonObject(PROFILES, new JsonObject())
+                .getJsonObject(jConfig.getString(CURRENT_PROFILE), new JsonObject());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -449,9 +459,24 @@ final public class Util {
         final String string = getOrDefault(val, "").trim();
         if (string.matches(GLOBAL_DATE_FORMAT_PATTERN)) {
             return ExceptionUtil.toRuntimeCall(() -> DATE_FORMAT_THREAD_LOCAL.get().parse(string));
-        } else {
+        } else if (string.matches(GLOBAL_DATETIME_FORMAT_PATTERN)) {
+            return ExceptionUtil.toRuntimeCall(() -> DATETIME_FORMAT_THREAD_LOCAL.get().parse(string));
+        } else if (string.matches(EXCEL_DATE_FORMAT_PATTERN)) {
             return ExceptionUtil.toRuntimeCall(() -> EXCEL_DATE_FORMAT_THREAD_LOCAL.get().parse(string));
+        } else {
+            throw new RuntimeException("Invalid date format. val: " + val);
         }
+    }
+
+    public static final Date parseDate(String val, Date defaultValue) {
+        final String string = getOrDefault(val, "").trim();
+        if (string.matches(GLOBAL_DATE_FORMAT_PATTERN)) {
+            return ExceptionUtil.toRuntimeCall(() -> DATE_FORMAT_THREAD_LOCAL.get().parse(string));
+        } else if (string.matches(GLOBAL_DATETIME_FORMAT_PATTERN)) {
+            return ExceptionUtil.toRuntimeCall(() -> DATETIME_FORMAT_THREAD_LOCAL.get().parse(string));
+        } else if (string.matches(EXCEL_DATE_FORMAT_PATTERN)) {
+            return ExceptionUtil.toRuntimeCall(() -> EXCEL_DATE_FORMAT_THREAD_LOCAL.get().parse(string));
+        } else return defaultValue;
     }
 
     public static String formatDate(final Date date, final String defaultValue) {
