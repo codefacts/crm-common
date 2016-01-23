@@ -13,6 +13,10 @@ public class Decision<T> {
         this.retVal = retVal;
     }
 
+    public static <V> Decision<V> of(final String decision) {
+        return new Decision(decision, null);
+    }
+
     public static <V> Decision<V> of(final String decision, final V retVal) {
         return new Decision(decision, retVal);
     }
