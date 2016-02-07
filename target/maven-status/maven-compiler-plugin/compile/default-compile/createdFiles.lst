@@ -59,8 +59,10 @@ test/PromiseAllTest.class
 io/crm/model/House.class
 io/crm/promise/NoDecisionHandlerIsGiven.class
 io/crm/promise/intfs/ThenHandler.class
+io/crm/util/Util$5.class
 io/crm/Indexes.class
 io/crm/util/touple/MutableTpl4.class
+io/crm/util/Util$6.class
 io/crm/intfs/PetaConsumerUnchecked.class
 io/crm/util/AsyncUtil$1.class
 io/crm/model/Address.class

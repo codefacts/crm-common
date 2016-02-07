@@ -45,11 +45,23 @@ final public class Util {
     public static final ObjectMapper mapper = new ObjectMapper();
     public static final JsonArray EMPTY_JSON_ARRAY = new JsonArray(Collections.EMPTY_LIST);
     public static final JsonObject EMPTY_JSON_OBJECT = new JsonObject(Collections.EMPTY_MAP);
-    public static final String mongoDateFormatString = "yyyy-MM-dd'T'HH:mm:ss'Z'";
+
+    public static final String ISO_DATE_ONLY_STRING = "yyyy-MM-dd";
+    public static final ThreadLocal<DateFormat> ISO_DATE_ONLY_THREAD_LOCAL = new ThreadLocal<DateFormat>() {
+        @Override
+        protected DateFormat initialValue() {
+            SimpleDateFormat f = new SimpleDateFormat(ISO_DATE_ONLY_STRING);
+            return f;
+        }
+    };
+
+    public static final String MONGO_DATE_FORMAT_STRING = "yyyy-MM-dd'T'HH:mm:ss'Z'";
     public static final ThreadLocal<DateFormat> MONGO_DATE_FORMAT_THREAD_LOCAL = new ThreadLocal<DateFormat>() {
         @Override
         protected DateFormat initialValue() {
-            return new SimpleDateFormat(mongoDateFormatString);
+            SimpleDateFormat format = new SimpleDateFormat(MONGO_DATE_FORMAT_STRING);
+            format.setTimeZone(TimeZone.getTimeZone("UTC"));
+            return format;
         }
     };
 
@@ -59,6 +71,14 @@ final public class Util {
 
     public static final String GLOBAL_DATE_FORMAT = "dd-MMM-yyyy";
     public static final String GLOBAL_DATETIME_FORMAT = "dd-MMM-yyyy hh:mm:ss a";
+    public static final String MYSQL_DATETIME_FORMAT = "yyyy-MM-dd hh:mm:ss";
+
+    public static final ThreadLocal<DateFormat> MYSQL_DATE_FORMAT_THREAD_LOCAL = new ThreadLocal<DateFormat>() {
+        @Override
+        protected DateFormat initialValue() {
+            return new SimpleDateFormat(MYSQL_DATETIME_FORMAT);
+        }
+    };
 
     public static final ThreadLocal<DateFormat> DATE_FORMAT_THREAD_LOCAL = new ThreadLocal<DateFormat>() {
         @Override
@@ -130,7 +150,7 @@ final public class Util {
         }
     }
 
-    public static Date parseMongoDate(final String isoString) throws ParseException {
+    public static Date parseIsoDate(final String isoString) throws ParseException {
         return mongoDateFormat().parse(isoString);
     }
 
@@ -156,7 +176,11 @@ final public class Util {
     }
 
     public static String toIsoString(final Date date) {
-        return mongoDateFormat().format(date) + "Z";
+        return mongoDateFormat().format(date);
+    }
+
+    public static String toIsoShortString(final Date date) {
+        return ISO_DATE_ONLY_THREAD_LOCAL.get().format(date);
     }
 
     public static String toIsoString(final Date date, final Date defaultValue) {
@@ -172,14 +196,14 @@ final public class Util {
 
     public static Date parseMongoDate(final JsonObject jsonObject, final Date defaultValue) {
         try {
-            return parseMongoDate(jsonObject.getString(QC.$date));
+            return parseIsoDate(jsonObject.getString(QC.$date));
         } catch (ParseException | NullPointerException ex) {
             return defaultValue;
         }
     }
 
     public static Date parseMongoDate(final JsonObject jsonObject) throws ParseException {
-        return parseMongoDate(jsonObject.getString(QC.$date));
+        return parseIsoDate(jsonObject.getString(QC.$date));
     }
 
     public static DateFormat mongoDateFormat() {
@@ -194,11 +218,11 @@ final public class Util {
         return ((Number) value).longValue();
     }
 
-    public static final String getOrDefault(final Enum src, final String defaultValue) {
+    public static final String or(final Enum src, final String defaultValue) {
         return src == null ? defaultValue : src.name();
     }
 
-    public static final <T> T getOrDefault(final T src, final T defaultValue) {
+    public static final <T> T or(final T src, final T defaultValue) {
         return src == null ? defaultValue : src;
     }
 
@@ -456,7 +480,7 @@ final public class Util {
     }
 
     public static final Date parseDate(String val) {
-        final String string = getOrDefault(val, "").trim();
+        final String string = or(val, "").trim();
         if (string.matches(GLOBAL_DATE_FORMAT_PATTERN)) {
             return ExceptionUtil.toRuntimeCall(() -> DATE_FORMAT_THREAD_LOCAL.get().parse(string));
         } else if (string.matches(GLOBAL_DATETIME_FORMAT_PATTERN)) {
@@ -469,7 +493,7 @@ final public class Util {
     }
 
     public static final Date parseDate(String val, Date defaultValue) {
-        final String string = getOrDefault(val, "").trim();
+        final String string = or(val, "").trim();
         if (string.matches(GLOBAL_DATE_FORMAT_PATTERN)) {
             return ExceptionUtil.toRuntimeCall(() -> DATE_FORMAT_THREAD_LOCAL.get().parse(string));
         } else if (string.matches(GLOBAL_DATETIME_FORMAT_PATTERN)) {
@@ -485,5 +509,24 @@ final public class Util {
         } catch (Exception ex) {
             return defaultValue;
         }
+    }
+
+    public static String toMySqlDateString(final Date date, final String defaultValue) {
+        try {
+            return MYSQL_DATE_FORMAT_THREAD_LOCAL.get().format(date);
+        } catch (Exception ex) {
+            return defaultValue;
+        }
+    }
+
+    public static StringBuilder join(final String delimeter, Iterator<String> iterator, final StringBuilder builder) {
+        return join(delimeter, iterator, builder, "", "");
+    }
+
+    public static StringBuilder join(final String delimeter, Iterator<String> iterator, final StringBuilder builder, final String before, final String after) {
+        iterator.forEachRemaining(value -> builder.append(before).append(value).append(after).append(delimeter));
+        if (builder.length() > 0)
+            return builder.delete(builder.length() - delimeter.length(), builder.length());
+        else return builder;
     }
 }
