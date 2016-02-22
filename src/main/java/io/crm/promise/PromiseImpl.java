@@ -1,11 +1,14 @@
 package io.crm.promise;
 
 import io.crm.promise.intfs.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Created by someone on 15/10/2015.
  */
 final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
+    public static final Logger LOGGER = LoggerFactory.getLogger(PromiseImpl.class);
     public static long total = 0;
     private static final MapToHandler EMPTY_MAP_TO_HANDLER = s -> s;
     private static final MapToPromiseHandler EMPTY_MAP_TO_PROMISE_HANDLER = s -> Promises.from(s);
@@ -39,6 +42,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
             throw new PromiseAlreadyComplete("Promise already complete. " + toString());
         }
         _fail(throwable);
+        logError(throwable);
     }
 
     private void _fail(final Throwable ex) {
@@ -84,7 +88,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
                     ((CompleteHandler) _invokeNext).accept($this);
                 }
             } catch (final Exception ex) {
-                ex.printStackTrace();
+                logError(ex);
                 error.addSuppressed(ex);
             }
 
@@ -113,15 +117,16 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
                     final Promise promise = ((MapToPromiseHandler) _invokeNext).apply(value);
 
                     if (promise == null) {
-                        throw new NullPointerException("No Promise was returned from the mapToPromise Handler for value: " + value);
+                        throw new NullPointerException("No Promise was returned from the mapToPromise " +
+                            "Handler for value: " + value);
                     }
 
                     final PromiseImpl pp = nextPromise;
                     promise
-                            .error(e ->
-                                    pp.fail(e))
-                            .then(s ->
-                                    pp.complete(s));
+                        .error(e ->
+                            pp._fail(e))
+                        .then(s ->
+                            pp.complete(s));
 
                     return;
 
@@ -150,8 +155,8 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
                 nextPromise = nextPromise.nextPromise;
 
             } catch (final Exception ex) {
-                ex.printStackTrace();
-                nextPromise.fail(ex);
+                logError(ex);
+                nextPromise._fail(ex);
                 return;
             }
         }
@@ -161,18 +166,18 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
     public <R> Promise<R> map(final MapToHandler<T, R> mapToHandler) {
         final MapToHandler<T, R> _mapToHandler = mapToHandler == null ? EMPTY_MAP_TO_HANDLER : mapToHandler;
         final PromiseImpl<R> promise = new PromiseImpl<>(_mapToHandler, Type.MapTo);
-        final Defer _deferNext = nextPromise = promise;
+        final PromiseImpl _deferNext = nextPromise = promise;
         if (isSuccess()) {
             try {
                 final R retVal = _mapToHandler.apply(value);
                 _deferNext.complete(retVal);
             } catch (final Exception ex) {
-                ex.printStackTrace();
-                _deferNext.fail(ex);
+                logError(ex);
+                _deferNext._fail(ex);
             }
             return promise;
         } else if (isError()) {
-            _deferNext.fail(error);
+            _deferNext._fail(error);
             return promise;
         }
         return promise;
@@ -182,21 +187,21 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
     public <R> Promise<R> mapToPromise(final MapToPromiseHandler<T, R> promiseHandler) {
         final MapToPromiseHandler<T, R> _promiseHandler = promiseHandler == null ? EMPTY_MAP_TO_PROMISE_HANDLER : promiseHandler;
         final PromiseImpl<R> promise = new PromiseImpl<>(_promiseHandler, Type.MapToPromise);
-        final Defer _deferNext = nextPromise = promise;
+        final PromiseImpl _deferNext = nextPromise = promise;
         if (isSuccess()) {
             try {
                 final Promise<R> rPromise = _promiseHandler.apply(value);
                 if (rPromise == null) {
                     throw new NullPointerException("No Promise was returned from the mapToPromise Handler for value: " + value);
                 }
-                rPromise.then(s -> _deferNext.complete(s)).error(e -> _deferNext.fail(e));
+                rPromise.then(s -> _deferNext.complete(s)).error(e -> _deferNext._fail(e));
             } catch (final Exception ex) {
-                ex.printStackTrace();
-                _deferNext.fail(ex);
+                logError(ex);
+                _deferNext._fail(ex);
             }
             return promise;
         } else if (isError()) {
-            _deferNext.fail(error);
+            _deferNext._fail(error);
             return promise;
         }
         return promise;
@@ -204,39 +209,39 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
 
     @Override
     public <R> ConditionalPromise<R> decideAndMap(MapAndDecideHandler<T, R> functionUnchecked) {
-        final Defer<Decision<R>> decisionDefer = Promises.<Decision<R>>defer();
+        final PromiseImpl<Decision<R>> decisionDefer = new PromiseImpl<>(null, null);
         final ConditionalPromiseImpl<R> router = new ConditionalPromiseImpl<>(decisionDefer.promise());
         this.map(functionUnchecked::apply)
-                .then(decision -> {
-                    decisionDefer.complete(decision);
-                })
-                .error(decisionDefer::fail)
+            .then(decision -> {
+                decisionDefer.complete(decision);
+            })
+            .error(decisionDefer::_fail)
         ;
         return router;
     }
 
     @Override
     public <R> ConditionalPromise<R> decideAndMapToPromise(MapToPromiseAndDecideHandler<T, R> function) {
-        final Defer<Decision<R>> decisionDefer = Promises.<Decision<R>>defer();
+        final PromiseImpl<Decision<R>> decisionDefer = new PromiseImpl<>(null, null);
         final ConditionalPromiseImpl<R> router = new ConditionalPromiseImpl<>(decisionDefer.promise());
         this.map(function::apply)
-                .mapToPromise(decision -> decision.retVal.then(val -> {
-                    decisionDefer.complete(Decision.of(decision.decision, val));
-                }))
-                .error(decisionDefer::fail)
+            .mapToPromise(decision -> decision.retVal.then(val -> {
+                decisionDefer.complete(Decision.of(decision.decision, val));
+            }))
+            .error(decisionDefer::_fail)
         ;
         return router;
     }
 
     @Override
     public ConditionalPromise<Void> decide(ThenDecideHandler<T> valueConsumer) {
-        final Defer<Decision<Void>> decisionDefer = Promises.<Decision<Void>>defer();
+        final PromiseImpl<Decision<Void>> decisionDefer = new PromiseImpl<>(null, null);
         final ConditionalPromiseImpl<Void> router = new ConditionalPromiseImpl<>(decisionDefer.promise());
         this.map(valueConsumer::apply)
-                .then(decision -> {
-                    decisionDefer.complete(Decision.of(decision, null));
-                })
-                .error(decisionDefer::fail)
+            .then(decision -> {
+                decisionDefer.complete(Decision.of(decision, null));
+            })
+            .error(decisionDefer::_fail)
         ;
         return router;
     }
@@ -251,7 +256,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
                 _successHandler.accept(value);
                 _deferNext.complete(value);
             } catch (final Exception ex) {
-                ex.printStackTrace();
+                logError(ex);
                 _deferNext._fail(ex);
             }
             return promise;
@@ -273,7 +278,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
                 _errorHandler.accept(error);
                 promise._fail(error);
             } catch (final Exception ex) {
-                ex.printStackTrace();
+                logError(ex);
                 error.addSuppressed(ex);
                 promise._fail(error);
             }
@@ -295,7 +300,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
                 _completeHandler.accept(this);
                 _deferNext.complete(value);
             } catch (final Exception ex) {
-                ex.printStackTrace();
+                logError(ex);
                 _deferNext._fail(ex);
             }
             return promise;
@@ -304,7 +309,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
                 _completeHandler.accept(this);
                 _deferNext._fail(error);
             } catch (final Exception ex) {
-                ex.printStackTrace();
+                logError(ex);
                 _deferNext._fail(ex);
             }
             return promise;
@@ -356,33 +361,37 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
     @Override
     public String toString() {
         return String.format("Promise[value: %s | error: %s | success: %s | error: %s | complete: %s]",
-                value, error, isSuccess(), isError(), isComplete());
+            value, error, isSuccess(), isError(), isComplete());
     }
 
     public static void main(String... args) throws Exception {
         final Defer<Object> defer = Promises.defer();
         defer.promise()
 //        Promises.from("sona")
-                .then(s -> {
-                    System.out.println();
+            .then(s -> {
+                System.out.println();
 //                    throw new RuntimeException();
-                })
-                .complete(p -> {
-                    System.out.println();
-                })
-                .map(s -> Boolean.TRUE)
-                .then(s -> {
-                    System.out.println(s);
-                    throw new RuntimeException();
-                })
-                .complete(p -> {
-                    System.out.println(p);
-                })
-                .complete(p -> {
-                    System.out.println(p);
-                })
+            })
+            .complete(p -> {
+                System.out.println();
+            })
+            .map(s -> Boolean.TRUE)
+            .then(s -> {
+                System.out.println(s);
+                throw new RuntimeException();
+            })
+            .complete(p -> {
+                System.out.println(p);
+            })
+            .complete(p -> {
+                System.out.println(p);
+            })
         ;
 
         defer.complete("sona");
+    }
+
+    public static void logError(Throwable error) {
+        LOGGER.error("PROMISE_ERROR: ", error);
     }
 }

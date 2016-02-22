@@ -8,11 +8,14 @@ import io.vertx.core.AsyncResult;
 import io.vertx.core.AsyncResultHandler;
 import io.vertx.core.Handler;
 import io.vertx.core.eventbus.Message;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Created by someone on 26-Jul-2015.
  */
 final public class ExceptionUtil {
+    public static final Logger LOGGER = LoggerFactory.getLogger(ExceptionUtil.class);
 
     public static void toRuntime(final RunnableUnchecked runnableUnchecked) {
         try {
@@ -147,10 +150,10 @@ final public class ExceptionUtil {
 
     public static void fail(final Message message, final Throwable throwable) {
         if (message != null) message.fail(FailureCode.InternalServerError.code, throwable.getMessage());
-        System.out.println("FAILING MESSAGE: " + message + " <<>> CAUSE: " + throwable.getMessage());
+        LOGGER.error("FAILING_MESSAGE: ", throwable);
     }
 
     public static void logException(final Throwable e) {
-        System.err.println("Error: " + e.getClass() + " : " + e.getMessage());
+        LOGGER.error("ExceptionUtil: ", e);
     }
 }
