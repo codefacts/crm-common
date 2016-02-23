@@ -2,6 +2,7 @@ package test;
 
 import io.crm.promise.Promises;
 import io.crm.promise.intfs.Defer;
+import io.crm.promise.intfs.Promise;
 
 /**
  * Created by sohan on 10/17/2015.
@@ -22,8 +23,24 @@ public class PromiseAllTest {
 //    }
 
     public static void main(String... args) {
-        System.out.println(new Double(5.45).toString());
-        System.out.println(new Integer(5).toString());
-        System.out.println(new Boolean(true).toString());
+        Defer<Object> defer = Promises.defer();
+        defer.promise()
+            .filter(v ->
+                v.equals("OK"))
+            .then(v -> System.out.println("v: " + v))
+            .complete(System.out::println)
+            .error(Throwable::printStackTrace)
+            .then(v -> System.out.println("v: " + v))
+            .complete(System.out::println)
+            .error(e -> System.out.println("OHHHH"))
+            .decide(v -> "do")
+            .on("do", v -> {
+                System.out.println("do");
+            })
+            .otherwise(v -> System.out.println("other"))
+            .complete(p -> System.out.println(p))
+            .error(e -> System.out.println(e))
+            .error(e -> e.printStackTrace());
+        defer.fail(new Exception("KONA"));
     }
 }

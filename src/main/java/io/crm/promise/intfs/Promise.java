@@ -1,9 +1,13 @@
 package io.crm.promise.intfs;
 
+import io.crm.intfs.PredicateUnchecked;
+
 /**
  * Created by someone on 15/10/2015.
  */
 public interface Promise<T> {
+
+    Promise<T> filter(FilterHandler<T> predicateUnchecked);
 
     <R> Promise<R> map(MapToHandler<T, R> functionUnchecked);
 
@@ -13,7 +17,7 @@ public interface Promise<T> {
 
     <R> ConditionalPromise<R> decideAndMapToPromise(MapToPromiseAndDecideHandler<T, R> function);
 
-    ConditionalPromise<Void> decide(ThenDecideHandler<T> valueConsumer);
+    ConditionalPromise<T> decide(ThenDecideHandler<T> valueConsumer);
 
     Promise<T> then(SuccessHandler<T> successHandler);
 

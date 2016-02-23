@@ -14,13 +14,13 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
     private static final MapToPromiseHandler EMPTY_MAP_TO_PROMISE_HANDLER = s -> Promises.from(s);
     private static final ThenHandler emptyThenHandler = s -> {
     };
+    private static final FilterHandler emptyFilterHandler = s -> true;
     private static final SuccessHandler emptySuccessHandler = s -> {
     };
     private static final ErrorHandler emptyErrorHandler = s -> {
     };
     private static final CompleteHandler emptyCompleteHandler = s -> {
     };
-    private FilterHandler emptyFilterHandler = s -> true;
 
     private T value;
     private Throwable error;
@@ -47,8 +47,8 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
 
     private void _fail(final Throwable ex) {
         error = ex;
-        state = State.error;
-        invokeErrorCallback(nextPromise, error, this);
+        setState(State.ERROR_AND_COMPLETE);
+        invokeErrorCallback(nextPromise, this);
     }
 
     @Override
@@ -56,8 +56,8 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
         if (isComplete()) {
             throw new PromiseAlreadyComplete("Promise already complete. " + toString());
         }
-        state = State.success;
-        invokeSuccessCallback(nextPromise, value, this);
+        setState(State.SUCCESS_AND_COMPLETE);
+        invokeSuccessCallback(nextPromise, this);
     }
 
     @Override
@@ -66,8 +66,35 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
             throw new PromiseAlreadyComplete("Promise already complete. " + toString());
         }
         this.value = value;
-        state = State.success;
-        invokeSuccessCallback(nextPromise, value, this);
+        setState(State.SUCCESS_AND_COMPLETE);
+        invokeSuccessCallback(nextPromise, this);
+    }
+
+    private void completeWithoutValue() {
+        setState(State.COMPLETE_ONLY);
+        invokeCompleteOnlyCallback(nextPromise, this);
+    }
+
+    private void invokeCompleteOnlyCallback(PromiseImpl<T> nextPromise, PromiseImpl $this) {
+        for (; ; ) {
+            if (nextPromise == null) {
+                return;
+            }
+            try {
+                final Invokable _invokeNext = nextPromise.callback;
+                if (_invokeNext instanceof CompleteHandler) {
+                    ((CompleteHandler) _invokeNext).accept($this);
+                }
+            } catch (final Exception ex) {
+                logError(ex);
+                nextPromise._fail(ex);
+                return;
+            }
+
+            nextPromise.setState(State.COMPLETE_ONLY);
+            $this = nextPromise;
+            nextPromise = nextPromise.nextPromise;
+        }
     }
 
     @Override
@@ -75,7 +102,8 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
         return this;
     }
 
-    private void invokeErrorCallback(PromiseImpl<T> nextPromise, Throwable error, PromiseImpl $this) {
+    private void invokeErrorCallback(PromiseImpl<T> nextPromise, PromiseImpl $this) {
+        Throwable error = $this.error;
         for (; ; ) {
             if (nextPromise == null) {
                 return;
@@ -93,14 +121,15 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
             }
 
             nextPromise.error = error;
-            nextPromise.state = State.error;
+            nextPromise.setState(State.ERROR_AND_COMPLETE);
             $this = nextPromise;
             error = nextPromise.error;
             nextPromise = nextPromise.nextPromise;
         }
     }
 
-    private void invokeSuccessCallback(PromiseImpl nextPromise, Object value, PromiseImpl $this) {
+    private void invokeSuccessCallback(PromiseImpl nextPromise, PromiseImpl $this) {
+        Object value = $this.value;
         for (; ; ) {
             if (nextPromise == null) return;
             try {
@@ -145,11 +174,19 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
                     ((CompleteHandler) _invokeNext).accept($this);
                     value = nextPromise.value = value;
 
+                } else if (_invokeNext instanceof FilterHandler) {
+                    boolean test = ((FilterHandler) _invokeNext).test(value);
+                    if (test) {
+                        nextPromise.value = value;
+                    } else {
+                        nextPromise.completeWithoutValue();
+                        return;
+                    }
                 } else {
-                    value = nextPromise.value = value;
+                    nextPromise.value = value;
                 }
 
-                nextPromise.state = State.success;
+                nextPromise.setState(State.SUCCESS_AND_COMPLETE);
 
                 $this = nextPromise;
                 nextPromise = nextPromise.nextPromise;
@@ -163,14 +200,43 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
     }
 
     @Override
+    public Promise<T> filter(FilterHandler<T> filterHandler) {
+        final FilterHandler<T> _filterHandler = filterHandler == null ? emptyFilterHandler : filterHandler;
+        final PromiseImpl<T> promise = new PromiseImpl<>(_filterHandler, Type.FilterHandler);
+        final PromiseImpl _deferNext = nextPromise = promise;
+        if (isSuccess()) {
+            try {
+                boolean test = _filterHandler.test(value);
+                if (test) {
+                    _deferNext.complete(value);
+                } else {
+                    _deferNext.completeWithoutValue();
+                }
+            } catch (final Exception ex) {
+                logError(ex);
+                _deferNext._fail(ex);
+            }
+            return promise;
+        } else if (isError()) {
+            _deferNext._fail(error);
+            return promise;
+        }
+        return promise;
+    }
+
+    @Override
     public <R> Promise<R> map(final MapToHandler<T, R> mapToHandler) {
         final MapToHandler<T, R> _mapToHandler = mapToHandler == null ? EMPTY_MAP_TO_HANDLER : mapToHandler;
         final PromiseImpl<R> promise = new PromiseImpl<>(_mapToHandler, Type.MapTo);
         final PromiseImpl _deferNext = nextPromise = promise;
         if (isSuccess()) {
             try {
-                final R retVal = _mapToHandler.apply(value);
-                _deferNext.complete(retVal);
+                if (isCompleteOnly()) {
+                    _deferNext.completeWithoutValue();
+                } else {
+                    final R retVal = _mapToHandler.apply(value);
+                    _deferNext.complete(retVal);
+                }
             } catch (final Exception ex) {
                 logError(ex);
                 _deferNext._fail(ex);
@@ -194,7 +260,15 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
                 if (rPromise == null) {
                     throw new NullPointerException("No Promise was returned from the mapToPromise Handler for value: " + value);
                 }
-                rPromise.then(s -> _deferNext.complete(s)).error(e -> _deferNext._fail(e));
+                rPromise.complete(p -> {
+                    if (((PromiseImpl) p).isCompleteOnly()) {
+                        _deferNext.completeWithoutValue();
+                    } else if (p.isSuccess()) {
+                        _deferNext.complete(p.get());
+                    } else {
+                        _deferNext._fail(p.error());
+                    }
+                });
             } catch (final Exception ex) {
                 logError(ex);
                 _deferNext._fail(ex);
@@ -212,10 +286,15 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
         final PromiseImpl<Decision<R>> decisionDefer = new PromiseImpl<>(null, null);
         final ConditionalPromiseImpl<R> router = new ConditionalPromiseImpl<>(decisionDefer.promise());
         this.map(functionUnchecked::apply)
-            .then(decision -> {
-                decisionDefer.complete(decision);
+            .complete(p -> {
+                if (((PromiseImpl) p).isCompleteOnly()) {
+                    decisionDefer.completeWithoutValue();
+                } else if (p.isSuccess()) {
+                    decisionDefer.complete(p.get());
+                } else {
+                    decisionDefer._fail(p.error());
+                }
             })
-            .error(decisionDefer::_fail)
         ;
         return router;
     }
@@ -225,23 +304,34 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
         final PromiseImpl<Decision<R>> decisionDefer = new PromiseImpl<>(null, null);
         final ConditionalPromiseImpl<R> router = new ConditionalPromiseImpl<>(decisionDefer.promise());
         this.map(function::apply)
-            .mapToPromise(decision -> decision.retVal.then(val -> {
-                decisionDefer.complete(Decision.of(decision.decision, val));
-            }))
-            .error(decisionDefer::_fail)
+            .then(decision -> decision.retVal
+                .complete(p -> {
+                    if (((PromiseImpl) p).isCompleteOnly()) {
+                        decisionDefer.completeWithoutValue();
+                    } else if (p.isSuccess()) {
+                        decisionDefer.complete(Decision.of(decision.decision, p.get()));
+                    } else {
+                        decisionDefer._fail(p.error());
+                    }
+                }))
         ;
         return router;
     }
 
     @Override
-    public ConditionalPromise<Void> decide(ThenDecideHandler<T> valueConsumer) {
-        final PromiseImpl<Decision<Void>> decisionDefer = new PromiseImpl<>(null, null);
-        final ConditionalPromiseImpl<Void> router = new ConditionalPromiseImpl<>(decisionDefer.promise());
+    public ConditionalPromise<T> decide(ThenDecideHandler<T> valueConsumer) {
+        final PromiseImpl<Decision<T>> decisionDefer = new PromiseImpl<>(null, null);
+        final ConditionalPromiseImpl<T> router = new ConditionalPromiseImpl<>(decisionDefer.promise());
         this.map(valueConsumer::apply)
-            .then(decision -> {
-                decisionDefer.complete(Decision.of(decision, null));
+            .complete(p -> {
+                if (((PromiseImpl) p).isCompleteOnly()) {
+                    decisionDefer.completeWithoutValue();
+                } else if (p.isSuccess()) {
+                    decisionDefer.complete(Decision.of(p.get(), this.value));
+                } else {
+                    decisionDefer._fail(p.error());
+                }
             })
-            .error(decisionDefer::_fail)
         ;
         return router;
     }
@@ -253,8 +343,12 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
         final PromiseImpl _deferNext = nextPromise = promise;
         if (isSuccess()) {
             try {
-                _successHandler.accept(value);
-                _deferNext.complete(value);
+                if (isCompleteOnly()) {
+                    _deferNext.completeWithoutValue();
+                } else {
+                    _successHandler.accept(value);
+                    _deferNext.complete(value);
+                }
             } catch (final Exception ex) {
                 logError(ex);
                 _deferNext._fail(ex);
@@ -283,9 +377,10 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
                 promise._fail(error);
             }
             return promise;
+        } else if (isCompleteOnly()) {
+            promise.completeWithoutValue();
         } else if (isSuccess()) {
             promise.complete(value);
-            return promise;
         }
         return promise;
     }
@@ -298,7 +393,11 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
         if (isSuccess()) {
             try {
                 _completeHandler.accept(this);
-                _deferNext.complete(value);
+                if (isCompleteOnly()) {
+                    _deferNext.completeWithoutValue();
+                } else {
+                    _deferNext.complete(value);
+                }
             } catch (final Exception ex) {
                 logError(ex);
                 _deferNext._fail(ex);
@@ -319,17 +418,23 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
 
     @Override
     public boolean isComplete() {
-        return (state == State.error) | (state == State.success);
+        return (getState() == State.ERROR_AND_COMPLETE)
+            | (getState() == State.SUCCESS_AND_COMPLETE)
+            | (getState() == State.COMPLETE_ONLY);
+    }
+
+    public boolean isCompleteOnly() {
+        return getState() == State.COMPLETE_ONLY;
     }
 
     @Override
     public boolean isSuccess() {
-        return state == State.success;
+        return (getState() == State.SUCCESS_AND_COMPLETE) | (getState() == State.COMPLETE_ONLY);
     }
 
     @Override
     public boolean isError() {
-        return state == State.error;
+        return getState() == State.ERROR_AND_COMPLETE;
     }
 
     @Override
@@ -347,7 +452,15 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
         return error;
     }
 
-    private enum State {success, error}
+    private State getState() {
+        return state;
+    }
+
+    private void setState(State state) {
+        this.state = state;
+    }
+
+    private enum State {SUCCESS_AND_COMPLETE, ERROR_AND_COMPLETE, COMPLETE_ONLY}
 
     private enum Type {
         MapTo,
@@ -355,6 +468,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
         MapToVoid,
         SuccessHandler,
         ErrorHandler,
+        FilterHandler,
         CompleteHandler
     }
 

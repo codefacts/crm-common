@@ -55,8 +55,9 @@ final public class ConditionalPromiseImpl<T> implements ConditionalPromise<T> {
 
     @Override
     public ConditionalPromise<T> complete(final CompleteHandler<T> completeHandler) {
-        promise = promise.complete(p -> (p.isSuccess() ? Promises.from(p.get().retVal) : Promises.<T>fromError(p.error()))
-            .complete(completeHandler));
+        promise = promise.complete(p ->
+            (p.isSuccess() ? (p.get() == null ? Promises.<T>from(null) : Promises.from(p.get().retVal)) : Promises.<T>fromError(p.error()))
+                .complete(completeHandler));
         return this;
     }
 
