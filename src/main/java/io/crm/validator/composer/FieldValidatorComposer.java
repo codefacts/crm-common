@@ -27,7 +27,7 @@ public class FieldValidatorComposer {
     }
 
     public FieldValidatorComposer doubleType() {
-
+        return this;
     }
 
     public FieldValidatorComposer floatType() {
