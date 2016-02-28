@@ -1,5 +1,8 @@
 package io.crm;
 
+import rx.Observable;
+import rx.Subscriber;
+
 /**
  * Created by someone on 23/08/2015.
  */
@@ -123,5 +126,39 @@ final public class QC {
 
     public static final String concat(String... strings) {
         return String.join(".", strings);
+    }
+
+    public static void main(String... args) {
+        Observable.create((Observable.OnSubscribe<String>) subscriber -> {
+            subscriber.setProducer(n -> {
+                System.out.println("Req: " + n);
+                for (int i = 0; i < 10; i++) {
+                    subscriber.onNext("Go: " + (i + 1));
+                }
+
+                subscriber.onCompleted();
+            });
+        }).subscribe(new Subscriber<String>() {
+            @Override
+            public void onStart() {
+                request(10);
+            }
+
+            @Override
+            public void onCompleted() {
+                System.out.println("onCompleted");
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                System.out.println("onError");
+            }
+
+            @Override
+            public void onNext(String s) {
+                System.out.println("onNext: " + s);
+            }
+        });
+
     }
 }
