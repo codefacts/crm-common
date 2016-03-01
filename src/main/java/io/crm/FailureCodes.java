@@ -12,8 +12,15 @@ public enum FailureCodes {
     INVALID_TYPE_VALIDATION_ERROR(validation(), "invalid.type.validation.error", validationHttp()),
     INVALID_RANGE_VALIDATION_ERROR(validation(), "invalid.range.validation.error", validationHttp()),
     NULL_VALIDATION_ERROR(validation(), "null.validation.error", validationHttp()),
-    INVALID_VALUE_VALIDATION_ERROR(validation(), "invalid.value.validation.error", validationHttp()), PATTERN_VALIDATION_ERROR(validation(), "pattern.validation.error", validationHttp()),
-    MAX_LENGTH_VALIDATION_ERROR(validation(), "max.length.validation.error", validationHttp()), MIN_LENGTH_VALIDATION_ERROR(validation(), "min.length.validation.error", validationHttp()), LENGTH_VALIDATION_ERROR(validation(), "length.validation.error", validationHttp()), INVALID_EMAIL_VALIDATION_ERROR(validation(), "invalid.email.validation.error", validationHttp()), INVALID_PHONE_VALIDATION_ERROR(validation(), "invalid.phone.validation.error", validationHttp());
+    INVALID_VALUE_VALIDATION_ERROR(validation(), "invalid.value.validation.error", validationHttp()),
+    PATTERN_VALIDATION_ERROR(validation(), "pattern.validation.error", validationHttp()),
+    MAX_LENGTH_VALIDATION_ERROR(validation(), "max.length.validation.error", validationHttp()),
+    MIN_LENGTH_VALIDATION_ERROR(validation(), "min.length.validation.error", validationHttp()),
+    LENGTH_VALIDATION_ERROR(validation(), "length.validation.error", validationHttp()),
+    INVALID_EMAIL_VALIDATION_ERROR(validation(), "invalid.email.validation.error", validationHttp()),
+    INVALID_PHONE_VALIDATION_ERROR(validation(), "invalid.phone.validation.error", validationHttp()),
+    VALUE_MISSING_VALIDATION_ERROR(validation(), "value.missing.validation.error", validationHttp()),
+    INVALID_SEQUENCE_ORDER_VALIDATION_ERROR(validation(), "invalid.sequence.order.validation.error", validationHttp());
 
     private final int code;
     private final String messageCode;

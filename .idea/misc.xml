@@ -11,6 +11,12 @@
         <option value="$PROJECT_DIR$/../crm-query/pom.xml" />
         <option value="$PROJECT_DIR$/../schema-validation/pom.xml" />
         <option value="$PROJECT_DIR$/../crm-web/pom.xml" />
+        <option value="$PROJECT_DIR$/../call_center/pom.xml" />
+        <option value="$PROJECT_DIR$/../grossary/pom.xml" />
+        <option value="$PROJECT_DIR$/../merchandiser-supervisor/pom.xml" />
+        <option value="$PROJECT_DIR$/../sql-core/pom.xml" />
+        <option value="$PROJECT_DIR$/../shopy/pom.xml" />
+        <option value="$PROJECT_DIR$/../uploader/pom.xml" />
       </list>
     </option>
   </component>

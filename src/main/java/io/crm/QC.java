@@ -123,6 +123,7 @@ final public class QC {
     public static final String size = "size";
     public static final String total = "total";
     public static final String length = "length";
+    public static final String mobile = "mobile";
 
     public static final String concat(String... strings) {
         return String.join(".", strings);

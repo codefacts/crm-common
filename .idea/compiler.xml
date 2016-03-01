@@ -17,13 +17,6 @@
       <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
       </profile>
-      <profile default="false" name="Annotation profile for common-crm" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="common-crm" />
-      </profile>
       <profile default="false" name="Annotation profile for vaadin_client" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -49,6 +42,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="call_center" />
+        <module name="grossary" />
+        <module name="merchandiser-supervisor" />
+        <module name="shopy" />
+        <module name="sql-core" />
+        <module name="uploader" />
         <module name="web" />
       </profile>
       <profile default="false" name="Annotation profile for core" enabled="true">
@@ -58,12 +57,25 @@
         <processorPath useClasspath="true" />
         <module name="core" />
       </profile>
+      <profile default="false" name="Annotation profile for common-crm" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="common-crm" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
+      <module name="call_center" target="1.8" />
       <module name="common-crm" target="1.8" />
       <module name="core" target="1.8" />
+      <module name="grossary" target="1.8" />
+      <module name="merchandiser-supervisor" target="1.8" />
       <module name="query" target="1.8" />
       <module name="schema-validation" target="1.8" />
+      <module name="shopy" target="1.8" />
+      <module name="sql-core" target="1.8" />
+      <module name="uploader" target="1.8" />
       <module name="web" target="1.8" />
     </bytecodeTargetLevel>
   </component>

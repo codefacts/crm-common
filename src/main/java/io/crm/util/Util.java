@@ -11,6 +11,7 @@ import io.crm.promise.intfs.Promise;
 import io.crm.util.exceptions.InvalidArgumentException;
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Handler;
+import io.vertx.core.MultiMap;
 import io.vertx.core.Vertx;
 import io.vertx.core.eventbus.DeliveryOptions;
 import io.vertx.core.eventbus.EventBus;
@@ -20,6 +21,8 @@ import io.vertx.core.json.JsonObject;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.bson.Document;
+import rx.*;
+import rx.Observable;
 
 import java.io.File;
 import java.io.IOException;
@@ -528,5 +531,17 @@ final public class Util {
         if (builder.length() > 0)
             return builder.delete(builder.length() - delimeter.length(), builder.length());
         else return builder;
+    }
+
+    public static <T> rx.Observable<T> bridgeAndInitiate(final EventBus eventBus, final String dest, Object message, MultiMap multiMap) {
+        return Observable.<T>create(subscriber -> {
+            if (!subscriber.isUnsubscribed()) {
+                subscriber.setProducer(n -> {
+                    for (int i = 0; i < n; i++) {
+                        send(eventBus, dest, message);
+                    }
+                });
+            }
+        });
     }
 }
