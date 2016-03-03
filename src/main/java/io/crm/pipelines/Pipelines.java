@@ -2,16 +2,18 @@ package io.crm.pipelines;
 
 import io.crm.promise.Promises;
 import io.crm.promise.intfs.Defer;
+import io.crm.promise.intfs.Promise;
 import io.crm.util.ExceptionUtil;
 import io.crm.util.Util;
-import io.crm.util.touple.MutableTpl1;
 import io.vertx.core.eventbus.DeliveryOptions;
 import io.vertx.core.eventbus.EventBus;
 import io.vertx.core.eventbus.Message;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import rx.Observable;
+import rx.Observer;
 import rx.Subscriber;
 import rx.Subscription;
-import rx.subjects.PublishSubject;
 
 import java.util.Objects;
 
@@ -19,10 +21,12 @@ import java.util.Objects;
  * Created by shahadat on 3/2/16.
  */
 final public class Pipelines {
+    private static final Logger LOGGER = LoggerFactory.getLogger(Pipelines.class);
 
     private static final String $$$SEQ_COMPLETE = "$$$SEQ_COMPLETE";
 
-    public static <T> rx.Observable<Message<T>> bridgeAndInitiate(final EventBus eventBus, final String dest, Object message, DeliveryOptions deliveryOptions) {
+    public static <T> rx.Observable<Message<T>> bridgeAndInitiate(final EventBus eventBus, final String dest,
+                                                                  Object message, DeliveryOptions deliveryOptions) {
 
         final Observable<Message<T>> emitter = Observable.create(
             subscriber -> {
@@ -33,7 +37,10 @@ final public class Pipelines {
         return emitter;
     }
 
-    private static <T> void eventRequestLoop(final EventBus eventBus, final String dest, Object message, DeliveryOptions deliveryOptions, Subscriber<? super Message<T>> subscriber, DeliveryOptions replyDeliveryOptions) {
+    private static <T> void eventRequestLoop(final EventBus eventBus, final String dest, Object message,
+                                             DeliveryOptions deliveryOptions,
+                                             Subscriber<? super Message<T>> subscriber,
+                                             DeliveryOptions replyDeliveryOptions) {
         Objects.requireNonNull(deliveryOptions);
         Objects.requireNonNull(replyDeliveryOptions);
 
@@ -51,7 +58,8 @@ final public class Pipelines {
             .then(msg -> reqLoop(msg, deliveryOptions, subscriber, replyDeliveryOptions));
     }
 
-    private static <T> void reqLoop(Message<T> msg, DeliveryOptions deliveryOptions, Subscriber<? super Message<T>> subscriber, DeliveryOptions replyDeliveryOptions) {
+    private static <T> void reqLoop(Message<T> msg, DeliveryOptions deliveryOptions,
+                                    Subscriber<? super Message<T>> subscriber, DeliveryOptions replyDeliveryOptions) {
         if (!subscriber.isUnsubscribed()) {
             msg.<T>reply(null, replyDeliveryOptions, asyncResult -> {
 
@@ -76,34 +84,114 @@ final public class Pipelines {
     public static <T> void bridgeFrom(Message message, Observable<T> src, DeliveryOptions replyDeliveryOptions) {
         Objects.requireNonNull(replyDeliveryOptions);
 
-        PublishSubject<T> subject = PublishSubject.create();
-        Subscription subscription = src.subscribe(subject);
+        BridgeSub<T> bridgeSub = new BridgeSub<>();
 
-        MutableTpl1<Subscription> tpl1 = new MutableTpl1<>();
-
-        tpl1.t1 = src.subscribe(new Subscriber<T>() {
+        bridgeSub.observer = new Observer<T>() {
             @Override
             public void onCompleted() {
                 message.reply(null, replyDeliveryOptions.addHeader($$$SEQ_COMPLETE, ""));
-                tpl1.t1.unsubscribe();
             }
 
             @Override
             public void onError(Throwable e) {
                 ExceptionUtil.fail(message, e);
-                tpl1.t1.unsubscribe();
             }
 
             @Override
             public void onNext(T t) {
-                final Defer<Message> defer = Promises.defer();
-                message.reply(t, replyDeliveryOptions, asyncResult -> {
-                    if (asyncResult.failed()) defer.fail(asyncResult.cause());
-                    else defer.complete(asyncResult.result());
-                });
 
-                defer.complete();
+                onNextLoop(t, message, replyDeliveryOptions, bridgeSub);
             }
+        };
+
+        bridgeSub.subscription = src.subscribe(bridgeSub);
+    }
+
+    private static <T> void onNextLoop(T t, Message message, DeliveryOptions replyDeliveryOptions, BridgeSub<T> bridgeSub) {
+        final Defer<Message> defer = Promises.defer();
+        message.reply(t, replyDeliveryOptions, asyncResult -> {
+            if (asyncResult.failed()) defer.fail(asyncResult.cause());
+            else defer.complete(asyncResult.result());
         });
+
+        MyObserver<T> myObserver = new MyObserver<>();
+        bridgeSub.observer = myObserver;
+
+        Promises.when(myObserver.promise(), defer.promise())
+            .then(tpl2 -> tpl2.accept((tNotification, msg) -> {
+                switch (tNotification.type) {
+                    case Notification.COMPLETE:
+                        message.reply(null, replyDeliveryOptions.addHeader($$$SEQ_COMPLETE, ""));
+                        break;
+                    case Notification.ERROR:
+                        ExceptionUtil.fail(message, tNotification.e);
+                        break;
+                    case Notification.NEXT:
+                        onNextLoop(tNotification.val, msg, replyDeliveryOptions, bridgeSub);
+                        break;
+                }
+            }))
+            .error(e -> LOGGER.error("PIPELINES_ERROR", e));
+    }
+
+    private static final class MyObserver<T> implements Observer<T> {
+        private final Defer<Notification<T>> defer = Promises.defer();
+
+        Promise<Notification<T>> promise() {
+            return defer.promise();
+        }
+
+        @Override
+        public void onCompleted() {
+            defer.complete(new Notification<T>(null, null, Notification.COMPLETE));
+        }
+
+        @Override
+        public void onError(Throwable e) {
+            defer.complete(new Notification<T>(null, e, Notification.ERROR));
+        }
+
+        @Override
+        public void onNext(T t) {
+            defer.complete(new Notification<T>(t, null, Notification.NEXT));
+        }
+    }
+
+    private static final class Notification<T> {
+        public final T val;
+        public final Throwable e;
+        public final int type;
+
+        private Notification(T val, Throwable e, int type) {
+            this.val = val;
+            this.e = e;
+            this.type = type;
+        }
+
+        public static final int ERROR = 1;
+        public static final int COMPLETE = 2;
+        public static final int NEXT = 3;
+    }
+
+    private static final class BridgeSub<T> extends Subscriber<T> {
+        private Subscription subscription;
+        Observer<T> observer;
+
+        @Override
+        public void onCompleted() {
+            subscription.unsubscribe();
+            observer.onCompleted();
+        }
+
+        @Override
+        public void onError(Throwable e) {
+            subscription.unsubscribe();
+            observer.onError(e);
+        }
+
+        @Override
+        public void onNext(T t) {
+            observer.onNext(t);
+        }
     }
 }
