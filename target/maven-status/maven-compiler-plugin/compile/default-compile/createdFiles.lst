@@ -1,14 +1,17 @@
 io/crm/pipelines/validator/impl/BooleanValidator.class
 io/crm/intfs/TriFunctionUnchecked.class
 io/crm/promise/intfs/MapToPromiseAndDecideHandler.class
+io/crm/pipelines/endpoints/Endpoint.class
 io/crm/promise/intfs/MapAndDecideHandler.class
 io/crm/pipelines/validator/impl/DoubleRangeValidator.class
 io/crm/pipelines/validator/impl/JsonObjectValidator.class
 io/crm/pipelines/validator/impl/StringValidator.class
 io/crm/promise/Promises.class
+io/crm/pipelines/Pipelines.class
 io/crm/util/touple/immutable/Tpl4.class
 io/crm/pipelines/validator/impl/json/object/ContainsAll.class
 io/crm/pipelines/validator/impl/json/object/MinFieldCount.class
+io/crm/pipelines/Pipelines$Notification.class
 io/crm/pipelines/validator/impl/json/object/MaxFieldCount.class
 io/crm/promise/PromiseCallbackAlreadySet.class
 io/crm/util/touple/MutableTpl8.class
@@ -17,6 +20,7 @@ io/crm/pipelines/validator/impl/NotNullEmptyOrWhiteSpace.class
 io/crm/pipelines/transformation/impl/json/object/DynamicDefaultValue.class
 io/crm/pipelines/validator/ValidatorPipeline.class
 io/crm/util/ContextImpl.class
+io/crm/pipelines/endpoints/HttpEndPoint.class
 io/crm/pipelines/validator/AsyncValidatorPipeline.class
 io/crm/util/touple/MutableTpl5.class
 io/crm/FailureCodes.class
@@ -43,6 +47,7 @@ io/crm/intfs/HexaConsumerUnchecked.class
 io/crm/promise/intfs/CompleteHandler.class
 io/crm/promise/intfs/MapToHandler.class
 io/crm/intfs/QuadFunctionUnchecked.class
+io/crm/pipelines/Pipelines$BridgeSub.class
 io/crm/pipelines/validator/ValidationResult.class
 io/crm/util/Util$4.class
 io/crm/pipelines/validator/composer/FieldValidatorComposer.class
@@ -86,12 +91,15 @@ io/crm/intfs/ConsumerUnchecked.class
 io/crm/util/Util$3.class
 io/crm/promise/PromiseAlreadyComplete.class
 io/crm/promise/intfs/Invokable.class
+io/crm/pipelines/endpoints/FileReadEndPoint.class
 io/crm/promise/PromiseImpl$Type.class
 io/crm/util/touple/MutableTpl1.class
 io/crm/pipelines/validator/impl/json/object/ContainsAny.class
+io/crm/pipelines/Pipelines$1.class
 io/crm/pipelines/validator/impl/json/array/SequenceEqual.class
 io/crm/promise/Decision.class
 io/crm/promise/intfs/Defer.class
+io/crm/pipelines/endpoints/FileInfoEndPoint.class
 io/crm/intfs/QuadConsumerUnchecked.class
 io/crm/pipelines/validator/composer/JsonArrayValidatorComposer.class
 io/crm/pipelines/validator/impl/json/array/MaxLength.class
@@ -140,5 +148,7 @@ io/crm/util/Util$2.class
 io/crm/intfs/SevenConsumerUnchecked.class
 io/crm/pipelines/validator/impl/NotNullValidator.class
 io/crm/util/touple/immutable/Tpls.class
+io/crm/pipelines/Pipelines$MyObserver.class
 io/crm/util/touple/immutable/Tpl2.class
 io/crm/pipelines/transformation/Transform.class
+io/crm/pipelines/endpoints/FileWriteEndPoint.class

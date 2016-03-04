@@ -23,9 +23,11 @@
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/util/touple/immutable/Tpls.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/impl/json/object/ContainsAny.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/util/touple/MutableTpl4.java
+/home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/Pipelines.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/promise/Decision.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/impl/IntegerValidator.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/test/PromiseAllTest.java
+/home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/endpoints/Endpoint.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/util/touple/immutable/Tpl6.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/util/touple/MutableTpl2.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/promise/intfs/MapToPromiseAndDecideHandler.java
@@ -54,6 +56,7 @@
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/FailureCodes.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/intfs/SevenFunctionUnchecked.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/promise/intfs/Promise.java
+/home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/endpoints/FileWriteEndPoint.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/intfs/TriConsumerUnchecked.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/util/ContextImpl.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/impl/json/object/Contains.java
@@ -79,6 +82,7 @@
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/impl/NotNullEmptyOrWhiteSpace.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/impl/JsonObjectValidator.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/promise/intfs/ConditionalPromise.java
+/home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/endpoints/HttpEndPoint.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/transformation/impl/json/object/DynamicDefaultValue.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/Validator.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/ValidationResultBuilder.java
@@ -100,6 +104,7 @@
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/util/AsyncUtil.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/transformation/JsonTransformationPipeline.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/impl/json/object/ContainsAll.java
+/home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/endpoints/FileReadEndPoint.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/util/touple/MutableTpl6.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/util/touple/immutable/Tpl4.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/impl/NotNullValidator.java
@@ -110,6 +115,7 @@
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/intfs/FunctionUnchecked.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/promise/intfs/MapToStreamAndDecideHandler.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/intfs/FunctionAsync.java
+/home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/endpoints/FileInfoEndPoint.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/impl/json/object/MinFieldCount.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/promise/intfs/ErrorHandler.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/promise/intfs/Invokable.java

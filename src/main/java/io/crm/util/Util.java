@@ -37,7 +37,9 @@ import java.util.*;
 import java.util.concurrent.Callable;
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Created by sohan on 8/1/2015.
@@ -532,5 +534,29 @@ final public class Util {
         if (builder.length() > 0)
             return builder.delete(builder.length() - delimeter.length(), builder.length());
         else return builder;
+    }
+
+    public static String parseCamelOrSnake(String src) {
+        Pattern pattern = Pattern.compile("");
+        String str = Stream.of(src).map(s -> s.replace('_', ' ')).map(s -> s.split(" "))
+            .flatMap(strings -> Arrays.asList(strings).stream())
+            .map(s -> splitCamelCase(s, " "))
+            .flatMap(s -> Arrays.asList(s.split(" ")).stream())
+            .map(String::trim)
+            .map(s -> s.toCharArray())
+            .map(chars -> accept(chars, chs -> {
+                if (chs.length > 0)
+                    chs[0] = Character.toUpperCase(chs[0]);
+            }))
+            .map(chars -> new String(chars))
+            .collect(Collectors.joining(" "));
+        ;
+        return str;
+    }
+
+    public static String splitCamelCase(String s, String replace) {
+        String regex = "([a-z])([A-Z])";
+        String replacement = "$1" + replace + "$2";
+        return s.replaceAll(regex, replacement);
     }
 }

@@ -12,7 +12,7 @@ import static io.crm.util.Util.*;
 /**
  * Created by shahadat on 3/1/16.
  */
-public class DefaultValue implements Transform<JsonObject> {
+public class DefaultValue implements Transform<JsonObject, JsonObject> {
     private final JsonObject defaultValue;
 
     public DefaultValue(JsonObject defaultValue) {

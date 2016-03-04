@@ -5,6 +5,7 @@ import io.crm.promise.intfs.Defer;
 import io.crm.promise.intfs.Promise;
 import io.crm.util.ExceptionUtil;
 import io.crm.util.Util;
+import io.vertx.core.AsyncResult;
 import io.vertx.core.eventbus.DeliveryOptions;
 import io.vertx.core.eventbus.EventBus;
 import io.vertx.core.eventbus.Message;
@@ -23,7 +24,7 @@ import java.util.Objects;
 final public class Pipelines {
     private static final Logger LOGGER = LoggerFactory.getLogger(Pipelines.class);
 
-    private static final String $$$SEQ_COMPLETE = "$$$SEQ_COMPLETE";
+    private static final String $$$SEQ_CONTINUE = "$$$SEQ_CONTINUE";
 
     public static <T> rx.Observable<Message<T>> bridgeAndInitiate(final EventBus eventBus, final String dest,
                                                                   Object message, DeliveryOptions deliveryOptions) {
@@ -54,7 +55,7 @@ final public class Pipelines {
                     }
                 }
             })
-            .filter(msg -> !msg.headers().contains($$$SEQ_COMPLETE) && !subscriber.isUnsubscribed())
+            .filter(msg -> msg.headers().contains($$$SEQ_CONTINUE) && !subscriber.isUnsubscribed())
             .then(msg -> reqLoop(msg, deliveryOptions, subscriber, replyDeliveryOptions));
     }
 
@@ -65,7 +66,7 @@ final public class Pipelines {
 
 
                 if (!subscriber.isUnsubscribed()) {
-                    if (!msg.headers().contains($$$SEQ_COMPLETE)) {
+                    if (msg.headers().contains($$$SEQ_CONTINUE)) {
                         if (asyncResult.succeeded()) {
                             subscriber.onNext(asyncResult.result());
                             reqLoop(msg, deliveryOptions, subscriber, replyDeliveryOptions);
@@ -89,17 +90,19 @@ final public class Pipelines {
         bridgeSub.observer = new Observer<T>() {
             @Override
             public void onCompleted() {
-                message.reply(null, replyDeliveryOptions.addHeader($$$SEQ_COMPLETE, ""));
+                replyDeliveryOptions.getHeaders().remove($$$SEQ_CONTINUE);
+                message.reply(null, replyDeliveryOptions);
             }
 
             @Override
             public void onError(Throwable e) {
+                replyDeliveryOptions.getHeaders().remove($$$SEQ_CONTINUE);
                 ExceptionUtil.fail(message, e);
             }
 
             @Override
             public void onNext(T t) {
-
+                replyDeliveryOptions.getHeaders().add($$$SEQ_CONTINUE, "");
                 onNextLoop(t, message, replyDeliveryOptions, bridgeSub);
             }
         };
@@ -109,10 +112,7 @@ final public class Pipelines {
 
     private static <T> void onNextLoop(T t, Message message, DeliveryOptions replyDeliveryOptions, BridgeSub<T> bridgeSub) {
         final Defer<Message> defer = Promises.defer();
-        message.reply(t, replyDeliveryOptions, asyncResult -> {
-            if (asyncResult.failed()) defer.fail(asyncResult.cause());
-            else defer.complete(asyncResult.result());
-        });
+        message.reply(t, replyDeliveryOptions, Util.makeDeferred(defer));
 
         MyObserver<T> myObserver = new MyObserver<>();
         bridgeSub.observer = myObserver;
@@ -121,9 +121,11 @@ final public class Pipelines {
             .then(tpl2 -> tpl2.accept((tNotification, msg) -> {
                 switch (tNotification.type) {
                     case Notification.COMPLETE:
-                        message.reply(null, replyDeliveryOptions.addHeader($$$SEQ_COMPLETE, ""));
+                        replyDeliveryOptions.getHeaders().remove($$$SEQ_CONTINUE);
+                        message.reply(null, replyDeliveryOptions);
                         break;
                     case Notification.ERROR:
+                        replyDeliveryOptions.getHeaders().remove($$$SEQ_CONTINUE);
                         ExceptionUtil.fail(message, tNotification.e);
                         break;
                     case Notification.NEXT:
