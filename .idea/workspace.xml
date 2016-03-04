@@ -2,66 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d163bfc-fd49-42ac-89b1-b7377f1bdc19" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/ArrayToObjectTransformation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/ConverterTransformation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/IncludeExcludeTransformation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/IntelligentConverterTransformation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/ObjectToArrayTransformation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/RemoveNullsTransformation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/StringTrimmer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/parsers/CsvFileParser.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/DynamicDefaultValue.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/common-1.0-SNAPSHOT-fat.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/common-1.0-SNAPSHOT.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/MainVerticle.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/MyApp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/MyEvents.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/MyMessageCodes.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/MyUris.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/controller/CategoryController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/controller/HomeController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/controller/ProductController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/controller/VariationConroller.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/db_generators/DB.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/gv.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/model/Address.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/model/Category.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/model/Customer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/model/Empoyee.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/model/Order.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/model/OrderItem.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/model/OrderStatus.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/model/PaymentMethod.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/model/Product.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/model/Unit.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/model/Units.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/model/Variation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/service/CategoryService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/service/ProductService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/service/VariationService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/template/Sidebar.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/template/page/DashboardTmpt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/template/page/DashboardTmptBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/template/page/PageTmpt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/template/page/PageTmptBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/template/page/SiteTmpt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/util/MyUtil$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/util/MyUtil$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/util/MyUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/util/MyValidators.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/classes/codefacts/shopy/values/CategoryValue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/test-classes/MM.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../shopy/target/test-classes/Main.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/crm/pipelines/Pipelines.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/pipelines/Pipelines.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/JsonTransformationPipeline.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/JsonTransformationPipeline.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/Transform.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/Transform.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/DefaultValue.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/DefaultValue.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/crm/util/Util.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/util/Util.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/web.iml" afterPath="$PROJECT_DIR$/../crm-web/web.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/StringTrimmer.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/StringTrimmer.java" />
     </list>
     <ignored path="common-crm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,23 +42,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DefaultValue.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/DefaultValue.java">
+      <file leaf-file-name="StringTrimmer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/StringTrimmer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JsonTransformationPipeline.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/JsonTransformationPipeline.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="27" column="67" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringTrimmer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/StringTrimmer.java">
+      <file leaf-file-name="FileReadEndPoint.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/pipelines/endpoints/FileReadEndPoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.7372881">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#623#631#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -174,11 +129,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ObjectToArrayTransformation.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ObjectToArrayTransformation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/ObjectToArrayTransformation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40677965">
-              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#442#443#0" expanded="true" />
@@ -206,18 +161,6 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="556" column="39" selection-start-line="556" selection-start-column="39" selection-end-line="556" selection-end-column="39" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/WebUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="178" column="0" selection-start-line="178" selection-start-column="0" selection-end-line="182" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -289,7 +232,6 @@
         <option value="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/Transform.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/DefaultValue.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/JsonTransformationPipeline.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/StringTrimmer.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/WebUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/util/Util.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/ConverterTransformation.java" />
@@ -299,6 +241,7 @@
         <option value="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/RemoveNullsTransformation.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/ArrayToObjectTransformation.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/ObjectToArrayTransformation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/StringTrimmer.java" />
       </list>
     </option>
   </component>
@@ -896,6 +839,78 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pipelines" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common-crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crm-common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pipelines" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="validator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common-crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crm-common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pipelines" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="validator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1591,7 +1606,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457038025518</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Transformation">
+      <created>1457127169416</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1457127169416</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1611,7 +1632,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4048387" sideWeight="0.4961665" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28039432" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3231106" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24863088" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1653,7 +1674,8 @@
     <MESSAGE value="TransormationPipeline And ValidationTransformation" />
     <MESSAGE value="COMPLETE RXJAVA BRIDGE TO VERTX MESSAGE AND  STARTING HTTP END POINT" />
     <MESSAGE value="EndPoints" />
-    <option name="LAST_COMMIT_MESSAGE" value="EndPoints" />
+    <MESSAGE value="Transformation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Transformation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1902,13 +1924,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/pipelines/endpoints/FileReadEndPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55932206">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="28" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/pipelines/endpoints/FileInfoEndPoint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.58474576">
@@ -1980,29 +1995,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/JsonTransformationPipeline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="67" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/DefaultValue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/StringTrimmer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2080,12 +2077,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/ObjectToArrayTransformation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40677965">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#442#443#0" expanded="true" />
             <element signature="e#482#483#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/StringTrimmer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/JsonTransformationPipeline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="67" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/pipelines/endpoints/FileReadEndPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7372881">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#623#631#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -28,7 +28,7 @@ public class StringTrimmer implements Transform<JsonObject, JsonObject> {
             stream = stream.filter(s -> !excludes.contains(s));
         }
         stream
-            .filter(key -> json.getValue(key) != null)
+            .filter(key -> json.getValue(key) instanceof String)
             .forEach(key -> {
                 json.put(key, json.getString(key).trim());
             });
