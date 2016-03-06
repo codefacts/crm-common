@@ -1,24 +1,24 @@
-package io.crm.pipelines.validator.impl;
+package io.crm.pipelines.validator.impl.type;
 
 import io.crm.MessageBundle;
 import io.crm.pipelines.validator.ValidationResult;
 import io.crm.pipelines.validator.Validator;
 import io.vertx.core.json.JsonObject;
 
-import static java.util.Objects.requireNonNull;
+import static io.crm.util.Util.as;
 
 /**
  * Created by shahadat on 2/28/16.
  */
-public class StringValidator implements Validator<JsonObject> {
+public class IntegerValidator implements Validator<JsonObject> {
     private final TypeValidator typeValidator;
 
-    public StringValidator(MessageBundle messageBundle, String field) {
+    public IntegerValidator(MessageBundle messageBundle, String field) {
         typeValidator = new TypeValidator(messageBundle, field,
-            jsonObject -> jsonObject.getInteger(field),
+            jsonObject -> as(jsonObject.getValue(field), Integer.class),
             validationResult -> {
                 validationResult.getAdditionals()
-                    .put(TypeValidator.TYPE, Types.STRING);
+                    .put(TypeValidator.TYPE, Types.INTEGER);
                 return validationResult;
             });
     }

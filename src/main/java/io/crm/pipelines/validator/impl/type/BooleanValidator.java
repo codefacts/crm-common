@@ -1,24 +1,22 @@
-package io.crm.pipelines.validator.impl;
+package io.crm.pipelines.validator.impl.type;
 
 import io.crm.MessageBundle;
 import io.crm.pipelines.validator.ValidationResult;
 import io.crm.pipelines.validator.Validator;
 import io.vertx.core.json.JsonObject;
 
-import static io.crm.util.Util.as;
-
 /**
  * Created by shahadat on 2/28/16.
  */
-public class FloatValidator implements Validator<JsonObject> {
+public class BooleanValidator implements Validator<JsonObject> {
     private final TypeValidator typeValidator;
 
-    public FloatValidator(MessageBundle messageBundle, String field) {
+    public BooleanValidator(MessageBundle messageBundle, String field) {
         typeValidator = new TypeValidator(messageBundle, field,
-            jsonObject -> as(jsonObject.getValue(field), Float.class),
+            jsonObject -> jsonObject.getBoolean(field),
             validationResult -> {
                 validationResult.getAdditionals()
-                    .put(TypeValidator.TYPE, Types.FLOAT);
+                    .put(TypeValidator.TYPE, Types.BOOLEAN);
                 return validationResult;
             });
     }

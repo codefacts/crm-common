@@ -1,4 +1,4 @@
-package io.crm.pipelines.validator.impl;
+package io.crm.pipelines.validator.impl.type;
 
 /**
  * Created by shahadat on 3/1/16.

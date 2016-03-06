@@ -3,6 +3,7 @@ package io.crm.pipelines.validator.composer;
 import io.crm.MessageBundle;
 import io.crm.pipelines.validator.ValidatorPipeline;
 import io.crm.pipelines.validator.impl.*;
+import io.crm.pipelines.validator.impl.type.*;
 import io.vertx.core.json.JsonObject;
 
 import java.util.regex.Pattern;

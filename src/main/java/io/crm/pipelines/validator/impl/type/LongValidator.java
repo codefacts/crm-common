@@ -1,4 +1,4 @@
-package io.crm.pipelines.validator.impl;
+package io.crm.pipelines.validator.impl.type;
 
 import io.crm.MessageBundle;
 import io.crm.pipelines.validator.ValidationResult;

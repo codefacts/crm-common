@@ -1,4 +1,4 @@
-package io.crm.pipelines.validator.impl;
+package io.crm.pipelines.validator.impl.type;
 
 import io.crm.MessageBundle;
 import io.crm.pipelines.validator.ValidationResult;
@@ -8,17 +8,17 @@ import io.vertx.core.json.JsonObject;
 import static io.crm.util.Util.as;
 
 /**
- * Created by shahadat on 3/1/16.
+ * Created by shahadat on 2/28/16.
  */
-public class NumberValidator implements Validator<JsonObject> {
+public class DoubleValidator implements Validator<JsonObject> {
     private final TypeValidator typeValidator;
 
-    public NumberValidator(MessageBundle messageBundle, String field) {
+    public DoubleValidator(MessageBundle messageBundle, String field) {
         typeValidator = new TypeValidator(messageBundle, field,
-            jsonObject -> as(jsonObject.getValue(field), Number.class),
+            jsonObject -> as(jsonObject.getValue(field), Double.class),
             validationResult -> {
                 validationResult.getAdditionals()
-                    .put(TypeValidator.TYPE, Types.NUMBER);
+                    .put(TypeValidator.TYPE, Types.DOUBLE);
                 return validationResult;
             });
     }

@@ -1,4 +1,4 @@
-package io.crm.pipelines.validator.impl;
+package io.crm.pipelines.validator.impl.type;
 
 import io.crm.MessageBundle;
 import io.crm.pipelines.validator.ValidationResult;
@@ -10,15 +10,15 @@ import static io.crm.util.Util.as;
 /**
  * Created by shahadat on 2/28/16.
  */
-public class DoubleValidator implements Validator<JsonObject> {
+public class FloatValidator implements Validator<JsonObject> {
     private final TypeValidator typeValidator;
 
-    public DoubleValidator(MessageBundle messageBundle, String field) {
+    public FloatValidator(MessageBundle messageBundle, String field) {
         typeValidator = new TypeValidator(messageBundle, field,
-            jsonObject -> as(jsonObject.getValue(field), Double.class),
+            jsonObject -> as(jsonObject.getValue(field), Float.class),
             validationResult -> {
                 validationResult.getAdditionals()
-                    .put(TypeValidator.TYPE, Types.DOUBLE);
+                    .put(TypeValidator.TYPE, Types.FLOAT);
                 return validationResult;
             });
     }

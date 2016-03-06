@@ -3,6 +3,8 @@ package io.crm.pipelines.validator.impl;
 import io.crm.MessageBundle;
 import io.crm.pipelines.validator.ValidationResult;
 import io.crm.pipelines.validator.Validator;
+import io.crm.pipelines.validator.impl.type.TypeValidator;
+import io.crm.pipelines.validator.impl.type.Types;
 import io.vertx.core.json.JsonObject;
 
 /**
@@ -20,7 +22,6 @@ public class JsonObjectValidator implements Validator<JsonObject> {
                 return validationResult;
             });
     }
-
 
     @Override
     public ValidationResult validate(JsonObject val) {
