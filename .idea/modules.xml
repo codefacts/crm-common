@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../SmsReceiverVertx/SmsReceiverVertx.iml" filepath="$PROJECT_DIR$/../SmsReceiverVertx/SmsReceiverVertx.iml" />
       <module fileurl="file://$PROJECT_DIR$/../call_center/call_center.iml" filepath="$PROJECT_DIR$/../call_center/call_center.iml" />
       <module fileurl="file://$PROJECT_DIR$/common-crm.iml" filepath="$PROJECT_DIR$/common-crm.iml" />
       <module fileurl="file://$PROJECT_DIR$/../grossary/grossary.iml" filepath="$PROJECT_DIR$/../grossary/grossary.iml" />

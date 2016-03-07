@@ -1,6 +1,7 @@
 package io.crm.promise;
 
 import com.google.common.collect.ImmutableList;
+import io.crm.intfs.CallableUnchecked;
 import io.crm.promise.intfs.Defer;
 import io.crm.promise.intfs.Promise;
 import io.crm.util.*;
@@ -26,6 +27,17 @@ final public class Promises {
         final PromiseImpl<T> promise = new PromiseImpl<>(null, null);
         promise.complete(val);
         return promise;
+    }
+
+    public static <T> Promise<T> from(final CallableUnchecked<T> callableUnchecked) {
+        Defer<T> defer = defer();
+        try {
+            T retVal = callableUnchecked.call();
+            defer.complete(retVal);
+        } catch (Exception ex) {
+            defer.fail(ex);
+        }
+        return defer.promise();
     }
 
     public static <T> Promise<T> fromError(Throwable error) {

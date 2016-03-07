@@ -46,6 +46,7 @@
         <module name="grossary" />
         <module name="merchandiser-supervisor" />
         <module name="shopy" />
+        <module name="SmsReceiverVertx" />
         <module name="sql-core" />
         <module name="uploader" />
         <module name="web" />
@@ -74,6 +75,7 @@
       <module name="query" target="1.8" />
       <module name="schema-validation" target="1.8" />
       <module name="shopy" target="1.8" />
+      <module name="SmsReceiverVertx" target="1.8" />
       <module name="sql-core" target="1.8" />
       <module name="uploader" target="1.8" />
       <module name="web" target="1.8" />

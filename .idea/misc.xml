@@ -17,6 +17,7 @@
         <option value="$PROJECT_DIR$/../sql-core/pom.xml" />
         <option value="$PROJECT_DIR$/../shopy/pom.xml" />
         <option value="$PROJECT_DIR$/../uploader/pom.xml" />
+        <option value="$PROJECT_DIR$/../SmsReceiverVertx/pom.xml" />
       </list>
     </option>
   </component>

@@ -11,7 +11,6 @@ import io.crm.promise.intfs.Promise;
 import io.crm.util.exceptions.InvalidArgumentException;
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Handler;
-import io.vertx.core.MultiMap;
 import io.vertx.core.Vertx;
 import io.vertx.core.eventbus.DeliveryOptions;
 import io.vertx.core.eventbus.EventBus;
@@ -21,9 +20,6 @@ import io.vertx.core.json.JsonObject;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.bson.Document;
-import rx.*;
-import rx.Observable;
-import rx.internal.operators.BackpressureUtils;
 
 import java.io.File;
 import java.io.IOException;
@@ -346,6 +342,21 @@ final public class Util {
         return defer.promise();
     }
 
+    public static <T> Promise<List<Message<T>>> sendAll(final EventBus eventBus, final String dest, List<?> list) {
+
+        ImmutableList.Builder<Promise<Message<T>>> builder = ImmutableList.builder();
+
+        list.forEach(o -> {
+
+            Promise<Message<T>> promise = send(eventBus, dest, o);
+
+            builder.add(promise);
+
+        });
+
+        return Promises.when(builder.build());
+    }
+
     public static <T> Promise<Message<T>> send(final EventBus eventBus, final String dest, Object message, DeliveryOptions options) {
         final Defer<Message<T>> defer = Promises.defer();
         eventBus.send(dest, message, options, (AsyncResult<Message<T>> r) -> {
@@ -356,6 +367,14 @@ final public class Util {
             }
         });
         return defer.promise();
+    }
+
+    public static void publish(final EventBus eventBus, final String dest, Object message) {
+        eventBus.publish(dest, message);
+    }
+
+    public static void publish(final EventBus eventBus, final String dest, Object message, DeliveryOptions deliveryOptions) {
+        eventBus.publish(dest, message, deliveryOptions);
     }
 
     public static <T> Handler<AsyncResult<T>> makeDeferred(Defer<T> defer) {
