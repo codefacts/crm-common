@@ -11,16 +11,12 @@ public class ValidationResult<T> {
     private final String field;
     private final T value;
     private final int errorCode;
-    private final String messageCode;
-    private final String message;
     private final JsonObject additionals;
 
-    public ValidationResult(String fieldName, T value, int errorCode, String messageCode, String message, JsonObject additionals) {
+    public ValidationResult(String fieldName, T value, int errorCode, JsonObject additionals) {
         this.field = fieldName;
         this.value = value;
         this.errorCode = errorCode;
-        this.messageCode = messageCode;
-        this.message = message;
         this.additionals = additionals;
     }
 
@@ -40,14 +36,6 @@ public class ValidationResult<T> {
         return errorCode;
     }
 
-    public String getMessageCode() {
-        return or(messageCode, "");
-    }
-
-    public String getMessage() {
-        return or(message, "");
-    }
-
     public JsonObject getAdditionals() {
         return or(additionals, new JsonObject());
     }
@@ -57,6 +45,6 @@ public class ValidationResult<T> {
             .put("field", field)
             .put("value", value)
             .put("errorCode", errorCode)
-            .put("message", message);
+            ;
     }
 }

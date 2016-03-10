@@ -45,7 +45,7 @@ public class PatternValidationError implements Validator<JsonObject> {
         if (string != null) {
             Matcher matcher = pattern.matcher(json.getString(field));
             if (!matcher.matches()) {
-                invalidate(json);
+                return invalidate(json);
             }
         }
         return null;
@@ -58,7 +58,7 @@ public class PatternValidationError implements Validator<JsonObject> {
             .setErrorCode(validationErrorCode)
             .setAdditionals(
                 new JsonObject()
-                    .put("pattern", pattern))
+                    .put("pattern", pattern.pattern()))
             .createValidationResult();
     }
 }

@@ -14,6 +14,10 @@ import java.util.stream.Stream;
 public class RemoveNullsTransformation implements Transform<JsonObject, JsonObject> {
     private final RecursiveMerge recursiveMerge;
 
+    public RemoveNullsTransformation() {
+        this(null, null);
+    }
+
     public RemoveNullsTransformation(Set<List<String>> includes, Set<List<String>> excludes) {
         recursiveMerge = new RecursiveMerge(includes, excludes,
             o -> o == null, (e, remove) -> remove.run(),

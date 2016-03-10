@@ -1,21 +1,29 @@
 package io.crm.util;
 
 import io.crm.FailureCode;
+import io.crm.FailureCodes;
 import io.crm.intfs.CallableUnchecked;
 import io.crm.intfs.ConsumerUnchecked;
 import io.crm.intfs.RunnableUnchecked;
 import io.vertx.core.AsyncResult;
 import io.vertx.core.AsyncResultHandler;
 import io.vertx.core.Handler;
+import io.vertx.core.MultiMap;
 import io.vertx.core.eventbus.Message;
+import io.vertx.core.json.JsonObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.Date;
+import java.util.Objects;
+import java.util.UUID;
 
 /**
  * Created by someone on 26-Jul-2015.
  */
 final public class ExceptionUtil {
     public static final Logger LOGGER = LoggerFactory.getLogger(ExceptionUtil.class);
+    private static final String DEV_MODE = "dev-mode";
 
     public static void toRuntime(final RunnableUnchecked runnableUnchecked) {
         try {
@@ -43,7 +51,7 @@ final public class ExceptionUtil {
         try {
             runnableUnchecked.run();
         } catch (final Exception e) {
-            logException(e);
+            logSallowEx(e);
         }
     }
 
@@ -51,7 +59,7 @@ final public class ExceptionUtil {
         try {
             return runnable.call();
         } catch (final Exception e) {
-            logException(e);
+            logSallowEx(e);
         }
         return null;
     }
@@ -63,65 +71,6 @@ final public class ExceptionUtil {
         } catch (final Exception ex) {
             asyncResultHandler.handle(AsyncUtil.fail(ex));
         }
-    }
-
-    public static <T> Handler<T> withCatch(final ConsumerUnchecked<T> consumerUnchecked, final ConsumerUnchecked<Throwable> runnable) {
-        return val -> {
-            try {
-                consumerUnchecked.accept(val);
-            } catch (final Exception e) {
-                try {
-                    runnable.accept(e);
-                } catch (Exception e1) {
-                    if (e instanceof RuntimeException) {
-                        throw (RuntimeException) e;
-                    }
-                    throw new RuntimeException(e);
-                }
-                if (e instanceof RuntimeException) {
-                    throw (RuntimeException) e;
-                }
-                throw new RuntimeException(e);
-            }
-        };
-    }
-
-    public static <T> Handler<T> withWebHandler(final ConsumerUnchecked<T> consumerUnchecked, final Message message) {
-        return val -> {
-            try {
-                consumerUnchecked.accept(val);
-            } catch (final Exception e) {
-                ExceptionUtil.fail(message, e);
-                if (e instanceof RuntimeException) {
-                    throw (RuntimeException) e;
-                }
-                throw new RuntimeException(e);
-            }
-        };
-    }
-
-    public static <T> Handler<T> withHandler(final ConsumerUnchecked<T> consumerUnchecked, final Message message) {
-        return val -> {
-            try {
-                consumerUnchecked.accept(val);
-            } catch (final Exception e) {
-                ExceptionUtil.fail(message, e);
-                if (e instanceof RuntimeException) {
-                    throw (RuntimeException) e;
-                }
-                throw new RuntimeException(e);
-            }
-        };
-    }
-
-    public static <T> Handler<AsyncResult<T>> withReply(final ConsumerUnchecked<T> consumerUnchecked, final Message message) {
-        return r -> {
-            if (r.failed()) {
-                ExceptionUtil.fail(message, r.cause());
-                return;
-            }
-            withReplyRun(() -> consumerUnchecked.accept(r.result()), message);
-        };
     }
 
     public static void withReplyRun(final RunnableUnchecked runnableUnchecked, final Message message) {
@@ -136,24 +85,47 @@ final public class ExceptionUtil {
         }
     }
 
-    public static <T> T withReplyCall(final CallableUnchecked<T> runnable, final Message message) {
-        try {
-            return runnable.call();
-        } catch (final Exception e) {
-            ExceptionUtil.fail(message, e);
-            if (e instanceof RuntimeException) {
-                throw (RuntimeException) e;
-            }
-            throw new RuntimeException(e);
+    public static void fail(final Message message, final Throwable throwable) {
+        Objects.requireNonNull(message, "ExceptionUtil.fail: argument message can't be null.");
+        Objects.requireNonNull(throwable, "ExceptionUtil.fail: argument throwable can't be null.");
+
+        final String uuid = UUID.randomUUID().toString();
+
+        message.fail(FailureCodes.SERVER_ERROR.code(), errorMessage(FailureCodes.SERVER_ERROR.code(), message, throwable, uuid));
+        LOGGER.error("FAILING_MESSAGE: " +
+            new JsonObject()
+                .put("uuid", uuid)
+                .put("address", message.address())
+                .put("body", message.body())
+                .put("headers", message.headers().toString()).encodePrettily(), throwable);
+    }
+
+    private static String errorMessage(int code, Message message, Throwable throwable, String uuid) {
+        if (System.getProperty(DEV_MODE) != null) {
+            return
+                new JsonObject()
+                    .put("exception", throwable.getClass().toString())
+                    .put("cause", throwable.getCause() == null ? "" : throwable.getCause().toString())
+                    .put("message", throwable.getMessage())
+                    .put("code", code)
+                    .put("uuid", uuid)
+                    .put("timestamp", Util.formatDateTime(new Date(), ""))
+                    .put("address", message.address())
+                    .put("body", message.body())
+                    .put("headers", message.headers().toString()).encodePrettily();
+        } else {
+            return "Server Error. Error code: " + code + ", uuid: " + uuid + ", timestamp: " + Util.formatDateTime(new Date(), "");
         }
     }
 
-    public static void fail(final Message message, final Throwable throwable) {
-        if (message != null) message.fail(FailureCode.InternalServerError.code, throwable.getMessage());
-        LOGGER.error("FAILING_MESSAGE: ", throwable);
+    public static void logSallowEx(final Throwable e) {
+        LOGGER.error("EXCEPTION_SALLOWED: ", e);
     }
 
-    public static void logException(final Throwable e) {
-        LOGGER.error("ExceptionUtil: ", e);
+    public static void main(String... args) {
+        MultiMap entries = MultiMap.caseInsensitiveMultiMap();
+        System.out.println(entries.add("kk", "kk")
+            .add("kk", "tt")
+            .add("ss", "ss"));
     }
 }

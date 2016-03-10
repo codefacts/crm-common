@@ -13,6 +13,7 @@ import io.crm.util.touple.MutableTpls;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Created by someone on 16/10/2015.
@@ -20,7 +21,7 @@ import java.util.List;
 final public class Promises {
 
     public static Promise<Void> from() {
-        return from(null);
+        return from((Void) null);
     }
 
     public static <T> Promise<T> from(final T val) {
@@ -29,7 +30,8 @@ final public class Promises {
         return promise;
     }
 
-    public static <T> Promise<T> from(final CallableUnchecked<T> callableUnchecked) {
+    public static <T> Promise<T> fromCallable(final CallableUnchecked<T> callableUnchecked) {
+        Objects.requireNonNull(callableUnchecked, "Argument to Promises.fromCallable can't be null.");
         Defer<T> defer = defer();
         try {
             T retVal = callableUnchecked.call();

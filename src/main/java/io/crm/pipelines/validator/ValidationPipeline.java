@@ -6,21 +6,21 @@ import java.util.List;
 /**
  * Created by shahadat on 2/28/16.
  */
-public class ValidatorPipeline<T> {
+public class ValidationPipeline<T> {
 
     private final List<Validator<T>> validatorList = new ArrayList<>();
 
-    public ValidatorPipeline add(Validator<T> validator) {
+    public ValidationPipeline add(Validator<T> validator) {
         validatorList.add(validator);
         return this;
     }
 
-    public ValidatorPipeline remove(Validator validator) {
+    public ValidationPipeline remove(Validator validator) {
         validatorList.remove(validator);
         return this;
     }
 
-    public ValidatorPipeline clear() {
+    public ValidationPipeline clear() {
         validatorList.clear();
         return this;
     }

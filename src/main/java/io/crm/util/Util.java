@@ -22,6 +22,7 @@ import org.apache.commons.io.IOUtils;
 import org.bson.Document;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Field;
@@ -357,6 +358,21 @@ final public class Util {
         return Promises.when(builder.build());
     }
 
+    public static <T> Promise<List<Promise<Message<T>>>> sendAllAndWaitAll(final EventBus eventBus, final String dest, List<?> list) {
+
+        ImmutableList.Builder<Promise<Message<T>>> builder = ImmutableList.builder();
+
+        list.forEach(o -> {
+
+            Promise<Message<T>> promise = send(eventBus, dest, o);
+
+            builder.add(promise);
+
+        });
+
+        return Promises.allComplete(builder.build());
+    }
+
     public static <T> Promise<Message<T>> send(final EventBus eventBus, final String dest, Object message, DeliveryOptions options) {
         final Defer<Message<T>> defer = Promises.defer();
         eventBus.send(dest, message, options, (AsyncResult<Message<T>> r) -> {
@@ -504,6 +520,20 @@ final public class Util {
         }
     }
 
+    public static String searchFor(String filename, Class<?> aClass) {
+        try {
+            final File file = new File(filename);
+            if (file.exists()) {
+                return IOUtils.toString(new FileInputStream(file));
+            } else {
+                final InputStream inputStream = aClass.getClassLoader().getResourceAsStream(filename);
+                return IOUtils.toString(inputStream);
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public static final Date parseDate(String val) {
         final String string = or(val, "").trim();
         if (string.matches(GLOBAL_DATE_FORMAT_PATTERN)) {
@@ -533,6 +563,14 @@ final public class Util {
             return DATE_FORMAT_THREAD_LOCAL.get().format(date);
         } catch (Exception ex) {
             return defaultValue;
+        }
+    }
+
+    public static String formatDateTime(Date date, String defaultValu) {
+        try {
+            return DATETIME_FORMAT_THREAD_LOCAL.get().format(date);
+        } catch (Exception ex) {
+            return defaultValu;
         }
     }
 

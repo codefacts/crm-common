@@ -20,7 +20,8 @@ public enum FailureCodes {
     INVALID_EMAIL_VALIDATION_ERROR(validation(), "invalid.email.validation.error", validationHttp()),
     INVALID_PHONE_VALIDATION_ERROR(validation(), "invalid.phone.validation.error", validationHttp()),
     VALUE_MISSING_VALIDATION_ERROR(validation(), "value.missing.validation.error", validationHttp()),
-    INVALID_SEQUENCE_ORDER_VALIDATION_ERROR(validation(), "invalid.sequence.order.validation.error", validationHttp());
+    INVALID_SEQUENCE_ORDER_VALIDATION_ERROR(validation(), "invalid.sequence.order.validation.error", validationHttp()),
+    SERVER_ERROR(Helper.error(), "server.error", Helper.errorHttp());
 
     private final int code;
     private final String messageCode;
@@ -46,14 +47,25 @@ public enum FailureCodes {
 }
 
 class Helper {
-    static private int validation = 30001;
-    static private int validationHttp = 300;
+    static private int validation = 3000_0_0001;
+    static private final int validationHttp = 300;
+
+    static private int error = 5000_0_0001;
+    static private final int errorHttp = 500;
 
     static int validation() {
         return validation++;
     }
 
     static int validationHttp() {
-        return validationHttp++;
+        return validationHttp;
+    }
+
+    public static int error() {
+        return error++;
+    }
+
+    public static int errorHttp() {
+        return errorHttp;
     }
 }
