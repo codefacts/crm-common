@@ -6,6 +6,7 @@
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/intfs/ConsumerUnchecked.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/promise/intfs/MapToPromiseHandler.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/impl/MinLengthValidationError.java
+/home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/ValidationPipeline.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/ValidationResult.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/intfs/PetaConsumerUnchecked.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/transformation/impl/json/object/StringTrimmer.java
@@ -20,6 +21,7 @@
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/impl/json/array/Contains.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/intfs/PredicateUnchecked.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/MessageBundle.java
+/home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/transformation/impl/json/object/PlainArrayToObject.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/promise/intfs/MapToHandler.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/util/touple/immutable/Tpls.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/impl/json/object/ContainsAny.java
@@ -99,7 +101,6 @@
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/intfs/CallableUnchecked.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/promise/PromiseImpl.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/AsyncValidatorPipeline.java
-/home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/ValidatorPipeline.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/impl/type/TypeValidator.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/util/SimpleCounter.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/util/touple/MutableTpl7.java
@@ -123,6 +124,7 @@
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/promise/intfs/MapToStreamAndDecideHandler.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/intfs/FunctionAsync.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/endpoints/FileInfoEndPoint.java
+/home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/transformation/impl/json/object/NullToEmptyObject.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/impl/json/object/MinFieldCount.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/promise/intfs/ErrorHandler.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/promise/intfs/Invokable.java
