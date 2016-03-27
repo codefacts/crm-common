@@ -1,5 +1,6 @@
 package io.crm.pipelines.transformation.impl.json.object;
 
+import com.google.common.collect.ImmutableMap;
 import io.crm.pipelines.transformation.Transform;
 import io.crm.util.Util;
 import io.vertx.core.json.JsonObject;
@@ -16,7 +17,7 @@ public class IntelligentConverterTransformation implements Transform<JsonObject,
 
     public IntelligentConverterTransformation(Map<String, Function<String, ?>> converters) {
         Objects.requireNonNull(converters);
-        this.converters = converters;
+        this.converters = ImmutableMap.copyOf(converters);
     }
 
     @Override

@@ -8,21 +8,10 @@ import java.util.List;
  */
 public class ValidationPipeline<T> {
 
-    private final List<Validator<T>> validatorList = new ArrayList<>();
+    private final List<Validator<T>> validatorList;
 
-    public ValidationPipeline add(Validator<T> validator) {
-        validatorList.add(validator);
-        return this;
-    }
-
-    public ValidationPipeline remove(Validator validator) {
-        validatorList.remove(validator);
-        return this;
-    }
-
-    public ValidationPipeline clear() {
-        validatorList.clear();
-        return this;
+    public ValidationPipeline(List<Validator<T>> validatorList) {
+        this.validatorList = validatorList;
     }
 
     public List<ValidationResult> validate(T obj) {

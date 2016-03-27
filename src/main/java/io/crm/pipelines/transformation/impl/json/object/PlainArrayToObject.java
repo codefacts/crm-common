@@ -1,5 +1,6 @@
 package io.crm.pipelines.transformation.impl.json.object;
 
+import com.google.common.collect.ImmutableList;
 import io.crm.pipelines.transformation.Transform;
 import io.crm.util.SimpleCounter;
 import io.vertx.core.json.JsonArray;
@@ -10,11 +11,11 @@ import java.util.List;
 /**
  * Created by shahadat on 3/8/16.
  */
-public class PlainArrayToObject implements Transform<JsonArray, JsonObject>{
+public class PlainArrayToObject implements Transform<JsonArray, JsonObject> {
     private final List<String> fields;
 
     public PlainArrayToObject(List<String> fields) {
-        this.fields = fields;
+        this.fields = ImmutableList.copyOf(fields);
     }
 
     @Override

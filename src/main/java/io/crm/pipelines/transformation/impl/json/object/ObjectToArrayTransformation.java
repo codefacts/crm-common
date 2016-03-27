@@ -1,5 +1,6 @@
 package io.crm.pipelines.transformation.impl.json.object;
 
+import com.google.common.collect.ImmutableList;
 import io.crm.pipelines.transformation.Transform;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
@@ -13,7 +14,7 @@ public class ObjectToArrayTransformation implements Transform<JsonObject, JsonAr
     private final List<String> keyOrder;
 
     public ObjectToArrayTransformation(List<String> keyOrder) {
-        this.keyOrder = keyOrder;
+        this.keyOrder = ImmutableList.copyOf(keyOrder);
     }
 
     @Override

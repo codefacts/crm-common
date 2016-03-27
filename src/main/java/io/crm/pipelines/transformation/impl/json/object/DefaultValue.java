@@ -1,10 +1,12 @@
 package io.crm.pipelines.transformation.impl.json.object;
 
+import com.google.common.collect.ImmutableMap;
 import io.crm.pipelines.transformation.Transform;
 import io.crm.util.Util;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 
+import java.util.Map;
 import java.util.Objects;
 
 import static io.crm.util.Util.*;
@@ -16,7 +18,9 @@ public class DefaultValue implements Transform<JsonObject, JsonObject> {
     private final JsonObject defaultValue;
 
     public DefaultValue(JsonObject defaultValue) {
-        this.defaultValue = defaultValue;
+
+        this.defaultValue = toImmutable(defaultValue);
+
     }
 
     @Override

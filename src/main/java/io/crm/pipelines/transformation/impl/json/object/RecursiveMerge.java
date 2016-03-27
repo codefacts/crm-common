@@ -1,5 +1,6 @@
 package io.crm.pipelines.transformation.impl.json.object;
 
+import com.google.common.collect.ImmutableSet;
 import io.crm.pipelines.transformation.Transform;
 import io.crm.util.Util;
 import io.vertx.core.json.JsonArray;
@@ -26,8 +27,8 @@ public class RecursiveMerge implements Transform<JsonObject, JsonObject> {
                           BiConsumer<Map.Entry<String, Object>, Runnable> entryConsumer,
                           Predicate<Object> arrayPredicate,
                           BiConsumer<Object, Runnable> arrayValueConsumer) {
-        this.includes = includes;
-        this.excludes = excludes;
+        this.includes = ImmutableSet.copyOf(includes);
+        this.excludes = ImmutableSet.copyOf(excludes);
         this.predicate = predicate;
         this.entryConsumer = entryConsumer;
         this.arrayPredicate = arrayPredicate;

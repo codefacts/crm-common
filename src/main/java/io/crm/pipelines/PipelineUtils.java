@@ -5,7 +5,6 @@ import io.crm.promise.intfs.Defer;
 import io.crm.promise.intfs.Promise;
 import io.crm.util.ExceptionUtil;
 import io.crm.util.Util;
-import io.vertx.core.AsyncResult;
 import io.vertx.core.eventbus.DeliveryOptions;
 import io.vertx.core.eventbus.EventBus;
 import io.vertx.core.eventbus.Message;
@@ -21,8 +20,8 @@ import java.util.Objects;
 /**
  * Created by shahadat on 3/2/16.
  */
-final public class Pipelines {
-    private static final Logger LOGGER = LoggerFactory.getLogger(Pipelines.class);
+final public class PipelineUtils {
+    private static final Logger LOGGER = LoggerFactory.getLogger(PipelineUtils.class);
 
     private static final String $$$SEQ_CONTINUE = "$$$SEQ_CONTINUE";
 

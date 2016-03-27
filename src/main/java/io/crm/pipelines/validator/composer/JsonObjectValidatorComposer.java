@@ -2,8 +2,10 @@ package io.crm.pipelines.validator.composer;
 
 import io.crm.MessageBundle;
 import io.crm.pipelines.validator.ValidationPipeline;
+import io.crm.pipelines.validator.Validator;
 import io.vertx.core.json.JsonObject;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.function.Consumer;
 
@@ -11,22 +13,22 @@ import java.util.function.Consumer;
  * Created by shahadat on 2/28/16.
  */
 public class JsonObjectValidatorComposer {
-    private final ValidationPipeline<JsonObject> validationPipeline;
+    private final List<Validator<JsonObject>> validatorList;
     private final MessageBundle messageBundle;
 
-    public JsonObjectValidatorComposer(ValidationPipeline<JsonObject> validationPipeline, MessageBundle messageBundle) {
-        Objects.requireNonNull(validationPipeline);
+    public JsonObjectValidatorComposer(List<Validator<JsonObject>> validatorList, MessageBundle messageBundle) {
+        Objects.requireNonNull(validatorList);
         Objects.requireNonNull(messageBundle);
-        this.validationPipeline = validationPipeline;
+        this.validatorList = validatorList;
         this.messageBundle = messageBundle;
     }
 
     public JsonObjectValidatorComposer field(String field, Consumer<FieldValidatorComposer> consumer) {
-        consumer.accept(new FieldValidatorComposer(field, validationPipeline, messageBundle));
+        consumer.accept(new FieldValidatorComposer(field, validatorList, messageBundle));
         return this;
     }
 
-    public ValidationPipeline<JsonObject> getValidationPipeline() {
-        return validationPipeline;
+    public List<Validator<JsonObject>> getValidatorList() {
+        return validatorList;
     }
 }

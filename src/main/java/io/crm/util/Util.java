@@ -2,6 +2,7 @@ package io.crm.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
 import io.crm.Events;
 import io.crm.QC;
 import io.crm.intfs.CallableUnchecked;
@@ -615,5 +616,43 @@ final public class Util {
         String regex = "([a-z])([A-Z])";
         String replacement = "$1" + replace + "$2";
         return s.replaceAll(regex, replacement);
+    }
+
+    public static JsonArray toImmutable(JsonArray jsonArray) {
+        ImmutableList.Builder<Object> builder = ImmutableList.builder();
+
+        jsonArray.getList().forEach((v) -> {
+            if (v instanceof JsonArray) {
+                builder.add(toImmutable((JsonArray) v));
+            } else if (v instanceof List) {
+                builder.add(toImmutable(new JsonArray((List) v)));
+            } else if (v instanceof JsonObject) {
+                builder.add(toImmutable((JsonObject) v));
+            } else if (v instanceof Map) {
+                builder.add(toImmutable(new JsonObject((Map<String, Object>) v)));
+            } else {
+                builder.add(v);
+            }
+        });
+
+        return new JsonArray(builder.build());
+    }
+
+    public static JsonObject toImmutable(JsonObject jsonObject) {
+        ImmutableMap.Builder<String, Object> builder = ImmutableMap.builder();
+        jsonObject.getMap().forEach((k, v) -> {
+            if (v instanceof JsonArray) {
+                builder.put(k, toImmutable((JsonArray) v));
+            } else if (v instanceof List) {
+                builder.put(k, toImmutable(new JsonArray((List) v)));
+            } else if (v instanceof JsonObject) {
+                builder.put(k, toImmutable((JsonObject) v));
+            } else if (v instanceof Map) {
+                builder.put(k, toImmutable(new JsonObject((Map<String, Object>) v)));
+            } else {
+                builder.put(k, v);
+            }
+        });
+        return new JsonObject(builder.build());
     }
 }

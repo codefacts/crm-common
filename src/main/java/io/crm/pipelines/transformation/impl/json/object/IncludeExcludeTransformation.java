@@ -1,5 +1,6 @@
 package io.crm.pipelines.transformation.impl.json.object;
 
+import com.google.common.collect.ImmutableSet;
 import io.crm.pipelines.transformation.Transform;
 import io.vertx.core.json.JsonObject;
 
@@ -15,8 +16,8 @@ public class IncludeExcludeTransformation implements Transform<JsonObject, JsonO
     private final Set<String> excludes;
 
     public IncludeExcludeTransformation(Set<String> includes, Set<String> excludes) {
-        this.includes = includes;
-        this.excludes = excludes;
+        this.includes = ImmutableSet.copyOf(includes);
+        this.excludes = ImmutableSet.copyOf(excludes);
     }
 
     @Override
