@@ -1,6 +1,6 @@
 package io.crm.pipelines.validator.impl.json.array;
 
-import io.crm.FailureCodes;
+import io.crm.ErrorCodes;
 import io.crm.MessageBundle;
 import io.crm.pipelines.validator.ValidationResult;
 import io.crm.pipelines.validator.ValidationResultBuilder;
@@ -35,7 +35,7 @@ public class Contains<T> implements Validator<JsonArray> {
 
     private ValidationResult invalidate(JsonArray json) {
         return new ValidationResultBuilder()
-            .setErrorCode(FailureCodes.VALUE_MISSING_VALIDATION_ERROR.code())
+            .setErrorCode(ErrorCodes.VALUE_MISSING_VALIDATION_ERROR.code())
             .setAdditionals(
                 new JsonObject()
                     .put("element", value)

@@ -1,13 +1,9 @@
 package io.crm.util;
 
-import io.crm.FailureCode;
-import io.crm.FailureCodes;
+import io.crm.ErrorCodes;
 import io.crm.intfs.CallableUnchecked;
-import io.crm.intfs.ConsumerUnchecked;
 import io.crm.intfs.RunnableUnchecked;
-import io.vertx.core.AsyncResult;
 import io.vertx.core.AsyncResultHandler;
-import io.vertx.core.Handler;
 import io.vertx.core.MultiMap;
 import io.vertx.core.eventbus.Message;
 import io.vertx.core.json.JsonObject;
@@ -91,7 +87,7 @@ final public class ExceptionUtil {
 
         final String uuid = UUID.randomUUID().toString();
 
-        message.fail(FailureCodes.SERVER_ERROR.code(), errorMessage(FailureCodes.SERVER_ERROR.code(), message, throwable, uuid));
+        message.fail(ErrorCodes.SERVER_ERROR.code(), errorMessage(ErrorCodes.SERVER_ERROR.code(), message, throwable, uuid));
         LOGGER.error("FAILING_MESSAGE: " +
             new JsonObject()
                 .put("uuid", uuid)

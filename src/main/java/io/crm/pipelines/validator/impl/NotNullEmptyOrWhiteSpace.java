@@ -1,6 +1,6 @@
 package io.crm.pipelines.validator.impl;
 
-import io.crm.FailureCodes;
+import io.crm.ErrorCodes;
 import io.crm.MessageBundle;
 import io.crm.pipelines.validator.ValidationResult;
 import io.crm.pipelines.validator.ValidationResultBuilder;
@@ -33,7 +33,7 @@ public class NotNullEmptyOrWhiteSpace implements Validator<JsonObject> {
         return new ValidationResultBuilder()
             .setField(field)
             .setValue(json.getValue(field))
-            .setErrorCode(FailureCodes.INVALID_VALUE_VALIDATION_ERROR.code())
+            .setErrorCode(ErrorCodes.INVALID_VALUE_VALIDATION_ERROR.code())
             .createValidationResult();
     }
 }

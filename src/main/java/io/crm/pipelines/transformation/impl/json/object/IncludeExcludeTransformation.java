@@ -16,8 +16,8 @@ public class IncludeExcludeTransformation implements Transform<JsonObject, JsonO
     private final Set<String> excludes;
 
     public IncludeExcludeTransformation(Set<String> includes, Set<String> excludes) {
-        this.includes = ImmutableSet.copyOf(includes);
-        this.excludes = ImmutableSet.copyOf(excludes);
+        this.includes = includes == null ? null : ImmutableSet.copyOf(includes);
+        this.excludes = excludes == null ? null : ImmutableSet.copyOf(excludes);
     }
 
     @Override

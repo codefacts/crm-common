@@ -1,6 +1,6 @@
 package io.crm.pipelines.validator.impl;
 
-import io.crm.FailureCodes;
+import io.crm.ErrorCodes;
 import io.crm.MessageBundle;
 import io.crm.pipelines.validator.ValidationResult;
 import io.crm.pipelines.validator.Validator;
@@ -18,7 +18,7 @@ public class PhoneValidationError implements Validator<JsonObject> {
 
     public PhoneValidationError(MessageBundle messageBundle, String field) {
         this.patternValidationError = new PatternValidationError(messageBundle, field,
-            PHONE_PATTERN, FailureCodes.INVALID_PHONE_VALIDATION_ERROR.code());
+            PHONE_PATTERN, ErrorCodes.INVALID_PHONE_VALIDATION_ERROR.code());
     }
 
     @Override

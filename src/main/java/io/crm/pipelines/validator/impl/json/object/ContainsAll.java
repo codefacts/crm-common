@@ -1,6 +1,6 @@
 package io.crm.pipelines.validator.impl.json.object;
 
-import io.crm.FailureCodes;
+import io.crm.ErrorCodes;
 import io.crm.MessageBundle;
 import io.crm.pipelines.validator.ValidationResult;
 import io.crm.pipelines.validator.ValidationResultBuilder;
@@ -34,7 +34,7 @@ public class ContainsAll implements Validator<JsonObject> {
 
     private ValidationResult invalidate(JsonObject json) {
         return new ValidationResultBuilder()
-            .setErrorCode(FailureCodes.LENGTH_VALIDATION_ERROR.code())
+            .setErrorCode(ErrorCodes.LENGTH_VALIDATION_ERROR.code())
             .setAdditionals(
                 new JsonObject()
                     .put("fields", fields))

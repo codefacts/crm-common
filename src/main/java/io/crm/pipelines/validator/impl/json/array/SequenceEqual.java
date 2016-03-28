@@ -1,6 +1,6 @@
 package io.crm.pipelines.validator.impl.json.array;
 
-import io.crm.FailureCodes;
+import io.crm.ErrorCodes;
 import io.crm.MessageBundle;
 import io.crm.pipelines.validator.ValidationResult;
 import io.crm.pipelines.validator.ValidationResultBuilder;
@@ -39,7 +39,7 @@ public class SequenceEqual implements Validator<JsonArray> {
 
     private ValidationResult invalidate(JsonArray json) {
         return new ValidationResultBuilder()
-            .setErrorCode(FailureCodes.INVALID_SEQUENCE_ORDER_VALIDATION_ERROR.code())
+            .setErrorCode(ErrorCodes.INVALID_SEQUENCE_ORDER_VALIDATION_ERROR.code())
             .setAdditionals(
                 new JsonObject()
                     .put("jsonArray", jsonArray)

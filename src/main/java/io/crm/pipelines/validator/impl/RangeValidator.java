@@ -1,6 +1,6 @@
 package io.crm.pipelines.validator.impl;
 
-import io.crm.FailureCodes;
+import io.crm.ErrorCodes;
 import io.crm.MessageBundle;
 import io.crm.pipelines.validator.ValidationResult;
 import io.crm.pipelines.validator.ValidationResultBuilder;
@@ -45,7 +45,7 @@ public class RangeValidator implements Validator<JsonObject> {
         return new ValidationResultBuilder()
             .setField(field)
             .setValue(json.getValue(field))
-            .setErrorCode(FailureCodes.INVALID_RANGE_VALIDATION_ERROR.code())
+            .setErrorCode(ErrorCodes.INVALID_RANGE_VALIDATION_ERROR.code())
             .setAdditionals(
                 new JsonObject()
                     .put("min", min)

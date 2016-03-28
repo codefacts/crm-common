@@ -1,6 +1,6 @@
 package io.crm.pipelines.validator.impl;
 
-import io.crm.FailureCodes;
+import io.crm.ErrorCodes;
 import io.crm.MessageBundle;
 import io.crm.pipelines.validator.ValidationResult;
 import io.crm.pipelines.validator.ValidationResultBuilder;
@@ -27,7 +27,7 @@ public class PatternValidationError implements Validator<JsonObject> {
         requireNonNull(field);
         this.messageBundle = messageBundle;
         this.field = field;
-        validationErrorCode = FailureCodes.PATTERN_VALIDATION_ERROR.code();
+        validationErrorCode = ErrorCodes.PATTERN_VALIDATION_ERROR.code();
     }
 
     public PatternValidationError(MessageBundle messageBundle, String field, Pattern pattern, int validationErrorCode) {

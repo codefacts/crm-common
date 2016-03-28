@@ -1,6 +1,6 @@
 package io.crm.pipelines.validator.impl.type;
 
-import io.crm.FailureCodes;
+import io.crm.ErrorCodes;
 import io.crm.MessageBundle;
 import io.crm.pipelines.validator.ValidationResult;
 import io.crm.pipelines.validator.ValidationResultBuilder;
@@ -41,7 +41,7 @@ public class TypeValidator implements Validator<JsonObject> {
         return onValidate.apply(new ValidationResultBuilder()
             .setField(field)
             .setValue(json.getValue(field))
-            .setErrorCode(FailureCodes.INVALID_TYPE_VALIDATION_ERROR.code())
+            .setErrorCode(ErrorCodes.INVALID_TYPE_VALIDATION_ERROR.code())
             .createValidationResult());
     }
 }
