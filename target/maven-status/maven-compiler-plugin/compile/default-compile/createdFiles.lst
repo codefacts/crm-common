@@ -2,6 +2,7 @@ io/crm/intfs/TriFunctionUnchecked.class
 io/crm/promise/intfs/MapToPromiseAndDecideHandler.class
 io/crm/pipelines/transformation/impl/json/object/StringTrimmer.class
 io/crm/pipelines/PipelineUtils$MyObserver.class
+io/crm/pipelines/transformation/impl/json/object/DefaultValueTransformation.class
 io/crm/pipelines/endpoints/Endpoint.class
 io/crm/promise/intfs/MapAndDecideHandler.class
 io/crm/pipelines/validator/impl/DoubleRangeValidator.class
@@ -19,7 +20,6 @@ io/crm/pipelines/PathTransform.class
 io/crm/util/ContextImpl.class
 io/crm/pipelines/endpoints/HttpEndPoint.class
 io/crm/util/touple/MutableTpl5.class
-io/crm/FailureCodes.class
 io/crm/promise/intfs/MapToPromiseHandler.class
 io/crm/util/touple/MutableTpls.class
 io/crm/intfs/RunnableUnchecked.class
@@ -69,7 +69,6 @@ io/crm/pipelines/transformation/impl/json/object/IncludeExcludeTransformation.cl
 io/crm/util/Util.class
 io/crm/Operation.class
 io/crm/util/TaskCoordinatorBuilder.class
-io/crm/pipelines/transformation/impl/json/object/DefaultValue.class
 io/crm/pipelines/validator/impl/json/object/Contains.class
 diag/Watch.class
 test/PromiseAllTest.class
@@ -117,6 +116,7 @@ io/crm/pipelines/validator/impl/EmailValidationError.class
 io/crm/pipelines/transformation/impl/json/object/NullToEmptyObject.class
 io/crm/promise/PromiseImpl.class
 io/crm/intfs/BiConsumerUnchecked.class
+io/crm/ErrorCodes.class
 io/crm/pipelines/validator/impl/type/Types.class
 io/crm/FailureCode.class
 io/crm/promise/intfs/SuccessHandler.class
@@ -133,6 +133,7 @@ io/crm/promise/intfs/Promise.class
 io/crm/promise/intfs/Stream.class
 io/crm/pipelines/validator/impl/JsonArrayValidator.class
 io/crm/pipelines/validator/impl/PatternValidationError.class
+io/crm/sql/SqlUtils.class
 io/crm/pipelines/validator/ValidationPipeline.class
 io/crm/promise/intfs/ErrorHandler.class
 io/crm/util/touple/MutableTpl6.class
@@ -155,6 +156,7 @@ io/crm/util/Util$2.class
 io/crm/intfs/SevenConsumerUnchecked.class
 io/crm/pipelines/validator/impl/NotNullValidator.class
 io/crm/util/touple/immutable/Tpls.class
+io/crm/sql/QueryBuilder.class
 io/crm/pipelines/validator/impl/type/FloatValidator.class
 io/crm/util/touple/immutable/Tpl2.class
 io/crm/pipelines/transformation/Transform.class

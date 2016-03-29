@@ -22,6 +22,8 @@ public class IncludeExcludeTransformation implements Transform<JsonObject, JsonO
 
     @Override
     public JsonObject transform(JsonObject json) {
+        if (json == null) return null;
+
         Stream<String> stream = json.getMap().keySet().stream();
         if (includes != null) {
             stream = stream.filter(k -> includes.contains(k));

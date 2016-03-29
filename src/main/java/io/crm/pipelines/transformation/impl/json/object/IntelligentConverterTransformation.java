@@ -22,6 +22,9 @@ public class IntelligentConverterTransformation implements Transform<JsonObject,
 
     @Override
     public JsonObject transform(JsonObject json) {
+
+        if (json == null) return null;
+
         json.getMap().keySet().forEach(key -> {
             if (converters.get(key) != null) {
                 json.put(key, converters.get(key).apply(json.getValue(key).toString()));

@@ -20,7 +20,6 @@ import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
-import org.bson.Document;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -105,46 +104,6 @@ final public class Util {
             return new SimpleDateFormat(EXCEL_DATE_FORMAT);
         }
     };
-
-    public static Document toDocument(final JsonObject jsonObject) {
-        return toDocument(new Document(), jsonObject);
-    }
-
-    public static List toDocumentArray(final JsonArray jsonObject) {
-        return toDocumentArray(new ArrayList<>(), jsonObject);
-    }
-
-    public static List<Document> toDocumentList(final Collection<JsonObject> jsonObjects) {
-        final ArrayList<Document> documentList = new ArrayList<>();
-        jsonObjects.forEach(obj -> documentList.add(toDocument(obj)));
-        return documentList;
-    }
-
-    public static Document toDocument(final Document doc, final JsonObject jsonObject) {
-        for (final Map.Entry<String, Object> e : jsonObject) {
-            final String key = e.getKey();
-            final Object value = e.getValue();
-            if (value instanceof JsonObject) {
-                doc.append(key, toDocument(new Document(), (JsonObject) value));
-            } else if (value instanceof JsonArray) {
-                doc.append(key, toDocumentArray(new ArrayList<>(), (JsonArray) value));
-            }
-            doc.append(key, value);
-        }
-        return doc;
-    }
-
-    public static List toDocumentArray(final List list, final JsonArray jsonArray) {
-        for (final Object obj : jsonArray) {
-            if (obj instanceof JsonObject) {
-                list.add(toDocument(new Document(), (JsonObject) obj));
-            } else if (obj instanceof JsonArray) {
-                list.add(toDocumentArray(new ArrayList<>(), (JsonArray) obj));
-            }
-            list.add(obj);
-        }
-        return list;
-    }
 
     public static Date parseMongoDate(final String isoString, final Date defaultValue) {
         try {

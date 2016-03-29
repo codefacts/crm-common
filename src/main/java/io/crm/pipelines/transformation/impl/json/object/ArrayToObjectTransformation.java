@@ -13,6 +13,9 @@ public class ArrayToObjectTransformation implements Transform<JsonArray, JsonObj
 
     @Override
     public JsonObject transform(JsonArray array) {
+
+        if (array == null) return null;
+
         JsonObject entries = new JsonObject();
         array.forEach(obj -> {
             JsonObject json = (JsonObject) obj;

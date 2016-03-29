@@ -20,6 +20,9 @@ public class PlainArrayToObject implements Transform<JsonArray, JsonObject> {
 
     @Override
     public JsonObject transform(JsonArray array) {
+
+        if (array == null) return null;
+
         JsonObject js = new JsonObject();
         SimpleCounter counter = new SimpleCounter(0);
         fields.forEach(field -> js.put(field, array.getValue(counter.counter++)));

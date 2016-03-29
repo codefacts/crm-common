@@ -16,6 +16,7 @@
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/intfs/OctaConsumerUnchecked.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/promise/Promises.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/intfs/HexaFunctionUnchecked.java
+/home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/sql/QueryBuilder.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/intfs/OctaFunctionUnchecked.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/PipelineUtils.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/impl/json/array/Contains.java
@@ -42,9 +43,11 @@
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/composer/JsonArrayValidatorComposer.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/impl/type/DoubleValidator.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/impl/type/Types.java
+/home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/transformation/impl/json/object/DefaultValueTransformation.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/intfs/HexaConsumerUnchecked.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/util/touple/immutable/Tpl5.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/util/touple/MutableTpl5.java
+/home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/sql/SqlUtils.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/util/touple/MutableTpl1.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/promise/intfs/ConditionalStream.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/intfs/QuadFunctionUnchecked.java
@@ -60,7 +63,6 @@
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/impl/json/array/MinLength.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/util/TaskCoordinator.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/intfs/BiConsumerUnchecked.java
-/home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/FailureCodes.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/intfs/SevenFunctionUnchecked.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/promise/intfs/Promise.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/endpoints/FileWriteEndPoint.java
@@ -71,6 +73,7 @@
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/impl/json/object/Contains.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/impl/json/array/ContainsAll.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/impl/type/LongValidator.java
+/home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/ErrorCodes.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/promise/intfs/CompleteHandler.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/composer/FieldValidatorComposer.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/impl/PhoneValidationError.java
@@ -104,7 +107,6 @@
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/util/touple/MutableTpl7.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/promise/intfs/FilterHandler.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/promise/intfs/ThenDecideHandler.java
-/home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/transformation/impl/json/object/DefaultValue.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/Indexes.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/util/AsyncUtil.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/transformation/JsonTransformationPipeline.java

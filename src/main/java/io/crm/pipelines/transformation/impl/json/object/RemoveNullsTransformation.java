@@ -26,6 +26,9 @@ public class RemoveNullsTransformation implements Transform<JsonObject, JsonObje
 
     @Override
     public JsonObject transform(JsonObject json) {
+
+        if (json == null) return null;
+
         JsonObject transform = recursiveMerge.transform(json);
         return transform;
     }

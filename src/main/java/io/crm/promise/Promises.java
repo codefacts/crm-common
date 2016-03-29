@@ -2,6 +2,7 @@ package io.crm.promise;
 
 import com.google.common.collect.ImmutableList;
 import io.crm.intfs.CallableUnchecked;
+import io.crm.intfs.RunnableUnchecked;
 import io.crm.promise.intfs.Defer;
 import io.crm.promise.intfs.Promise;
 import io.crm.util.*;
@@ -30,8 +31,20 @@ final public class Promises {
         return promise;
     }
 
-    public static <T> Promise<T> fromCallable(final CallableUnchecked<T> callableUnchecked) {
-        Objects.requireNonNull(callableUnchecked, "Argument to Promises.fromCallable can't be null.");
+    public static Promise<Void> runnable(final RunnableUnchecked runnableUnchecked) {
+        Objects.requireNonNull(runnableUnchecked, "Argument to Promises.runnable can't be null.");
+        Defer<Void> defer = defer();
+        try {
+            runnableUnchecked.run();
+            defer.complete();
+        } catch (Exception ex) {
+            defer.fail(ex);
+        }
+        return defer.promise();
+    }
+
+    public static <T> Promise<T> callable(final CallableUnchecked<T> callableUnchecked) {
+        Objects.requireNonNull(callableUnchecked, "Argument to Promises.callable can't be null.");
         Defer<T> defer = defer();
         try {
             T retVal = callableUnchecked.call();

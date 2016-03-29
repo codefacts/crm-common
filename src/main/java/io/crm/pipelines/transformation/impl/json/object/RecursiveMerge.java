@@ -37,6 +37,9 @@ public class RecursiveMerge implements Transform<JsonObject, JsonObject> {
 
     @Override
     public JsonObject transform(JsonObject json) {
+
+        if (json == null) return null;
+
         if (includes != null) {
             Stream<List<String>> stream = includes.stream();
             if (excludes != null && excludes.size() > 0) {

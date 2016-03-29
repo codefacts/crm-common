@@ -18,12 +18,15 @@ public class ObjectToArrayTransformation implements Transform<JsonObject, JsonAr
     }
 
     @Override
-    public JsonArray transform(JsonObject val) {
+    public JsonArray transform(JsonObject jo) {
+
+        if (jo == null) return null;
+
         JsonArray objects = new JsonArray();
         if (keyOrder != null) {
-            keyOrder.forEach(key -> objects.add(new JsonObject().put(key, val.getValue(key))));
+            keyOrder.forEach(key -> objects.add(new JsonObject().put(key, jo.getValue(key))));
         } else {
-            val.forEach(e -> objects.add(new JsonObject().put(e.getKey(), e.getValue())));
+            jo.forEach(e -> objects.add(new JsonObject().put(e.getKey(), e.getValue())));
         }
         return objects;
     }

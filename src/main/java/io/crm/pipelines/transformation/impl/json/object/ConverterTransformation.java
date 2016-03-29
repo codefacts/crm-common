@@ -19,6 +19,9 @@ public class ConverterTransformation implements Transform<JsonObject, JsonObject
 
     @Override
     public JsonObject transform(JsonObject json) {
+        if (json == null) {
+            return null;
+        }
         converters.forEach((k, v) -> {
             Object value = json.getValue(k);
             if (value != null) {

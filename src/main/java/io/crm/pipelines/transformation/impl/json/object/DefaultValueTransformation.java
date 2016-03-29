@@ -24,10 +24,10 @@ public class DefaultValueTransformation implements Transform<JsonObject, JsonObj
     }
 
     @Override
-    public JsonObject transform(JsonObject val) {
-        if (val == null) return new JsonObject();
+    public JsonObject transform(JsonObject json) {
+        if (json == null) return new JsonObject();
 
-        return recursive(val, defaultValue);
+        return recursive(json, defaultValue);
     }
 
     private JsonObject recursive(JsonObject json, JsonObject defJson) {

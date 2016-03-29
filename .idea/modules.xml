@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/../merchandiser-supervisor/merchandiser-supervisor.iml" filepath="$PROJECT_DIR$/../merchandiser-supervisor/merchandiser-supervisor.iml" />
       <module fileurl="file://$PROJECT_DIR$/../shopy/shopy.iml" filepath="$PROJECT_DIR$/../shopy/shopy.iml" />
       <module fileurl="file://$PROJECT_DIR$/../sql-core/sql-core.iml" filepath="$PROJECT_DIR$/../sql-core/sql-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tx/tx.iml" filepath="$PROJECT_DIR$/../tx/tx.iml" />
       <module fileurl="file://$PROJECT_DIR$/../uploader/uploader.iml" filepath="$PROJECT_DIR$/../uploader/uploader.iml" />
       <module fileurl="file://$PROJECT_DIR$/../crm-web/web.iml" filepath="$PROJECT_DIR$/../crm-web/web.iml" />
     </modules>
