@@ -48,6 +48,7 @@
         <module name="shopy" />
         <module name="SmsReceiverVertx" />
         <module name="sql-core" />
+        <module name="tx" />
         <module name="uploader" />
         <module name="web" />
       </profile>
@@ -64,13 +65,6 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="common-crm" />
-      </profile>
-      <profile default="false" name="Annotation profile for tx" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="tx" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">

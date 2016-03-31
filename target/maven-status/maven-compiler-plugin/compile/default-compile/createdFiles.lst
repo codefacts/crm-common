@@ -78,6 +78,7 @@ io/crm/promise/intfs/ThenHandler.class
 io/crm/pipelines/PipelineUtils$BridgeSub.class
 io/crm/util/Util$5.class
 io/crm/pipelines/validator/impl/type/LongValidator.class
+io/crm/util/DataTypes.class
 io/crm/pipelines/validator/impl/type/IntegerValidator.class
 io/crm/Indexes.class
 io/crm/util/touple/MutableTpl4.class
@@ -110,6 +111,7 @@ io/crm/pipelines/validator/composer/JsonArrayValidatorComposer.class
 io/crm/pipelines/validator/impl/json/array/MaxLength.class
 io/crm/util/touple/immutable/Tpl3.class
 io/crm/pipelines/validator/impl/RangeValidator.class
+io/crm/intfs/TriFunction.class
 io/crm/pipelines/validator/impl/type/TypeValidator.class
 io/crm/promise/intfs/ConditionalStream.class
 io/crm/pipelines/validator/impl/EmailValidationError.class

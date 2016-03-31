@@ -31,6 +31,6 @@ public class ValidationResultBuilder {
     }
 
     public ValidationResult createValidationResult() {
-        return new ValidationResult(fieldName, value, errorCode, additionals);
+        return new ValidationResult(fieldName, value, errorCode, additionals == null ? new JsonObject() : additionals);
     }
 }

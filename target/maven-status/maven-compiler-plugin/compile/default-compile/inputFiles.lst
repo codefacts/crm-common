@@ -15,6 +15,7 @@
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/util/touple/immutable/Tpl8.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/intfs/OctaConsumerUnchecked.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/promise/Promises.java
+/home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/intfs/TriFunction.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/intfs/HexaFunctionUnchecked.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/sql/QueryBuilder.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/intfs/OctaFunctionUnchecked.java
@@ -135,6 +136,7 @@
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/promise/PromiseCallbackAlreadySet.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/impl/json/object/MaxFieldCount.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/validator/impl/json/array/MaxLength.java
+/home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/util/DataTypes.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/promise/intfs/MapAndDecideHandler.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/pipelines/transformation/impl/json/object/IntelligentConverterTransformation.java
 /home/shahadat/IdeaProjects/crm-common/src/main/java/io/crm/util/TaskCoordinatorBuilder.java

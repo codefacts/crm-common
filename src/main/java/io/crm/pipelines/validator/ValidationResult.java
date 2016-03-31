@@ -1,5 +1,6 @@
 package io.crm.pipelines.validator;
 
+import io.crm.util.Util;
 import io.vertx.core.json.JsonObject;
 
 import static io.crm.util.Util.or;
@@ -8,12 +9,13 @@ import static io.crm.util.Util.or;
  * Created by shahadat on 2/28/16.
  */
 public class ValidationResult<T> {
+    public static final String MESSAGE = "message";
     private final String field;
     private final T value;
     private final int errorCode;
     private final JsonObject additionals;
 
-    public ValidationResult(String fieldName, T value, int errorCode, JsonObject additionals) {
+    ValidationResult(String fieldName, T value, int errorCode, JsonObject additionals) {
         this.field = fieldName;
         this.value = value;
         this.errorCode = errorCode;
@@ -41,10 +43,25 @@ public class ValidationResult<T> {
     }
 
     public JsonObject toJson() {
-        return additionals
-            .put("field", field)
-            .put("value", value)
-            .put("errorCode", errorCode)
+        return
+            additionals
+                .put("field", field)
+                .put("value", value)
+                .put("errorCode", errorCode)
             ;
+    }
+
+    public ValidationResult addAdditionals(JsonObject additionalsData) {
+        additionalsData.getMap().forEach((k, v) -> additionals.put(k, v));
+        return this;
+    }
+
+    public void message(String message) {
+        additionals.put(MESSAGE, message);
+    }
+
+    @Override
+    public String toString() {
+        return toJson().encode();
     }
 }

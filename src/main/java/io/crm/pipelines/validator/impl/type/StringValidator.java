@@ -15,7 +15,7 @@ public class StringValidator implements Validator<JsonObject> {
 
     public StringValidator(MessageBundle messageBundle, String field) {
         typeValidator = new TypeValidator(messageBundle, field,
-            jsonObject -> jsonObject.getInteger(field),
+            jsonObject -> jsonObject.getString(field),
             validationResult -> {
                 validationResult.getAdditionals()
                     .put(TypeValidator.TYPE, Types.STRING);
