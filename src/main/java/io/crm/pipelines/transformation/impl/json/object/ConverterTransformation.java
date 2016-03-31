@@ -11,9 +11,9 @@ import java.util.function.Function;
  * Created by shahadat on 3/5/16.
  */
 public class ConverterTransformation implements Transform<JsonObject, JsonObject> {
-    final Map<String, Function<String, Object>> converters;
+    final Map<String, Function<Object, Object>> converters;
 
-    public ConverterTransformation(Map<String, Function<String, Object>> converters) {
+    public ConverterTransformation(Map<String, Function<Object, Object>> converters) {
         this.converters = converters;
     }
 
@@ -25,7 +25,7 @@ public class ConverterTransformation implements Transform<JsonObject, JsonObject
         converters.forEach((k, v) -> {
             Object value = json.getValue(k);
             if (value != null) {
-                json.put(k, v.apply(value.toString()));
+                json.put(k, v.apply(value));
             }
         });
         return json;

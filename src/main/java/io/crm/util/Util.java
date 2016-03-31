@@ -480,7 +480,7 @@ final public class Util {
         }
     }
 
-    public static String searchFor(String filename, Class<?> aClass) {
+    public static String load(String filename, Class<?> aClass) {
         try {
             final File file = new File(filename);
             if (file.exists()) {

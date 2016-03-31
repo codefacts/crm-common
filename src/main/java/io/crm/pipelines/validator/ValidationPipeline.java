@@ -15,7 +15,7 @@ public class ValidationPipeline<T> {
     }
 
     public List<ValidationResult> validate(T obj) {
-        return validatorList.stream().reduce(new ArrayList<>(),
+        final ArrayList<ValidationResult> list = validatorList.stream().reduce(new ArrayList<>(),
             (validationResults, validator) -> {
                 ValidationResult validationResult = validator.validate(obj);
                 if (validationResult != null) validationResults.add(validationResult);
@@ -24,5 +24,6 @@ public class ValidationPipeline<T> {
                 u.addAll(u2);
                 return u;
             });
+        return list.size() <= 0 ? null : list;
     }
 }
