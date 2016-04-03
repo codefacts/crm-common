@@ -1,6 +1,8 @@
 package io.crm.pipelines.validator.composer;
 
 import io.crm.MessageBundle;
+import io.crm.pipelines.validator.NonZeroValidator;
+import io.crm.pipelines.validator.PositiveValidator;
 import io.crm.pipelines.validator.Validator;
 import io.crm.pipelines.validator.impl.*;
 import io.crm.pipelines.validator.impl.type.*;
@@ -40,6 +42,16 @@ public class FieldValidatorComposer {
 
     public FieldValidatorComposer longType() {
         validatorList.add(new LongValidator(messageBundle, field));
+        return this;
+    }
+
+    public FieldValidatorComposer positive() {
+        validatorList.add(new PositiveValidator(messageBundle, field));
+        return this;
+    }
+
+    public FieldValidatorComposer nonZero() {
+        validatorList.add(new NonZeroValidator(messageBundle, field));
         return this;
     }
 

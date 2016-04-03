@@ -21,7 +21,9 @@ public enum ErrorCodes {
     VALUE_MISSING_VALIDATION_ERROR(validation(), "value.missing.validation.error", validationHttp()),
     INVALID_SEQUENCE_ORDER_VALIDATION_ERROR(validation(), "invalid.sequence.order.validation.error", validationHttp()),
     SERVER_ERROR(error(), "server.error", errorHttp()),
-    NOT_FOUND(error(), "not_found.error", errorHttp());
+    NOT_FOUND(error(), "not_found.error", errorHttp()),
+    POSITIVE_NUMBER_VALIDATION_ERROR(validation(), "positive.number.validation.error", validationHttp()),
+    NON_ZERO_NUMBER_VALIDATION_ERROR(validation(), "non_zero.number.validation.error", validationHttp());
 
     private final int code;
     private final String messageCode;
