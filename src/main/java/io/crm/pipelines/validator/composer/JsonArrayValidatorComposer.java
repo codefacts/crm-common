@@ -1,19 +1,18 @@
 package io.crm.pipelines.validator.composer;
 
-import io.crm.MessageBundle;
-import io.crm.pipelines.validator.ValidationPipeline;
+import io.crm.pipelines.validator.Validator;
 import io.vertx.core.json.JsonObject;
+
+import java.util.List;
 
 /**
  * Created by shahadat on 3/1/16.
  */
 public class JsonArrayValidatorComposer {
-    private final ValidationPipeline<JsonObject> validationPipeline;
-    private final MessageBundle messageBundle;
+    private final List<Validator<JsonObject>> validatorList;
 
-    public JsonArrayValidatorComposer(ValidationPipeline<JsonObject> validationPipeline, MessageBundle messageBundle) {
-        this.validationPipeline = validationPipeline;
-        this.messageBundle = messageBundle;
+    public JsonArrayValidatorComposer(List<Validator<JsonObject>> validatorList) {
+        this.validatorList = validatorList;
     }
 
 
