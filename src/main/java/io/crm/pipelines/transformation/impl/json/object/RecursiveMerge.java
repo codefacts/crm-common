@@ -27,8 +27,8 @@ public class RecursiveMerge implements Transform<JsonObject, JsonObject> {
                           BiConsumer<Map.Entry<String, Object>, Runnable> entryConsumer,
                           Predicate<Object> arrayPredicate,
                           BiConsumer<Object, Runnable> arrayValueConsumer) {
-        this.includes = ImmutableSet.copyOf(Util.or(includes, Collections.EMPTY_SET));
-        this.excludes = ImmutableSet.copyOf(Util.or(excludes, Collections.EMPTY_SET));
+        this.includes = includes == null ? null : ImmutableSet.copyOf(includes);
+        this.excludes = excludes == null ? null : ImmutableSet.copyOf(excludes);
         this.predicate = predicate;
         this.entryConsumer = entryConsumer;
         this.arrayPredicate = arrayPredicate;
