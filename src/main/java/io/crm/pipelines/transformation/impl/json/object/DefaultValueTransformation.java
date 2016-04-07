@@ -18,7 +18,7 @@ public class DefaultValueTransformation implements Transform<JsonObject, JsonObj
     private final JsonObject defaultValue;
 
     public DefaultValueTransformation(JsonObject defaultValue) {
-
+        Objects.requireNonNull(defaultValue, "DefaultValueTransformation: DefaultValue:JsonObject must not be null.");
         this.defaultValue = toImmutable(defaultValue);
 
     }

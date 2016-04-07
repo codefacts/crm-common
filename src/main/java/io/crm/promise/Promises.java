@@ -6,10 +6,7 @@ import io.crm.intfs.RunnableUnchecked;
 import io.crm.promise.intfs.Defer;
 import io.crm.promise.intfs.Promise;
 import io.crm.util.*;
-import io.crm.util.touple.MutableTpl2;
-import io.crm.util.touple.MutableTpl3;
-import io.crm.util.touple.MutableTpl4;
-import io.crm.util.touple.MutableTpls;
+import io.crm.util.touple.*;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -261,6 +258,88 @@ final public class Promises {
                 }
             }
         });
+        return defer.promise();
+    }
+
+    public static <T1, T2, T3, T4, T5> Promise<MutableTpl5<T1, T2, T3, T4, T5>> when(final Promise<T1> t1Promise,
+                                                                                     final Promise<T2> t2Promise,
+                                                                                     final Promise<T3> t3Promise,
+                                                                                     final Promise<T4> t4Promise,
+                                                                                     final Promise<T5> t5Promise) {
+        final Defer<MutableTpl5<T1, T2, T3, T4, T5>> defer = defer();
+        SimpleCounter counter = new SimpleCounter();
+        MutableTpl5<T1, T2, T3, T4, T5> mutableTpl5 = new MutableTpl5<>();
+        final int len = 5;
+        t1Promise.complete(t -> {
+            if (!defer.promise().isComplete()) {
+                if (t.isSuccess()) {
+                    mutableTpl5.setT1(t.get());
+                    counter.counter++;
+                    if (counter.counter == len) {
+                        defer.complete(mutableTpl5);
+                    }
+                } else {
+                    defer.fail(t.error());
+                }
+            }
+        });
+
+        t2Promise.complete(t -> {
+            if (!defer.promise().isComplete()) {
+                if (t.isSuccess()) {
+                    mutableTpl5.setT2(t.get());
+                    counter.counter++;
+                    if (counter.counter == len) {
+                        defer.complete(mutableTpl5);
+                    }
+                } else {
+                    defer.fail(t.error());
+                }
+            }
+        });
+
+        t3Promise.complete(t -> {
+            if (!defer.promise().isComplete()) {
+                if (t.isSuccess()) {
+                    mutableTpl5.setT3(t.get());
+                    counter.counter++;
+                    if (counter.counter == len) {
+                        defer.complete(mutableTpl5);
+                    }
+                } else {
+                    defer.fail(t.error());
+                }
+            }
+        });
+
+        t4Promise.complete(t -> {
+            if (!defer.promise().isComplete()) {
+                if (t.isSuccess()) {
+                    mutableTpl5.setT4(t.get());
+                    counter.counter++;
+                    if (counter.counter == len) {
+                        defer.complete(mutableTpl5);
+                    }
+                } else {
+                    defer.fail(t.error());
+                }
+            }
+        });
+
+        t5Promise.complete(t -> {
+            if (!defer.promise().isComplete()) {
+                if (t.isSuccess()) {
+                    mutableTpl5.setT5(t.get());
+                    counter.counter++;
+                    if (counter.counter == len) {
+                        defer.complete(mutableTpl5);
+                    }
+                } else {
+                    defer.fail(t.error());
+                }
+            }
+        });
+
         return defer.promise();
     }
 }
