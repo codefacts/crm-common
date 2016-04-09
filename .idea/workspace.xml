@@ -1,8 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d163bfc-fd49-42ac-89b1-b7377f1bdc19" name="Default" comment="UM All Service Almost complete">
+    <list default="true" id="3d163bfc-fd49-42ac-89b1-b7377f1bdc19" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/controller/AuthController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/MainVerticle.class" afterPath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/MainVerticle.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/UmErrorCodeHelper.class" afterPath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/UmErrorCodeHelper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/UmErrorCodes.class" afterPath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/UmErrorCodes.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/UmEvents.class" afterPath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/UmEvents.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/model/User.class" afterPath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/model/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/service/InventoryService.class" afterPath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/service/InventoryService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/service/ProductService.class" afterPath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/service/ProductService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/service/SellService.class" afterPath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/service/SellService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/service/UnitService.class" afterPath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/service/UnitService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/service/UserService.class" afterPath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/service/UserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/call_center/MainVerticle.java" afterPath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/call_center/MainVerticle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/UmErrorCodeHelper.java" afterPath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/UmErrorCodeHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/UmErrorCodes.java" afterPath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/UmErrorCodes.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/UmEvents.java" afterPath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/UmEvents.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/model/User.java" afterPath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/model/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/InventoryService.java" afterPath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/InventoryService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/ProductService.java" afterPath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/ProductService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/SellService.java" afterPath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/SellService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/UnitService.java" afterPath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/UnitService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/UserService.java" afterPath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/src/main/resources/my-public/js/bundle.js" afterPath="$PROJECT_DIR$/../call_center/src/main/resources/my-public/js/bundle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/bundle.js" afterPath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/bundle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/crm/ErrorCodeHelper.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/ErrorCodeHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/crm/ErrorCodes.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/ErrorCodes.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/Converters.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/Converters.java" />
     </list>
     <ignored path="common-crm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,23 +69,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainVerticle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/call_center/MainVerticle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.935484">
-              <caret line="497" column="49" selection-start-line="497" selection-start-column="49" selection-end-line="497" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SellService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/SellService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6331169">
-              <caret line="78" column="22" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.78246754">
+              <caret line="388" column="92" selection-start-line="388" selection-start-column="92" selection-end-line="388" selection-end-column="92" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,36 +81,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuthController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/controller/AuthController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.387097">
-              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UmUris.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/controller/UmUris.java">
+      <file leaf-file-name="Converters.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/Converters.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="22" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="22" />
+              <caret line="132" column="9" selection-start-line="132" selection-start-column="9" selection-end-line="132" selection-end-column="9" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/WebUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="198" column="37" selection-start-line="198" selection-start-column="37" selection-end-line="198" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -133,13 +123,10 @@
         <option value="$PROJECT_DIR$/../tx/pom.xml" />
         <option value="$PROJECT_DIR$/../tx/src/main/java/tx/MainVerticle.java" />
         <option value="$PROJECT_DIR$/../tx/src/main/resources/config.json" />
-        <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/model/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/pipelines/validator/impl/DoubleRangeValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/pipelines/validator/ValidationResultBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/Helper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/crm/ErrorCodeHelper.java" />
         <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/Helper.java" />
-        <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/UmErrorCodeHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/pipelines/validator/impl/type/StringValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/pipelines/validator/impl/type/DoubleValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/pipelines/validator/ValidationResult.java" />
@@ -147,39 +134,42 @@
         <option value="$PROJECT_DIR$/src/main/java/io/crm/pipelines/validator/PositiveValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/pipelines/validator/composer/FieldValidatorComposer.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/pipelines/validator/NonZeroValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/crm/ErrorCodes.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/pipelines/validator/composer/JsonArrayValidatorComposer.java" />
         <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/model/Product.java" />
         <option value="$PROJECT_DIR$/../tx/src/main/java/tx/service/OrganizationService.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/RecursiveMerge.java" />
         <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/model/Unit.java" />
         <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/model/ProductUnitPrice.java" />
-        <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/UmErrorCodes.java" />
         <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/model/Inventory.java" />
-        <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/UnitService.java" />
         <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/InventoryProduct.java" />
-        <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/ProductService.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/DefaultValueTransformation.java" />
         <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/Tables.java" />
-        <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/UmEvents.java" />
         <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/model/Sell.java" />
         <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/Services.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/Converters.java" />
-        <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/UserService.java" />
-        <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/InventoryService.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/promise/Promises.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/WebUtils.java" />
         <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/model/SellUnit.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/Pagination.java" />
-        <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/SellService.java" />
         <option value="$PROJECT_DIR$/../crm-web/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/statichandler/StaticHandlerImpl.java" />
         <option value="$PROJECT_DIR$/../call_center/pom.xml" />
         <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/controller/UmUris.java" />
         <option value="$PROJECT_DIR$/../call_center/src/main/resources/keystore.jceks" />
-        <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/call_center/MainVerticle.java" />
         <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/controller/AuthController.java" />
+        <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/UmEvents.java" />
+        <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/call_center/MainVerticle.java" />
+        <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/UmErrorCodes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/crm/ErrorCodes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/crm/ErrorCodeHelper.java" />
+        <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/UmErrorCodeHelper.java" />
+        <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/model/User.java" />
+        <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/UserService.java" />
+        <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/UnitService.java" />
+        <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/ProductService.java" />
+        <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/InventoryService.java" />
+        <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/SellService.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/Converters.java" />
       </list>
     </option>
   </component>
@@ -376,6 +366,64 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="crm-common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common-crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crm-common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common-crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crm-common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common-crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="call_center" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -441,6 +489,10 @@
               <option name="myItemId" value="imslbd" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="um" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -468,7 +520,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="um" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common-crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="call_center" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imslbd" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -507,11 +589,11 @@
       <recent name="$PROJECT_DIR$/../SmsReceiverVertx/src/main/java/sms/receiver/service/callreview" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="io.crm" />
       <recent name="com.imslbd.um.model" />
       <recent name="com.imslbd.um" />
       <recent name="io.crm.pipelines.validator" />
       <recent name="tx" />
-      <recent name="io.crm.intfs" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/../call_center/src/main/resources/my-static/css" />
@@ -1213,7 +1295,13 @@
       <option name="project" value="LOCAL" />
       <updated>1460187364017</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="UM All Service Almost complete">
+      <created>1460188034395</created>
+      <option name="number" value="00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1460188034395</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1221,25 +1309,25 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="959" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37419355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5629032" sideWeight="0.50383353" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5629032" sideWeight="0.51259583" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2946331" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4032258" sideWeight="0.4961665" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2913472" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2913472" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.65" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4162103" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45483872" sideWeight="0.4961665" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45483872" sideWeight="0.48740417" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1250,6 +1338,34 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5629032" sideWeight="0.51259583" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2946331" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4162103" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45483872" sideWeight="0.48740417" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37419355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="108" y="135" width="759" height="572" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4032258" sideWeight="0.4961665" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2913472" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.65" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1297,7 +1413,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/UnitService.java</url>
-          <line>228</line>
+          <line>203</line>
           <properties />
           <option name="timeStamp" value="61" />
         </line-breakpoint>
@@ -1308,7 +1424,7 @@
           <option name="timeStamp" value="96" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="193" />
+      <option name="time" value="198" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1317,34 +1433,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/pipelines/validator/PositiveValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="43" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/ErrorCodes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/pipelines/validator/NonZeroValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/pipelines/validator/composer/JsonArrayValidatorComposer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3559322">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/pipelines/validator/composer/JsonObjectValidatorComposer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20338982">
@@ -1464,14 +1552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/UmErrorCodes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27966103">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/InventoryProduct.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1520,50 +1600,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/UmEvents.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7966102">
-          <caret line="56" column="85" selection-start-line="56" selection-start-column="85" selection-end-line="56" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/model/Sell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3559322">
           <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/Services.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43649372">
-          <caret line="74" column="39" selection-start-line="74" selection-start-column="39" selection-end-line="74" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.903226">
-          <caret line="310" column="37" selection-start-line="310" selection-start-column="37" selection-end-line="310" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/UnitService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.483871">
-          <caret line="210" column="71" selection-start-line="210" selection-start-column="71" selection-end-line="210" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/InventoryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33273703">
-          <caret line="292" column="37" selection-start-line="292" selection-start-column="37" selection-end-line="292" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -1575,24 +1615,6 @@
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/ProductService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11806798">
-          <caret line="294" column="36" selection-start-line="294" selection-start-column="36" selection-end-line="294" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/ConverterTransformation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5084746">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1608,14 +1630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22881356">
           <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/Converters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33050847">
-          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -1699,19 +1713,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/call_center/MainVerticle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.935484">
-          <caret line="497" column="49" selection-start-line="497" selection-start-column="49" selection-end-line="497" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/WebUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.17288135">
           <caret line="198" column="37" selection-start-line="198" selection-start-column="37" selection-end-line="198" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1721,7 +1725,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/controller/AuthController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.387097">
+        <state vertical-scroll-proportion="0.29874778">
           <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1729,10 +1733,137 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/UmEvents.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2542373">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/call_center/MainVerticle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1645796">
+          <caret line="355" column="84" selection-start-line="355" selection-start-column="84" selection-end-line="355" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/ErrorCodes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3898305">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/UmErrorCodes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/ErrorCodeHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/UmErrorCodeHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding>
+            <element signature="e#428#429#0" expanded="true" />
+            <element signature="e#463#464#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45762712">
+          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/ConverterTransformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5084746">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/pipelines/transformation/impl/json/object/IncludeExcludeTransformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.0">
+          <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/UnitService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49373883">
+          <caret line="69" column="81" selection-start-line="69" selection-start-column="81" selection-end-line="69" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/Services.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1645796">
+          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/InventoryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.627907">
+          <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/ProductService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33273703">
+          <caret line="441" column="53" selection-start-line="441" selection-start-column="53" selection-end-line="441" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/Converters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="132" column="9" selection-start-line="132" selection-start-column="9" selection-end-line="132" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/SellService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6331169">
-          <caret line="78" column="22" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.78246754">
+          <caret line="388" column="92" selection-start-line="388" selection-start-column="92" selection-end-line="388" selection-end-column="92" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

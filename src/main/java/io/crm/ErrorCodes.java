@@ -23,7 +23,8 @@ public enum ErrorCodes {
     SERVER_ERROR(error(), "server.error", errorHttp()),
     NOT_FOUND(error(), "not_found.error", errorHttp()),
     POSITIVE_NUMBER_VALIDATION_ERROR(validation(), "positive.number.validation.error", validationHttp()),
-    NON_ZERO_NUMBER_VALIDATION_ERROR(validation(), "non_zero.number.validation.error", validationHttp());
+    NON_ZERO_NUMBER_VALIDATION_ERROR(validation(), "non_zero.number.validation.error", validationHttp()),
+    PASSWORD_MISMATCH(validation(), "password.mismatch.validation.error", validationHttp());
 
     private final int code;
     private final String messageCode;
