@@ -4,7 +4,7 @@ package io.crm.promise;
  * Created by someone on 09/11/2015.
  */
 public class Decision<T> {
-    public static final String OTHERWISE = "OTHERWISE";
+    public static final String CONTINUE = "CONTINUE";
     public final String decision;
     public final T retVal;
 

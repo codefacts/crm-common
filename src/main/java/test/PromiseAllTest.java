@@ -2,7 +2,6 @@ package test;
 
 import io.crm.promise.Promises;
 import io.crm.promise.intfs.Defer;
-import io.crm.promise.intfs.Promise;
 
 /**
  * Created by sohan on 10/17/2015.
@@ -37,7 +36,7 @@ public class PromiseAllTest {
             .on("do", v -> {
                 System.out.println("do");
             })
-            .otherwise(v -> System.out.println("other"))
+            .contnue(v -> System.out.println("other"))
             .complete(p -> System.out.println(p))
             .error(e -> System.out.println(e))
             .error(e -> e.printStackTrace());

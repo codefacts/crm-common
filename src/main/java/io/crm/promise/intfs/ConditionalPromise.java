@@ -8,7 +8,7 @@ import io.crm.intfs.ConsumerUnchecked;
 public interface ConditionalPromise<T> {
     ConditionalPromise<T> on(String condition, ConsumerUnchecked<T> promiseConsumer);
 
-    ConditionalPromise<T> otherwise(ConsumerUnchecked<T> promiseConsumer);
+    ConditionalPromise<T> contnue(ConsumerUnchecked<T> promiseConsumer);
 
     ConditionalPromise<T> error(ErrorHandler errorHandler);
 

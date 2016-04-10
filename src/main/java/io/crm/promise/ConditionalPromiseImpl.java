@@ -28,8 +28,8 @@ final public class ConditionalPromiseImpl<T> implements ConditionalPromise<T> {
     }
 
     @Override
-    public ConditionalPromise<T> otherwise(final ConsumerUnchecked<T> promiseConsumer) {
-        map.put(Decision.OTHERWISE, promiseConsumer);
+    public ConditionalPromise<T> contnue(final ConsumerUnchecked<T> promiseConsumer) {
+        map.put(Decision.CONTINUE, promiseConsumer);
         doStuff();
         return this;
     }
@@ -38,7 +38,7 @@ final public class ConditionalPromiseImpl<T> implements ConditionalPromise<T> {
         promise = promise.then(decision -> {
             if (!done) {
                 final ConsumerUnchecked<T> decisionHandler = apply(map.get(decision.decision),
-                    pcu -> pcu == null ? map.get(Decision.OTHERWISE) : pcu);
+                    pcu -> pcu == null ? map.get(Decision.CONTINUE) : pcu);
                 if (decisionHandler != null) {
                     done = true;
                     decisionHandler.accept(decision.retVal);
@@ -66,7 +66,7 @@ final public class ConditionalPromiseImpl<T> implements ConditionalPromise<T> {
 
         Promises.from().decideAndMap(v -> Decision.of("g", "JJ"))
             .on("ok", val -> System.out.println(val))
-            .otherwise(g -> System.out.println(g + g.toString()))
+            .contnue(g -> System.out.println(g + g.toString()))
         ;
 
         defer.complete("kkkk");
