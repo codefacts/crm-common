@@ -2,29 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d163bfc-fd49-42ac-89b1-b7377f1bdc19" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_crm_common_1_0_SNAPSHOT.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/call_center/MainVerticle.java" afterPath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/call_center/MainVerticle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/call_center/controller/CallController.java" afterPath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/call_center/controller/CallController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/InventoryProduct.java" afterPath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/InventoryProduct.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/UmEvents.java" afterPath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/UmEvents.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/controller/AuthController.java" afterPath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/controller/AuthController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/InventoryService.java" afterPath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/InventoryService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/ProductService.java" afterPath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/ProductService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/SellService.java" afterPath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/SellService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/UnitService.java" afterPath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/UnitService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/UserService.java" afterPath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/MainVerticle.class" afterPath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/MainVerticle.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/controller/CallController.class" afterPath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/controller/CallController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/InventoryProduct.class" afterPath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/InventoryProduct.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/UmEvents.class" afterPath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/UmEvents.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/service/InventoryService.class" afterPath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/service/InventoryService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/service/ProductService.class" afterPath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/service/ProductService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/service/SellService.class" afterPath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/service/SellService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/service/UnitService.class" afterPath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/service/UnitService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/service/UserService.class" afterPath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/service/UserService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/src/main/resources/my-public/js/bundle.js" afterPath="$PROJECT_DIR$/../call_center/src/main/resources/my-public/js/bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/bundle.js" afterPath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/bundle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/crm/promise/ConditionalPromiseImpl.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/promise/ConditionalPromiseImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/crm/promise/Decision.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/promise/Decision.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/crm/promise/intfs/ConditionalPromise.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/promise/intfs/ConditionalPromise.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/test/PromiseAllTest.java" afterPath="$PROJECT_DIR$/src/main/java/test/PromiseAllTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/WebUtils.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/WebUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../grossary/src/main/java/com/imslbd/grossary/controller/AuthController.java" afterPath="$PROJECT_DIR$/../grossary/src/main/java/com/imslbd/grossary/controller/AuthController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../grossary/src/main/java/com/imslbd/grossary/controller/ContactController.java" afterPath="$PROJECT_DIR$/../grossary/src/main/java/com/imslbd/grossary/controller/ContactController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../grossary/src/main/java/com/imslbd/grossary/service/AuthService.java" afterPath="$PROJECT_DIR$/../grossary/src/main/java/com/imslbd/grossary/service/AuthService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../grossary/src/main/java/com/imslbd/grossary/service/ContactService.java" afterPath="$PROJECT_DIR$/../grossary/src/main/java/com/imslbd/grossary/service/ContactService.java" />
     </list>
     <ignored path="common-crm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,7 +76,7 @@
       <file leaf-file-name="InventoryService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/InventoryService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6220339">
+            <state vertical-scroll-proportion="1.1915585">
               <caret line="310" column="51" selection-start-line="310" selection-start-column="51" selection-end-line="310" selection-end-column="51" />
               <folding />
             </state>
@@ -1079,12 +1067,6 @@
       <workItem from="1443118564550" duration="166000" />
       <workItem from="1443120452548" duration="70000" />
     </task>
-    <task id="LOCAL-00002" summary="Web">
-      <created>1443548685182</created>
-      <option name="number" value="00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1443548685182</updated>
-    </task>
     <task id="LOCAL-00003" summary="Web">
       <created>1443580723643</created>
       <option name="number" value="00003" />
@@ -1373,7 +1355,13 @@
       <option name="project" value="LOCAL" />
       <updated>1460269862887</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Transfer done">
+      <created>1460300818484</created>
+      <option name="number" value="00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1460300818484</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1381,7 +1369,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="959" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1399,7 +1387,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45483872" sideWeight="0.48740417" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45483872" sideWeight="0.48740417" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1453,7 +1441,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="BrCheckerComplete" />
     <MESSAGE value="br_checker_app jar file creating with maven-assembly-plugin" />
     <MESSAGE value="Promise Optimization" />
     <MESSAGE value="Promise Optimization did not work" />
@@ -1478,7 +1465,8 @@
     <MESSAGE value="UM All Service Almost complete" />
     <MESSAGE value="Transfer" />
     <MESSAGE value="common, web &amp; call center version change" />
-    <option name="LAST_COMMIT_MESSAGE" value="common, web &amp; call center version change" />
+    <MESSAGE value="Transfer done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Transfer done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1934,7 +1922,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/InventoryService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6220339">
+        <state vertical-scroll-proportion="1.1915585">
           <caret line="310" column="51" selection-start-line="310" selection-start-column="51" selection-end-line="310" selection-end-column="51" />
           <folding />
         </state>
