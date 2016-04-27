@@ -1,5 +1,7 @@
 package io.crm.pipelines.validator;
 
+import com.google.common.collect.ImmutableList;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,15 +17,14 @@ public class ValidationPipeline<T> {
     }
 
     public List<ValidationResult> validate(T obj) {
-        final ArrayList<ValidationResult> list = validatorList.stream().reduce(new ArrayList<>(),
-            (validationResults, validator) -> {
-                ValidationResult validationResult = validator.validate(obj);
-                if (validationResult != null) validationResults.add(validationResult);
-                return validationResults;
-            }, (u, u2) -> {
-                u.addAll(u2);
-                return u;
-            });
+        final ImmutableList.Builder<ValidationResult> builder = ImmutableList.builder();
+
+        validatorList.forEach(tValidator -> {
+            final ValidationResult result = tValidator.validate(obj);
+            if (result != null) builder.add(result);
+        });
+
+        final ImmutableList<ValidationResult> list = builder.build();
         return list.size() <= 0 ? null : list;
     }
 }
