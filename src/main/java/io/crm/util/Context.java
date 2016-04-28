@@ -14,11 +14,11 @@ public class Context {
     private final Map<String, Object> map;
 
     public Context() {
-        map = new HashMap<>();
+        map = Collections.EMPTY_MAP;
     }
 
     public Context(Map<String, Object> map) {
-        this.map = map;
+        this.map = map == null ? Collections.EMPTY_MAP : map;
     }
 
     //Methods
