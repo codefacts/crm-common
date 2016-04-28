@@ -7,11 +7,11 @@ import java.util.Map;
  * Created by shahadat on 4/28/16.
  */
 public class StateContextBuilder<R> {
-    private Map<String, String> map;
+    private Map<String, Object> map;
     private String event;
     private R result;
 
-    public StateContextBuilder context(Map<String, String> map) {
+    public StateContextBuilder context(Map<String, Object> map) {
         this.map = map;
         return this;
     }

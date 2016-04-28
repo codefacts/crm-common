@@ -1,6 +1,6 @@
 package io.crm.pipelines;
 
-import io.crm.pipelines.transformation.Transform;
+import io.crm.transformation.Transform;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 

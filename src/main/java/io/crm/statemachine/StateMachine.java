@@ -1,7 +1,6 @@
 package io.crm.statemachine;
 
 import io.crm.promise.Promises;
-import io.crm.promise.intfs.MapToPromiseHandler;
 import io.crm.promise.intfs.Promise;
 import io.crm.statemachine.ex.StateMachineException;
 import io.crm.util.Context;
@@ -56,7 +55,7 @@ final public class StateMachine {
             if (stateCallbacks != null) {
 
                 return execute(stateCallbacks, stateContext.getResult())
-                    .mapToPromise(this::executeNext);
+                    .mapToPromise(stateCtx -> executeNext((StateContext<Object>) stateCtx));
 
             } else {
                 return Promises.<StateContext<Object>>fromError(new StateMachineException("State Mapping for event '" + event + "' not found."));

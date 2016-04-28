@@ -36,5 +36,6 @@ public class StateMachineTest {
                 })
                 .createState())
             .build();
+        stateMachine.start("");
     }
 }
