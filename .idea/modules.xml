@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/../tx/tx.iml" filepath="$PROJECT_DIR$/../tx/tx.iml" />
       <module fileurl="file://$PROJECT_DIR$/../uploader/uploader.iml" filepath="$PROJECT_DIR$/../uploader/uploader.iml" />
       <module fileurl="file://$PROJECT_DIR$/../crm-web/web.iml" filepath="$PROJECT_DIR$/../crm-web/web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../webpanel/webpanel.iml" filepath="$PROJECT_DIR$/../webpanel/webpanel.iml" />
     </modules>
   </component>
 </project>

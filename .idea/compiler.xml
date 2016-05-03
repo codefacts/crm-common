@@ -51,6 +51,7 @@
         <module name="tx" />
         <module name="uploader" />
         <module name="web" />
+        <module name="webpanel" />
       </profile>
       <profile default="false" name="Annotation profile for core" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -81,6 +82,7 @@
       <module name="tx" target="1.8" />
       <module name="uploader" target="1.8" />
       <module name="web" target="1.8" />
+      <module name="webpanel" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

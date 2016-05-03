@@ -1,6 +1,7 @@
 package io.crm.statemachine;
 
 import io.crm.promise.Promises;
+import io.crm.promise.intfs.Defer;
 import io.crm.promise.intfs.Promise;
 import io.crm.statemachine.ex.StateMachineException;
 import io.crm.util.Context;
@@ -72,17 +73,32 @@ final public class StateMachine {
 
             registry.onEnter.accept(msg);
 
-            final MutableTpl1<StateContext> tpl1 = new MutableTpl1<>();
+            final Defer<StateContext<Object>> defer = Promises.defer();
 
-            return registry
+            registry
                 .initialize.apply(msg)
-                .mapToPromise(map -> registry.execute.apply(new Context(map), msg))
-                .then(val -> tpl1.t1 = val)
-                .map(StateContext::getMap)
-                .mapToPromise(map1 -> registry.cleanup.apply(new Context(map1), msg))
-                .then(aVoid -> registry.onExit.accept(msg))
-                .map(v -> tpl1.t1)
-                ;
+                .then(
+                    initialContext -> {
+
+                        registry.execute.apply(new Context(initialContext), msg)
+
+                            .complete(
+                                p -> registry.cleanup.apply(new Context(initialContext), msg)
+                                    .complete(aVoid -> registry.onExit.accept(msg))
+                                    .error(defer::fail)
+                                    .then(v -> {
+                                        if (p.isSuccess()) {
+                                            defer.complete(p.get());
+                                        } else {
+                                            defer.fail(p.error());
+                                        }
+                                    }));
+
+                    })
+                .error(defer::fail)
+            ;
+
+            return defer.promise();
 
         } catch (Exception ex) {
             return Promises.fromError(ex);
