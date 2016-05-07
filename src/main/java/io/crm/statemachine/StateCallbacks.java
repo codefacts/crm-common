@@ -20,7 +20,7 @@ final public class StateCallbacks<T, R> {
     public final BiFunction<Context, T, Promise<StateContext<R>>> execute;
     public final BiFunction<Context, T, Promise<Void>> cleanup;
 
-    public StateCallbacks(Consumer<T> onEnter, Consumer<T> onExit, Function<T, Promise<Map<String, Object>>> initialize, BiFunction<Context, T, Promise<StateContext<R>>> execute, BiFunction<Context, T, Promise<Void>> cleanup) {
+    StateCallbacks(Consumer<T> onEnter, Consumer<T> onExit, Function<T, Promise<Map<String, Object>>> initialize, BiFunction<Context, T, Promise<StateContext<R>>> execute, BiFunction<Context, T, Promise<Void>> cleanup) {
         this.onEnter = onEnter != null ? onEnter : t -> {
         };
         this.onExit = onExit != null ? onExit : t -> {

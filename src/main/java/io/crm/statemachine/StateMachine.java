@@ -78,7 +78,7 @@ final public class StateMachine {
             registry
                 .initialize.apply(msg)
                 .then(
-                    initialContext -> {
+                    initialContext ->
 
                         registry.execute.apply(new Context(initialContext), msg)
 
@@ -92,9 +92,7 @@ final public class StateMachine {
                                         } else {
                                             defer.fail(p.error());
                                         }
-                                    }));
-
-                    })
+                                    })))
                 .error(defer::fail)
             ;
 

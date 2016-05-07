@@ -3,6 +3,8 @@ package io.crm.statemachine;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import io.crm.statemachine.ex.StateMachineException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.*;
 
@@ -11,47 +13,60 @@ import java.util.*;
  */
 public class StateMachineBuilder {
 
-    private final String initialState;
+    public static final Logger LOGGER = LoggerFactory.getLogger(StateMachineBuilder.class);
+
+    private String initialState;
 
     private final Map<String, Set<String>> stateEvents = new HashMap<>();
     private final Map<String, Set<String>> eventStates = new HashMap<>();
     private final Map<String, StateCallbacks> stateMap = new HashMap<>();
 
+    public StateMachineBuilder() {
+    }
+
     public StateMachineBuilder(String initialState) {
         this.initialState = initialState;
+    }
+
+    public String getInitialState() {
+        return initialState;
+    }
+
+    public StateMachineBuilder setInitialState(String initialState) {
+        this.initialState = initialState;
+        return this;
     }
 
     public StateMachineBuilder from(String state, StateEventsRegistry... stateEvents) {
         Objects.requireNonNull(state);
 
-        final HashSet<String> eSet = new HashSet<>();
+        Set<String> ss = this.stateEvents.get(state);
+
+        if (ss == null) {
+            ss = new HashSet<>();
+            this.stateEvents.put(state, ss);
+        }
+
+        final Set<String> eSet = ss;
 
         Arrays.asList(stateEvents).forEach(registry -> {
 
-            if (eSet.contains(registry.event)) {
-                throw new StateMachineException("Duplicate event: '" + registry.event + "' in the eventList for State: '" + state + "'");
-            }
             eSet.add(registry.event);
 
             Set<String> stateSet = eventStates.get(registry.event);
             if (stateSet == null) {
                 stateSet = new HashSet<>();
-                stateSet.add(registry.state);
                 eventStates.put(registry.event, stateSet);
-            } else {
-                stateSet.add(registry.state);
             }
-        });
 
-        if (this.stateEvents.containsKey(state)) {
-            throw new StateMachineException("Duplicate state: '" + state + "' in the stateList.");
-        }
-        this.stateEvents.put(state, ImmutableSet.copyOf(eSet));
+            stateSet.add(registry.state);
+
+        });
 
         return this;
     }
 
-    public <T,R> StateMachineBuilder from(String state, StateEventsRegistry[] stateEvents, StateCallbacks<T,R> stateCallbacks) {
+    public <T, R> StateMachineBuilder from(String state, StateEventsRegistry[] stateEvents, StateCallbacks<T, R> stateCallbacks) {
 
         from(state, stateEvents);
         callbacks(state, stateCallbacks);
@@ -61,7 +76,7 @@ public class StateMachineBuilder {
     public <T, R> StateMachineBuilder callbacks(String state, StateCallbacks<T, R> registry) {
 
         if (stateMap.containsKey(state)) {
-            throw new StateMachineException("Duplicate state: '" + state + "' in the stateCallbacksList.");
+            LOGGER.info("STATE CALLBACK IS OVER WRITTEN FOR STATE '" + state + "'");
         }
 
         stateMap.put(state, registry);
@@ -72,11 +87,7 @@ public class StateMachineBuilder {
 
         Objects.requireNonNull(initialState);
 
-        if (stateEvents.size() != stateMap.size()) {
-            throw new StateMachineException("callbacks registry count: " + stateMap.size() + " and states name count " + stateEvents.size() + " must be equal.");
-        }
-
-        return new StateMachine(initialState, ImmutableMap.copyOf(stateEvents),
+        return new StateMachine(initialState, immutableCopy(stateEvents),
             immutableCopy(eventStates), ImmutableMap.copyOf(stateMap));
     }
 

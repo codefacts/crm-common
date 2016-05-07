@@ -11,7 +11,7 @@ import java.util.*;
  * Created by shahadat on 4/27/16.
  */
 public class Context {
-    private final Map<String, Object> map;
+    protected final Map<String, Object> map;
 
     public Context() {
         map = Collections.EMPTY_MAP;
@@ -55,7 +55,7 @@ public class Context {
     }
 
     //MyMethods
-    public <T> T getAs(String key, Class<T> tClass) {
+    public <T> T getAs(String key) {
         Objects.requireNonNull(key);
         return (T) map.get(key);
     }
