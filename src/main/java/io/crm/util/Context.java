@@ -55,12 +55,12 @@ public class Context {
     }
 
     //MyMethods
-    public <T> T getAs(String key) {
+    public <T> T as(String key) {
         Objects.requireNonNull(key);
         return (T) map.get(key);
     }
 
-    public <T> T getAs(String key, T defaultValue) {
+    public <T> T as(String key, T defaultValue) {
         Objects.requireNonNull(key);
         final Object o = map.get(key);
         return o == null ? defaultValue : (T) o;

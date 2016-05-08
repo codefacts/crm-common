@@ -39,7 +39,7 @@ public class StateMachine {
         }
     }
 
-    public <T, R> Promise<R> trigger(String state, T message) {
+    public <T, R> Promise<R> start(String state, T message) {
         try {
             final StateCallbacks<T, Object> stateCallbacks = stateCallbacksMap.get(state);
             return execute(stateCallbacks, message)
@@ -135,5 +135,17 @@ public class StateMachine {
 
     public static <T, R> StateCallbacksBuilder<T, R> exec() {
         return StateCallbacksBuilder.<T, R>create();
+    }
+
+    public static <T> StateTrigger<T> trigger(String event, T message) {
+        return StateTrigger.create(event, message);
+    }
+
+    public static <T> StateTrigger<T> exit(T message) {
+        return StateTrigger.create(null, message);
+    }
+
+    public static <T> StateTrigger<T> exit() {
+        return StateTrigger.create(null, null);
     }
 }

@@ -1,8 +1,5 @@
 package io.crm.statemachine;
 
-import io.crm.promise.Promises;
-import io.vertx.core.eventbus.Message;
-
 import java.util.*;
 
 public class StateMachineBuilder {
@@ -45,7 +42,7 @@ public class StateMachineBuilder {
         return this;
     }
 
-    public StateMachineBuilder callback(String state, StateCallbacks stateCallbacks) {
+    public StateMachineBuilder handlers(String state, StateCallbacks stateCallbacks) {
         this.stateCallbacksMap.put(state, stateCallbacks);
         return this;
     }
@@ -68,7 +65,7 @@ public class StateMachineBuilder {
     public static void main(String[] args) {
         StateMachine.builder()
             .when("", StateMachine.on("", ""))
-            .callback("", StateMachine.exec().onEnter(null).onExit(null).build())
+            .handlers("", StateMachine.exec().onEnter(null).onExit(null).build())
             .build();
     }
 }
