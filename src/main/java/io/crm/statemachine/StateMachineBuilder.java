@@ -1,17 +1,20 @@
-package statemachine;
+package io.crm.statemachine;
+
+import io.crm.promise.Promises;
+import io.vertx.core.eventbus.Message;
 
 import java.util.*;
 
 public class StateMachineBuilder {
     private String initialState;
     private final Map<String, Set<String>> stateEvents = new HashMap<>();
-    private final Map<String, Set<String>> eventStates = new HashMap<>();
+    private final Map<String, Map<String, String>> eventState = new HashMap<>();
     private final Map<String, StateCallbacks> stateCallbacksMap = new HashMap<>();
 
     private StateMachineBuilder() {
     }
 
-    public static StateMachineBuilder newInstance() {
+    public static StateMachineBuilder create() {
         return new StateMachineBuilder();
     }
 
@@ -31,13 +34,12 @@ public class StateMachineBuilder {
         Arrays.asList(stateEntries).forEach(entry -> {
             eventSet.add(entry.event);
 
-            Set<String> states = eventStates.get(entry.event);
-            if (states == null) {
-                states = new HashSet<>();
-                eventStates.put(entry.event, states);
+            Map<String, String> eventStateMap = eventState.get(state);
+            if (eventStateMap == null) {
+                eventStateMap = new HashMap<>();
             }
 
-            states.add(entry.state);
+            eventStateMap.put(entry.event, entry.state);
         });
 
         return this;
@@ -49,24 +51,24 @@ public class StateMachineBuilder {
     }
 
     public StateMachine build() {
+
         if (stateCallbacksMap.size() < stateEvents.size()) {
             throw new StateMachineException("State callbacks are missing for some states.");
         }
 
-        if (initialState == null) throw new StateMachineException("Initial state is required.");
+        if (initialState == null)
+            throw new StateMachineException("Initial state ['" + initialState + "'] is required.");
 
-        return new StateMachine(initialState, stateEvents, eventStates, stateCallbacksMap);
+        if (!stateCallbacksMap.containsKey(initialState))
+            throw new StateMachineException("Callbacks is not defined for initial state ['" + initialState + "'].");
+
+        return new StateMachine(initialState, stateEvents, eventState, stateCallbacksMap);
     }
 
     public static void main(String[] args) {
-        newInstance()
-                .setInitialState("start")
-                .when("start",
-                        StateEntry.on("userIdNotFount", "validationError"),
-                        StateEntry.on("bad", "back"))
-                .when("transform",
-                        StateEntry.on("ok", "end"))
-                .callback("start", f2.createStateCallbacksBuilder().setOnEnter(null).setOnExit(null).build())
-                .build();
+        StateMachine.builder()
+            .when("", StateMachine.on("", ""))
+            .callback("", StateMachine.exec().onEnter(null).onExit(null).build())
+            .build();
     }
 }

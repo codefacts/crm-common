@@ -1,5 +1,4 @@
-package statemachine;
-
+package io.crm.statemachine;
 /**
  * Created by Khan on 5/7/2016.
  */

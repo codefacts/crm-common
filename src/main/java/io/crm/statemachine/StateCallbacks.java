@@ -1,6 +1,6 @@
-package statemachine;
-
-import io.netty.util.concurrent.Promise;
+package io.crm.statemachine;
+import io.crm.intfs.FunctionUnchecked;
+import io.crm.promise.intfs.Promise;
 
 import java.util.concurrent.Callable;
 
@@ -8,10 +8,10 @@ import java.util.concurrent.Callable;
  * Created by Khan on 5/7/2016.
  */
 public class StateCallbacks<T, R> {
-    private final io.crm.
-    private final Callable<Promise<?>> onExit;
+    final FunctionUnchecked<T, Promise<StateTrigger<R>>> onEnter;
+    final Callable<Promise<Void>> onExit;
 
-    StateCallbacks(Callable<Promise<StateTrigger>> onEnter, Callable<Promise<?>> onExit) {
+    StateCallbacks(FunctionUnchecked<T, Promise<StateTrigger<R>>> onEnter, Callable<Promise<Void>> onExit) {
         this.onEnter = onEnter;
         this.onExit = onExit;
     }
