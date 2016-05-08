@@ -2,25 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d163bfc-fd49-42ac-89b1-b7377f1bdc19" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/MSGBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/CreateNewHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/EndHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/JsonObjectStartHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationErrorHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/transormations/DefaultTransformationPipelineBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/EventCn.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/StateCn.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/chain/cleanups/DbCleaner.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/chain/initializers/DbConInitializer.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Resp.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Rsp.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/TransformationHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/JsonObjectStartHandler.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/StartHandlerJsonObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/call_center.iml" afterPath="$PROJECT_DIR$/../call_center/call_center.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateCallbacks.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateCallbacks.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateMachine.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateMachine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateMachineBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateMachineBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/crm/util/Context.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/util/Context.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/WebUtils.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/WebUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/MSG.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/MSG.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/pom.xml" afterPath="$PROJECT_DIR$/../crm-web/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Store.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Store.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/CreateHandler.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/CreateHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/CreateNewHandler.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/CreateNewHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/EventCn.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/EventCn.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/StateCn.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/StateCn.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/web.iml" afterPath="$PROJECT_DIR$/../crm-web/web.iml" />
     </list>
     <ignored path="common-crm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,11 +55,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CreateNewHandler.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CreateNewHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/CreateNewHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5338983">
-              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,25 +67,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreateHandler.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EventCn.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/EventCn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../crm-web/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.3333335">
+              <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../webpanel/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.208333">
+              <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="134" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StateCn.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/StateCn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreateHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/CreateHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6694915">
+              <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JsonObjectStartHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/JsonObjectStartHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#397#398#0" expanded="true" />
+                <element signature="e#445#446#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -111,21 +134,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Function.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/function/Function.java">
+      <file leaf-file-name="ValidationHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MSG.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/MSG.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -133,49 +146,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EndHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/EndHandler.java">
+      <file leaf-file-name="TransformationHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/TransformationHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+              <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#507#508#0" expanded="true" />
+                <element signature="e#1323#1335#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MSGBuilder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/MSGBuilder.java">
+      <file leaf-file-name="StartHandlerJsonObject.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/StartHandlerJsonObject.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
-              <folding>
-                <element signature="e#995#996#0" expanded="true" />
-                <element signature="e#1028#1029#0" expanded="true" />
-                <element signature="e#1057#1058#0" expanded="true" />
-                <element signature="e#1140#1141#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Defaults.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/transormations/Defaults.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultTransformationPipelineBuilder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/transormations/DefaultTransformationPipelineBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+              <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -211,16 +199,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../webpanel/src/main/java/webpanel/web/Test.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/transormations/Defaults.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/CreateHandlerComposer.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/chain/initializers/DbConInitializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/test/StateMachineTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/statemachine/CallbacksBuilder.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Resp.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Cnst.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/fn/Defaults.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Store.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/chain/cleanups/DbCleaner.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/StateLifeCycleBuilder.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/StateLifeCycle.java" />
@@ -240,20 +224,16 @@
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/ErrorRsp.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/Converters.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/../crm-web/pom.xml" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/ConfigCommon.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/DomainInfo.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/resource/SqlConnectionResource.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/WebUtils.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/StateCn.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/EventCn.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateCallbacks.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/holder/ContextHolder.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/holder/StoreHolder.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/util/Context.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/StartHandler.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/EndHandler.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/CreateHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateMachine.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/transormations/DefaultPipelineBuilder.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/JsonObjectStartHandler.java" />
@@ -261,6 +241,14 @@
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationErrorHandler.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/MSGBuilder.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/MSG.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/StartHandlerJsonObject.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Store.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/StateCn.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/CreateHandler.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationHandler.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/TransformationHandler.java" />
+        <option value="$PROJECT_DIR$/../crm-web/pom.xml" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/EventCn.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/CreateNewHandler.java" />
       </list>
     </option>
@@ -450,6 +438,16 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="common-crm" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common-crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webpanel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1304,12 +1302,6 @@
       <workItem from="1443118564550" duration="166000" />
       <workItem from="1443120452548" duration="70000" />
     </task>
-    <task id="LOCAL-00025" summary="Transformation">
-      <created>1457127169416</created>
-      <option name="number" value="00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1457127169416</updated>
-    </task>
     <task id="LOCAL-00026" summary="Transformation">
       <created>1457129075678</created>
       <option name="number" value="00026" />
@@ -1598,7 +1590,13 @@
       <option name="project" value="LOCAL" />
       <updated>1462692405941</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="StateMachine reimplementation">
+      <created>1462704030545</created>
+      <option name="number" value="00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1462704030545</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1702,28 +1700,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/Services.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="143" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test/StateMachineTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/18.0/guava-18.0.jar!/com/google/common/collect/ImmutableMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.620689">
-          <caret line="350" column="34" selection-start-line="350" selection-start-column="34" selection-end-line="350" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/ProductService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1843,29 +1819,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6360424">
-          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/Converters.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48305085">
           <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Store.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1970,34 +1928,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/Defaults.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12711865">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/EditHandlerComposer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12711865">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/StateCn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/EventCn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
           <folding />
         </state>
       </provider>
@@ -2066,16 +2000,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/JsonObjectStartHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/transormations/DefaultTransformationPipelineBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2094,16 +2018,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/CreateHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/MSGBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2113,17 +2027,6 @@
             <element signature="e#1028#1029#0" expanded="true" />
             <element signature="e#1057#1058#0" expanded="true" />
             <element signature="e#1140#1141#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationErrorHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1401#1413#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2149,12 +2052,120 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/CreateNewHandler.java">
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Store.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5338983">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#230#231#0" expanded="true" />
+            <element signature="e#268#269#0" expanded="true" />
+            <element signature="e#318#319#0" expanded="true" />
+            <element signature="e#349#350#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/Defaults.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/StateCn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/StartHandlerJsonObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationErrorHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1401#1413#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/TransformationHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1323#1335#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../webpanel/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.208333">
+          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="134" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.3333335">
+          <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/EventCn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/CreateNewHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/CreateHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6694915">
+          <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#397#398#0" expanded="true" />
+            <element signature="e#445#446#0" expanded="true" />
           </folding>
         </state>
       </provider>
