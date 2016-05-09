@@ -14,6 +14,7 @@ import java.util.concurrent.Callable;
  */
 public class StateMachine {
     private static final StateTrigger STATE_TRIGGER = StateTrigger.create(null, null);
+    private static final String NEXT = "NEXT";
     private final String initialState;
     private final Map<String, Set<String>> stateEvents;
     private final Map<String, Map<String, String>> eventStateMapByState;
@@ -125,6 +126,10 @@ public class StateMachine {
 
     public static StateEntry on(String event, String state) {
         return StateEntry.on(event, state);
+    }
+
+    public static StateEntry next(String state) {
+        return StateEntry.on(NEXT, state);
     }
 
     public static <T, R> StateCallbacks<T, R> exec(

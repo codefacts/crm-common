@@ -2,18 +2,186 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d163bfc-fd49-42ac-89b1-b7377f1bdc19" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/TransformationHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationHandler.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/JsonObjectStartHandler.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/StartHandlerJsonObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/call_center.iml" afterPath="$PROJECT_DIR$/../call_center/call_center.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/CreateHandlerComposer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/DeleteHandlerComposer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/FindAllHandlerComposer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/FindHandlerComposer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/UpdateHandlerComposer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/DeleteHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/FIndAllHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/FindHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/PublishEventHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/UpdateHandler.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/call_center-1.0-SNAPSHOT-jar-with-dependencies.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/.idea/jsLibraryMappings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/.idea/libraries/resources_node_modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/.idea/resources.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/MainVerticle.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/MyApp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/MyEvents.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/MyMessageCodes.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/MyUris.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/controller/AreaController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/controller/BrController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/controller/BrandController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/controller/CallController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/controller/CallOperator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/controller/CampaignController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/controller/ConsumerContactController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/controller/Controllers.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/controller/DBController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/controller/DashboardController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/controller/DistributionHouseController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/gv.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/service/AreaService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/service/AuthService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/service/BrService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/service/CampaignService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/service/ConsumerContactService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/service/DbService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/service/DistributionHouseService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/service/Services.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/template/Sidebar.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/template/js/CallDetailsSummaryViewJS.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/template/js/CallDetailsTemplateJS.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/template/js/WorkDayDetailsJS.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/template/page/DashboardTmpt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/template/page/DashboardTmptBuilder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/template/page/GoogleMapTemplate.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/template/page/PageTmpt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/template/page/PageTmptBuilder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/template/page/PageUmTmpt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/template/page/PageUmTmptBuilder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/template/page/SiteTmpt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/template/page/SiteUmTmpt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/template/page/StartPage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/util/MyUtil$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/util/MyUtil$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/util/MyUtil.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/call_center/util/MyValidators.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/InventoryProduct.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/Tables.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/Um.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/UmErrorCodeHelper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/UmErrorCodes.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/UmEvents.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/UmUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/cns.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/controller/H.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/controller/UmUris.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/controller/UserController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/ex/NotFoundException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/ex/UmException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/ex/UserNotFoundException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/model/Inventory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/model/Product.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/model/ProductUnitPrice.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/model/Sell.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/model/SellUnit.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/model/Unit.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/model/User.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/service/InventoryService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/service/ProductService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/service/SellService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/service/Services.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/service/UnitService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/com/imslbd/um/service/UserService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/config.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/logback.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/css/app.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/css/react-autosuggest.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/css/react-bootstrap-table-all.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/BrSummary.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/CallSubmitForm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/ContactDetails.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/ContactDetailsAndCall.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/DERBY_JAN_2016/BrSummary.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/DERBY_JAN_2016/TablePrimary.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/DERBY_JAN_2016/WorkDayDetailsTable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/Filter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/FilterArrow.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/FilterFields.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/FilterFields2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/NavbarPrimary.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/Sidebar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/Step1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/Step2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/TablePrimary.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/WorkDayDetailsTable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/appUm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/bundle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/forms/CallSubmitFormBNH.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/forms/DerbyForm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/functions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/grocery/CallSubmitForm.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/grocery/ContactDetails.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/grocery/ContactDetailsAndCall.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/grocery/Dashboard.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/grocery/Filter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/grocery/FilterArrow.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/grocery/FilterFields.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/grocery/FilterFields2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/grocery/MorrisBar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/grocery/NavbarPrimary.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/grocery/Sidebar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/grocery/Step1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/grocery/Step2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/grocery/Step3.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/grocery/SummaryDetailsTable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/grocery/SummaryTable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/grocery/TablePrimary.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/grocery/WorkDayDetailsTable.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/grocery/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/grocery/config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/grocery/functions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/grocery/route.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-public/js/route.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-static/css/bootstrap-datetimepicker.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-static/css/react-bootstrap-table-all.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-static/css/react-widgets.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-static/fonts/rw-widgets.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-static/img/loader-big.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-static/img/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-templates-s/en_US/pages/dashboard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-templates-s/en_US/pages/google-map.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-templates-s/en_US/pages/page-um.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-templates-s/en_US/pages/page.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-templates-s/en_US/pages/site-um.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-templates-s/en_US/pages/site.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-templates-s/en_US/pages/start-page.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/classes/my-templates-s/en_US/sidebar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/test-classes/EnergyType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/test-classes/EnergyUsageData.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/test-classes/Main$FlatData.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/test-classes/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/test-classes/YearMonth.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/target/test-classes/logback-test.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/CreateHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/EditHandlerComposer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/IndexHandlerComposer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/ViewHandlerComposer.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/pom.xml" afterPath="$PROJECT_DIR$/../crm-web/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Store.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Store.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/CreateHandler.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/CreateHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateCallbacksBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateCallbacksBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateMachine.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateMachine.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/WebUtils.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/WebUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Cnst.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Cnst.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/MSG.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/MSG.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Rsp.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Rsp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/CreateNewHandler.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/CreateNewHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/EndHandler.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/EndHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/StartHandlerJsonObject.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/StartHandlerJsonObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/TransformationHandler.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/TransformationHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationErrorHandler.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationErrorHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationHandler.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/EventCn.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/EventCn.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/StateCn.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/StateCn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/web.iml" afterPath="$PROJECT_DIR$/../crm-web/web.iml" />
     </list>
     <ignored path="common-crm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,86 +227,27 @@
         <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/CreateNewHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventCn.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/EventCn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="49" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../crm-web/pom.xml">
+      <file leaf-file-name="EndHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/EndHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.3333335">
-              <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="35" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../webpanel/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.208333">
-              <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="134" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StateCn.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/StateCn.java">
+      <file leaf-file-name="FindAllHandlerComposer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/FindAllHandlerComposer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateHandler.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/CreateHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6694915">
-              <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#397#398#0" expanded="true" />
-                <element signature="e#445#446#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ValidationErrorHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationErrorHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1401#1413#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ValidationHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="51" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -146,24 +255,87 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TransformationHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/TransformationHandler.java">
+      <file leaf-file-name="FindHandlerComposer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/FindHandlerComposer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1323#1335#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StartHandlerJsonObject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/StartHandlerJsonObject.java">
+      <file leaf-file-name="UpdateHandlerComposer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/UpdateHandlerComposer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.41525424">
+              <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpdateHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/UpdateHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+              <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FindHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/FindHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#578#579#0" expanded="true" />
+                <element signature="e#612#613#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreateHandlerComposer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/CreateHandlerComposer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="54" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FIndAllHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/FIndAllHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="52" column="34" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#760#761#0" expanded="true" />
+                <element signature="e#794#795#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PublishEventHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/PublishEventHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -199,26 +371,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/chain/initializers/DbConInitializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/test/StateMachineTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/crm/statemachine/CallbacksBuilder.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Resp.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Cnst.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/fn/Defaults.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/chain/cleanups/DbCleaner.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/StateLifeCycleBuilder.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/StateLifeCycle.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/ChainComposer.java" />
-        <option value="$PROJECT_DIR$/../sql-core/src/main/java/io/crm/sql/MMM.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateEntry.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateMachineException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/crm/statemachine/f2.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateCallbacksBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateTrigger.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateMachineBuilder.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Model.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/CreateHandler.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/ViewHandlerComposer.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Services.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Error.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/ErrorRsp.java" />
@@ -227,29 +383,45 @@
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/ConfigCommon.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/DomainInfo.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/resource/SqlConnectionResource.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/WebUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateCallbacks.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/holder/ContextHolder.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/holder/StoreHolder.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/crm/util/Context.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/StartHandler.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/EndHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateMachine.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/transormations/DefaultPipelineBuilder.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/JsonObjectStartHandler.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/transormations/DefaultTransformationPipelineBuilder.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationErrorHandler.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/MSGBuilder.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/MSG.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/StartHandlerJsonObject.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Store.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/StateCn.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/CreateHandler.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationHandler.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/TransformationHandler.java" />
         <option value="$PROJECT_DIR$/../crm-web/pom.xml" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/EventCn.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateMachine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateCallbacksBuilder.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/TransformationHandler.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/CreateNewHandler.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/EndHandler.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/StartHandlerJsonObject.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationErrorHandler.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationHandler.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/CreateHandler.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/EditHandlerComposer.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/IndexHandlerComposer.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/ViewHandlerComposer.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/StateCn.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/EventCn.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/PublishEventHandler.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/CreateHandlerComposer.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Cnst.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/DeleteHandler.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/DeleteHandlerComposer.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/WebUtils.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Rsp.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/MSG.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/FIndAllHandler.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/FindAllHandlerComposer.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/FindHandler.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/FindHandlerComposer.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/UpdateHandlerComposer.java" />
+        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/UpdateHandler.java" />
       </list>
     </option>
   </component>
@@ -806,36 +978,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common-crm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crm-common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="statemachine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -1302,12 +1444,6 @@
       <workItem from="1443118564550" duration="166000" />
       <workItem from="1443120452548" duration="70000" />
     </task>
-    <task id="LOCAL-00026" summary="Transformation">
-      <created>1457129075678</created>
-      <option name="number" value="00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1457129075678</updated>
-    </task>
     <task id="LOCAL-00027" summary="RecursiveMerge">
       <created>1457222440623</created>
       <option name="number" value="00027" />
@@ -1596,7 +1732,13 @@
       <option name="project" value="LOCAL" />
       <updated>1462704030545</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="StateMachine reimplementation">
+      <created>1462709673539</created>
+      <option name="number" value="00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1462709673539</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1608,7 +1750,6 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37419355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5629032" sideWeight="0.51259583" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39211392" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1616,7 +1757,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3143483" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.65" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4162103" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1628,10 +1768,12 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7129032" sideWeight="0.48740417" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37419355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="108" y="135" width="759" height="572" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4032258" sideWeight="0.4961665" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.65" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1700,81 +1842,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/ProductService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="81" column="44" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/fn/Defaults.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12711865">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sql-core/src/main/java/io/crm/sql/MyMessageCodes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sql-core/src/main/java/io/crm/sql/MyEvents.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12711865">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sql-core/src/main/java/io/crm/sql/MyApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#722#723#0" expanded="false" />
-            <element signature="e#783#784#0" expanded="false" />
-            <element signature="e#830#831#0" expanded="false" />
-            <element signature="e#894#895#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateMachineException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="28" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../sql-core/src/main/java/io/crm/sql/MMM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateCallbacksBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
-          <folding>
-            <element signature="e#409#410#0" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#807#808#0" expanded="true" />
-            <element signature="e#867#868#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateEntry.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1788,18 +1855,10 @@
         <state vertical-scroll-proportion="0.8220339">
           <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#448#449#0" expanded="true" />
-            <element signature="e#496#497#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#448#449#0" expanded="false" />
+            <element signature="e#496#497#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Cnst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1807,7 +1866,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2542373">
           <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1823,14 +1881,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48305085">
           <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Rsp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
           <folding />
         </state>
       </provider>
@@ -1872,8 +1922,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
           <folding>
-            <element signature="e#388#389#0" expanded="true" />
-            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="false" />
+            <element signature="e#434#435#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1891,7 +1941,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="48" column="37" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1899,38 +1949,6 @@
     <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Composer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/IndexHandlerComposer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15254237">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/ViewHandlerComposer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12711865">
-          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/WebUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6864407">
-          <caret line="500" column="70" selection-start-line="500" selection-start-column="70" selection-end-line="500" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/EditHandlerComposer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12711865">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
@@ -1952,26 +1970,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateMachine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.290322">
-          <caret line="139" column="45" selection-start-line="139" selection-start-column="45" selection-end-line="139" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5312#5313#0" expanded="true" />
-            <element signature="e#5370#5371#0" expanded="true" />
-            <element signature="e#5532#5533#0" expanded="true" />
-            <element signature="e#5586#5587#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateCallbacks.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3559322">
           <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1988,7 +1992,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2005,7 +2008,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2023,31 +2026,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
           <folding>
-            <element signature="e#995#996#0" expanded="true" />
-            <element signature="e#1028#1029#0" expanded="true" />
-            <element signature="e#1057#1058#0" expanded="true" />
-            <element signature="e#1140#1141#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/MSG.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/EndHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#507#508#0" expanded="true" />
+            <element signature="e#995#996#0" expanded="false" />
+            <element signature="e#1028#1029#0" expanded="false" />
+            <element signature="e#1057#1058#0" expanded="false" />
+            <element signature="e#1140#1141#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2057,11 +2039,90 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
           <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#230#231#0" expanded="false" />
+            <element signature="e#268#269#0" expanded="false" />
+            <element signature="e#318#319#0" expanded="false" />
+            <element signature="e#349#350#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../webpanel/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="134" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/vertx/vertx-core/3.2.1/vertx-core-3.2.1.jar!/io/vertx/core/json/JsonObject.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16042781">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateCallbacksBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6864407">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="e#689#690#0" expanded="true" />
+            <element signature="e#749#750#0" expanded="true" />
+            <element signature="e#814#815#0" expanded="true" />
+            <element signature="e#866#867#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+          <folding>
+            <element signature="e#1316#1317#0" expanded="true" />
+            <element signature="e#1388#1389#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationErrorHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="59" selection-end-column="5" />
+          <folding>
+            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#910#911#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/TransformationHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="39" selection-end-column="5" />
+          <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#230#231#0" expanded="true" />
-            <element signature="e#268#269#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-            <element signature="e#349#350#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/StartHandlerJsonObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="62" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2077,65 +2138,7 @@
     <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/StateCn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/StartHandlerJsonObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationErrorHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1401#1413#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/TransformationHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1323#1335#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../webpanel/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.208333">
-          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="134" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.3333335">
-          <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
+          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -2143,29 +2146,172 @@
     <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/EventCn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
+          <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/CreateNewHandler.java">
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Cnst.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/DeleteHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#579#580#0" expanded="true" />
+            <element signature="e#613#614#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/DeleteHandlerComposer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="44" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/CreateHandler.java">
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/WebUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6694915">
-          <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="215" column="37" selection-start-line="215" selection-start-column="37" selection-end-line="215" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Rsp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/MSG.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="144" column="38" selection-start-line="144" selection-start-column="38" selection-end-line="144" selection-end-column="38" />
+          <folding>
+            <element signature="e#5459#5460#0" expanded="true" />
+            <element signature="e#5517#5518#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/PublishEventHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#397#398#0" expanded="true" />
-            <element signature="e#445#446#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/FIndAllHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="34" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#760#761#0" expanded="true" />
+            <element signature="e#794#795#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/FindAllHandlerComposer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="51" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/EndHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="35" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/FindHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#578#579#0" expanded="true" />
+            <element signature="e#612#613#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/FindHandlerComposer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/CreateHandlerComposer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="54" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/CreateNewHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="49" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/UpdateHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/UpdateHandlerComposer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41525424">
+          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
