@@ -5,7 +5,7 @@ import java.util.*;
 public class StateMachineBuilder {
     private String initialState;
     private final Map<String, Set<String>> stateEvents = new HashMap<>();
-    private final Map<String, Map<String, String>> eventState = new HashMap<>();
+    private final Map<String, Map<String, String>> eventStateByState = new HashMap<>();
     private final Map<String, StateCallbacks> stateCallbacksMap = new HashMap<>();
 
     private StateMachineBuilder() {
@@ -15,7 +15,7 @@ public class StateMachineBuilder {
         return new StateMachineBuilder();
     }
 
-    StateMachineBuilder setInitialState(String initialState) {
+    public StateMachineBuilder setInitialState(String initialState) {
         this.initialState = initialState;
         return this;
     }
@@ -31,9 +31,10 @@ public class StateMachineBuilder {
         Arrays.asList(stateEntries).forEach(entry -> {
             eventSet.add(entry.event);
 
-            Map<String, String> eventStateMap = eventState.get(state);
+            Map<String, String> eventStateMap = eventStateByState.get(state);
             if (eventStateMap == null) {
                 eventStateMap = new HashMap<>();
+                eventStateByState.put(state, eventStateMap);
             }
 
             eventStateMap.put(entry.event, entry.state);
@@ -59,7 +60,7 @@ public class StateMachineBuilder {
         if (!stateCallbacksMap.containsKey(initialState))
             throw new StateMachineException("Callbacks is not defined for initial state ['" + initialState + "'].");
 
-        return new StateMachine(initialState, stateEvents, eventState, stateCallbacksMap);
+        return new StateMachine(initialState, stateEvents, eventStateByState, stateCallbacksMap);
     }
 
     public static void main(String[] args) {

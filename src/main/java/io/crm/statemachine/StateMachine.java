@@ -75,7 +75,7 @@ public class StateMachine {
         final Map<String, String> esMap = eventStateMapByState.get(prevState);
 
         if (esMap == null) {
-            return Promises.fromError(new StateMachineException("No event to state mapping found for state '" + prevState + "'."));
+            return Promises.fromError(new StateMachineException("No \"event to state\" mapping found for state '" + prevState + "'."));
         }
 
         final String nextState = esMap.get(trigger.event);
@@ -99,15 +99,21 @@ public class StateMachine {
             final Defer<StateTrigger<R>> defer = Promises.defer();
             stateCallbacks.onEnter.apply(message)
                 .complete(
-                    promise ->
-                        stateCallbacks.onExit.call()
-                            .complete(p -> {
-                                if (p.isSuccess()) {
-                                    defer.complete(promise.get());
-                                } else {
-                                    defer.fail(p.error());
-                                }
-                            }))
+                    promise -> {
+                        final Promise<Void> voidPromise = stateCallbacks.onExit.call();
+                        if (voidPromise == null) {
+                            defer.complete(promise.get());
+                        } else {
+                            voidPromise
+                                .complete(p -> {
+                                    if (p.isSuccess()) {
+                                        defer.complete(promise.get());
+                                    } else {
+                                        defer.fail(p.error());
+                                    }
+                                });
+                        }
+                    })
                 .error(defer::fail)
             ;
             return defer.promise();

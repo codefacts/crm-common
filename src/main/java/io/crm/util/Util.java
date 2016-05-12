@@ -614,4 +614,8 @@ final public class Util {
         });
         return new JsonObject(builder.build());
     }
+
+    public static void nops() {
+
+    }
 }

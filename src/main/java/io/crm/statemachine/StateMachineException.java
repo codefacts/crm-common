@@ -5,5 +5,6 @@ package io.crm.statemachine;
  */
 public class StateMachineException extends RuntimeException {
     public StateMachineException(String s) {
+        super(s);
     }
 }

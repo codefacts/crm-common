@@ -1,25 +1,25 @@
 package io.crm.validator;
 
 import com.google.common.collect.ImmutableList;
-import io.crm.util.Context;
+import io.crm.promise.Promises;
 import io.crm.promise.intfs.Promise;
-import io.vertx.core.json.JsonObject;
+import io.crm.util.Context;
 
 import java.util.List;
 
 /**
  * Created by shahadat on 4/27/16.
  */
-public class ValidationPipelineDeferred {
-    private final List<ValidatorDeferred<JsonObject>> list;
+public class ValidationPipelineDeferred<T> {
+    private final List<ValidatorDeferred<T>> list;
 
-    public ValidationPipelineDeferred(List<ValidatorDeferred<JsonObject>> list) {
+    public ValidationPipelineDeferred(List<ValidatorDeferred<T>> list) {
         this.list = list;
     }
 
-    public Promise<List<ValidationResult>> validate(JsonObject jsonObject, Context context) {
+    public Promise<List<ValidationResult>> validate(T jsonObject, Context context) {
 
-        if (list.isEmpty()) return null;
+        if (list.isEmpty()) return Promises.from(null);
 
         final ImmutableList.Builder<ValidationResult> builder = ImmutableList.<ValidationResult>builder();
 
@@ -31,7 +31,7 @@ public class ValidationPipelineDeferred {
             });
 
         for (int i = 1; i < list.size(); i++) {
-            final ValidatorDeferred<JsonObject> validatorDeferred = list.get(i);
+            final ValidatorDeferred<T> validatorDeferred = list.get(i);
             promise = promise
                 .mapToPromise(result -> validatorDeferred.validate(jsonObject, context))
                 .then(result -> {

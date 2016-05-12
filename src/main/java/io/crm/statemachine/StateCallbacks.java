@@ -1,6 +1,7 @@
 package io.crm.statemachine;
 
 import io.crm.intfs.FunctionUnchecked;
+import io.crm.promise.Promises;
 import io.crm.promise.intfs.Promise;
 
 import java.util.concurrent.Callable;
@@ -22,6 +23,6 @@ public class StateCallbacks<T, R> {
     }
 
     private static <T, R> FunctionUnchecked<T, Promise<StateTrigger<R>>> defE() {
-        return t -> null;
+        return t -> Promises.from(null);
     }
 }
