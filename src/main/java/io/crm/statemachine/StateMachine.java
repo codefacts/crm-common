@@ -91,7 +91,7 @@ public class StateMachine {
         }
 
         return StateMachine.this.execute(nextStateCallbacks, trigger.message)
-            .mapToPromise(value -> executeNext(value, nextState));
+            .mapToPromise(sTrigger -> executeNext(sTrigger, nextState));
     }
 
     private <T, R> Promise<StateTrigger<R>> execute(StateCallbacks<T, R> stateCallbacks, T message) {
@@ -100,6 +100,10 @@ public class StateMachine {
             stateCallbacks.onEnter.apply(message)
                 .complete(
                     promise -> {
+                        if (promise.isError()) {
+                            defer.fail(promise.error());
+                            return;
+                        }
                         final Promise<Void> voidPromise = stateCallbacks.onExit.call();
                         if (voidPromise == null) {
                             defer.complete(promise.get());
