@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../SmsReceiverVertx/SmsReceiverVertx.iml" filepath="$PROJECT_DIR$/../SmsReceiverVertx/SmsReceiverVertx.iml" />
       <module fileurl="file://$PROJECT_DIR$/../call_center/call_center.iml" filepath="$PROJECT_DIR$/../call_center/call_center.iml" />
       <module fileurl="file://$PROJECT_DIR$/common-crm.iml" filepath="$PROJECT_DIR$/common-crm.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../grossary/grossary.iml" filepath="$PROJECT_DIR$/../grossary/grossary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../merchandiser-supervisor/merchandiser-supervisor.iml" filepath="$PROJECT_DIR$/../merchandiser-supervisor/merchandiser-supervisor.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../shopy/shopy.iml" filepath="$PROJECT_DIR$/../shopy/shopy.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../sql-core/sql-core.iml" filepath="$PROJECT_DIR$/../sql-core/sql-core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../tx/tx.iml" filepath="$PROJECT_DIR$/../tx/tx.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../uploader/uploader.iml" filepath="$PROJECT_DIR$/../uploader/uploader.iml" />
       <module fileurl="file://$PROJECT_DIR$/../crm-web/web.iml" filepath="$PROJECT_DIR$/../crm-web/web.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../webpanel/webpanel.iml" filepath="$PROJECT_DIR$/../webpanel/webpanel.iml" />
     </modules>
   </component>
 </project>

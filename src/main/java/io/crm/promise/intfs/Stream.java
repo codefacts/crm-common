@@ -1,6 +1,5 @@
 package io.crm.promise.intfs;
 
-import io.crm.intfs.BiFunctionUnchecked;
 import io.crm.intfs.FunctionUnchecked;
 import io.crm.intfs.PredicateUnchecked;
 
@@ -11,7 +10,7 @@ import java.util.List;
  * Created by someone on 17/11/2015.
  */
 public interface Stream<T> {
-    public <R> Stream<R> map(MapToHandler<T, R> functionUnchecked);
+    public <R> Stream<R> map(MapHandler<T, R> functionUnchecked);
 
     public <R> Stream<R> mapToStream(MapToStreamHandler<T, R> function);
 

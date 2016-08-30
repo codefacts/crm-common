@@ -32,7 +32,7 @@ public class JsonTransformationPipelineDeferred implements TransformDeferred<Jso
             final int ls = list.size();
             for (int i = 1; i < ls; i++) {
                 final int idx = i;
-                promise = promise.mapToPromise(obj -> list.get(idx).transform(obj, context));
+                promise = promise.mapP(obj -> list.get(idx).transform(obj, context));
             }
 
             return promise;

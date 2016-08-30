@@ -33,7 +33,7 @@ public class ValidationPipelineDeferred<T> {
         for (int i = 1; i < list.size(); i++) {
             final ValidatorDeferred<T> validatorDeferred = list.get(i);
             promise = promise
-                .mapToPromise(result -> validatorDeferred.validate(jsonObject, context))
+                .mapP(result -> validatorDeferred.validate(jsonObject, context))
                 .then(result -> {
                     if (result != null) {
                         builder.add(result);

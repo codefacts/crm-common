@@ -10,10 +10,8 @@ import org.slf4j.LoggerFactory;
 final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
     public static final Logger LOGGER = LoggerFactory.getLogger(PromiseImpl.class);
     public static long total = 0;
-    private static final MapToHandler EMPTY_MAP_TO_HANDLER = s -> s;
-    private static final MapToPromiseHandler EMPTY_MAP_TO_PROMISE_HANDLER = s -> Promises.from(s);
-    private static final ThenHandler emptyThenHandler = s -> {
-    };
+    private static final MapHandler EMPTY_MAP_TO_HANDLER = s -> s;
+    private static final MapPHandler EMPTY_MAP_TO_PROMISE_HANDLER = s -> Promises.from(s);
     private static final FilterHandler emptyFilterHandler = s -> true;
     private static final SuccessHandler emptySuccessHandler = s -> {
     };
@@ -138,15 +136,15 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
 
                 if (nextPromise.type == Type.MapTo) {
 
-                    final Object retValue = ((MapToHandler) _invokeNext).apply(value);
+                    final Object retValue = ((MapHandler) _invokeNext).apply(value);
                     value = nextPromise.value = retValue;
 
-                } else if (_invokeNext instanceof MapToPromiseHandler) {
+                } else if (_invokeNext instanceof MapPHandler) {
 
-                    final Promise promise = ((MapToPromiseHandler) _invokeNext).apply(value);
+                    final Promise promise = ((MapPHandler) _invokeNext).apply(value);
 
                     if (promise == null) {
-                        throw new NullPointerException("No Promise was returned from the mapToPromise " +
+                        throw new NullPointerException("No Promise was returned from the mapP " +
                             "Handler for value: " + value);
                     }
 
@@ -158,11 +156,6 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
                             pp.complete(s));
 
                     return;
-
-                } else if (_invokeNext instanceof ThenHandler) {
-
-                    ((ThenHandler) _invokeNext).accept(value);
-                    value = null;
 
                 } else if (_invokeNext instanceof SuccessHandler) {
 
@@ -225,16 +218,16 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
     }
 
     @Override
-    public <R> Promise<R> map(final MapToHandler<T, R> mapToHandler) {
-        final MapToHandler<T, R> _mapToHandler = mapToHandler == null ? EMPTY_MAP_TO_HANDLER : mapToHandler;
-        final PromiseImpl<R> promise = new PromiseImpl<>(_mapToHandler, Type.MapTo);
+    public <R> Promise<R> map(final MapHandler<T, R> mapHandler) {
+        final MapHandler<T, R> _mapHandler = mapHandler == null ? EMPTY_MAP_TO_HANDLER : mapHandler;
+        final PromiseImpl<R> promise = new PromiseImpl<>(_mapHandler, Type.MapTo);
         final PromiseImpl _deferNext = nextPromise = promise;
         if (isSuccess()) {
             try {
                 if (isCompleteOnly()) {
                     _deferNext.completeWithoutValue();
                 } else {
-                    final R retVal = _mapToHandler.apply(value);
+                    final R retVal = _mapHandler.apply(value);
                     _deferNext.complete(retVal);
                 }
             } catch (final Exception ex) {
@@ -250,15 +243,15 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
     }
 
     @Override
-    public <R> Promise<R> mapToPromise(final MapToPromiseHandler<T, R> promiseHandler) {
-        final MapToPromiseHandler<T, R> _promiseHandler = promiseHandler == null ? EMPTY_MAP_TO_PROMISE_HANDLER : promiseHandler;
+    public <R> Promise<R> mapP(final MapPHandler<T, R> promiseHandler) {
+        final MapPHandler<T, R> _promiseHandler = promiseHandler == null ? EMPTY_MAP_TO_PROMISE_HANDLER : promiseHandler;
         final PromiseImpl<R> promise = new PromiseImpl<>(_promiseHandler, Type.MapToPromise);
         final PromiseImpl _deferNext = nextPromise = promise;
         if (isSuccess()) {
             try {
                 final Promise<R> rPromise = _promiseHandler.apply(value);
                 if (rPromise == null) {
-                    throw new NullPointerException("No Promise was returned from the mapToPromise Handler for value: " + value);
+                    throw new NullPointerException("No Promise was returned from the mapP Handler for value: " + value);
                 }
                 rPromise.complete(p -> {
                     if (((PromiseImpl) p).isCompleteOnly()) {
@@ -443,7 +436,7 @@ final public class PromiseImpl<T> implements Promise<T>, Defer<T> {
     }
 
     @Override
-    public T getOrElse(T t) {
+    public T orElse(T t) {
         return value == null ? t : value;
     }
 

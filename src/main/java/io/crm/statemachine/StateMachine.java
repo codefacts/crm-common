@@ -33,7 +33,7 @@ public class StateMachine {
         try {
             final StateCallbacks<T, Object> stateCallbacks = stateCallbacksMap.get(initialState);
             return execute(stateCallbacks, message)
-                .mapToPromise(trigger -> executeNext(trigger, initialState))
+                .mapP(trigger -> executeNext(trigger, initialState))
                 .map(stateTrigger -> (R) stateTrigger.message);
         } catch (Exception ex) {
             return Promises.fromError(ex);
@@ -44,7 +44,7 @@ public class StateMachine {
         try {
             final StateCallbacks<T, Object> stateCallbacks = stateCallbacksMap.get(state);
             return execute(stateCallbacks, message)
-                .mapToPromise(trigger -> executeNext(trigger, state))
+                .mapP(trigger -> executeNext(trigger, state))
                 .map(stateTrigger -> (R) stateTrigger.message);
         } catch (Exception ex) {
             return Promises.fromError(ex);
@@ -91,7 +91,7 @@ public class StateMachine {
         }
 
         return StateMachine.this.execute(nextStateCallbacks, trigger.message)
-            .mapToPromise(sTrigger -> executeNext(sTrigger, nextState));
+            .mapP(sTrigger -> executeNext(sTrigger, nextState));
     }
 
     private <T, R> Promise<StateTrigger<R>> execute(StateCallbacks<T, R> stateCallbacks, T message) {

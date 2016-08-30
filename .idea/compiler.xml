@@ -17,12 +17,6 @@
       <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
       </profile>
-      <profile default="false" name="Annotation profile for vaadin_client" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-      </profile>
       <profile default="false" name="Annotation profile for query" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -43,6 +37,7 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="call_center" />
+        <module name="common-crm" />
         <module name="grossary" />
         <module name="merchandiser-supervisor" />
         <module name="shopy" />
@@ -59,13 +54,6 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="core" />
-      </profile>
-      <profile default="false" name="Annotation profile for common-crm" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="common-crm" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">

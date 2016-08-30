@@ -31,7 +31,7 @@ public class TransformationPipelineDeferred<T, R> implements TransformDeferred<T
             final int ls = list.size();
             for (int i = 1; i < ls; i++) {
                 final int idx = i;
-                promise = promise.mapToPromise(
+                promise = promise.mapP(
                     obj -> list.get(idx).transform(obj, context));
             }
 

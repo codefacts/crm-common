@@ -1,13 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d163bfc-fd49-42ac-89b1-b7377f1bdc19" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/SellService.java" afterPath="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/SellService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/src/main/resources/my-public/js/bundle.js" afterPath="$PROJECT_DIR$/../call_center/src/main/resources/my-public/js/bundle.js" />
+    <list default="true" id="3d163bfc-fd49-42ac-89b1-b7377f1bdc19" name="Default" comment="StateMachine reimplementation">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/io/crm/promise/PromiseImpl2.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__ch_qos_logback_logback_core_1_0_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__codefacts_watertemplate_watertemplate_engine_custom_1_2_1_SNAPSHOT.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_6_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_6_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_6_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__com_google_guava_guava_18_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_11.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__io_netty_netty_buffer_4_0_33_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__io_netty_netty_codec_4_0_33_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__io_netty_netty_codec_http_4_0_33_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__io_netty_netty_common_4_0_33_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__io_netty_netty_handler_4_0_33_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__io_netty_netty_transport_4_0_33_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__io_reactivex_rxjava_1_1_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__io_vertx_vertx_auth_common_3_2_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__io_vertx_vertx_core_3_2_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__io_vertx_vertx_jdbc_client_3_2_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__io_vertx_vertx_sql_common_3_2_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__io_vertx_vertx_web_3_2_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__junit_junit_4_12.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_18.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__org_apache_commons_commons_csv_1_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__org_apache_commons_commons_io_1_3_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__org_codehaus_janino_janino_2_5_16.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__org_eclipse_persistence_javax_persistence_2_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_antlr_2_6_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_asm_2_6_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_core_2_6_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_jpa_2_6_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_jpa_jpql_2_6_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__org_glassfish_javax_json_1_0_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__org_jooq_jool_0_9_10.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__org_jooq_jooq_3_7_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__org_jooq_jooq_codegen_3_7_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__org_jooq_jooq_meta_3_7_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../crm-web/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_4.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__com_eclipsesource_minimal_json_minimal_json_0_9_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_5_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_5_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_5_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__com_google_guava_guava_14_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__com_hazelcast_hazelcast_3_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__com_hazelcast_hazelcast_code_generator_3_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__com_jolbox_bonecp_0_8_0_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_10.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__com_zaxxer_HikariCP_2_3_9.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__commons_pool_commons_pool_1_6.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__io_crm_common_1_0_SNAPSHOT.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__io_crm_web_1_0_SNAPSHOT.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__io_netty_netty_buffer_4_0_28_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__io_netty_netty_codec_4_0_28_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__io_netty_netty_codec_http_4_0_28_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__io_netty_netty_common_4_0_28_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__io_netty_netty_handler_4_0_28_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__io_netty_netty_transport_4_0_28_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__io_vertx_vertx_auth_common_3_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__io_vertx_vertx_core_3_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__io_vertx_vertx_hazelcast_3_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__io_vertx_vertx_jdbc_client_3_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__io_vertx_vertx_lang_js_3_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__io_vertx_vertx_mongo_client_3_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__io_vertx_vertx_sql_common_3_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__io_vertx_vertx_web_3_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_apache_activemq_activemq_client_5_11_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_apache_activemq_activemq_jms_pool_5_11_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_apache_activemq_activemq_pool_5_11_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_j2ee_management_1_1_spec_1_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_jms_1_1_spec_1_1_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_jta_1_0_1B_spec_1_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_eclipse_persistence_javax_persistence_2_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_antlr_2_6_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_asm_2_6_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_core_2_6_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_jpa_2_6_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_eclipse_persistence_org_eclipse_persistence_jpa_jpql_2_6_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_eclipse_xtext_org_eclipse_xtext_xbase_lib_2_9_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_freemarker_freemarker_2_3_22.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_fusesource_hawtbuf_hawtbuf_1_11.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_glassfish_javax_json_1_0_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_javassist_javassist_3_18_2_GA.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_mongodb_bson_3_0_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_mongodb_mongodb_driver_async_3_0_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_mongodb_mongodb_driver_core_3_0_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_10.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_springframework_spring_aop_4_2_0_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_springframework_spring_beans_4_2_0_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_springframework_spring_context_4_2_0_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_springframework_spring_core_4_2_0_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_springframework_spring_expression_4_2_0_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../call_center/.idea/libraries/Maven__org_watertemplate_watertemplate_engine_1_2_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_eclipsesource_minimal_json_minimal_json_0_9_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_5_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_5_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_5_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_14_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_4_190.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_hazelcast_hazelcast_3_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_hazelcast_hazelcast_code_generator_3_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jolbox_bonecp_0_8_0_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_pre10.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_10.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_8.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp_okhttp_2_7_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okio_okio_1_6_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_2_3_9.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_0_28_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_0_28_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_0_28_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_0_28_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_0_28_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_0_28_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_vertx_vertx_auth_common_3_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_vertx_vertx_core_3_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_vertx_vertx_hazelcast_3_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_vertx_vertx_jdbc_client_3_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_vertx_vertx_jdbc_client_3_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_vertx_vertx_lang_js_3_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_vertx_vertx_mongo_client_3_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_vertx_vertx_rx_java_3_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_vertx_vertx_sql_common_3_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_vertx_vertx_sql_common_3_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_vertx_vertx_web_3_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_37.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__one_util_streamex_0_5_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_xtext_org_eclipse_xtext_xbase_lib_2_9_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_22.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_18_2_GA.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jooq_jool_0_9_9.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_7_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_bson_3_0_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_async_3_0_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_core_3_0_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_smslib_smslib_3_5_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/io/crm/promise/ConditionalPromiseImpl.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/io/crm/promise/intfs/MapToHandler.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/promise/intfs/MapHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/io/crm/promise/intfs/MapToPromiseHandler.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/promise/intfs/MapPHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../call_center/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../call_center/call_center.iml" afterPath="$PROJECT_DIR$/../call_center/call_center.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common.iml" afterPath="$PROJECT_DIR$/common.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/crm/promise/PromiseImpl.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/promise/PromiseImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/crm/promise/intfs/Promise.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/promise/intfs/Promise.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/crm/promise/intfs/Stream.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/promise/intfs/Stream.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateMachine.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateMachine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/AppComposer.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/AppComposer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/FindHandlerComposer.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/FindHandlerComposer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/crm/transformation/JsonTransformationPipelineDeferred.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/transformation/JsonTransformationPipelineDeferred.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/crm/transformation/TransformationPipelineDeferred.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/transformation/TransformationPipelineDeferred.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/crm/validator/ValidationPipelineDeferred.java" afterPath="$PROJECT_DIR$/src/main/java/io/crm/validator/ValidationPipelineDeferred.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../crm-web/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/controller/AuthController.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/controller/AuthController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/WebUtils.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/WebUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/JsonValidationHandler.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/JsonValidationHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationHandler.java" afterPath="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../crm-web/web.iml" afterPath="$PROJECT_DIR$/../crm-web/web.iml" />
     </list>
     <ignored path="common-crm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,7 +207,60 @@
     <favorites_list name="common-crm" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Promise.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/promise/intfs/Promise.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SuccessHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/promise/intfs/SuccessHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ThenHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/promise/intfs/ThenHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PromiseImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/promise/PromiseImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FunctionAsync.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/intfs/FunctionAsync.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -61,7 +273,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../call_center" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="modificationStamps">
@@ -76,9 +288,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/CreateHandler.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/EditHandlerComposer.java" />
-        <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/IndexHandlerComposer.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/ViewHandlerComposer.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/StateCn.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/EventCn.java" />
@@ -127,6 +336,9 @@
         <option value="$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateMachine.java" />
         <option value="$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/AppComposer.java" />
         <option value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/SellService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/crm/promise/intfs/Promise.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/crm/promise/PromiseImpl2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/crm/promise/PromiseImpl.java" />
       </list>
     </option>
   </component>
@@ -261,9 +473,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="24" />
-    <option name="width" value="959" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -307,8 +519,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -317,8 +527,128 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common-crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crm-common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common-crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crm-common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common-crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crm-common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common-crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crm-common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="promise" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common-crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crm-common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="intfs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -328,8 +658,8 @@
     <property name="last_directory_selection" value="$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="E:/IdeaProjects/elasta-core" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="dynamic.classpath" value="false" />
@@ -483,31 +813,21 @@
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
       <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
-      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="" />
-      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
-      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="" />
-      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
-      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="" />
-      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -517,27 +837,15 @@
       <option name="METHOD_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
       <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
       <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="0" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="SELECTED_CLOUD_DEVICE_CONFIGURATION_ID" value="0" />
-      <option name="SELECTED_CLOUD_DEVICE_PROJECT_ID" value="" />
-      <option name="IS_VALID_CLOUD_MATRIX_SELECTION" value="false" />
-      <option name="INVALID_CLOUD_MATRIX_SELECTION_ERROR" value="" />
-      <option name="IS_VALID_CLOUD_DEVICE_SELECTION" value="false" />
-      <option name="INVALID_CLOUD_DEVICE_SELECTION_ERROR" value="" />
-      <option name="CLOUD_DEVICE_SERIAL_NUMBER" value="" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -769,7 +1077,9 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
   <component name="StructureViewFactory">
     <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
   </component>
@@ -781,6 +1091,7 @@
       <changelist id="3d163bfc-fd49-42ac-89b1-b7377f1bdc19" name="Default" comment="" />
       <created>1440322883829</created>
       <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
       <updated>1440322883829</updated>
       <workItem from="1443118564550" duration="166000" />
       <workItem from="1443120452548" duration="70000" />
@@ -788,294 +1099,343 @@
     <task id="LOCAL-00030" summary="SmsReceiverVertx">
       <created>1457635465297</created>
       <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
       <option name="project" value="LOCAL" />
       <updated>1457635465297</updated>
     </task>
     <task id="LOCAL-00031" summary="CreateSell">
       <created>1457883306563</created>
       <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
       <option name="project" value="LOCAL" />
       <updated>1457883306563</updated>
     </task>
     <task id="LOCAL-00032" summary="CreateSell">
       <created>1457954974082</created>
       <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
       <option name="project" value="LOCAL" />
       <updated>1457954974082</updated>
     </task>
     <task id="LOCAL-00033" summary="CreateSell">
       <created>1457979923197</created>
       <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
       <option name="project" value="LOCAL" />
       <updated>1457979923197</updated>
     </task>
     <task id="LOCAL-00034" summary="Sell And Invetory Complete">
       <created>1458905713232</created>
       <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
       <option name="project" value="LOCAL" />
       <updated>1458905713233</updated>
     </task>
     <task id="LOCAL-00035" summary="Validation &amp; Transformation Pipelines made thread safe.">
       <created>1459062813245</created>
       <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
       <option name="project" value="LOCAL" />
       <updated>1459062813245</updated>
     </task>
     <task id="LOCAL-00036" summary="Validation &amp; Transformation Pipelines made thread safe.">
       <created>1459177904774</created>
       <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
       <option name="project" value="LOCAL" />
       <updated>1459177904774</updated>
     </task>
     <task id="LOCAL-00037" summary="Transformation Pipeline made null safe.">
       <created>1459267236505</created>
       <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
       <option name="project" value="LOCAL" />
       <updated>1459267236505</updated>
     </task>
     <task id="LOCAL-00038" summary="OrganizationService">
       <created>1459405994283</created>
       <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
       <option name="project" value="LOCAL" />
       <updated>1459405994283</updated>
     </task>
     <task id="LOCAL-00039" summary="Validation">
       <created>1459434984927</created>
       <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
       <option name="project" value="LOCAL" />
       <updated>1459434984927</updated>
     </task>
     <task id="LOCAL-00040" summary="Validation">
       <created>1459699872005</created>
       <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
       <option name="project" value="LOCAL" />
       <updated>1459699872005</updated>
     </task>
     <task id="LOCAL-00041" summary="Create Product">
       <created>1459775044791</created>
       <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
       <option name="project" value="LOCAL" />
       <updated>1459775044791</updated>
     </task>
     <task id="LOCAL-00042" summary="FIndProduct">
       <created>1459784477700</created>
       <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
       <option name="project" value="LOCAL" />
       <updated>1459784477700</updated>
     </task>
     <task id="LOCAL-00043" summary="FIndProduct">
       <created>1459870764809</created>
       <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
       <option name="project" value="LOCAL" />
       <updated>1459870764809</updated>
     </task>
     <task id="LOCAL-00044" summary="InventoryService">
       <created>1460005504134</created>
       <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
       <option name="project" value="LOCAL" />
       <updated>1460005504134</updated>
     </task>
     <task id="LOCAL-00045" summary="InventoryService">
       <created>1460045456676</created>
       <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
       <option name="project" value="LOCAL" />
       <updated>1460045456676</updated>
     </task>
     <task id="LOCAL-00046" summary="UM All Service Almost complete">
       <created>1460107895082</created>
       <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
       <option name="project" value="LOCAL" />
       <updated>1460107895082</updated>
     </task>
     <task id="LOCAL-00047" summary="UM All Service Almost complete">
       <created>1460187364017</created>
       <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
       <option name="project" value="LOCAL" />
       <updated>1460187364017</updated>
     </task>
     <task id="LOCAL-00048" summary="UM All Service Almost complete">
       <created>1460188034395</created>
       <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
       <option name="project" value="LOCAL" />
       <updated>1460188034395</updated>
     </task>
     <task id="LOCAL-00049" summary="Transfer">
       <created>1460216295742</created>
       <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
       <option name="project" value="LOCAL" />
       <updated>1460216295742</updated>
     </task>
     <task id="LOCAL-00050" summary="common, web &amp; call center version change">
       <created>1460269862829</created>
       <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
       <option name="project" value="LOCAL" />
       <updated>1460269862887</updated>
     </task>
     <task id="LOCAL-00051" summary="Transfer done">
       <created>1460300818484</created>
       <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
       <option name="project" value="LOCAL" />
       <updated>1460300818484</updated>
     </task>
     <task id="LOCAL-00052" summary="Transfer done">
       <created>1460302688227</created>
       <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
       <option name="project" value="LOCAL" />
       <updated>1460302688227</updated>
     </task>
     <task id="LOCAL-00053" summary="Transfer done">
       <created>1460322294411</created>
       <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
       <option name="project" value="LOCAL" />
       <updated>1460322294411</updated>
     </task>
     <task id="LOCAL-00054" summary="Transfer done">
       <created>1460376857396</created>
       <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
       <option name="project" value="LOCAL" />
       <updated>1460376857396</updated>
     </task>
     <task id="LOCAL-00055" summary="Event Notification added">
       <created>1460407591076</created>
       <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
       <option name="project" value="LOCAL" />
       <updated>1460407591077</updated>
     </task>
     <task id="LOCAL-00056" summary="Event Notification added">
       <created>1460457106952</created>
       <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
       <option name="project" value="LOCAL" />
       <updated>1460457106952</updated>
     </task>
     <task id="LOCAL-00057" summary="Event Dumping Servicce Updated">
       <created>1460510083956</created>
       <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
       <option name="project" value="LOCAL" />
       <updated>1460510083956</updated>
     </task>
     <task id="LOCAL-00058" summary="Event Dumping Servicce Updated">
       <created>1460525079261</created>
       <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
       <option name="project" value="LOCAL" />
       <updated>1460525079261</updated>
     </task>
     <task id="LOCAL-00059" summary="Event Dumping Servicce Updated">
       <created>1460564876516</created>
       <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
       <option name="project" value="LOCAL" />
       <updated>1460564876518</updated>
     </task>
     <task id="LOCAL-00060" summary="Event Dumping Servicce Updated">
       <created>1461328309702</created>
       <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
       <option name="project" value="LOCAL" />
       <updated>1461328309709</updated>
     </task>
     <task id="LOCAL-00061" summary="Event Dumping Servicce Updated">
       <created>1461358488963</created>
       <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
       <option name="project" value="LOCAL" />
       <updated>1461358488963</updated>
     </task>
     <task id="LOCAL-00062" summary="Event Dumping Servicce Updated">
       <created>1461387948523</created>
       <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
       <option name="project" value="LOCAL" />
       <updated>1461387948523</updated>
     </task>
     <task id="LOCAL-00063" summary="Dashboard">
       <created>1461391277061</created>
       <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
       <option name="project" value="LOCAL" />
       <updated>1461391277061</updated>
     </task>
     <task id="LOCAL-00064" summary="Dashboard">
       <created>1461501722880</created>
       <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
       <option name="project" value="LOCAL" />
       <updated>1461501722881</updated>
     </task>
     <task id="LOCAL-00065" summary="Building StateMachine">
       <created>1461760074691</created>
       <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
       <option name="project" value="LOCAL" />
       <updated>1461760074709</updated>
     </task>
     <task id="LOCAL-00066" summary="StateMachine Complete But Untested">
       <created>1461838064423</created>
       <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
       <option name="project" value="LOCAL" />
       <updated>1461838064423</updated>
     </task>
     <task id="LOCAL-00067" summary="StateMachine Complete But Untested">
       <created>1461860656757</created>
       <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
       <option name="project" value="LOCAL" />
       <updated>1461860656758</updated>
     </task>
     <task id="LOCAL-00068" summary="StateMachine Fixed But Untested">
       <created>1462279968980</created>
       <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
       <option name="project" value="LOCAL" />
       <updated>1462279969015</updated>
     </task>
     <task id="LOCAL-00069" summary="StateMachine Fixed But Untested">
       <created>1462288957877</created>
       <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
       <option name="project" value="LOCAL" />
       <updated>1462288957877</updated>
     </task>
     <task id="LOCAL-00070" summary="Before StateMachine reimplementation">
       <created>1462604111471</created>
       <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
       <option name="project" value="LOCAL" />
       <updated>1462604111471</updated>
     </task>
     <task id="LOCAL-00071" summary="Before StateMachine reimplementation">
       <created>1462682187047</created>
       <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
       <option name="project" value="LOCAL" />
       <updated>1462682187047</updated>
     </task>
     <task id="LOCAL-00072" summary="StateMachine reimplementation">
       <created>1462682521110</created>
       <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
       <option name="project" value="LOCAL" />
       <updated>1462682521110</updated>
     </task>
     <task id="LOCAL-00073" summary="StateMachine reimplementation">
       <created>1462692405941</created>
       <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
       <option name="project" value="LOCAL" />
       <updated>1462692405941</updated>
     </task>
     <task id="LOCAL-00074" summary="StateMachine reimplementation">
       <created>1462704030545</created>
       <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
       <option name="project" value="LOCAL" />
       <updated>1462704030545</updated>
     </task>
     <task id="LOCAL-00075" summary="StateMachine reimplementation">
       <created>1462709673539</created>
       <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
       <option name="project" value="LOCAL" />
       <updated>1462709673539</updated>
     </task>
     <task id="LOCAL-00076" summary="StateMachine reimplementation">
       <created>1462797045952</created>
       <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
       <option name="project" value="LOCAL" />
       <updated>1462797045959</updated>
     </task>
     <task id="LOCAL-00077" summary="StateMachine reimplementation">
       <created>1463036104370</created>
       <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
       <option name="project" value="LOCAL" />
       <updated>1463036104394</updated>
     </task>
     <task id="LOCAL-00078" summary="StateMachine reimplementation">
       <created>1463040549259</created>
       <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
       <option name="project" value="LOCAL" />
       <updated>1463040549259</updated>
     </task>
@@ -1086,35 +1446,37 @@
     <option name="totallyTimeSpent" value="236000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="959" height="744" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5629032" sideWeight="0.51259583" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39209402" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5623932" sideWeight="0.51259583" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39209402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40087622" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27231467" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4162103" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7129032" sideWeight="0.48740417" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37419355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="108" y="135" width="759" height="572" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4032258" sideWeight="0.4961665" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.65" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.62564105" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1189,371 +1551,124 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/promise/intfs/Defer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateCallbacks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateMachineException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateTrigger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/util/EventCn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="43" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateMachineBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60169494">
-          <caret line="36" column="60" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationErrorHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationErrorHandler.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/validator/ValidationPipelineDeferred.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27728087">
+        <state relative-caret-position="0">
           <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/EndHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48305085">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../webpanel/src/main/java/webpanel/MainVerticle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.89830506">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../webpanel/src/main/java/webpanel/web/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1779661">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../webpanel/src/main/java/webpanel/model/tables/AreasBatb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0254238">
-          <caret line="106" column="12" selection-start-line="106" selection-start-column="12" selection-end-line="106" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../webpanel/src/main/java/webpanel/ModelGen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33050847">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Model.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Rsp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/ConfigCommon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40677965">
-          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/EndHandler.java" />
+    <entry file="file://$PROJECT_DIR$/../webpanel/src/main/java/webpanel/MainVerticle.java" />
+    <entry file="file://$PROJECT_DIR$/../webpanel/src/main/java/webpanel/web/Test.java" />
+    <entry file="file://$PROJECT_DIR$/../webpanel/src/main/java/webpanel/model/tables/AreasBatb.java" />
+    <entry file="file://$PROJECT_DIR$/../webpanel/src/main/java/webpanel/ModelGen.java" />
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Model.java" />
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/Rsp.java" />
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/ConfigCommon.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/sql/SqlUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationHandler.java">
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/ValidationHandler.java" />
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/CreateHandlerComposerBuilder.java" />
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/CreateHandlerComposer.java" />
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/FIndAllHandler.java" />
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/JsonTransformationHandler.java" />
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/JsonValidationHandler.java" />
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/StartHandler.java" />
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/CreateNewHandler.java" />
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/DomainInfoBuilder.java" />
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/DomainInfo.java" />
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/UpdateHandlerComposerBuilder.java" />
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/FindAllHandlerComposer.java" />
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/DeleteHandlerComposer.java" />
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/UpdateHandlerComposer.java" />
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/UpdateHandler.java" />
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/MSG.java" />
+    <entry file="file://$PROJECT_DIR$/../webpanel/src/main/java/webpanel/Handlers.java" />
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/DeleteHandler.java" />
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/FindHandlerComposer.java" />
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/WebUtils.java" />
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/FindHandler.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/io/vertx/vertx-core/3.2.1/vertx-core-3.2.1.jar!/io/vertx/core/json/JsonObject.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84745765">
-          <caret line="66" column="10" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
+        <state relative-caret-position="0">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/CreateHandlerComposerBuilder.java">
+    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/AppComposer.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateMachine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7966102">
-          <caret line="49" column="31" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+        <state relative-caret-position="0">
+          <caret line="104" column="35" selection-start-line="104" selection-start-column="35" selection-end-line="104" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/CreateHandlerComposer.java">
+    <entry file="file://$PROJECT_DIR$/../webpanel/src/main/java/webpanel/App.java" />
+    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/call_center/MyApp.java" />
+    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/EventDumpingService.java" />
+    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/UmEvents.java" />
+    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/call_center/MainVerticle.java" />
+    <entry file="file://$PROJECT_DIR$/../call_center/src/main/resources/config.json" />
+    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/SellInventoryTrackerService.java" />
+    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/MailService.java" />
+    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/SellService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/promise/ConditionalPromiseImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/promise/intfs/SuccessHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44067797">
-          <caret line="44" column="31" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
+        <state relative-caret-position="119">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/FIndAllHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/promise/intfs/Promise.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.720339">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+        <state relative-caret-position="238">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/JsonTransformationHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/promise/intfs/ThenHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/JsonValidationHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/StartHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/CreateNewHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/DomainInfoBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/DomainInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="113" selection-start-line="23" selection-start-column="113" selection-end-line="23" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/UpdateHandlerComposerBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="31" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/FindAllHandlerComposer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9704918">
-          <caret line="43" column="34" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/DeleteHandlerComposer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.90163934">
-          <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/UpdateHandlerComposer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0620438">
-          <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/UpdateHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="66" selection-start-line="37" selection-start-column="66" selection-end-line="37" selection-end-column="66" />
+        <state relative-caret-position="119">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/promise/PromiseImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33114755">
-          <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/MSG.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33114755">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../webpanel/src/main/java/webpanel/Handlers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="116" column="36" selection-start-line="116" selection-start-column="36" selection-end-line="116" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/DeleteHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/handlers/FindHandlerComposer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6694915">
-          <caret line="50" column="61" selection-start-line="50" selection-start-column="61" selection-end-line="50" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/io/crm/web/util/WebUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17118645">
-          <caret line="198" column="37" selection-start-line="198" selection-start-column="37" selection-end-line="198" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/statehandlers/FindHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5084746">
-          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/vertx/vertx-core/3.2.1/vertx-core-3.2.1.jar!/io/vertx/core/json/JsonObject.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16042781">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../crm-web/src/main/java/webcomposer/AppComposer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.22711864">
-          <caret line="96" column="50" selection-start-line="96" selection-start-column="50" selection-end-line="96" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/statemachine/StateMachine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17966102">
-          <caret line="104" column="35" selection-start-line="104" selection-start-column="35" selection-end-line="104" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../webpanel/src/main/java/webpanel/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5338983">
-          <caret line="71" column="5" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/call_center/MyApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10135135">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/EventDumpingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56049824">
-          <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+        <state relative-caret-position="119">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
           <folding>
-            <element signature="e#1317#1318#0" expanded="true" />
-            <element signature="e#1371#1372#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/UmEvents.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/intfs/FunctionAsync.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.9217082">
-          <caret line="72" column="40" selection-start-line="72" selection-start-column="40" selection-end-line="72" selection-end-column="40" />
+        <state relative-caret-position="119">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/call_center/MainVerticle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/crm/promise/PromiseImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.3380785">
-          <caret line="258" column="88" selection-start-line="258" selection-start-column="88" selection-end-line="258" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../call_center/src/main/resources/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8745583">
-          <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/SellInventoryTrackerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9608541">
-          <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/MailService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1743772">
-          <caret line="70" column="39" selection-start-line="70" selection-start-column="39" selection-end-line="70" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../call_center/src/main/java/com/imslbd/um/service/SellService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7935943">
-          <caret line="465" column="14" selection-start-line="465" selection-start-column="14" selection-end-line="465" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="102">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1609,11 +1724,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>webpanel</last-edited>
+          <last-edited>common-crm</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
